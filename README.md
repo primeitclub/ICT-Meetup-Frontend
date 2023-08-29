@@ -1,27 +1,55 @@
-# React + TypeScript + Vite
+# ICT Meetup Website - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the frontend repository of the ICT Meetup organized by the Prime IT Club. This website is built using Vite, React, and TypeScript.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Prerequisites
 
-- Configure the top-level `parserOptions` property like this:
+Before you begin, ensure you have the following installed:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+- [Node.js](https://nodejs.org/) (v14 or higher)
+- [npm](https://www.npmjs.com/) (comes with Node.js) or [Yarn](https://yarnpkg.com/) (recommended)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Installation
+
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/your-username/ict-meetup-frontend.git
+   cd ict-meetup-frontend
+   ```
+2. Install the project dependencies:
+
+   If you're installing with npm then
+
+   ```
+   npm install
+   ```
+
+   If you're installing with yarn(recommended)
+
+   ```
+   yarn
+   ```
+
+## Deployment
+
+You can deploy the built frontend to your chosen hosting platform. Here's a general outline:
+
+1. Build the production version of the app using the `build` script.
+2. Upload the contents of the `dist` folder to your hosting server or platform.
+
+Remember to configure any necessary environment variables or settings specific to your deployment platform.
+
+## Contributing
+
+We welcome contributions from the community! If you find a bug, have an enhancement in mind, or want to propose a new feature, please open an issue or submit a pull request.
