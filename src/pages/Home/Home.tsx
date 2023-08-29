@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <div>
       <p>
-        {data?.data?.data?.map((item: any, index: number) => (
+        {data?.data?.map((item: any, index: number) => (
           <div key={index}>{item}</div>
         ))}
       </p>
