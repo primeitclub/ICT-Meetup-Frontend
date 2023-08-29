@@ -1,9 +1,12 @@
 import { useQuery } from "react-query";
 import { GetTest } from "../../api/testApi";
+import { useTestStore } from "../../store/testStore";
 
 const Home = () => {
-  const { isLoading, error, data } = useQuery("repoData", () => {
-    return GetTest();
+  const globalState = useTestStore((state) => state);
+
+  const { isLoading, error } = useQuery("repoData", () => {
+    GetTest();
   });
 
   if (isLoading) return <div>Loading...</div>;
@@ -12,11 +15,11 @@ const Home = () => {
 
   return (
     <div>
-      <p>
-        {data?.data?.map((item: any, index: number) => (
-          <div key={index}>{item}</div>
-        ))}
-      </p>
+      {globalState.test
+        ? globalState.test.map((item: string, index: number) => (
+            <div key={index}>{item}</div>
+          ))
+        : null}
     </div>
   );
 };
