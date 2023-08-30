@@ -1,6 +1,7 @@
 import { useQuery } from "react-query";
 import { GetTest } from "../../api/testApi";
 import { useTestStore } from "../../store/testStore";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const globalState = useTestStore((state) => state);
@@ -20,6 +21,8 @@ const Home = () => {
             <div key={index}>{item}</div>
           ))
         : null}
+
+      <Link to="/login">Login</Link>
     </div>
   );
 };
