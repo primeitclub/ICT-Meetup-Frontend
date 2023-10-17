@@ -1,5 +1,5 @@
 import { Button, Flex } from "@chakra-ui/react";
-import Gradient from "../../assets/gradient.png";
+import Robot from "../../assets/Robot.png";
 import { Box, Text } from "@chakra-ui/react";
 import { BsArrowRight } from "react-icons/bs";
 export default function Hero() {
@@ -58,7 +58,7 @@ export default function Hero() {
         </Flex>
 
         <Flex width={"50%"}>
-          <img src={Gradient} alt="gradient" />
+          <img src={Robot} alt="gradient" />
         </Flex>
       </Box>
     </>

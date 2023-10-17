@@ -23,21 +23,23 @@ export default function About() {
       <Flex
         direction={{
           base: "column",
-          lg: "row",
+          xl: "row",
         }}
         alignItems={"center"}
         justify={"space-between"}
         gap={"10"}
+        position={"relative"}
+        paddingY={"100px"}
       >
         <Image src={AboutImage} alt="About" />
         <Flex direction={"column"} gap={"48px"}>
-          <SectionHeader title={"About"} />
+          <SectionHeader title={"About"} top="0" right="0" />
           <Heading
             as="h1"
             fontSize={"3xl"}
             fontFamily="heading"
             fontWeight={"bold"}
-            autoCapitalize="true"
+            textTransform={"uppercase"}
             color={"white"}
           >
             AI Innovation : Sculpting a Brighter Future.
