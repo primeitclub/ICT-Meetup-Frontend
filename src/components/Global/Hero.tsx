@@ -57,7 +57,7 @@ export default function Hero() {
           </Button>
         </Flex>
 
-        <Flex width={"50%"}>
+        <Flex>
           <img src={Robot} alt="gradient" />
         </Flex>
       </Box>
