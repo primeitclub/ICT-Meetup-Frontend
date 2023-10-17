@@ -10,13 +10,13 @@ import { theme } from "./themes/theme.ts";
 const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-    <ChakraProvider theme={theme}>
-        <React.StrictMode>
-            <BrowserRouter>
-                <QueryClientProvider client={queryClient}>
-                    <App />
-                </QueryClientProvider>
-            </BrowserRouter>
-        </React.StrictMode>
-    </ChakraProvider>
+  <ChakraProvider theme={theme}>
+    <React.StrictMode>
+      <BrowserRouter>
+        <QueryClientProvider client={queryClient}>
+          <App />
+        </QueryClientProvider>
+      </BrowserRouter>
+    </React.StrictMode>
+  </ChakraProvider>
 );
