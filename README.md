@@ -27,6 +27,7 @@ Before you begin, ensure you have the following installed:
    git clone https://github.com/your-username/ict-meetup-frontend.git
    cd ict-meetup-frontend
    ```
+
 2. Install the project dependencies:
 
    If you're installing with npm then

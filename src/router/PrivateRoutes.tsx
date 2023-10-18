@@ -1,11 +1,11 @@
-import { Routes } from "react-router-dom";
+import { Routes } from 'react-router-dom';
 
 const PrivateRoutes = () => {
-  return (
-    <div>
-      <Routes></Routes>
-    </div>
-  );
+ return (
+  <div>
+   <Routes></Routes>
+  </div>
+ );
 };
 
 export default PrivateRoutes;
