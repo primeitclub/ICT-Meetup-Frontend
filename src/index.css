@@ -83,3 +83,22 @@
   font-size: 40px;
  }
 }
+
+
+.Tab_Header {
+    background: linear-gradient(92deg, rgba(44, 132, 236, 0.60) 0.11%, rgba(0, 85, 213, 0.60) 103.68%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-family: Syncopate;
+text-transform: uppercase;
+}
+
+.Tab_Header[aria-selected=true], .Tab_Header[data-selected] {
+    background: white;
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-family: Syncopate;
+text-transform: uppercase;
+}
