@@ -29,7 +29,7 @@ function PageTitle( { pageTitle , pageDescription} : PageProps ) {
         </Box>
         </Flex>
       
-        <Text textAlign={'center'} fontSize={ { sm:'16px', base:'14px' } }>
+        <Text textAlign={'center'} color={'white'} fontSize={ { sm:'16px', base:'14px' } }>
             {pageDescription}
         </Text>
     </Box>

@@ -82,6 +82,7 @@ function EventPage() {
       </TabList>
 
       <TabPanels mt={'69px'}>
+
         {/* mapping again for single event detail  */}
        {Object.keys(workShop).map((dataIndex) => {
         const DataVariable = workShop[dataIndex];
@@ -90,6 +91,7 @@ function EventPage() {
          <TabPanel>
           {DataVariable.map((items) => {
            return (
+            // *Component
             <Box className="single_event_card" sx={FontCard} pb={10}>
              <Card
               direction={{ base: 'column', md: 'row' }}
@@ -104,7 +106,7 @@ function EventPage() {
                 border: '2px solid #13448E;',
                 cursor: 'pointer',
                 '&_button': {
-                 background: 'red.300',
+                 background: 'red.300 ',
                  color: 'black'
                 }
                }
