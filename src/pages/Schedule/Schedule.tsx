@@ -1,23 +1,9 @@
 import PageTitle from "../../components/Global/PageTitle";
 import {
-    Box,
-    Tabs,
-    TabList,
-    TabPanels,
-    Tab,
-    TabPanel,
-    Card,
-    Image,
-    Stack,
-    CardBody,
-    CardFooter,
-    Button,
-    Heading,
-    Text,
-    Flex
+    Box,    
    } from '@chakra-ui/react';
 
-   import TabContent from "./TabContent";
+   import TabContent from "./Components/TabContent";
 
 function Schedule() {
 
