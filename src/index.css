@@ -68,6 +68,37 @@
  white-space: nowrap;
 }
 
+.inside-events-header{
+    background: var(--Primary-Gradient, linear-gradient(92deg, #2c84ec 0.11%, #0055d5 103.68%));
+ background-clip: text;
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ font-feature-settings:
+  'clig' off,
+  'liga' off;
+ font-size: 48px;
+ font-style: normal;
+ font-weight: 700;
+ line-height: 100%;
+}
+.speaker-card{
+    border-radius: 24px;
+background: var(--radial, radial-gradient(148.96% 84.61% at 14.83% 40.07%, #040E2C 0%, rgba(0, 0, 0, 0.80) 29.04%, rgba(4, 14, 44, 0.80) 69.88%, rgba(0, 0, 0, 0.80) 100%));
+box-shadow: 0px 8px 10px 0px rgba(255, 255, 255, 0.04), 0px 6px 30px 0px rgba(255, 255, 255, 0.02), 0px 16px 24px 0px rgba(255, 255, 255, 0.03);   
+color: #FFF;
+padding: 16px;
+max-width: 853px;
+display: flex;
+justify-content: center;
+align-items: center;
+border-bottom:10px solid rgb(18, 96, 168) ;
+background-image: url('./assets/speaker-card-mic.svg');
+background-repeat: no-repeat;
+background-position: right;
+/* max-height: ; */
+
+}
+
 @media (max-width: 768px) {
  .hero-title-typography {
   font-size: 3.875rem;
