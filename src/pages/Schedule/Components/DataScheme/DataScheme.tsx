@@ -1,14 +1,11 @@
-
-
-
 export enum ProgramType {
-      Event = "Event",
-      Workshop = "Workshop",
-      eSports = "eSports",
-      Panel_Discussion = "Panel_Discussion",
-      Competition = "Competition",
-      Project_expo  = "Project_expo",
-      ICT_night ="ICT_night",
+      Event = "#A40A79",
+      Workshop = "#0A92A4",
+      eSports = "#0AA419",
+      Discussion = "#A4540A",
+      Competition = "#0A2CA4",
+      Project_expo  = "#A40A79",
+      ICT_night ="#98A40A",
 }
 
 export interface DataSchedule {
@@ -19,7 +16,7 @@ export interface DataSchedule {
  EventImage?: string;
  EventAuthor: string;
  EventRoom: number;
- ProgramType?: ProgramType;
+ ProgramType?:ProgramType | string | undefined;
 }
 
 

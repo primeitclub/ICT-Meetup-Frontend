@@ -1,11 +1,21 @@
 import { TabPanel, Box, Image, Stack, Heading, Text, Flex } from '@chakra-ui/react';
 import { DataSchedule } from './DataScheme/DataScheme';
+import { useState } from 'react';
+import { ProgramType } from './DataScheme/DataScheme';
 
-interface Data13props {
- data13: DataSchedule[];
+
+interface DataProps {
+    dataScheduleDate: DataSchedule[];
 }
 
-function Dec13({ data13 }: Data13props) {
+function ScheduleData ( { dataScheduleDate }: DataProps) {
+
+
+const [colorBg, setColorBg] = useState('');
+
+Object
+
+
  return (
   <>
    <TabPanel
@@ -16,7 +26,7 @@ function Dec13({ data13 }: Data13props) {
     className="time_event_wrap">
     {/* <BreakEvent /> */}
 
-    {Object.keys(data13).map((item: any) => (
+    {dataScheduleDate.map((item: any) => (
      <Box
       p={{ base: '15px', sm: '24px' }}
       sx={{
@@ -30,14 +40,14 @@ function Dec13({ data13 }: Data13props) {
       }}
       className="single_program">
       <Flex flexDirection={{ sm: 'row', base: 'column' }} gap={7}>
-       {data13[item].EventType === 'Event' ? (
+       {item.EventType === 'Event' ? (
         <Box
          // here
          w={{ lg: '20%', md: '30%', sm: '40%', base: '100%' }}
          //  change in here
          h={{ base: '150px', sm: '125px' }}
          className="event_image">
-         <Image src={data13[item].EventImage} h={'100%'} w={'100%'} objectFit={'cover'} />
+         <Image src={item.EventImage} h={'100%'} w={'100%'} objectFit={'cover'} />
         </Box>
        ) : null}
 
@@ -45,7 +55,7 @@ function Dec13({ data13 }: Data13props) {
         <Flex w={'100%'} justifyContent={'space-between'} className="Headings">
          <Stack>
           <Heading fontWeight={600} fontSize={{ lg: '24px', sm: '20px', base: '20px' }} as={'h4'}>
-           {data13[item].EventName}
+           {item.EventName}
           </Heading>
           <Heading
            as={'h5'}
@@ -54,13 +64,13 @@ function Dec13({ data13 }: Data13props) {
            fontWeight={400}
            lineHeight={'140%'}
            letterSpacing={'0.4px'}>
-           {data13[item].EventTimeStart} - {data13[item].EventTimeEnd}
+           {item.EventTimeStart} - {item.EventTimeEnd}
           </Heading>
          </Stack>
          <Box>
-          {data13[item].EventType === 'Event' ? (
-           <Text borderRadius={'4px'} h={'fit-content'} bg={'#A40A0A'} p={'5px 12px'}>
-            Event
+          {item.EventType === 'Event' ? (
+           <Text borderRadius={'4px'} h={'fit-content'} bg={ProgramType[item.ProgramType as keyof typeof ProgramType]} p={'5px 12px'}>
+            { item.ProgramType}
            </Text>
           ) : null}
          </Box>
@@ -74,9 +84,9 @@ function Dec13({ data13 }: Data13props) {
          fontSize={{ lg: '18px', sm: '16px', base: '16px' }}
          justifyContent={'space-between'}
          alignItems={'center'}>
-         <Text>{data13[item].EventAuthor}</Text>
+         <Text>{item.EventAuthor}</Text>
 
-         {data13[item].EventType === 'Event' ? <Text>Room : {data13[item].EventRoom}</Text> : null}
+         {item.EventType === 'Event' ? <Text>Room : {item.EventRoom}</Text> : null}
         </Flex>
        </Box>
       </Flex>
@@ -86,5 +96,5 @@ function Dec13({ data13 }: Data13props) {
   </>
  );
 }
-
-export default Dec13;
+ 
+export default ScheduleData ;

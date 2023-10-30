@@ -1,84 +1,136 @@
 {
-  "Dec12": [
+    "Dec12": [
       {
-          "EventType": "Event",
-          "EventName": "Registration",
-          "EventTimeStart": 900,
-          "EventTimeEnd": 1000,
-          "EventImage": "https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60",
-          "EventAuthor": "John Doe",
-          "EventRoom": 201,  
-          "ProgramType": "Workshop"
+        "EventType": "Break",
+        "EventName": "Registration",
+        "EventTimeStart": 900,
+        "EventTimeEnd": 1000,
+        "EventImage": "https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWltZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60",
+        "EventAuthor": "John Doe",
+        "EventRoom": 201
       },
       {
-          "EventType": "Break",
-          "EventName": "Lunch Break",
-          "EventTimeStart": 1200,
-          "EventTimeEnd": 1300,
-          "EventImage": "https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60",
-          "EventAuthor": "N/A",
-          "EventRoom": 202
+        "EventType": "Event",
+        "EventName": "Discussion",
+        "EventTimeStart": 1200,
+        "EventTimeEnd": 1300,
+        "EventImage": "https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWltZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60",
+        "EventAuthor": "N/A",
+        "EventRoom": 202,
+        "ProgramType": "Workshop"
       },
       {
-          "EventType": "Event",
-          "EventName": "Panel Discussion",
-          "EventTimeStart": 1400,
-          "EventTimeEnd": 1600,
-          "EventImage": "https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60",
-          "EventAuthor": "Jane Smith",
-          "EventRoom": 203,  
-          "ProgramType": "ICT night"
+        "EventType": "Event",
+        "EventName": "Discussion",
+        "EventTimeStart": 1400,
+        "EventTimeEnd": 1600,
+        "EventImage": "https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWltZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60",
+        "EventAuthor": "Jane Smith",
+        "EventRoom": 203,
+        "ProgramType": "ICT_night"
       },
       {
-          "EventType": "Event",
-          "EventName": "Keynote Speech",
-          "EventTimeStart": 1700,
-          "EventTimeEnd": 1830,
-          "EventImage": "https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60",
-          "EventAuthor": "Michael Brown",
-          "EventRoom": 204,  
-          "ProgramType": "Project expo"
+        "EventType": "Event",
+        "EventName": "Keynote Speech",
+        "EventTimeStart": 1700,
+        "EventTimeEnd": 1830,
+        "EventImage": "https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWltZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60",
+        "EventAuthor": "Michael Brown",
+        "EventRoom": 204,
+        "ProgramType": "Project_expo"
+      },
+      {
+        "EventType": "Break",
+        "EventName": "Lunch",
+        "EventTimeStart": 1200,
+        "EventTimeEnd": 1300,
+        "EventImage": "https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWltZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60",
+        "EventAuthor": "Sarah Johnson",
+        "EventRoom": 205,
+        "ProgramType": "Lunch"
+      },
+      {
+        "EventType": "Event",
+        "EventName": "Workshop",
+        "EventTimeStart": 1400,
+        "EventTimeEnd": 1500,
+        "EventImage": "https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWltZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60",
+        "EventAuthor": "Alex Johnson",
+        "EventRoom": 206,
+        "ProgramType": "Workshop"
       }
-  ],
-  "Dec13": [
+    ],
+    "Dec13": [
       {
-          "EventType": "Event",
-          "EventName": "Workshop",
-          "EventTimeStart": 900,
-          "EventTimeEnd": 1030,
-          "EventImage": "https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60",
-          "EventAuthor": "Alice Johnson",
-          "EventRoom": 205,  
-          "ProgramType": "Competition"
+        "EventType": "Break",
+        "EventName": "Workshop",
+        "EventTimeStart": 900,
+        "EventTimeEnd": 1030,
+        "EventImage": "https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWltZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60",
+        "EventAuthor": "Alice Johnson",
+        "EventRoom": 205,
+        "ProgramType": "Competition"
       },
       {
-          "EventType": "Break",
-          "EventName": "Coffee Break",
-          "EventTimeStart": 1030,
-          "EventTimeEnd": 1045,
-          "EventImage": "https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto.format&fit=crop&w=800&q=60",
-          "EventAuthor": "N/A",
-          "EventRoom": 206
+        "EventType": "Event",
+        "EventName": "Workshop",
+        "EventTimeStart": 1030,
+        "EventTimeEnd": 1045,
+        "EventImage": "https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWltZmVlZHw5fHx8ZW58MHx8fHw%3D&auto.format&fit=crop&w=800&q=60",
+        "EventAuthor": "N/A",
+        "EventRoom": 206,
+        "ProgramType": "Discussion"
       },
       {
-          "EventType": "Event",
-          "EventName": "Panel Discussion",
-          "EventTimeStart": 1100,
-          "EventTimeEnd": 1300,
-          "EventImage": "https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto.format&fit=crop&w=800&q=60",
-          "EventAuthor": "Jane Smith",
-          "EventRoom": 203,  
-          "ProgramType": "Discussion"
+        "EventType": "Event",
+        "EventName": "Panel Discussion",
+        "EventTimeStart": 1100,
+        "EventTimeEnd": 1300,
+        "EventImage": "https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWltZmVlZHw5fHx8ZW58MHx8fHw%3D&auto.format&fit=crop&w=800&q=60",
+        "EventAuthor": "Jane Smith",
+        "EventRoom": 203,
+        "ProgramType": "Discussion"
       },
       {
-          "EventType": "Event",
-          "EventName": "Keynote Speech",
-          "EventTimeStart": 1400,
-          "EventTimeEnd": 1530,
-          "EventImage": "https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto.format&fit=crop&w=800&q=60",
-          "EventAuthor": "Michael Brown",
-          "EventRoom": 204,  
-          "ProgramType": "eSports"
+        "EventType": "Event",
+        "EventName": "Keynote Speech",
+        "EventTimeStart": 1700,
+        "EventTimeEnd": 1830,
+        "EventImage": "https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWltZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60",
+        "EventAuthor": "Michael Brown",
+        "EventRoom": 204,
+        "ProgramType": "Project_expo"
+      },
+      {
+        "EventType": "Break",
+        "EventName": "Lunch",
+        "EventTimeStart": 1200,
+        "EventTimeEnd": 1300,
+        "EventImage": "https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWltZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60",
+        "EventAuthor": "Sarah Johnson",
+        "EventRoom": 205,
+        "ProgramType": "Lunch"
+      },
+      {
+        "EventType": "Event",
+        "EventName": "Workshop",
+        "EventTimeStart": 1400,
+        "EventTimeEnd": 1500,
+        "EventImage": "https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWltZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60",
+        "EventAuthor": "Alex Johnson",
+        "EventRoom": 206,
+        "ProgramType": "Workshop"
+      },
+      {
+        "EventType": "Event",
+        "EventName": "Keynote Speech",
+        "EventTimeStart": 1400,
+        "EventTimeEnd": 1530,
+        "EventImage": "https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWltZmVlZHw5fHx8ZW58MHx8fHw%3D&auto.format&fit=crop&w=800&q=60",
+        "EventAuthor": "Michael Brown",
+        "EventRoom": 204,
+        "ProgramType": "eSports"
       }
-  ]
-}
+    ]
+  }
+  
