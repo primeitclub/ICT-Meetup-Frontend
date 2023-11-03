@@ -103,7 +103,7 @@ font-family: Syncopate;
 text-transform: uppercase;
 }
 
-.team_wrap .swiper {
+/* .team_wrap .swiper {
     width: 100%;
     height: 500px;
     margin-left: auto;
@@ -113,15 +113,25 @@ text-transform: uppercase;
   .team_wrap .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
-    height: 270px;
-  
-    /* Center slide text vertically */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height:270px;   
+   
   }
-  
+   */
 
  
+   .team_wrap .swiper {
+    width: 100%;
+    height:700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   
+  .team_wrap .swiper-slide {
+    text-align: center;
+    font-size: 10px;
+    background: #6d6d6d;
+    height: 300px !important;
+    border-radius: 8px ;
+    /* Center slide text vertically */
+    
+  }

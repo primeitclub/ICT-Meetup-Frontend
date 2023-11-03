@@ -1,62 +1,85 @@
-import SingleImage from '../../../assets/dummyBoy.jpg'
+import SingleImage from '../../../assets/susit.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Grid, Pagination } from 'swiper/modules';
 import { Box } from '@chakra-ui/layout';
+import { Image, Flex } from '@chakra-ui/react';
+import { DataTypeTeam } from '../DataSchema/Data';
 
 import 'swiper/css';
-import 'swiper/css/pagination';
 import 'swiper/css/grid';
+import 'swiper/css/pagination';
 
-function SliderGroup() {
+interface TeamProps {
+  TeamData :  DataTypeTeam[];
+}
+
+function SliderGroup( { TeamData } : TeamProps ) {
+
+  
+
+ return (
+  <>
+
+   <Swiper
+    grid={{
+     rows: 2
+    }}
+    breakpoints={{
+     640: {
+      slidesPerView: 2
+     },
+     1000: {
+      slidesPerView: 3
+     },
+     1300: {
+      slidesPerView: 5
+     }
+    }}
+    spaceBetween={30}
+    pagination={{
+     clickable: true
+    }}
+    modules={[Grid, Pagination]}
+    className="mySwiper">
 
 
+      { TeamData?.map( (item)=> (
+ <SwiperSlide>
+ <Flex h={'100%'} direction={'column'} className="single_team">
+  <Box className="image_wraper" h={'85%'}>
+   <Image
+    borderTopLeftRadius={'8px'}
+    borderTopRightRadius={'8px'}
+    h={'100%'}
+    w={'100%'}
+    objectPosition={'top right'}
+    objectFit={'cover'}
+    src={item.image}
+   />
+  </Box>
+  <Box
+   borderBottomLeftRadius={'8px'}
+   borderBottomRightRadius={'8px'}
+   display={'flex'}
+   alignItems={'center'}
+   justifyContent={'center'}
+   color={'white'}
+   h={'15%'}
+   bg={'#061532'}
+   fontFamily={'Syncopate'}
+   fontWeight={700}
+   className="single_team_name"
+   letterSpacing={'.2px'}>
+   { item.name }
+  </Box>
+ </Flex>
+</SwiperSlide>
+      ) ) }
 
-    return (   <>
-       <Swiper
-    //    slidesPerView={5}
-        pagination= {{
-            el: '.swiper-custom-pagination',
-          }}
-          loop ={true}
-      
-        grid={{
-            rows: 2,
-          }}
-          breakpoints={{
-            640: {
-              slidesPerView: 2,
-            },
-            1000: {
-              slidesPerView: 3
-            },
-            1300: {
-              slidesPerView: 5
-            }
-          }}
-          modules={[ Pagination , Grid]}
-         className="mySwiper">
-            
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
-       
-      </Swiper>
-      <Box w={'fit-content'} display={'flex'} justifyContent={'center'} gap={2} pt={10}  margin={'auto'} className="swiper-custom-pagination"/>
-      </>);
+   
+   </Swiper>
+  </>
+ );
 }
 
 export default SliderGroup;

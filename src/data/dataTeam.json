@@ -1,236 +1,236 @@
 {
     "organizer_team": [
       {
-        "name": "John Doe",
-        "image": "../../../assets/dummyBoy.jpg"
+        "name": "OJohn Doe",
+        "image": "/src/assets/susit.png"
       },
       {
         "name": "Alice Smith",
-        "image": "../../../assets/dummyBoy.jpg"
+        "image": "/src/assets/susit.png"
       },
       {
         "name": "Robert Johnson",
-        "image": "../../../assets/dummyBoy.jpg"
+        "image": "/src/assets/susit.png"
       },
       {
         "name": "Sarah Wilson",
-        "image": "../../../assets/dummyBoy.jpg"
+        "image": "/src/assets/susit.png"
       },
       {
         "name": "Chris Brown",
-        "image": "../../../assets/dummyBoy.jpg"
+        "image": "/src/assets/susit.png"
       },
       {
         "name": "Emma White",
-        "image": "../../../assets/dummyBoy.jpg"
+        "image": "/src/assets/susit.png"
       },
       {
         "name": "Michael Davis",
-        "image": "../../../assets/dummyBoy.jpg"
+        "image": "/src/assets/susit.png"
       },
       {
         "name": "Olivia Johnson",
-        "image": "../../../assets/dummyBoy.jpg"
+        "image": "/src/assets/susit.png"
       },
       {
         "name": "Daniel Lee",
-        "image": "../../../assets/dummyBoy.jpg"
+        "image": "/src/assets/susit.png"
       },
       {
         "name": "Sophia Miller",
-        "image": "../../../assets/dummyBoy.jpg"
+        "image": "/src/assets/susit.png"
       },
       {
         "name": "William Smith",
-        "image": "../../../assets/dummyBoy.jpg"
+        "image": "/src/assets/susit.png"
       },
       {
         "name": "Ava Davis",
-        "image": "../../../assets/dummyBoy.jpg"
+        "image": "/src/assets/susit.png"
       },
       {
         "name": "Liam Anderson",
-        "image": "../../../assets/dummyBoy.jpg"
+        "image": "/src/assets/susit.png"
       },
       {
         "name": "Grace Taylor",
-        "image": "../../../assets/dummyBoy.jpg"
+        "image": "/src/assets/susit.png"
       },
       {
         "name": "Ethan Martin",
-        "image": "../../../assets/dummyBoy.jpg"
+        "image": "/src/assets/susit.png"
       },
       {
         "name": "Chloe Moore",
-        "image": "../../../assets/dummyBoy.jpg"
+        "image": "/src/assets/susit.png"
       },
       {
         "name": "James Jackson",
-        "image": "../../../assets/dummyBoy.jpg"
+        "image": "/src/assets/susit.png"
       },
       {
         "name": "Aiden Harris",
-        "image": "../../../assets/dummyBoy.jpg"
+        "image": "/src/assets/susit.png"
       },
       {
         "name": "Mia Thomas",
-        "image": "../../../assets/dummyBoy.jpg"
+        "image": "/src/assets/susit.png"
       }
     ],
     "volunteer_team": [
         {
-            "name": "John Doe",
-            "image": "../../../assets/dummyBoy.jpg"
+            "name": "VJohn Doe",
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "Alice Smith",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "Robert Johnson",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "Sarah Wilson",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "Chris Brown",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "Emma White",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "Michael Davis",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "Olivia Johnson",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "Daniel Lee",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "Sophia Miller",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "William Smith",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "Ava Davis",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "Liam Anderson",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "Grace Taylor",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "Ethan Martin",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "Chloe Moore",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "James Jackson",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "Aiden Harris",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "Mia Thomas",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           }
     ],
     "developer_team": [
         {
-            "name": "John Doe",
-            "image": "../../../assets/dummyBoy.jpg"
+            "name": "DJohn Doe",
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "Alice Smith",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "Robert Johnson",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "Sarah Wilson",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "Chris Brown",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "Emma White",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "Michael Davis",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "Olivia Johnson",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "Daniel Lee",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "Sophia Miller",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "William Smith",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "Ava Davis",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "Liam Anderson",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "Grace Taylor",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "Ethan Martin",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "Chloe Moore",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "James Jackson",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "Aiden Harris",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           },
           {
             "name": "Mia Thomas",
-            "image": "../../../assets/dummyBoy.jpg"
+            "image": "/src/assets/susit.png"
           }
     ]
   }
