@@ -5,6 +5,7 @@ import {
     Input,
     FormErrorMessage,
     Button,
+    Checkbox,
 } from "@chakra-ui/react";
 import Robot from "../../assets/robo.svg"
 import { Formik } from "formik";
@@ -29,23 +30,29 @@ const RegisterPage = () => {
     const onSubmit = (values: any) => {
         console.log(values)
     }
+
+
     const gradient = `radial-gradient(55.06% 120.2% at 43.76% 52.23%, #040E2C 0.47%, rgba(0, 0, 0, 0.8) 100%)`;
     return (
         <Flex bg={gradient} h='100vh'
             justifyContent={'space-between'}
             p={'10% 8%'}>
+
             <Image src={Robot} alt="Robot" height={'100%'} />
             <Formik
                 initialValues={initialValue}
                 validationSchema={validationSchema}
                 onSubmit={onSubmit}
             >
+
                 {(form) => (
                     <form onSubmit={form.handleSubmit} >
                         <Flex w='50vw'>
+
                             <Flex justifyContent={'center'} mb={4} direction={'column'} color={'white'} width='100%'>
                                 <FormControl mt={4} isInvalid={form.errors.name} >
                                     <Input
+                                        background={'#1A1A1A'}
                                         variant='login-input'
                                         {...form.getFieldProps("name")}
                                         type="text"
@@ -93,7 +100,7 @@ const RegisterPage = () => {
                                     />
                                     <FormErrorMessage>{form.errors.confirmPassword}</FormErrorMessage>
                                 </FormControl>
-                                <Button mt={4} colorScheme="teal" type="submit">
+                                <Button mt={4} colorScheme="teal" variant='primary-button' type="submit">
                                     Register
                                 </Button>
                             </Flex>
