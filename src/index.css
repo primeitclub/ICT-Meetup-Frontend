@@ -83,3 +83,63 @@
   font-size: 40px;
  }
 }
+
+
+.Tab_Header {
+    background: linear-gradient(92deg, rgba(44, 132, 236, 0.60) 0.11%, rgba(0, 85, 213, 0.60) 103.68%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-family: Syncopate;
+text-transform: uppercase;
+}
+
+.Tab_Header[aria-selected=true], .Tab_Header[data-selected] {
+    background: white;
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-family: Syncopate;
+text-transform: uppercase;
+}
+
+/* .team_wrap .swiper {
+    width: 100%;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .team_wrap .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    height:270px;   
+   
+  }
+   */
+
+ 
+   .team_wrap .swiper {
+    width: 100%;
+    height:700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .team_wrap .swiper-slide {
+    text-align: center;
+    font-size: 10px;
+    background: #6d6d6d;
+    height: 300px !important;
+    border-radius: 8px ;
+    /* Center slide text vertically */
+    
+  }
+
+  .team_wrap .swiper-pagination-bullet {
+    background: #8D8D8D !important;
+  }
+
+  .team_wrap .swiper-pagination-bullet .swiper-pagination-bullet-active {
+    background: #FFFFFF !important;
+  }
