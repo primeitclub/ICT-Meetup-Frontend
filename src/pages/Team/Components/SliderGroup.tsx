@@ -1,6 +1,6 @@
 import SingleImage from '../../../assets/susit.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Grid, Pagination } from 'swiper/modules';
+import { Autoplay ,Grid, Pagination , Navigation } from 'swiper/modules';
 import { Box } from '@chakra-ui/layout';
 import { Image, Flex } from '@chakra-ui/react';
 import { DataTypeTeam } from '../DataSchema/Data';
@@ -24,7 +24,15 @@ function SliderGroup( { TeamData } : TeamProps ) {
     grid={{
      rows: 2
     }}
+    autoplay={{
+      delay: 2000,
+      disableOnInteraction: false,
+    }}
+    navigation={true}
     breakpoints={{
+      300: {
+        slidesPerView: 2
+       },
      640: {
       slidesPerView: 2
      },
@@ -39,7 +47,7 @@ function SliderGroup( { TeamData } : TeamProps ) {
     pagination={{
      clickable: true
     }}
-    modules={[Grid, Pagination]}
+    modules={[Autoplay,Grid, Pagination]}
     className="mySwiper">
 
 
@@ -52,7 +60,6 @@ function SliderGroup( { TeamData } : TeamProps ) {
     borderTopRightRadius={'8px'}
     h={'100%'}
     w={'100%'}
-    objectPosition={'top right'}
     objectFit={'cover'}
     src={item.image}
    />

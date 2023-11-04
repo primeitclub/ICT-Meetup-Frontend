@@ -135,3 +135,11 @@ text-transform: uppercase;
     /* Center slide text vertically */
     
   }
+
+  .team_wrap .swiper-pagination-bullet {
+    background: #8D8D8D !important;
+  }
+
+  .team_wrap .swiper-pagination-bullet .swiper-pagination-bullet-active {
+    background: #FFFFFF !important;
+  }

@@ -19,17 +19,23 @@ function Team(){
 
 
 
-    <Box className="team_wrap" w={'90%'} m={'auto'}  >
+    <Box className="team_wrap" w={ {lg:'85%',sm:'90%',base:'100%'} } m={'auto'}  >
 
 
-    <TeamHeader headerTitle = 'OrganizeR Team' headerDescription= 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' />
+    <Box className="team_category" pb={'80px'} >
+    <TeamHeader headerTitle = 'OrganizeR Team' headerDescription= 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.dasdas sdadsa asd  ' />
     <SliderGroup TeamData = {team_organizer}  />
+    </Box>
 
-    <TeamHeader headerTitle = 'OrganizeR Team' headerDescription= 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' />
+   <Box className="team_category" pb={'80px'} >
+   <TeamHeader headerTitle = 'Volunteer' headerDescription= 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' />
     <SliderGroup TeamData={ team_volunter } />
+   </Box>
 
-    <TeamHeader headerTitle = 'OrganizeR Team' headerDescription= 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' />
+    <Box className="team_category" pb={'80px'} >
+    <TeamHeader headerTitle = 'Development Team' headerDescription= 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' />
     <SliderGroup TeamData={ team_developer } />
+    </Box>
 
     </Box>
 

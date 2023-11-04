@@ -13,7 +13,7 @@ function TeamHeader( { headerTitle , headerDescription } : HeaderTitleProps ) {
         color:'white' ,
         fontWeight:700,
         letterSpacing:'0.64px',
-        textTransformation:'uppercase',
+        
         fontSize: { lg:'32px',md:'28px',sm:'28px',base:'26px' },
         textAlign:'center' 
 
@@ -21,21 +21,21 @@ function TeamHeader( { headerTitle , headerDescription } : HeaderTitleProps ) {
 
     const FontDescription = {
         fontFamily:"Nunito Sans",
-        fontSize:"18px",
+        fontSize: { lg:'18px',md:'18px',sm:'16px',base:'14px' },
         fontStyle:"normal",
         fontWeight:"400",
-        lineHeight:"0%" ,
-        color:'white'
+        color:'white',
+        textAlign:'center',
     }
 
     return ( <>
     
-       <Flex width={'fit-content'} m={'auto'} direction='column' gap={18} className="Team_header_wrap" mb={55} >
+       <Flex width={'auto'} m={'auto'} direction='column' gap={18} className="Team_header_wrap" pt={'70px'} pb={'55'} >
 
-           <Heading sx={ FontHeader }  as={'h2'} >
+           <Heading sx={ FontHeader } textTransform={'uppercase'} as={'h2'} >
                 { headerTitle }
            </Heading>
-           <Text sx={ FontDescription } >
+           <Text sx={FontDescription} >
             {headerDescription} 
            </Text>
 
