@@ -75,27 +75,21 @@ export const sectionHeaderTheme = {
         },
         "text": {
             color: "white",
-            fontSize: {
-                md: "16px",
-            },
+            fontSize: "16px",
             fontWeight: "700",
             lineHeight: "24px",
             letterSpacing: "2%",
         },
         "small": {
             color: "white",
-            fontSize: {
-                md: "14px",
-            },
+            fontSize: "14px",
             fontWeight: "700",
             lineHeight: "20px",
             letterSpacing: "2%",
         },
         "m-small": {
             color: "white",
-            fontSize: {
-                md: "12px",
-            },
+            fontSize: "12px",
             fontWeight: "700",
             lineHeight: "16px",
             letterSpacing: "4%",

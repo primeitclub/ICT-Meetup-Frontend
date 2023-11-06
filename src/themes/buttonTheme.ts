@@ -14,7 +14,6 @@ export const buttonTheme = {
 
     "outlined-button": {
       padding: "10px 30px",
-      borderRadius: "10px",
       color: "#2C84EC",
       border: "1px solid var(--blue-gradient, #2C84EC)",
       transition: "background 0.3s ease-in-out, transform 0.3s ease-in-out",
