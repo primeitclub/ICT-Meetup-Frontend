@@ -51,7 +51,7 @@ export default function Navbar() {
         >
           {data.map((item, i) => (
             <Link key={i} to={item.link}>
-              <Button variant="nav"> {item.label} </Button>
+              <Button> {item.label} </Button>
             </Link>
           ))}
         </HStack>

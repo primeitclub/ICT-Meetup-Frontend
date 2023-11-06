@@ -1,6 +1,7 @@
 import { extendBaseTheme } from "@chakra-ui/react";
 import { buttonTheme } from "./buttonTheme";
 import { sectionHeaderTheme } from "./headerTheme";
+import { cardTheme } from "./cardTheme";
 
 export const theme = extendBaseTheme({
   fonts: {
@@ -10,5 +11,6 @@ export const theme = extendBaseTheme({
   components: {
     Button: buttonTheme,
     Heading: sectionHeaderTheme,
+    CustomCard: cardTheme
   },
 });
