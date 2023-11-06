@@ -39,6 +39,7 @@ export default function Navbar() {
         justify="space-between"
         textColor={"white"}
         fontFamily={"body"}
+        fontSize={"24px"}
       >
         <Image src={Logo} h="50px" />
         <HStack

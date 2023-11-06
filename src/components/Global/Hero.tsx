@@ -37,7 +37,7 @@ export default function Hero() {
             </Flex>
             <h1 className="meetup-header">MEETUP</h1>
           </Flex>
-          <Text fontFamily="body" color={"white"}>
+          <Text fontFamily="body" color={"white"} fontSize={"24px"}>
             Join us for three days of cutting-edge technology, inspiring
             workshops, exciting competitions and more!
           </Text>

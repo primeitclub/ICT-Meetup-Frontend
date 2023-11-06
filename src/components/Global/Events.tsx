@@ -5,7 +5,6 @@ import {
   Heading,
   Image,
   Box,
-  VStack,
   Text,
   HStack,
 } from "@chakra-ui/react";
@@ -15,7 +14,7 @@ import SectionHeader from "../reusables/SectionHeader";
 const data = [
   "Data Science",
   "Web 3",
-  "NEural Networks",
+  "Neural Networks",
   "Git and Github",
   "Computer Vision",
 ];
@@ -32,18 +31,14 @@ export default function Events() {
             base: "column",
             xl: "row",
           }}
-          gap={{
-            base: "100px",
-            xl: "200px",
-          }}
           justify={"space-between"}
         >
           <Image src={AboutImage} alt="About" />
-          <Flex align={"center"}>
+          <Flex align={"center"} width={"full"} paddingX={"97px"}>
             <Flex
               direction={"column"}
               gap={"48px"}
-              align={"center"}
+              align={"start"}
               width={"full"}
             >
               <Heading
@@ -57,14 +52,19 @@ export default function Events() {
                 WORKSHOPS
               </Heading>
 
-              <VStack spacing={"16px"} fontSize={"24px"} align={"start"}>
+              <Flex
+                direction={"column"}
+                gap={"16px"}
+                fontSize={"24px"}
+                align={"start"}
+              >
                 {data.map((item, i) => (
                   <HStack key={i} color={"white"} spacing={"10px"}>
                     <LuBox />
                     <Text>{item}</Text>
                   </HStack>
                 ))}
-              </VStack>
+              </Flex>
             </Flex>
           </Flex>
 

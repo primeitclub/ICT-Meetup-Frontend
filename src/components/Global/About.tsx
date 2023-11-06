@@ -25,7 +25,10 @@ export default function About() {
           base: "column",
           xl: "row",
         }}
-        alignItems={"center"}
+        alignItems={{
+          base: "center",
+          xl: "end",
+        }}
         justify={"space-between"}
         position={"relative"}
         paddingY={"100px"}
@@ -37,7 +40,7 @@ export default function About() {
             as="h1"
             fontSize={"32px"}
             fontFamily="heading"
-            fontWeight={"bold"}
+            fontWeight={"700"}
             textTransform={"uppercase"}
             color={"white"}
           >
@@ -45,11 +48,21 @@ export default function About() {
             <br /> Sculpting a<br /> Brighter Future.
           </Heading>
 
-          <Text fontSize={"18px"} color={"white"}>
+          <Text
+            fontSize={"18px"}
+            color={"white"}
+            lineHeight={"28px"}
+            letterSpacing={"0.36px"}
+            fontWeight={"500"}
+            fontStyle={"normal"}
+          >
             ICT Meetup v7.0 is an AI-themed event that will change the way you
+            <br />
             think about AI. Through our events you can easily explore a wide
-            range of workshops, sessions, competitions, E-sports games, and a
-            thrilling musical night near the end. Join us fior an unforgettable
+            range
+            <br /> of workshops, sessions, competitions, E-sports games, and a
+            thrilling
+            <br /> musical night near the end. Join us fior an unforgettable
             experience.
           </Text>
 
