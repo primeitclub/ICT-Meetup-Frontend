@@ -1,7 +1,7 @@
-import { Button, Flex } from "@chakra-ui/react";
-import Robot from "../../assets/Robot.png";
-import { Box, Text } from "@chakra-ui/react";
-import { BsArrowRight } from "react-icons/bs";
+import { Button, Flex } from '@chakra-ui/react';
+import Robot from '../../assets/Robot.png';
+import { Box, Text } from '@chakra-ui/react';
+import { BsArrowRight } from 'react-icons/bs';
 export default function Hero() {
   return (
     <>
@@ -42,25 +42,25 @@ export default function Hero() {
             workshops, exciting competitions and more!
           </Text>
 
-          <Button
-            variant={"primary-button"}
-            padding={{
-              base: "10px 30px",
-              lg: "10px 50px",
-            }}
-            width={"fit-content"}
-            rounded={"0"}
-            gap={"2"}
-          >
-            <span>Register Now</span>
-            <BsArrowRight />
-          </Button>
-        </Flex>
+     <Button
+      variant={'primary-button'}
+      padding={{
+       base: '10px 30px',
+       lg: '10px 50px'
+      }}
+      width={'fit-content'}
+      rounded={'0'}
+      gap={'2'}
+     >
+      <span>Register Now</span>
+      <BsArrowRight />
+     </Button>
+    </Flex>
 
-        <Flex>
-          <img src={Robot} alt="gradient" />
-        </Flex>
-      </Box>
-    </>
-  );
+    <Flex>
+     <img src={Robot} alt="gradient" />
+    </Flex>
+   </Box>
+  </>
+ );
 }

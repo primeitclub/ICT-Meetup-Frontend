@@ -1,9 +1,8 @@
 //constans go here
 
-import { TestTypes } from "../types/testTypes";
+import { TestTypes } from '../types/testTypes';
 
-export const testConstants: TestTypes= {
-    name: "test",
-    age: 20
-}
-
+export const testConstants: TestTypes = {
+ name: 'test',
+ age: 20
+};

@@ -1,32 +1,32 @@
-import Logo from "../../assets/mainlogo.png";
-import { Image, Flex, Button, HStack } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import Logo from '../../assets/mainlogo.png';
+import { Image, Flex, Button, HStack } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 
 const data = [
-  {
-    label: "About",
-    link: "/about",
-  },
-  {
-    label: "Events",
-    link: "/events",
-  },
-  {
-    label: "Schedule",
-    link: "/schedule",
-  },
-  {
-    label: "Teams",
-    link: "/teams",
-  },
-  {
-    label: "Gallery",
-    link: "/gallery",
-  },
-  {
-    label: "FAQ",
-    link: "/faq",
-  },
+ {
+  label: 'About',
+  link: '/about'
+ },
+ {
+  label: 'Events',
+  link: '/events'
+ },
+ {
+  label: 'Schedule',
+  link: '/schedule'
+ },
+ {
+  label: 'Teams',
+  link: '/teams'
+ },
+ {
+  label: 'Gallery',
+  link: '/gallery'
+ },
+ {
+  label: 'FAQ',
+  link: '/faq'
+ }
 ];
 
 export default function Navbar() {

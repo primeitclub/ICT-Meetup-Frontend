@@ -1,20 +1,12 @@
-import AboutImage from "../../assets/About.png";
-import {
-  Button,
-  Flex,
-  Heading,
-  Image,
-  VStack,
-  Text,
-  HStack,
-} from "@chakra-ui/react";
-import { LuBox } from "react-icons/lu";
-import SectionHeader from "../reusables/SectionHeader";
+import AboutImage from '../../assets/About.png';
+import { Button, Flex, Heading, Image, VStack, Text, HStack } from '@chakra-ui/react';
+import { LuBox } from 'react-icons/lu';
+import SectionHeader from '../reusables/SectionHeader';
 
 const data = [
-  "Discover cutting-edge technology",
-  "Explore Innovative Projects at the expo",
-  "Compete in thrilling competitions and esports games",
+ 'Discover cutting-edge technology',
+ 'Explore Innovative Projects at the expo',
+ 'Compete in thrilling competitions and esports games'
 ];
 
 export default function About() {
@@ -75,11 +67,11 @@ export default function About() {
             ))}
           </VStack>
 
-          <Button variant="outlined-button" width={"25%"}>
-            <span>Learn More</span>
-          </Button>
-        </Flex>
-      </Flex>
-    </>
-  );
+     <Button variant="outlined-button" width={'25%'}>
+      <span>Learn More</span>
+     </Button>
+    </Flex>
+   </Flex>
+  </>
+ );
 }
