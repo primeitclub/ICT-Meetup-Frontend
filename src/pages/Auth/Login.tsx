@@ -1,22 +1,31 @@
-import { Button, Flex, Heading } from '@chakra-ui/react';
+import { Flex, Box } from '@chakra-ui/react';
+import auth_robot from '../../assets/auth_robot.png';
+import LoginForm from './_components/loginform';
 
 const LoginPage = () => {
  return (
-  <Flex direction={'column'} alignItems={'center'}>
-   <Heading
-    as="h1"
-    fontSize={'4xl'}
-    fontFamily="heading"
-    fontWeight={'bold'}
-    autoCapitalize="true"
-    color={'white'}
-   >
-    Login
-   </Heading>
-   <Button variant={'primary-button'} w="40vw">
-    Button
-   </Button>
-  </Flex>
+  <Box
+   paddingY={{
+    base: '10px',
+    lg: '10px'
+   }}
+   width={'85%'}
+   margin={'auto'}
+   position={'relative'}
+   display={'flex'}
+   justifyContent={'space-between'}
+   alignItems={'center'}
+   flexShrink={0}
+   flexDirection={{
+    base: 'column',
+    lg: 'row'
+   }}>
+   <Flex direction={'column'} w="500px" h="650px" borderRadius="24px">
+    <img src={auth_robot} alt="gradient" />
+   </Flex>
+
+   <LoginForm />
+  </Box>
  );
 };
 
