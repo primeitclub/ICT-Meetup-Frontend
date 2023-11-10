@@ -16,7 +16,7 @@ import {
 } from '@chakra-ui/react';
 import importedData from '../../../data/dataGallery.json';
 import PageTitle from '../../../components/Global/PageTitle';
-import React from 'react';
+import React , { useState } from 'react';
 
 
 interface Images {
@@ -29,6 +29,9 @@ interface DataImages {
 
 function SingleGallery() {
 
+  // state to throw image url 
+  const [imagaeUrl, setImagaeUrl] = useState<string>('')
+
 
   // modal box
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -36,8 +39,12 @@ function SingleGallery() {
 
 // data hadnel
  const { eventName }: any = useParams<{ eventName: string }>();
+
+  
+
  const dataImages: DataImages = importedData;
  const AllImages = dataImages[eventName];
+ 
 
  // image css
  const imageStyle = {
@@ -46,31 +53,36 @@ function SingleGallery() {
  };
 
 
+//  function onClick 
 
+const functioImage = ( getImagePath:string )=>{
 
+  setImagaeUrl(getImagePath);
 
-//  testt
-AllImages.map( (item)=>{
-  console.log(item)
-} )
+  onOpen();    
+
+}
+
 
  return (
   <>
-   <Box className="GalleryPhoto_wrap">
+   <Box minH={'100vh'} className="GalleryPhoto_wrap">
     <PageTitle pageTitle="Gallery" pageDescription={`Some of Glimps of ${eventName}`} />
 
    
       <Modal  finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose}>
         <ModalOverlay sx={ { background: ' rgba(0, 0, 0, 0.8)' } } />
-        <ModalContent   background={'red.400'} height={'100%'} width={'fit-content'} margin={'auto'} >
-          
-          <ModalCloseButton position={'absolute'} right={5} top={5} />
-          <ModalBody height={'90%'} >
-          <Image objectFit={'contain'} onClick={onOpen} height="100%" mb={4} w="100%" src="https://picsum.photos/seed/picsum/700/500" />
-          </ModalBody>
 
-          
+        <ModalContent width={{ lg:'70%',md:'80%',sm:'90%',base:'90%' }} margin={'auto'} >          
+          <ModalBody >
+          <Box height={ {lg:'600px',sm:'500px',base:'100%'} } width={'fit-content'} margin={'auto'} position={'relative'}>
+          <Image objectFit={'contain'} height="100%" w="100%" src={imagaeUrl} />
+          <ModalCloseButton sx={{ background: ' rgba(0, 0, 0, 0.3)'}} p={1} borderRadius={'50%'} color={'white'} position={'absolute'} right={5} top={5} />
+
+          </Box>
+          </ModalBody>          
         </ModalContent>
+
       </Modal>
      
 
@@ -78,7 +90,7 @@ AllImages.map( (item)=>{
      <Box className="all_photos" sx={imageStyle} py={10}>
       {AllImages.map((item) =>
        item ? (
-        <Image _hover={  {cursor:'pointer'} } onClick={onOpen} height="100%" mb={4} w="100%" src={item.imagePath} />
+        <Image _hover={  {cursor:'pointer'} } onClick={ ()=>functioImage( item.imagePath ) } height="100%" mb={4} w="100%" src={item.imagePath} />
        ) : (
         <Box height="100vh" display="flex" alignItems="center" justifyContent="center">
          <Box fontSize={80} color="white">

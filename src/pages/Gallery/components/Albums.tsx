@@ -1,19 +1,24 @@
 import {
  Box,
- Heading,
  Image,
  Flex,
  Text,
- Button,
  chakra,
  shouldForwardProp
 } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
-import cardContainer from '../../../assets/Card Container.svg';
 import ImafeDmo from '../../../assets/susit.png';
-import hovered from '../../../assets/hoverd.svg';
-import { useEffect, useState } from 'react';
 import { motion, isValidMotionProp, Transition } from 'framer-motion';
+
+
+export enum ictVerson {
+
+    ictV4 = "ICT MEETUP V4",
+    ictV5 = "ICT MEETUP V5", 
+    ictV6 = "ICT MEETUP V6", 
+
+}
+
 
 function Albums() {
  const styleAlbum = {
@@ -67,8 +72,11 @@ function Albums() {
     duration: '0.2',
   ease: 'easein',
   type: 'spring',
-  stiffness: 100,
+  stiffness: 240,
  }
+ 
+
+ 
 
  return (
   <>
@@ -82,25 +90,7 @@ function Albums() {
       className="all_albums">
 
       <motion.div
-      whileHover={ { y:-15,transition:hoverTranstion } }
-      whileTap={{ scale: 0.9 }}
-      >
-      <Link to={'ictV4'}>
-       <Box sx={cardAlbum} className="single_card_album">
-        <Flex direction={'column'} gap={5}>
-         <Box sx={styleAlbum} className="single_album_image">
-          <Image height={'100%'} width={'100%'} objectFit={'cover'} src={ImafeDmo} />
-         </Box>
-         <Box className="single_album_text">
-          <Text sx={textAlbum}>ICT MEETUP V4</Text>
-         </Box>
-        </Flex>
-       </Box>
-      </Link>
-      </motion.div>
-
-      <motion.div
-      whileHover={ { y:-15,transition:hoverTranstion } }
+      whileHover={ { y:-30,transition:hoverTranstion } }
       whileTap={{ scale: 0.5 }}
       >
       <Link to={'ictV4'}>
@@ -118,10 +108,28 @@ function Albums() {
       </motion.div>
 
       <motion.div
-      whileHover={ { y:-15,transition:hoverTranstion } }
-      whileTap={{ scale: 0.9 }}
+      whileHover={ { y:-30,transition:hoverTranstion } }
+      whileTap={{ scale: 0.5 }}
       >
-      <Link to={'ictV4'}>
+      <Link to={'ictV5'}>
+       <Box sx={cardAlbum} className="single_card_album">
+        <Flex direction={'column'} gap={5}>
+         <Box sx={styleAlbum} className="single_album_image">
+          <Image height={'100%'} width={'100%'} objectFit={'cover'} src={ImafeDmo} />
+         </Box>
+         <Box className="single_album_text">
+          <Text sx={textAlbum}>ICT MEETUP V4</Text>
+         </Box>
+        </Flex>
+       </Box>
+      </Link>
+      </motion.div>
+
+      <motion.div
+      whileHover={ { y:-30,transition:hoverTranstion } }
+      whileTap={{ scale: 0.5 }}
+      >
+      <Link to={'ictV6'}>
        <Box sx={cardAlbum} className="single_card_album">
         <Flex direction={'column'} gap={5}>
          <Box sx={styleAlbum} className="single_album_image">
@@ -144,18 +152,3 @@ function Albums() {
 
 export default Albums;
 
-{
- /* <Box>
-    <Flex gap={10} direction={'row'} className="album_wrap">
-     <Heading fontSize={30} color={'white'}>
-            <Link to={"ictV4"}>ictV4</Link>
-     </Heading>
-     <Heading fontSize={30} color={'white'}>
-             <Link to={"ictV5"}>ictV5</Link>
-     </Heading>
-     <Heading fontSize={30} color={'white'}>
-              <Link to={"ictV6"}>ictV6</Link>
-     </Heading>
-    </Flex>
-   </Box> */
-}
