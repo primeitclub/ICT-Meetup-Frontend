@@ -1,22 +1,18 @@
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams ,Navigate  } from 'react-router-dom';
 import {
  Heading,
- Text,
  Box,
  Image,
- Button,
  Modal,
  ModalOverlay,
  ModalContent,
- ModalHeader,
- ModalFooter,
  ModalBody,
  ModalCloseButton,
  useDisclosure
 } from '@chakra-ui/react';
 import importedData from '../../../data/dataGallery.json';
 import PageTitle from '../../../components/Global/PageTitle';
-import React , { useState } from 'react';
+import React , { useState, useEffect } from 'react';
 
 
 interface Images {
@@ -28,6 +24,7 @@ interface DataImages {
 }
 
 function SingleGallery() {
+
 
   // state to throw image url 
   const [imagaeUrl, setImagaeUrl] = useState<string>('')
@@ -62,6 +59,19 @@ const functioImage = ( getImagePath:string )=>{
   onOpen();    
 
 }
+
+
+  // check if the current URL is valid, if not, navigate to /gallery
+  const checkUrl = ['/gallery/ictV4', '/gallery/ictV5', '/gallery/ictV6'];
+  const isValid = checkUrl.includes(useLocation().pathname);
+ 
+
+  if (!isValid) {
+    console.log('nope');
+    
+    // don't render the rest of the component
+    return  <Navigate to={'/gallery'} />;
+  }
 
 
  return (
@@ -108,6 +118,4 @@ const functioImage = ( getImagePath:string )=>{
 
 export default SingleGallery;
 
-{
- /* <Image height={'100%'} mb={4} w={'100%'} src={item.imagePath ? item.imagePath : dummyImage} /> */
-}
+

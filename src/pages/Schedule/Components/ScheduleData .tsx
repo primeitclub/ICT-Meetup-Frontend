@@ -11,11 +11,6 @@ interface DataProps {
 function ScheduleData ( { dataScheduleDate }: DataProps) {
 
 
-const [colorBg, setColorBg] = useState('');
-
-Object
-
-
  return (
   <>
    <TabPanel
@@ -86,7 +81,7 @@ Object
          alignItems={'center'}>
          <Text>{item.EventAuthor}</Text>
 
-         {item.EventType === 'Event' ? <Text>Room : {item.EventRoom}</Text> : null}
+         {item.EventType === 'Event' ? <Text> Room : {item.EventRoom}</Text> : null}
         </Flex>
        </Box>
       </Flex>
