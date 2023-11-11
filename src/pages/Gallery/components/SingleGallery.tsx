@@ -12,7 +12,7 @@ import {
 } from '@chakra-ui/react';
 import importedData from '../../../data/dataGallery.json';
 import PageTitle from '../../../components/Global/PageTitle';
-import React , { useState, useEffect } from 'react';
+import React , { useState } from 'react';
 
 
 interface Images {
@@ -41,6 +41,8 @@ function SingleGallery() {
 
  const dataImages: DataImages = importedData;
  const AllImages = dataImages[eventName];
+
+ 
  
 
  // image css
@@ -66,10 +68,7 @@ const functioImage = ( getImagePath:string )=>{
   const isValid = checkUrl.includes(useLocation().pathname);
  
 
-  if (!isValid) {
-    console.log('nope');
-    
-    // don't render the rest of the component
+  if (!isValid) {    
     return  <Navigate to={'/gallery'} />;
   }
 
