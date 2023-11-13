@@ -1,14 +1,13 @@
 import { Flex, Box } from '@chakra-ui/react';
 import auth_robot from '../../assets/auth_robot.png';
 import LoginForm from './_components/loginform';
+import { Show } from '@chakra-ui/react';
 
 const LoginPage = () => {
  return (
   <Box
-   paddingY={{
-    base: '10px',
-    lg: '10px'
-   }}
+   paddingY={'10px'}
+   h={'100vh'}
    width={'85%'}
    margin={'auto'}
    position={'relative'}
@@ -20,9 +19,15 @@ const LoginPage = () => {
     base: 'column',
     lg: 'row'
    }}>
-   <Flex direction={'column'} w="500px" h="650px" borderRadius="24px">
-    <img src={auth_robot} alt="gradient" />
-   </Flex>
+   <Show above="lg">
+    <Flex direction={'column'} w={{ base: '100%', md: '500px' }} h="auto" borderRadius="24px">
+     <img
+      src={auth_robot}
+      alt="gradient"
+      style={{ width: '100%', height: 'auto', borderRadius: '24px' }}
+     />
+    </Flex>
+   </Show>
 
    <LoginForm />
   </Box>

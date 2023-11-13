@@ -1,9 +1,10 @@
 import { Button, Flex, Heading, Box, Text, IconButton } from '@chakra-ui/react';
 import { Input, Stack, InputGroup, InputRightElement } from '@chakra-ui/react';
-import { Checkbox, FormControl, FormLabel } from '@chakra-ui/react';
+import { Checkbox } from '@chakra-ui/react';
 import google from '../../../assets/google.png';
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function LoginForm() {
  const [showPassword, setShowPassword] = useState(false);
@@ -13,38 +14,24 @@ export default function LoginForm() {
  return (
   <>
    <Box
-    paddingY={{
-     base: '50px',
-     lg: '50px'
-    }}
-    padding={{
-     base: '50px',
-     lg: '50px'
-    }}
-    w="600px"
-    h="660px"
-    // flexShrink={0}
+    p={{ base: '20px', lg: '50px' }}
+    w={{ base: '100%', md: '600px', lg: '600px' }}
+    h={'80vh'}
     borderRadius="24px"
     background="rgba(9, 13, 27, 0.50)"
     // background={'red'}
     backdropFilter="blur(20px)">
     <Flex direction={'column'}>
-     <Heading as="h3" fontSize={'32px'} fontFamily="heading" fontWeight={700} color={'white'}>
+     <Heading
+      as="h3"
+      fontSize={{ base: '24px', md: '32px' }}
+      fontFamily="heading"
+      fontWeight={700}
+      color={'white'}>
       Login
      </Heading>
 
-     <Text
-      //   w="644px"
-      //   h="798px"
-      //   flexShrink={0}
-      color={'#D6D6D6'}
-      fontFamily="body"
-      //   fontSize="20px"
-      //   fontStyle="normal"
-      //   fontWeight={400}
-      //   lineHeight="28px"
-      //   letterSpacing="0.4px"
-     >
+     <Text color={'#D6D6D6'} fontFamily="body">
       Log in to your account
      </Text>
 
@@ -91,13 +78,21 @@ export default function LoginForm() {
        </InputGroup>
       </Stack>
 
-      <Flex justifyContent="space-between" alignItems="center" w="100%">
-       <FormControl display="flex" alignItems="center">
+      <Flex
+       direction={{ base: 'column', md: 'row' }}
+       justifyContent={{ base: 'flex-start', md: 'space-between' }}
+       alignItems={'center'}
+       w="100%"
+       gap="12px">
+       {/* <FormControl display="flex" alignItems="center">
         <Box display="flex" alignItems="center" border="1px solid white" p="2" mr="2">
          <Checkbox color="white" defaultChecked />
         </Box>
         <FormLabel color="white">Remember me</FormLabel>
-       </FormControl>
+       </FormControl> */}
+       <Checkbox colorScheme="white" defaultChecked color="#D6D6D6">
+        Remember me
+       </Checkbox>
 
        <Text fontFamily="body" color={'#D6D6D6'}>
         Forgot your password?
@@ -108,29 +103,31 @@ export default function LoginForm() {
        flexDirection="column"
        justifyContent="center"
        alignItems="center"
-       gap={'12px'}>
-       <Button variant={'primary-button'} w="37vw" borderRadius={'none'}>
+       gap={'18px'}>
+       <Button
+        variant={'primary-button'}
+        w={{ base: '100%', md: '27vw' }}
+        minW="27vw"
+        borderRadius={'none'}>
         Login
        </Button>
        <Text fontFamily="body" color={'#D6D6D6'}>
-        Dont have an account? Register Now
+        Dont have an account? <Link to="/register">Register Now</Link>
        </Text>
       </Box>
       <Text
        fontFamily="heading"
        color={'rgba(255, 255, 255, 0.60)'}
-       w="73px"
-       h="36px"
        fontWeight={700}
-       fontSize={'24px'}
-       lineHeight="36px"
+       fontSize={{ base: '16px', md: '24px' }}
+       lineHeight={{ base: '24px', md: '36px' }}
        textTransform="uppercase">
        -OR-
       </Text>
       <Flex justifyContent="space-between" alignItems="center" w="100%" gap="34px">
        <Flex
-        display="inline-flex"
-        padding="8px 16px"
+        padding={{ base: '8px', md: '8px 16px' }}
+        display={{ base: 'flex', md: 'inline-flex' }}
         alignItems="center"
         gap="4px"
         borderRadius="8px"
@@ -143,8 +140,8 @@ export default function LoginForm() {
         </Text>
        </Flex>
        <Flex
-        display="inline-flex"
-        padding="8px 16px"
+        padding={{ base: '8px', md: '8px 16px' }}
+        display={{ base: 'flex', md: 'inline-flex' }}
         alignItems="center"
         gap="4px"
         borderRadius="8px"
