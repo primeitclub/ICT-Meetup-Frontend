@@ -14,8 +14,8 @@ export const buttonTheme = {
 
     "outlined-button": {
       padding: "10px 30px",
-      color: "#2C84EC",
-      border: "1px solid var(--blue-gradient, #2C84EC)",
+      color: "white",
+      border: "2px solid var(--blue-gradient, #2C84EC)",
       transition: "background 0.3s ease-in-out, transform 0.3s ease-in-out",
       _hover: {
         transform: "scale(1.05)", // Scale the button slightly on hover for a smooth effect

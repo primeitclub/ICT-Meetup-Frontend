@@ -4,7 +4,7 @@ import { sectionHeaderTheme } from './headerTheme';
 
 export const theme = extendBaseTheme({
  fonts: {
-  body: 'Nunito Sans, sans-serif',
+  body: 'Darker Grotesque, sans-serif',
   heading: 'Syncopate, sans-serif'
  },
  components: {

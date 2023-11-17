@@ -83,7 +83,7 @@ export const sectionHeaderTheme = {
         "small": {
             color: "white",
             fontSize: "14px",
-            fontWeight: "700",
+            fontWeight: "500",
             lineHeight: "20px",
             letterSpacing: "2%",
         },
