@@ -1,0 +1,47 @@
+{
+    "ictV4": [
+      { "imagePath": "https://picsum.photos/1200/700" },
+      { "imagePath": "https://picsum.photos/1200/900" },
+      { "imagePath": "https://picsum.photos/400/250" },
+      { "imagePath": "https://picsum.photos/750/350" },
+      { "imagePath": "https://picsum.photos/950/550" },
+      { "imagePath": "https://picsum.photos/850/450" },
+      { "imagePath": "https://picsum.photos/720/320" },
+      { "imagePath": "https://picsum.photos/540/280" },
+      { "imagePath": "https://picsum.photos/880/460" },
+      { "imagePath": "https://picsum.photos/480/240" },
+      { "imagePath": "https://picsum.photos/650/310" },
+      { "imagePath": "https://picsum.photos/seed/picsum/700/300" }
+
+    ],
+    "ictV5": [
+      { "imagePath": "https://picsum.photos/1200/900" },
+      { "imagePath": "https://picsum.photos/400/250" },
+      { "imagePath": "https://picsum.photos/750/350" },
+      { "imagePath": "https://picsum.photos/950/550" },
+      { "imagePath": "https://picsum.photos/850/450" },
+      { "imagePath": "https://picsum.photos/720/320" },
+      { "imagePath": "https://picsum.photos/540/280" },
+      { "imagePath": "https://picsum.photos/880/460" },
+      { "imagePath": "https://picsum.photos/480/240" },
+      { "imagePath": "https://picsum.photos/650/310" },
+        { "imagePath": "https://picsum.photos/seed/picsum/480/240" },
+        { "imagePath": "https://picsum.photos/seed/picsum/650/310" }
+    ],
+    "ictV6": [      
+      { "imagePath": "https://picsum.photos/1100/750" },
+      { "imagePath": "https://picsum.photos/750/350" },
+      { "imagePath": "https://picsum.photos/950/550" },
+      { "imagePath": "https://picsum.photos/850/450" },
+      { "imagePath": "https://picsum.photos/720/320" },
+      { "imagePath": "https://picsum.photos/540/280" },
+      { "imagePath": "https://picsum.photos/880/460" },
+      { "imagePath": "https://picsum.photos/1200/900" },
+      { "imagePath": "https://picsum.photos/480/240" },
+      { "imagePath": "https://picsum.photos/650/310" },
+      { "imagePath": "https://picsum.photos/seed/picsum/880/460" },
+      { "imagePath": "https://picsum.photos/seed/picsum/480/240" }
+    ]
+    
+  }
+  
