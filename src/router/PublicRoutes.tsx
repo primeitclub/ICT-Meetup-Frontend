@@ -9,6 +9,7 @@ import Team from '../pages/Team/Team';
 import Gallery from '../pages/Gallery/Gallery';
 import SingleGallery from '../pages/Gallery/components/SingleGallery';
 
+import AboutUs from '../pages/AboutUs/AboutUs';
 
 const PublicRoutes = () => {
  return (
@@ -17,12 +18,13 @@ const PublicRoutes = () => {
     <Route path="/" element={<Home />} />
     <Route path="/login" element={<LoginPage />} />
     <Route path="/register" element={<RegisterPage />} />
-    <Route path="/insideevents" element={<InsideEvents/>}/>
+    <Route path="/insideevents" element={<InsideEvents />} />
     <Route path="/events" element={<EventPage />} />
     <Route path="/schedule" element={<Schedule />} />
     <Route path="/teams" element={<Team />} />
     <Route path="/gallery" element={<Gallery />}></Route>
     <Route path='/gallery/:eventName' element={<SingleGallery/>} />
+    <Route path="/about" element={<AboutUs />}></Route>
    </Routes>
   </>
  );
