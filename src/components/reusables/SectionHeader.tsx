@@ -17,23 +17,20 @@ export default function SectionHeader(props: HeaderProps) {
     position={'absolute'}
     top={props.top}
     right={props.right}
-    left={props.left}
-   >
-    <div
+    left={props.left}>
+    {/* <div
      style={{
       width: '234px',
       height: '2px',
       background: 'white',
       marginRight: '20px'
-     }}
-    ></div>
+     }}></div> */}
     <Heading variant={'section-header'} fontFamily={'heading'}>
      {props.title}
      <span
       style={{
        color: '#E76028'
-      }}
-     >
+      }}>
       .
      </span>
     </Heading>
