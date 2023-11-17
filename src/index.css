@@ -142,6 +142,9 @@
 .speaker_image_wrapper:hover {
  .speaker_name {
   background-color: white;
+  transition: all 0.5s ease-in-out;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
   color: black;
  }
 

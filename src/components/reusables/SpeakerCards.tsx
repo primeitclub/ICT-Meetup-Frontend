@@ -20,10 +20,7 @@ export default function SpeakerCards({
      }}
      borderRadius={'16px'}
      position={'relative'}
-     transition={'all .3s ease-in-out'}
-     _hover={{
-      border: '10px solid white'
-     }}>
+     transition={'all .3s ease-in-out'}>
      <Image
       className="speaker-image"
       h={'100%'}

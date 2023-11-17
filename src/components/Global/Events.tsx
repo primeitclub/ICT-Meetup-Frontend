@@ -17,8 +17,22 @@ export default function Events() {
       xl: 'row'
      }}
      justify={'space-between'}>
-     <Image src={AboutImage} alt="About" />
-     <Flex align={'center'} width={'full'} paddingX={'97px'}>
+     <Image
+      src={AboutImage}
+      alt="About"
+      maxWidth={{
+       base: '100%',
+       md: '50%',
+       xl: '100%'
+      }}
+     />
+     <Flex
+      align={'center'}
+      width={'full'}
+      paddingX={{
+       base: '0',
+       md: '97px'
+      }}>
       <Flex direction={'column'} gap={'48px'} align={'start'} width={'full'}>
        <Heading
         as="h1"
