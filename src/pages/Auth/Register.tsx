@@ -13,7 +13,7 @@ const RegisterPage = () => {
    position={'relative'}
    display={'flex'}
    justifyContent={'space-between'}
-   alignItems={'center'}
+   alignItems={'flex-start'}
    flexShrink={0}
    flexDirection={{
     base: 'column',
