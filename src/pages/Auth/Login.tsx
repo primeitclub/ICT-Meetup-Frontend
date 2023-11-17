@@ -6,8 +6,8 @@ import { Show } from '@chakra-ui/react';
 const LoginPage = () => {
  return (
   <Box
-   paddingY={'10px'}
-   h={'100vh'}
+   paddingY={{ base: '10px', lg: '20px' }}
+   h={{ base: '115vh', md: '100vh', lg: '115vh', xl: '100vh' }}
    width={'85%'}
    margin={'auto'}
    position={'relative'}

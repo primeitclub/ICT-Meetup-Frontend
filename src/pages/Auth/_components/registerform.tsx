@@ -14,9 +14,9 @@ export default function LoginForm() {
  return (
   <>
    <Box
-    p={{ base: '20px', lg: '50px' }}
-    w={{ base: '100%', md: '600px', lg: '600px' }}
-    h={'110vh'}
+    p={{ base: '20px', md: '25px', lg: '50px' }}
+    w={{ base: '100%', md: '700px', lg: '600px' }}
+    h={{ base: '160vh', md: '130vh', lg: '150vh', xl: '110vh' }}
     borderRadius="24px"
     background="rgba(9, 13, 27, 0.50)"
     // background={'red'}
@@ -179,6 +179,7 @@ export default function LoginForm() {
         display={{ base: 'flex', md: 'inline-flex' }}
         alignItems="center"
         gap="4px"
+        flexDirection={{ base: 'column', md: 'row' }}
         borderRadius="8px"
         border="1px solid rgba(255, 255, 255, 0.12)"
         background="#0D0D0D"
@@ -194,6 +195,7 @@ export default function LoginForm() {
         alignItems="center"
         gap="4px"
         borderRadius="8px"
+        flexDirection={{ base: 'column', md: 'row' }}
         border="1px solid rgba(255, 255, 255, 0.12)"
         background="#0D0D0D"
         width="100%">

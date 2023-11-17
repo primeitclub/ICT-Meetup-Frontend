@@ -14,9 +14,9 @@ export default function LoginForm() {
  return (
   <>
    <Box
-    p={{ base: '20px', lg: '50px' }}
-    w={{ base: '100%', md: '600px', lg: '600px' }}
-    h={'80vh'}
+    p={{ base: '20px', md: '25px', lg: '50px' }}
+    w={{ base: '100%', md: '700px', lg: '600px' }}
+    h={{ base: '110vh', md: '90vh', lg: '110vh', xl: '90vh' }}
     borderRadius="24px"
     background="rgba(9, 13, 27, 0.50)"
     // background={'red'}
@@ -83,7 +83,7 @@ export default function LoginForm() {
        justifyContent={{ base: 'flex-start', md: 'space-between' }}
        alignItems={'center'}
        w="100%"
-       gap="12px">
+       gap={{ base: '8px', md: '12px' }}>
        {/* <FormControl display="flex" alignItems="center">
         <Box display="flex" alignItems="center" border="1px solid white" p="2" mr="2">
          <Checkbox color="white" defaultChecked />
@@ -127,12 +127,13 @@ export default function LoginForm() {
       <Flex justifyContent="space-between" alignItems="center" w="100%" gap="34px">
        <Flex
         padding={{ base: '8px', md: '8px 16px' }}
-        display={{ base: 'flex', md: 'inline-flex' }}
+        display={'inline-flex'}
         alignItems="center"
         gap="4px"
         borderRadius="8px"
         border="1px solid rgba(255, 255, 255, 0.12)"
         background="#0D0D0D"
+        flexDirection={{ base: 'column', md: 'row' }}
         width="100%">
         <img src={google} alt="google" />
         <Text fontFamily="body" color={'#D6D6D6'}>
@@ -141,12 +142,13 @@ export default function LoginForm() {
        </Flex>
        <Flex
         padding={{ base: '8px', md: '8px 16px' }}
-        display={{ base: 'flex', md: 'inline-flex' }}
+        display={'inline-flex'}
         alignItems="center"
         gap="4px"
         borderRadius="8px"
         border="1px solid rgba(255, 255, 255, 0.12)"
         background="#0D0D0D"
+        flexDirection={{ base: 'column', md: 'row' }}
         width="100%">
         <img src={google} alt="google" />
         <Text fontFamily="body" color={'#D6D6D6'}>
