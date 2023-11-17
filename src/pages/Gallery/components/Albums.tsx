@@ -2,7 +2,7 @@ import { Box, Image, Flex, Text, chakra, shouldForwardProp } from '@chakra-ui/re
 import { Link } from 'react-router-dom';
 import { motion, isValidMotionProp, Transition } from 'framer-motion';
 import importedData from '../../../data/dataGallery.json';
-import { redirect } from 'react-router-dom';
+
 
 export enum ictVerson {
  ictV4 = 'ICT MEETUP V4',
