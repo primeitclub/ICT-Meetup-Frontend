@@ -30,41 +30,44 @@ const data = [
 ];
 
 export default function Navbar() {
-  return (
-    <header>
-      <Flex
-        w="100%"
-        py="5"
-        align="center"
-        justify="space-between"
-        textColor={"white"}
-        fontFamily={"body"}
-        fontSize={"24px"}
-      >
-        <Image src={Logo} h="50px" />
-        <HStack
-          as="nav"
-          spacing="8"
-          display={{
-            base: "none",
-            lg: "flex",
-          }}
-        >
-          {data.map((item, i) => (
-            <Link key={i} to={item.link}>
-              <Button> {item.label} </Button>
-            </Link>
-          ))}
-        </HStack>
-        <HStack spacing={5}>
-          <Button>
-            <Link to="/login">Login</Link>
-          </Button>
-          <Button>
-            <Link to="/register">Register</Link>
-          </Button>
-        </HStack>
-      </Flex>
-    </header>
-  );
+ return (
+  <header className="navbar">
+   <Flex
+    paddingX={{
+     base: '32px',
+     md: '64px'
+    }}
+    margin={'auto'}
+    w="100%"
+    py="5"
+    align="center"
+    justify="space-between"
+    textColor={'white'}
+    fontFamily={'body'}
+    fontSize={'24px'}>
+    <Image src={Logo} h="50px" />
+    <HStack
+     as="nav"
+     spacing="8"
+     display={{
+      base: 'none',
+      lg: 'flex'
+     }}>
+     {data.map((item, i) => (
+      <Link key={i} to={item.link}>
+       <Button> {item.label} </Button>
+      </Link>
+     ))}
+    </HStack>
+    <HStack spacing={5}>
+     <Button>
+      <Link to="/login">Login</Link>
+     </Button>
+     <Button>
+      <Link to="/register">Register</Link>
+     </Button>
+    </HStack>
+   </Flex>
+  </header>
+ );
 }
