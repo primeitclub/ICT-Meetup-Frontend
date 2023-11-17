@@ -124,7 +124,12 @@ export default function LoginForm() {
        textTransform="uppercase">
        -OR-
       </Text>
-      <Flex justifyContent="space-between" alignItems="center" w="100%" gap="34px">
+      <Flex
+       justifyContent="space-between"
+       alignItems="center"
+       w="100%"
+       gap="34px"
+       flexDirection={{ base: 'column', md: 'row' }}>
        <Flex
         padding={{ base: '8px', md: '8px 16px' }}
         display={'inline-flex'}
@@ -133,7 +138,6 @@ export default function LoginForm() {
         borderRadius="8px"
         border="1px solid rgba(255, 255, 255, 0.12)"
         background="#0D0D0D"
-        flexDirection={{ base: 'column', md: 'row' }}
         width="100%">
         <img src={google} alt="google" />
         <Text fontFamily="body" color={'#D6D6D6'}>
@@ -148,7 +152,6 @@ export default function LoginForm() {
         borderRadius="8px"
         border="1px solid rgba(255, 255, 255, 0.12)"
         background="#0D0D0D"
-        flexDirection={{ base: 'column', md: 'row' }}
         width="100%">
         <img src={google} alt="google" />
         <Text fontFamily="body" color={'#D6D6D6'}>

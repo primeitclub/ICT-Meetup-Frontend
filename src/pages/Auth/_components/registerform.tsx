@@ -173,13 +173,17 @@ export default function LoginForm() {
        textTransform="uppercase">
        -OR-
       </Text>
-      <Flex justifyContent="space-between" alignItems="center" w="100%" gap="34px">
+      <Flex
+       justifyContent="space-between"
+       alignItems="center"
+       w="100%"
+       gap="34px"
+       flexDirection={{ base: 'column', md: 'row' }}>
        <Flex
         padding={{ base: '8px', md: '8px 16px' }}
         display={{ base: 'flex', md: 'inline-flex' }}
         alignItems="center"
         gap="4px"
-        flexDirection={{ base: 'column', md: 'row' }}
         borderRadius="8px"
         border="1px solid rgba(255, 255, 255, 0.12)"
         background="#0D0D0D"
@@ -195,7 +199,6 @@ export default function LoginForm() {
         alignItems="center"
         gap="4px"
         borderRadius="8px"
-        flexDirection={{ base: 'column', md: 'row' }}
         border="1px solid rgba(255, 255, 255, 0.12)"
         background="#0D0D0D"
         width="100%">
