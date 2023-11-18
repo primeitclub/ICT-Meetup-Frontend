@@ -109,11 +109,9 @@ export default function Sponsors() {
   <>
    <Container
     paddingTop={{
-     base: '60px',
-     sm: '80px',
+     base: '40px',
      md: '112px'
-    }}
-    paddingBottom={'100px'}>
+    }}>
     <HomePageTitle pageTitle={'Sponsors'} />
     <Flex direction={'column'} alignItems={'center'} gap={'10'} paddingY={'10'}>
      {sponsorsData.map((sponsor: any, index: number) => {

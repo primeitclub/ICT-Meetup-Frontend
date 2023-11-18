@@ -14,10 +14,12 @@ const Home = () => {
   <>
    <Container
     maxW={{
-     xl: '1440px'
+     xl: '1240px',
+     '2xl': '1440px'
     }}
     paddingX={{
      base: '32px',
+     md: '64px',
      xl: '0px'
     }}
     margin={'auto'}>
@@ -29,10 +31,12 @@ const Home = () => {
    <SneakPeak />
    <Container
     maxW={{
-     xl: '1440px'
+     xl: '1240px',
+     '2xl': '1440px'
     }}
     paddingX={{
      base: '32px',
+     md: '64px',
      xl: '0px'
     }}
     margin={'auto'}>

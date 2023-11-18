@@ -7,7 +7,7 @@ export default function OutlinedButton({ buttonText }: { buttonText: string }) {
     paddingX={'24px'}
     width={{
      base: '100%',
-     sm: '321px'
+     md: '321px'
     }}
     paddingY={'12px'}
     variant={'outlined-button'}>

@@ -18,13 +18,15 @@ export default function SectionHeader(props: HeaderProps) {
     top={props.top}
     right={props.right}
     left={props.left}>
-    {/* <div
+    <div
+     className="section-header-line"
      style={{
-      width: '234px',
+      minWidth: '100px',
+      maxWidth: '234px',
       height: '2px',
       background: 'white',
       marginRight: '20px'
-     }}></div> */}
+     }}></div>
     <Heading variant={'section-header'} fontFamily={'heading'}>
      {props.title}
      <span
