@@ -145,3 +145,11 @@ text-transform: uppercase;
   }
 
  
+  .icon_size_admin {
+    font-size: 18px;
+    
+  }
+
+  .nav_items_admin .active {
+    color: #2C84EC;
+  }

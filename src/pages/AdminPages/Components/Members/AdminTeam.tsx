@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 
-function AdminTeam() {
+function TeamAdmin() {
 
     const {dashboard } = useParams<any>();
 
@@ -13,4 +13,4 @@ function AdminTeam() {
     </> );
 }
 
-export default AdminTeam;
+export default TeamAdmin;

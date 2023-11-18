@@ -1,14 +1,17 @@
-import { Box } from '@chakra-ui/react';
 import MainRoute from './router/MainRoute';
-import Navbar from './components/Global/Navbar';
 import AdminRoute from './router/AdminRoute';
+import { useState } from "react";
 
 function App() {
+
+    const [isAdmin, setAdmin] = useState(true);
+    
  return (
   <>
-   <AdminRoute />
 
-   <MainRoute />
+  {  isAdmin ? ( <AdminRoute /> ) : ( <MainRoute /> )   } 
+
+   
   </>
  );
 }
