@@ -7,7 +7,6 @@ import TeamHeader from "./Components/TeamHeader"
 function Team(){
 
 
-    console.log( TeamData );
 
     const team_developer = TeamData.developer_team;
     const team_organizer = TeamData.organizer_team;
