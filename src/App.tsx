@@ -1,7 +1,8 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Container } from '@chakra-ui/react';
 import MainRoute from './router/MainRoute';
 import Navbar from './components/Global/Navbar';
 import Footer from './components/Global/Footer';
+import MobileMenu from './components/Global/MobileMenu';
 
 function App() {
  return (
@@ -18,6 +19,13 @@ function App() {
     // }}
     margin={'auto'}>
     <Navbar />
+    <Container
+     display={{
+      base: 'flex',
+      lg: 'none'
+     }}>
+     <MobileMenu />
+    </Container>
     <MainRoute />
     <Footer />
    </Box>
