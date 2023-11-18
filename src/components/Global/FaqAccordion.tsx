@@ -44,7 +44,11 @@ const faqData: IFAQData[] = [
 export default function FAQAccordion() {
  return (
   <>
-   <Container paddingY={'80px'}>
+   <Container
+    paddingY={{
+     base: '40px',
+     lg: '80px'
+    }}>
     <HomePageTitle pageTitle={'FAQS'} />
     <Heading as={'h2'} color={'white'} fontSize={'20px'} fontWeight={'100'} textAlign={'center'}>
      Find the answers to common questions about the event, registration and attendance.

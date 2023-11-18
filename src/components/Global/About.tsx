@@ -1,6 +1,7 @@
 import AboutImage from '../../assets/About.png';
-import { Button, Flex, Heading, Image, VStack, Text, HStack } from '@chakra-ui/react';
+import { Flex, Heading, Image, VStack, Text, HStack } from '@chakra-ui/react';
 import SectionHeader from '../reusables/SectionHeader';
+import OutlinedButton from '../ui/OutlinedButton';
 
 const data = [
  'Discover cutting-edge technology',
@@ -14,7 +15,7 @@ export default function About() {
    <Flex
     direction={{
      base: 'column',
-     xl: 'row'
+     lg: 'row'
     }}
     alignItems={{
      base: 'center',
@@ -22,8 +23,16 @@ export default function About() {
     }}
     justify={'space-between'}
     position={'relative'}
-    paddingY={'100px'}>
-    <Image src={AboutImage} alt="About" />
+    paddingY={'112px'}>
+    <Image
+     src={AboutImage}
+     alt="About"
+     maxWidth={{
+      base: '100%',
+      lg: '50%',
+      xl: '100%'
+     }}
+    />
     <Flex
      direction={'column'}
      gap={'48px'}
@@ -49,11 +58,9 @@ export default function About() {
       letterSpacing={'0.36px'}
       fontWeight={'500'}
       fontStyle={'normal'}>
-      ICT Meetup v7.0 is an AI-themed event that will change the way you
-      <br />
-      think about AI. Through our events you can easily explore a wide range
-      <br /> of workshops, sessions, competitions, E-sports games, and a thrilling
-      <br /> musical night near the end. Join us fior an unforgettable experience.
+      ICT Meetup v7.0 is an AI-themed event that will change the way you think about AI. Through our
+      events you can easily explore a wide range of workshops, sessions, competitions, E-sports
+      games, and a thrilling musical night near the end. Join us fior an unforgettable experience.
      </Text>
 
      <VStack gap={'16px'} align={'start'}>
@@ -77,9 +84,7 @@ export default function About() {
       ))}
      </VStack>
 
-     <Button variant="outlined-button" width={'25%'}>
-      <span>Learn More</span>
-     </Button>
+     <OutlinedButton buttonText="Register Now" />
     </Flex>
    </Flex>
   </>

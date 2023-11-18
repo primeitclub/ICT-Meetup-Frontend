@@ -7,14 +7,14 @@ const data = ['Data Science', 'Web 3', 'Neural Networks', 'Git and Github', 'Com
 export default function Events() {
  return (
   <>
-   <Box paddingY={'100px'} position={'relative'}>
+   <Box paddingY={'112px'} position={'relative'}>
     {/* for home page this is a reusable component pass props direction for flex direction and top left for absolute positioning */}
     <SectionHeader title={'Events'} direction="end" top="0" left="0" />
 
     <Flex
      direction={{
       base: 'column',
-      xl: 'row'
+      md: 'row'
      }}
      justify={'space-between'}>
      <Image
@@ -65,17 +65,17 @@ export default function Events() {
       </Flex>
      </Flex>
 
-     <Flex direction={'column'} gap={'48px'} justifyContent={'space-between'} height={'full'}>
-      <Heading
-       as="h1"
-       fontSize={'3xl'}
-       fontFamily="heading"
-       fontWeight={'bold'}
-       autoCapitalize="true"
-       color={'white'}>
-       01
-      </Heading>
-     </Flex>
+     <Heading
+      as="h1"
+      fontSize={'3xl'}
+      fontFamily="heading"
+      fontWeight={'bold'}
+      autoCapitalize="true"
+      color={'white'}
+      position={'absolute'}
+      right={0}>
+      01
+     </Heading>
     </Flex>
     <Button
      display={{
