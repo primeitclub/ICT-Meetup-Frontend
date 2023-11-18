@@ -94,5 +94,12 @@ export const sectionHeaderTheme = {
             lineHeight: "16px",
             letterSpacing: "4%",
         },
+        "normal-text" : {
+            color: "white",
+            fontSize: "16px",
+            fontWeight: "100",
+            lineHeight: "24px",
+            letterSpacing: "2%",
+        }
         }
     }
