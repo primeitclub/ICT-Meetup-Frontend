@@ -1,5 +1,6 @@
-import { Grid, Image, GridItem, Heading, Button, Flex, Container } from '@chakra-ui/react';
+import { Grid, Image, GridItem, Heading, Flex, Container } from '@chakra-ui/react';
 import HomePageTitle from '../reusables/HomePageTitle';
+import OutlinedButton from '../ui/OutlinedButton';
 
 interface IHomePageGlimpsesData {
  images: {
@@ -32,7 +33,11 @@ const homePageGlimpsesData: IHomePageGlimpsesData = {
 export default function HomePageGlimpses() {
  return (
   <>
-   <Container paddingY={'112px'}>
+   <Container
+    paddingY={{
+     base: '40px',
+     lg: '112px'
+    }}>
     <HomePageTitle pageTitle={'Glimpses of the past'} />
     <Heading variant={'h5'} textAlign={'center'}>
      Experience the past editions of the conference
@@ -54,16 +59,7 @@ export default function HomePageGlimpses() {
      ))}
     </Grid>
     <Flex justifyContent={'center'}>
-     <Button
-      paddingX={'24px'}
-      width={{
-       base: '100%',
-       sm: '321px'
-      }}
-      paddingY={'12px'}
-      variant={'outlined-button'}>
-      View Gallery
-     </Button>
+     <OutlinedButton buttonText={'View Gallery'} />
     </Flex>
    </Container>
   </>

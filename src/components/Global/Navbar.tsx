@@ -33,6 +33,10 @@ export default function Navbar() {
  return (
   <header className="navbar">
    <Flex
+    display={{
+     base: 'none',
+     lg: 'flex'
+    }}
     paddingX={{
      base: '32px',
      md: '64px'

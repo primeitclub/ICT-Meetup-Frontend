@@ -14,7 +14,22 @@ export default function JoinUs() {
      objectFit={'cover'}
      height={'full'}
     />
-    <Flex paddingY={'112px'} paddingX={'64px'} gap={'24px'} direction={'column'}>
+    <Flex
+     maxWidth={{
+      base: '100%',
+      md: '100%',
+      xl: '1240px',
+      '2xl': '1440px'
+     }}
+     margin={'auto'}
+     paddingY={'112px'}
+     paddingX={{
+      base: '32px',
+      md: '64px',
+      xl: '0px'
+     }}
+     gap={'24px'}
+     direction={'column'}>
      <Box zIndex={2}>
       <Heading variant={'h5'} fontFamily={'heading'}>
        WHAT ARE YOU WAITING FOR?
@@ -28,7 +43,12 @@ export default function JoinUs() {
       Join us for the most awaited event of the year!
      </Text>
 
-     <Flex gap={4}>
+     <Flex
+      direction={{
+       base: 'column',
+       md: 'row'
+      }}
+      gap={4}>
       <OutlinedButton buttonText={'Register Now'} />
       <OutlinedButton buttonText={'All Events'} />
      </Flex>

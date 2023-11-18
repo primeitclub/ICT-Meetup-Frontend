@@ -6,9 +6,10 @@ export default function Hero() {
  return (
   <>
    <Box
+    zIndex={0}
     // height={"90vh"}
     paddingY={{
-     base: '100px',
+     base: '80px',
      lg: '200px'
     }}
     // width={'90%'}
@@ -55,7 +56,7 @@ export default function Hero() {
     </Flex>
 
     <Flex
-     paddingY={{
+     paddingBottom={{
       base: '20',
       lg: '0'
      }}>
