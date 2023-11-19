@@ -49,6 +49,7 @@ const MyTeam: React.FC = () => {
        flex="1 0 0"
        height="364px"
        width={'100%'}
+       style={{ objectFit: 'cover' }}
       />
       <Box
        position="absolute"
