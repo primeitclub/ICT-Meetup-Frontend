@@ -31,15 +31,24 @@ const data = [
 
 export default function Navbar() {
  return (
-  <header>
+  <header className="navbar">
    <Flex
+    display={{
+     base: 'none',
+     lg: 'flex'
+    }}
+    paddingX={{
+     base: '32px',
+     md: '64px'
+    }}
+    margin={'auto'}
     w="100%"
     py="5"
     align="center"
     justify="space-between"
     textColor={'white'}
     fontFamily={'body'}
-   >
+    fontSize={'24px'}>
     <Image src={Logo} h="50px" />
     <HStack
      as="nav"
@@ -47,11 +56,10 @@ export default function Navbar() {
      display={{
       base: 'none',
       lg: 'flex'
-     }}
-    >
+     }}>
      {data.map((item, i) => (
       <Link key={i} to={item.link}>
-       <Button variant="nav"> {item.label} </Button>
+       <Button> {item.label} </Button>
       </Link>
      ))}
     </HStack>
