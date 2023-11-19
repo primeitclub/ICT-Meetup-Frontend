@@ -217,3 +217,17 @@ image {
 
  background-blend-mode: color, normal, normal;
 }
+
+  .team_wrap .swiper-pagination-bullet .swiper-pagination-bullet-active {
+    background: #FFFFFF !important;
+  }
+
+ 
+  .icon_size_admin {
+    font-size: 18px;
+    
+  }
+
+  .nav_items_admin .active {
+    color: #2C84EC;
+  }
