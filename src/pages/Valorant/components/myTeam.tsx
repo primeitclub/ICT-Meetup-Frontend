@@ -22,7 +22,7 @@ const MyTeam: React.FC = () => {
      width={{ base: '100%', md: '400px', lg: '450px', xl: '400px' }}
      boxSizing="border-box"
      alignItems={'center'}>
-     <Image src="../../../src/assets/Teamlogo.png" alt="Team Logo" boxSize="50px" />
+     <Image src={MyTeamValoData.teamLogo} alt="Team Logo" boxSize="50px" />
      <Box width="4px" height="48px" bg="#0055D5" marginX="4" />
      <Text
       color="#FFF"
@@ -31,7 +31,7 @@ const MyTeam: React.FC = () => {
       fontWeight={'bold'}
       letterSpacing="-2.92px"
       textTransform="uppercase">
-      Prime IT Club
+      {MyTeamValoData.teamName}
      </Text>
     </Box>
    </Flex>
@@ -49,7 +49,6 @@ const MyTeam: React.FC = () => {
        flex="1 0 0"
        height="364px"
        width={'100%'}
-       style={{ objectFit: 'cover' }}
       />
       <Box
        position="absolute"
