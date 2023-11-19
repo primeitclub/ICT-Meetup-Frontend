@@ -1,6 +1,7 @@
 import { extendBaseTheme } from '@chakra-ui/react';
 import { buttonTheme } from './buttonTheme';
 import { sectionHeaderTheme } from './headerTheme';
+import { TableTheme } from './AdminTable';
 
 export const theme = extendBaseTheme({
  fonts: {
@@ -9,6 +10,7 @@ export const theme = extendBaseTheme({
  },
  components: {
   Button: buttonTheme,
-  Heading: sectionHeaderTheme
+  Heading: sectionHeaderTheme,
+  Thead:TableTheme
  }
 });
