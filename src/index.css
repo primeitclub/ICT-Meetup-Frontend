@@ -68,6 +68,7 @@
  white-space: nowrap;
 }
 
+
 @media (max-width: 768px) {
  .hero-title-typography {
   font-size: 3.875rem;

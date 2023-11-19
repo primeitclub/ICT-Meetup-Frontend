@@ -20,16 +20,14 @@ export default function Hero() {
     flexDirection={{
      base: 'column',
      lg: 'row'
-    }}
-   >
+    }}>
     <Flex
      width={{
       base: '100%',
       lg: '50%'
      }}
      direction={'column'}
-     gap={'26px'}
-    >
+     gap={'26px'}>
      <Flex direction={'column'} fontFamily={'heading'}>
       <Flex justifyContent={'space-between'} width={'70%'}>
        <Text className="ict-header">ICT</Text>
@@ -50,8 +48,7 @@ export default function Hero() {
       }}
       width={'fit-content'}
       rounded={'0'}
-      gap={'2'}
-     >
+      gap={'2'}>
       <span>Register Now</span>
       <BsArrowRight />
      </Button>
