@@ -1,0 +1,29 @@
+{
+ "my_team": [
+  {
+   "name": "Person 1",
+   "lead": true,
+   "photo": "/src/assets/susit.png"
+  },
+  {
+   "name": "Person 2",
+   "lead": false,
+   "photo": "/src/assets/speakerimage.jpeg"
+  },
+  {
+   "name": "Person N",
+   "lead": false,
+   "photo": "/src/assets/susit.png"
+  },
+  {
+   "name": "Person N",
+   "lead": false,
+   "photo": "/src/assets/susit.png"
+  },
+  {
+   "name": "Person N",
+   "lead": false,
+   "photo": "/src/assets/speakerimage.jpeg"
+  }
+ ]
+}
