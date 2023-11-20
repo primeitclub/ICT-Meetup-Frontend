@@ -6,19 +6,20 @@ export default function Hero() {
  return (
   <>
    <Box
+    zIndex={0}
     // height={"90vh"}
     paddingY={{
-     base: '100px',
+     base: '80px',
      lg: '200px'
     }}
-    width={'90%'}
+    // width={'90%'}
     margin={'auto'}
     position={'relative'}
     display={'flex'}
     justifyContent={'space-between'}
     alignItems={'center'}
     flexDirection={{
-     base: 'column',
+     base: 'column-reverse',
      lg: 'row'
     }}>
     <Flex
@@ -35,18 +36,18 @@ export default function Hero() {
       </Flex>
       <h1 className="meetup-header">MEETUP</h1>
      </Flex>
-     <Text fontFamily="body" color={'white'}>
+     <Text color={'white'} fontSize={{ sm: '20px', base: '18px' }}>
       Join us for three days of cutting-edge technology, inspiring workshops, exciting competitions
       and more!
      </Text>
 
      <Button
       variant={'primary-button'}
-      padding={{
-       base: '10px 30px',
-       lg: '10px 50px'
+      padding={'12px 24px'}
+      width={{
+       base: '100%',
+       md: 'fit-content'
       }}
-      width={'fit-content'}
       rounded={'0'}
       gap={'2'}>
       <span>Register Now</span>
@@ -54,7 +55,11 @@ export default function Hero() {
      </Button>
     </Flex>
 
-    <Flex>
+    <Flex
+     paddingBottom={{
+      base: '20',
+      lg: '0'
+     }}>
      <img src={Robot} alt="gradient" />
     </Flex>
    </Box>

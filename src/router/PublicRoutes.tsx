@@ -10,6 +10,8 @@ import Team from '../pages/Team/Team';
 import Gallery from '../pages/Gallery/Gallery';
 import SingleGallery from '../pages/Gallery/components/SingleGallery';
 
+import AboutUs from '../pages/AboutUs/AboutUs';
+
 const PublicRoutes = () => {
  return (
   <>
@@ -24,6 +26,7 @@ const PublicRoutes = () => {
     <Route path="/teams" element={<Team />} />
     <Route path="/gallery" element={<Gallery />}></Route>
     <Route path="/gallery/:eventName" element={<SingleGallery />} />
+    <Route path="/about" element={<AboutUs />}></Route>
    </Routes>
   </>
  );
