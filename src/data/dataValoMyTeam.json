@@ -1,5 +1,5 @@
 {
- "teamName": "100 Thieves",
+ "teamName": "Solo Leveling",
  "teamLogo": "/src/assets/Teamlogo.png",
  "my_team": [
   {
@@ -13,14 +13,19 @@
    "photo": "/src/assets/speakerimage.jpeg"
   },
   {
-   "name": "Person N",
+   "name": "Person 3",
+   "lead": false,
+   "photo": "/src/assets/susit.png"
+  },
+  {
+   "name": "Person 4",
    "lead": false,
    "photo": "/src/assets/susit.png"
   },
   {
    "name": "Person N",
    "lead": false,
-   "photo": "/src/assets/susit.png"
+   "photo": "/src/assets/speakerimage.jpeg"
   },
   {
    "name": "Person N",
