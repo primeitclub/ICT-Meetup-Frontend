@@ -1,6 +1,5 @@
 import { Box, Container, Image } from '@chakra-ui/react';
 import PageTitle from '../../components/Global/PageTitle';
-import AboutUsBg from '../../assets/AboutUs/about-us-bg.png';
 import AboutUsSection from './Component/AboutUsSection';
 import AboutBg from "../../assets/AboutUs/aboutBg.png"
 
@@ -51,7 +50,7 @@ export default function AboutUs() {
   <>
    <PageTitle pageTitle="About" pageDescription="What is ICT MEETUP v7.0"></PageTitle>
    <Box
-    backgroundImage={`url(${AboutUsBg})`}
+    backgroundImage={`url(${AboutBg})`}
     width={'100%'}
     height={'605px'}
     backgroundRepeat={'no-repeat'}
@@ -60,7 +59,7 @@ export default function AboutUs() {
     backgroundColor={'lightgray 50%'}
     position={'relative'}>
     <Box position={'absolute'} top={'25%'} left={['15%', '25%']}>
-     <Image src={MainLogo} width={'800px'}></Image>
+     <Image src={LogoPng} width={'800px'}></Image>
     </Box>
    </Box>
    <Container
