@@ -115,8 +115,13 @@ export default function MobileMenu() {
      marginTop={'30%'}
      borderTop={'2px solid #14134C;'}>
      {Navlinks.map((item, i) => (
-      <Box paddingY={'16px'} borderBottom={'2px solid #14134C'} width={'full'} textAlign={'right'}>
-       <Link key={i} to={item.link}>
+      <Box
+       key={i}
+       paddingY={'16px'}
+       borderBottom={'2px solid #14134C'}
+       width={'full'}
+       textAlign={'right'}>
+       <Link to={item.link}>
         <Text color={'white'} fontSize={'24px'} fontWeight={'100'}>
          {item.label}
         </Text>
