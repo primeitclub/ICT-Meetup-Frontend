@@ -1,9 +1,11 @@
 import { Box, Container, Image } from '@chakra-ui/react';
 import PageTitle from '../../components/Global/PageTitle';
 import AboutUsBg from '../../assets/AboutUs/about-us-bg.png';
-import jsondata from '../../data/aboutdata.json';
+// import jsondata from '../../data/aboutdata.json';
 import AboutUsSection from './Component/AboutUsSection';
-import MainLogo from '../../assets/mainlogo.png';
+import AboutBg from "../../assets/AboutUs/aboutBg.png"
+
+import LogoPng from '../../assets/AboutUs/logo.svg'
 
 interface ObjectDataType {
 
@@ -51,16 +53,16 @@ export default function AboutUs() {
    <Container>
     <PageTitle pageTitle="About" pageDescription="What is ICT MEETUP v7.0"></PageTitle>
     <Box
-     backgroundImage={`url(${AboutUsBg})`}
+     background={`url(${AboutBg}),#101010 0% `}
      width={'100%'}
-     height={'605px'}
+     height={ {lg:'605px',sm:'300px',base:'300px'} }
      backgroundRepeat={'no-repeat'}
      backgroundSize="cover"
      backgroundBlendMode={'color-dodge'}
-     backgroundColor={'lightgray 50%'}
+    //  backgroundColor={'lightgray 50%'}
      position={'relative'}>
      <Box position={'absolute'} top={'25%'} left={['15%', '25%']}>
-      <Image src={MainLogo} width={'800px'}></Image>
+        <Image src={LogoPng} width={{xl:'800px',lg:'561px',md:'485px',sm:'380px',base:'280px'}}></Image>
      </Box>
     </Box>
     <Box padding={'5rem 0'}>

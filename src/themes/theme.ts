@@ -1,6 +1,7 @@
 import { extendBaseTheme } from '@chakra-ui/react';
 import { buttonTheme } from './buttonTheme';
 import { sectionHeaderTheme } from './headerTheme';
+import { TableTheme } from './AdminTable';
 
 const breakpoints = {
   base: "0px",

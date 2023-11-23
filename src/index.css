@@ -242,3 +242,37 @@ image {
 .error-input {
  border-bottom: 1px solid red;
 }
+
+.custom-input {
+ background-color: var(--form-background);
+ border-bottom: 1px solid #d9d9d9;
+ width: 100%;
+ padding: 20px;
+ color: white;
+ font-size: 20px;
+}
+
+.custom-input::placeholder {
+ color: #a2a2a2;
+ font-size: 20px;
+}
+
+.custom-input:focus {
+ outline: none;
+}
+
+.error-input {
+ border-bottom: 1px solid red;
+}
+
+.team_wrap .swiper-pagination-bullet .swiper-pagination-bullet-active {
+ background: #ffffff !important;
+}
+
+.icon_size_admin {
+ font-size: 18px;
+}
+
+.nav_items_admin .active {
+ color: #2c84ec;
+}
