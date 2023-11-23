@@ -9,7 +9,11 @@ function ValorantPage() {
    <Box
     sx={{
      width: '100%',
-     padding: { base: '4% 2%', md: '4% 4%' }
+     padding: { base: '4% 2%', md: '4% 4%' },
+     display: 'flex',
+     flexDirection: 'column',
+     alignItems: 'center',
+     justifyContent: 'center'
     }}>
     <Text
      color="#FFF"
