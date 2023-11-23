@@ -22,13 +22,11 @@ function EventForm() {
  });
 
  // onSubmit function
-console.log(errors)
+ console.log(errors);
 
  const onSubmit = (value: AddEventFormValues) => {
-
-   console.log(value);
-
-  }
+  console.log(value);
+ };
 
  return (
   <>
@@ -63,7 +61,37 @@ console.log(errors)
        required={true}
        field={register('category')}
        label="Event Category"
-       options={['Voulneter','Development','Helping Hands']}
+       options={['Voulneter', 'Development', 'Helping Hands']}
+      />
+
+      <InputFieldAdmin
+       key={'venue'}
+       required={true}
+       label="Event Venue"
+       type="text"
+       placeholder="Enter Venue"
+       field={register('venue')}
+       errors={errors.slug}
+      />
+
+      <InputFieldAdmin
+       key={'slug'}
+       required={true}
+       label="Event Reg Link"
+       type="text"
+       placeholder="Enter Registration Link"
+       field={register('registrationLink')}
+       errors={errors.slug}
+      />
+
+      <InputFieldAdmin
+       key={'slug'}
+       required={true}
+       label="Event Description"
+       type="textarea"
+       placeholder="Enter Description"
+       field={register('desciption')}
+       errors={errors.slug}
       />
 
       <Button type="submit">Submit</Button>
