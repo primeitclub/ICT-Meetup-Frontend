@@ -1,104 +1,77 @@
-import { useState } from 'react';
-import { Box, FormControl, FormLabel, Input, Select, Textarea, Button } from '@chakra-ui/react';
+import { useForm } from 'react-hook-form';
+import { FormControl, FormLabel, FormErrorMessage, Input, Button } from '@chakra-ui/react';
+import { z, ZodType } from 'zod';
+
+// Define Zod schema for form validation
+const schema = z.object({
+  name: z.string(),
+  last:z.string(),
+});
+
+// make a requred object to make it easy 
+const validatedData = {
+  name:{
+    required:'your name'
+  },
+
+  last:{
+    required:'your lastname'
+  }
+  
+}
+
+type FormValues = z.infer<typeof schema>;
 
 const EventForm = () => {
-  const [formData, setFormData] = useState({
-    title: '',
-    slug: '',
-    eventCategory: '',
-    description: '',
-    registrationLink: '',
-    venues: '',
-  });
+  const {
+    handleSubmit,
+    register,
+    formState: { errors, isSubmitting },
+  } = useForm<FormValues>({});
 
-  const eventCategories = ['Category 1', 'Category 2', 'Category 3'];
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission or validation here with formData
-    console.log(formData);
+  // function onSubmit
+  const onSubmit = async (values: FormValues) => {
+    try {
+      // Validate the form values using the Zod schema
+      const validatedData = schema.parse(values);
+      console.log('Validated data:', validatedData);
+      // Perform form submission logic here
+    } catch (error) {
+      console.error('Validation error:', error);
+    }
   };
 
   return (
-    <Box maxWidth="400px" margin="0 auto">
-      
-        <FormControl marginBottom="20px">
-          <FormLabel>Title</FormLabel>
-          <Input
-            type="text"
-            name="title"
-            value={formData.title}
-            onChange={handleChange}
-            placeholder="Enter title"
-          />
-        </FormControl>
-        <FormControl marginBottom="20px">
-          <FormLabel>Slug</FormLabel>
-          <Input
-            type="text"
-            name="slug"
-            value={formData.slug}
-            onChange={handleChange}
-            placeholder="Enter slug"
-          />
-        </FormControl>
-        <FormControl marginBottom="20px">
-          <FormLabel>Event Category</FormLabel>
-          <Select
-            name="eventCategory"
-            value={formData.eventCategory}
-            onChange={handleChange}
-            placeholder="Select event category"
-          >
-            {eventCategories.map((category) => (
-              <option key={category} value={category}>
-                {category}
-              </option>
-            ))}
-          </Select>
-        </FormControl>
-        <FormControl marginBottom="20px">
-          <FormLabel>Description</FormLabel>
-          <Textarea
-            name="description"
-            value={formData.description}
-            onChange={handleChange}
-            placeholder="Enter description"
-          />
-        </FormControl>
-        <FormControl marginBottom="20px">
-          <FormLabel>Registration Link</FormLabel>
-          <Input
-            type="text"
-            name="registrationLink"
-            value={formData.registrationLink}
-            onChange={handleChange}
-            placeholder="Enter registration link"
-          />
-        </FormControl>
-        <FormControl marginBottom="20px">
-          <FormLabel>Venues</FormLabel>
-          <Textarea
-            name="venues"
-            value={formData.venues}
-            onChange={handleChange}
-            placeholder="Enter venues"
-          />
-        </FormControl>
-        <Button 
-        colorScheme="blue"
-         type="submit">
-          Submit
-        </Button>
-    </Box>
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <FormControl isInvalid={!!errors.name}>
+        <FormLabel htmlFor='name'>FIRST NAME</FormLabel>
+        <Input
+          id='name'
+          placeholder='Name'
+          {...register('name',validatedData.name)} // No need for additional validation rules here
+        />
+        <FormErrorMessage>
+          {errors.name && errors.name.message}
+        </FormErrorMessage>
+      </FormControl>
+
+      <FormControl isInvalid={!!errors.last}>
+        <FormLabel htmlFor='name'>LAST NAME</FormLabel>
+        <Input
+          id='last'
+          placeholder='last'
+          {...register('last',validatedData.last)} // No need for additional validation rules here
+        />
+        <FormErrorMessage>
+          {errors.last && errors.last.message}
+        </FormErrorMessage>
+      </FormControl>
+
+
+      <Button type='submit' isLoading={isSubmitting} colorScheme='teal'>
+        Submit
+      </Button>
+    </form>
   );
 };
 
