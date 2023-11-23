@@ -42,7 +42,10 @@ export default function About() {
      <SectionHeader title={'About'} top="0" right="0" />
      <Heading
       as="h1"
-      fontSize={'32px'}
+      fontSize={{
+       base: '24px',
+       md: '32px'
+      }}
       fontFamily="heading"
       fontWeight={'700'}
       textTransform={'uppercase'}

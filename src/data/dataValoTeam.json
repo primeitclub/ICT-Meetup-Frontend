@@ -1,0 +1,68 @@
+{
+ "valorant_teams": [
+  {
+   "name": "Prime",
+   "logo": "/src/assets/Teamlogo.png"
+  },
+  {
+   "name": "Prime IT Club",
+   "logo": "/src/assets/Teamlogo.png"
+  },
+  {
+   "name": "Prime College",
+   "logo": "/src/assets/Teamlogo.png"
+  },
+  {
+   "name": "No prime college",
+   "logo": "/src/assets/Teamlogo.png"
+  },
+  {
+   "name": "Not at all Prime College",
+   "logo": "/src/assets/Teamlogo.png"
+  },
+  {
+   "name": "Prime",
+   "logo": "/src/assets/Teamlogo.png"
+  },
+  {
+   "name": "Prime",
+   "logo": "/src/assets/Teamlogo.png"
+  },
+  {
+   "name": "Prime",
+   "logo": "/src/assets/Teamlogo.png"
+  },
+  {
+   "name": "Prime",
+   "logo": "/src/assets/Teamlogo.png"
+  },
+  {
+   "name": "Prime",
+   "logo": "/src/assets/Teamlogo.png"
+  },
+  {
+   "name": "Prime",
+   "logo": "/src/assets/Teamlogo.png"
+  },
+  {
+   "name": "Prime",
+   "logo": "/src/assets/Teamlogo.png"
+  },
+  {
+   "name": "Prime",
+   "logo": "/src/assets/Teamlogo.png"
+  },
+  {
+   "name": "Prime",
+   "logo": "/src/assets/Teamlogo.png"
+  },
+  {
+   "name": "Prime",
+   "logo": "/src/assets/Teamlogo.png"
+  },
+  {
+   "name": "Prime",
+   "logo": "/src/assets/Teamlogo.png"
+  }
+ ]
+}
