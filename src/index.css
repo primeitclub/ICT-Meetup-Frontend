@@ -14,6 +14,16 @@
  width: 10px;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+ color: white !important;
+ -webkit-text-fill-color: white !important;
+ background-color: transparent !important;
+ -webkit-box-shadow: 0 0 0 30px rgb(9, 13, 27) inset !important;
+}
+
 /* Track */
 ::-webkit-scrollbar-track {
  background: #040e2c;
