@@ -28,7 +28,7 @@ export default function LoginForm() {
       fontFamily="heading"
       fontWeight={700}
       color={'white'}>
-      Login
+      LOGIN
      </Heading>
 
      <Text color={'#D6D6D6'} fontFamily="body">
