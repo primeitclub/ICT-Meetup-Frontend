@@ -21,5 +21,6 @@ export const buttonTheme = {
         transform: "scale(1.05)", // Scale the button slightly on hover for a smooth effect
       },
     },
+    
   },
 };

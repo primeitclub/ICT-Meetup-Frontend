@@ -4,7 +4,7 @@ import { useState } from "react";
 
 function App() {
 
-    const [isAdmin, setAdmin] = useState(false);
+    const [isAdmin, setAdmin] = useState(true);
     
  return (
   <>
