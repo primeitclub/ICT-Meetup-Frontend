@@ -14,7 +14,7 @@ const Home = () => {
   <>
    <Container
     maxW={{
-     xl: '1240px',
+     xl: '1100px',
      '2xl': '1440px'
     }}
     paddingX={{
@@ -31,7 +31,7 @@ const Home = () => {
    <SneakPeak />
    <Container
     maxW={{
-     xl: '1240px',
+     xl: '1100px',
      '2xl': '1440px'
     }}
     paddingX={{
