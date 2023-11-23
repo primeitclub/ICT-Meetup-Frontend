@@ -466,7 +466,7 @@
     "@chakra-ui/react-use-safe-layout-effect" "2.1.0"
     "@chakra-ui/shared-utils" "2.0.5"
 
-"@chakra-ui/input@2.1.1", "@chakra-ui/input@^2.1.1":
+"@chakra-ui/input@2.1.1":
   version "2.1.1"
   resolved "https://registry.npmjs.org/@chakra-ui/input/-/input-2.1.1.tgz"
   integrity sha512-RQYzQ/qcak3eCuCfvSqc1kEFx0sCcnIeiSi7i0r70CeBnAUK/CP1/4Uz849FpKz81K4z2SikC9MkHPQd8ZpOwg==
@@ -1343,10 +1343,10 @@
   resolved "https://registry.yarnpkg.com/@hookform/resolvers/-/resolvers-3.3.2.tgz#5c40f06fe8137390b071d961c66d27ee8f76f3bc"
   integrity sha512-Tw+GGPnBp+5DOsSg4ek3LCPgkBOuOgS5DsDV7qsWNH9LZc433kgsWICjlsh2J9p04H2K66hsXPPb9qn9ILdUtA==
 
-"@humanwhocodes/config-array@^0.11.10":
-  version "0.11.11"
-  resolved "https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.11.11.tgz"
-  integrity sha512-N2brEuAadi0CcdeMXUkhbZB84eskAc8MEX1By6qEchoVywSgXPIjou4rYsl0V3Hj0ZnuGycGCjdNgockbzeWNA==
+"@humanwhocodes/config-array@^0.11.13":
+  version "0.11.13"
+  resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.11.13.tgz#075dc9684f40a531d9b26b0822153c1e832ee297"
+  integrity sha512-JSBDMiDKSzQVngfRjOdFXgFfklaXI4K9nLF49Auh21lmBWRLIK3+xTErTWD4KU54pb6coM6ESE7Awz/FNU3zgQ==
   dependencies:
     "@humanwhocodes/object-schema" "^2.0.1"
     debug "^4.1.1"
