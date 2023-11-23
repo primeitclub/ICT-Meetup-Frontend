@@ -3,6 +3,8 @@ import PrivateRoutes from './PrivateRoutes';
 import PublicRoutes from './PublicRoutes';
 import Navbar from '../components/Global/Navbar';
 import { Box } from '@chakra-ui/react';
+import Footer from '../components/Global/Footer';
+import MobileMenu from '../components/Global/MobileMenu';
 
 const MainRoute = () => {
  // check for auth status if user is logged in and show private/public routes accordingly
@@ -23,9 +25,11 @@ const MainRoute = () => {
      //  }}
      margin={'auto'}>
      <Navbar />
+     <MobileMenu />
      {/* make conditionals for private and public routing according to the auth status */}
      {isAuth && <PrivateRoutes />}
      {!isAuth && <PublicRoutes />}
+     <Footer />
     </Box>
    </Box>
   </>

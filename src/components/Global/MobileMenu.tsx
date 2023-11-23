@@ -54,6 +54,7 @@ export default function MobileMenu() {
  return (
   <>
    <Box
+    display={{ base: 'block', lg: 'none' }}
     width={'full'}
     paddingX={{
      base: '32px',

@@ -12,6 +12,16 @@ export const buttonTheme = {
    }
   },
 
+  'disabled-button': {
+    background: 'gray',
+    padding: '10px 30px',
+    borderRadius: '10px',
+    color: 'white',
+    transition: 'background 0.3s ease-in-out, transform 0.3s ease-in-out',
+    _hover: {
+    }
+    },
+
     "outlined-button": {
       padding: "10px 30px",
       color: "white",

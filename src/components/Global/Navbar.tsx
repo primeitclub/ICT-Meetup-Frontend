@@ -22,10 +22,6 @@ const data = [
  {
   label: 'Gallery',
   link: '/gallery'
- },
- {
-  label: 'FAQ',
-  link: '/faq'
  }
 ];
 

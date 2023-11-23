@@ -1,11 +1,20 @@
 import { Box, Container, Flex, Heading, Text, Image } from '@chakra-ui/react';
 import Cubes from '../../assets/cubes.jpg';
 import OutlinedButton from '../ui/OutlinedButton';
+import PrimaryButton from '../ui/PrimaryButton';
 
 export default function JoinUs() {
  return (
   <>
    <Container position={'relative'}>
+    <Box
+     position={'absolute'}
+     width={'full'}
+     height={'full'}
+     bg={'black'}
+     opacity={0.4}
+     zIndex={1}
+    />
     <Image
      src={Cubes}
      position={'absolute'}
@@ -48,8 +57,9 @@ export default function JoinUs() {
        base: 'column',
        md: 'row'
       }}
-      gap={4}>
-      <OutlinedButton buttonText={'Register Now'} />
+      gap={4}
+      zIndex={2}>
+      <PrimaryButton buttonText={'Register Now'} />
       <OutlinedButton buttonText={'All Events'} />
      </Flex>
     </Flex>

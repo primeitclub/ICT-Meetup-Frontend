@@ -1,5 +1,6 @@
 import { Flex, Text, Image, Box } from '@chakra-ui/react';
 import { memo } from 'react';
+import NotFound from '../../assets/notfound.png';
 
 interface FormProps {
  register?: any;
@@ -77,7 +78,7 @@ function FileInput(props: FormProps) {
         </svg>
         <Text marginBottom={'2'} fontSize={'20px'}>
          <>
-          {props.watch?.[props.registerName]?.[0] ? (
+          {props.watch?.length > 0 ? (
            <Text textColor={'green'}>Uploaded!</Text>
           ) : (
            <Text fontSize={'16px'} align={'center'} color={'gray'}>
@@ -118,7 +119,7 @@ function FileInput(props: FormProps) {
        base: '100%',
        md: '50%'
       }}
-      border={'2px dashed var(--input-border)'}
+      border={'2px dashed gray'}
       borderRadius={'md'}
       direction={'column'}
       height={'200px'}>
@@ -126,11 +127,7 @@ function FileInput(props: FormProps) {
        <Image
         height={'100%'}
         width={'100%'}
-        src={
-         props.watch?.length > 0
-          ? URL.createObjectURL(props.watch?.[0])
-          : 'https://via.placeholder.com/720'
-        }
+        src={props.watch?.length > 0 ? URL.createObjectURL(props.watch?.[0]) : NotFound}
         alt={'Preview'}
        />
       </Flex>
