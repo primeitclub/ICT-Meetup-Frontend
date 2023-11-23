@@ -18,7 +18,7 @@ export default function JoinUs() {
      maxWidth={{
       base: '100%',
       md: '100%',
-      xl: '1240px',
+      xl: '1100px',
       '2xl': '1440px'
      }}
      margin={'auto'}

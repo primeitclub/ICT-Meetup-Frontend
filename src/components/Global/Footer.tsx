@@ -22,7 +22,7 @@ export default function Footer() {
      xl: '0px'
     }}
     maxW={{
-     xl: '1240px',
+     xl: '1100px',
      '2xl': '1440px'
     }}
     margin={'auto'}>
