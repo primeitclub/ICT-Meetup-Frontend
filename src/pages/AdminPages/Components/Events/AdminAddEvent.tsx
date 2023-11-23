@@ -1,78 +1,77 @@
+import { Box } from '@chakra-ui/layout';
 import { useForm } from 'react-hook-form';
-import { FormControl, FormLabel, FormErrorMessage, Input, Button } from '@chakra-ui/react';
-import { z, ZodType } from 'zod';
+import InputFieldAdmin from '../AdminInputFiled';
 
-// Define Zod schema for form validation
-const schema = z.object({
-  name: z.string(),
-  last:z.string(),
-});
+// form schemda
+import { AddEventFormValues } from '../../DataSchemas/AddEventSchema';
+import { addEventSchema } from '../../DataSchemas/AddEventSchema';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { FormControl, FormLabel } from '@chakra-ui/form-control';
+import { Button } from '@chakra-ui/button';
 
-// make a requred object to make it easy 
-const validatedData = {
-  name:{
-    required:'your name'
-  },
+// demo select
+import SelectInput from '../AdminSelectInput';
 
-  last:{
-    required:'your lastname'
+function EventForm() {
+ const {
+  handleSubmit,
+  register,
+  formState: { errors }
+ } = useForm<AddEventFormValues>({
+  resolver: zodResolver(addEventSchema)
+ });
+
+ // onSubmit function
+console.log(errors)
+
+ const onSubmit = (value: AddEventFormValues) => {
+
+   console.log(value);
+
   }
-  
+
+ return (
+  <>
+   <Box className="event_form">
+    <Box className="Form_heaing">Add Event</Box>
+
+    <Box bg={'white'} px={10} py={10} className="form_wrap">
+     <form onSubmit={handleSubmit(onSubmit)}>
+      <InputFieldAdmin
+       key={'name'}
+       required={true}
+       label="Event Name"
+       type="text"
+       placeholder="Enter Event Title"
+       field={register('title')}
+       errors={errors.title}
+      />
+
+      <InputFieldAdmin
+       key={'slug'}
+       required={true}
+       label="Event Slug"
+       type="text"
+       placeholder="Enter Event Slug"
+       field={register('slug')}
+       errors={errors.slug}
+      />
+
+      <SelectInput
+       key={'event'}
+       errors={errors.category}
+       required={true}
+       field={register('category')}
+       label="Event Category"
+       options={['Voulneter','Development','Helping Hands']}
+      />
+
+      <Button type="submit">Submit</Button>
+     </form>
+    </Box>
+   </Box>
+  </>
+ );
 }
-
-type FormValues = z.infer<typeof schema>;
-
-const EventForm = () => {
-  const {
-    handleSubmit,
-    register,
-    formState: { errors, isSubmitting },
-  } = useForm<FormValues>({});
-
-  // function onSubmit
-  const onSubmit = async (values: FormValues) => {
-    try {
-      // Validate the form values using the Zod schema
-      const validatedData = schema.parse(values);
-      console.log('Validated data:', validatedData);
-      // Perform form submission logic here
-    } catch (error) {
-      console.error('Validation error:', error);
-    }
-  };
-
-  return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <FormControl isInvalid={!!errors.name}>
-        <FormLabel htmlFor='name'>FIRST NAME</FormLabel>
-        <Input
-          id='name'
-          placeholder='Name'
-          {...register('name',validatedData.name)} // No need for additional validation rules here
-        />
-        <FormErrorMessage>
-          {errors.name && errors.name.message}
-        </FormErrorMessage>
-      </FormControl>
-
-      <FormControl isInvalid={!!errors.last}>
-        <FormLabel htmlFor='name'>LAST NAME</FormLabel>
-        <Input
-          id='last'
-          placeholder='last'
-          {...register('last',validatedData.last)} // No need for additional validation rules here
-        />
-        <FormErrorMessage>
-          {errors.last && errors.last.message}
-        </FormErrorMessage>
-      </FormControl>
-
-
-      <Button type='submit' isLoading={isSubmitting} colorScheme='teal'>
-        Submit
-      </Button>
-    </form>
-  );
-};
 
 export default EventForm;
