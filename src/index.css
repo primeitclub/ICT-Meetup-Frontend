@@ -262,22 +262,30 @@ image {
 
 
 /* admin */
-.custom-input-admin {
+.custom-input-admin ,  .select_input_admin select{
   background-color: transparent;
   border-bottom: 2px solid #040D2A;
   width: 100%;
   padding: 12px 0px;
   color: #575757;
   text-transform: capitalize;
-  font-size: 18px;
+  font-size: 16px;
  }
  
- .custom-input-admin::placeholder {
+ .custom-input-admin::placeholder  {
   color: #a2a2a2;
-  font-size: 18px;
+  font-size: 16px;
  }
  
  .custom-input-admin:focus {
   outline: none;
  }
+ 
+ .text-area-admin{
+  border: 2px solid #252525;
+  border-radius: 10px;
+  min-height: 150px !important;
+  margin-top: 10px;
+  padding-left:10px ;
+}
 

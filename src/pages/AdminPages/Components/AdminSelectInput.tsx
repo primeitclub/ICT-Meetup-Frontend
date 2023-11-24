@@ -15,14 +15,14 @@ interface SelectInput {
 function SelectInput( {label , options , required , field , errors} : SelectInput ) {
  return (
   <>
-   <Box className="select_input">
+   <Box className="select_input_admin">
    <FormLabel htmlFor="Select">
     {
      <Box
       display={'flex'}
       textColor={'#A2A2A2'}
       fontFamily={'body'}
-      fontSize={'18px'}
+      fontSize={'16px'}
       fontStyle={'normal'}
       fontWeight={'100'}
       color={'#252525'}
@@ -39,7 +39,7 @@ function SelectInput( {label , options , required , field , errors} : SelectInpu
     }
    </FormLabel>
 
-    <Select 
+    <select        
     {...field}
     onChange={ (e)=>{
         const valueChange = e.target.value;
@@ -48,10 +48,12 @@ function SelectInput( {label , options , required , field , errors} : SelectInpu
         }
     } }
     placeholder="Select option">
+
+        <option style={{color:'#a2a2a2'}} value="">Select an option</option>
         {options?.map( (item:any)=>(
             <option value="option1">{item}</option>
         ) )}   
-    </Select>
+    </select>
 
     {
     <Text
