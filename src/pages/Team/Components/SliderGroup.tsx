@@ -32,7 +32,7 @@ function SliderGroup({ TeamData }: TeamProps) {
      640: {
       slidesPerView: 2
      },
-     1000: {
+     1100: {
       slidesPerView: 3
      },
      1300: {
