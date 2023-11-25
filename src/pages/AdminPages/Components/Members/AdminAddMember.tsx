@@ -54,40 +54,16 @@ function AdminAddMember() {
       key={'name'}
      />
 
-     <Flex justifyContent={'space-between'}>
-      <Box width={'30%'}>
-       <SelectInput
-        label="Batch"
-        errors={errors.batch}
-        field={register('batch')}
-        required={true}
-        key={'batch'}
-        options={['2004', '2005']}
-       />
-      </Box>
+     
 
-      <Box width={'30%'}>
        <SelectInput
-        label="Batch"
+        label="Category"
         errors={errors.batch}
         field={register('batch')}
         required={true}
         key={'batch'}
-        options={['2004', '2005']}
+        options={['OrganizeR Team', 'Volunteer','Development Team']}
        />
-      </Box>
-
-      <Box width={'30%'}>
-       <SelectInput
-        label="Batch"
-        errors={errors.batch}
-        field={register('batch')}
-        required={true}
-        key={'batch'}
-        options={['2004', '2005']}
-       />
-      </Box>
-     </Flex>
 
      <AdminFile
       label="file"
