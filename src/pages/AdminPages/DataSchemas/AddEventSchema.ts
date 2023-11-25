@@ -8,8 +8,8 @@ const urlCheck = ( str:string )=>{
 }
 
 // image size and type 
-const Image_Type = [ 'image/jpeg','image/jpg','image/png','image/svg'] ;
-const Max_Image_Size = 5000000;
+const ACCEPTED_IMAGE_TYPES = [ 'image/jpeg','image/jpg','image/png','image/svg'] ;
+const MAX_FILE_SIZE = 5000000;
 
 
 export const addEventSchema = z.object({
@@ -21,11 +21,14 @@ export const addEventSchema = z.object({
   venue:z.string(), 
   eventDate:z.string(),
 
-  eventThumbnail:z.any().refine( 
-    (files)=>{ Image_Type.includes(files?.[0]?.type) } ,"Only .jpg, .jpeg, .png and .webp formats are supported."
-   ).refine(
-    (files)=>{ files?.[0].size < Max_Image_Size } ,"Max image size is 5MB."
-   ),
+  eventThumbnail:z.any()
+  .refine(
+    (files)=> files.length > 0 ,"Please upload an image"
+    )
+  .refine(
+      (files) => ACCEPTED_IMAGE_TYPES.includes(files?.[0]?.type),
+      "Only .jpg, .jpeg, .png and .webp formats are supported."
+    ).refine((files) => files?.[0]?.size < MAX_FILE_SIZE, `Max image size is 5MB.`),
 
   startTime:z.any()
 });

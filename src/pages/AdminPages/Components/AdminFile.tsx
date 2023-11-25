@@ -12,7 +12,7 @@ interface FormProps {
 function FileInput(props: FormProps) {
  return (
   <>
-   <Box height={'100%'} >
+   <Box height={'100%'}>
     <Flex justify={'space-between'} marginY={'5'}>
      <label>
       <Text
@@ -130,7 +130,7 @@ function FileInput(props: FormProps) {
         src={
          props.watch?.length > 0
           ? URL.createObjectURL(props.watch?.[0])
-          : ''
+          : 'https://placehold.co/600x400'
         }
         alt={'upload a image'}
        />

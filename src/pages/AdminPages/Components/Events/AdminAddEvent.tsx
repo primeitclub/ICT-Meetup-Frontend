@@ -1,7 +1,7 @@
 import { Box, Flex } from '@chakra-ui/layout';
 import { useForm } from 'react-hook-form';
 import InputFieldAdmin from '../AdminInputFill';
-import {useState} from "react";
+import { useEffect, useState } from 'react';
 // form schemda
 import { AddEventFormValues } from '../../DataSchemas/AddEventSchema';
 import { addEventSchema } from '../../DataSchemas/AddEventSchema';
@@ -14,16 +14,15 @@ import SelectInput from '../AdminSelectInput';
 import AdminFile from '../AdminFile';
 
 function EventForm() {
-
-
-    // state to copy from slug 
-    const [slug, setSlug] = useState<any>("");
-
+ // state to copy from slug
+ //  const [slug, setSlug] = useState<any>('');
 
  const {
   handleSubmit,
   register,
   watch,
+  setValue,
+  getValues,
   formState: { errors }
  } = useForm<AddEventFormValues>({
   resolver: zodResolver(addEventSchema)
@@ -31,14 +30,29 @@ function EventForm() {
 
  // onSubmit function
 
+ function slugify(title: string): string {
+  // Convert the title to lowercase and replace spaces with hyphens
+  const slug = title.toLowerCase().replace(/\s+/g, '-');
+
+  // Remove special characters and non-alphanumeric characters
+  const cleanedSlug = slug.replace(/[^\w-]+/g, '');
+
+  return cleanedSlug;
+ }
+
  const onSubmit = (value: AddEventFormValues) => {
   console.log(value);
  };
 
  const watchFields = watch();
 
+ console.log(errors);
 
-console.log(slug);
+ useEffect(() => {
+  if (watchFields.title) {
+   setValue('slug', slugify(watchFields.title));
+  }
+ }, [getValues('title')]);
 
  return (
   <>
@@ -50,7 +64,7 @@ console.log(slug);
       textTransform: 'uppercase',
       fontWeight: 600,
       marginBottom: 8,
-      paddingLeft: 5,      
+      paddingLeft: 5
      }}>
      Add Event
     </Box>
@@ -63,9 +77,7 @@ console.log(slug);
      className="form_wrap">
      <form onSubmit={handleSubmit(onSubmit)}>
       <Flex direction={'column'} gap={6}>
-
        <InputFieldAdmin
-        setSlug={setSlug}
         key={'name'}
         required={true}
         label="Event Name"
@@ -73,7 +85,7 @@ console.log(slug);
         placeholder="Enter Event Title"
         field={register('title')}
         errors={errors.title}
-       />       
+       />
 
        <InputFieldAdmin
         key={'slug'}
@@ -130,7 +142,7 @@ console.log(slug);
         label="Event Date"
         type="date"
         placeholder="Event Date"
-        field={register('eventDate' , {required:"please enter a date"})}
+        field={register('eventDate', { required: 'please enter a date' })}
         errors={errors.eventDate}
        />
 
@@ -140,26 +152,24 @@ console.log(slug);
         label="Start At"
         type="time"
         placeholder="Event Time"
-        field={register('startTime' , {required:"please enter a time"})}
+        field={register('startTime', { required: 'please enter a time' })}
         errors={errors.startTime}
        />
 
        <AdminFile
-       errors={errors.eventThumbnail}
-       registerName='eventThumbnail'
-       label='eventThumbnail'
-       key={'file upload'}
-       register={register}
-       watch={watchFields.eventThumbnail}
+        errors={errors.eventThumbnail}
+        registerName="eventThumbnail"
+        label="eventThumbnail"
+        key={'file upload'}
+        register={register}
+        watch={watchFields.eventThumbnail}
        />
-
-
 
        <Button
         type="submit"
         bg={'blue.300'}
         transition={'0.1s ease-in'}
-        _hover={{ bg: 'blue.700' ,color:'white'}}
+        _hover={{ bg: 'blue.700', color: 'white' }}
         py={4}
         borderRadius={10}>
         Submit
