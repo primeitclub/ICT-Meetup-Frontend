@@ -51,7 +51,7 @@ const AdminAllList = ({ dataList, title, addLink, tableHeaders, RowComponent }) 
         </Button>
       </Flex>
       <GenericTable>
-        <Thead textTransform={'uppercase'} fontSize={'0.75rem'} lineHeight={'1rem'}>
+        <Thead textTransform={'uppercase'} fontSize={'0.75rem'} lineHeight={'1rem'} textAlign={'left'}>
           <Tr opacity={'0.6'}>
             {tableHeaders.map((header, index) => (
               <Th key={index} px={'4'} py={'3'}>

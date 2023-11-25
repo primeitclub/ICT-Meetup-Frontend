@@ -11,7 +11,7 @@ interface EventData {
  eventStatus: string;
 }
 
-const tableHeadersForEvents = ['Title', 'Category', 'Speakers', 'Date', 'Time', 'Status','Seats','Actions'];
+const tableHeadersForEvents = ['Title', 'Category', 'Speakers', 'Date', 'Time','Seats','Actions'];
 
 function AdminAllEvent() {
  const allEventData: EventData[] = dataJson;
