@@ -46,7 +46,7 @@ const EventRow = ({ item }) => {
   const statusStyle = statusStyles[item.eventStatus] || {};
 
   return (
-    <Tr borderBottom={'1px solid #f2f2f2'} color={'gray.600'}>
+    <Tr borderBottom={'1px solid #f2f2f2'} color={'gray.600'} fontSize={'0.99rem'}>
       <Td p={4} borderStyle={'solid'}>
         {item.eventTitle}
       </Td>
@@ -56,6 +56,7 @@ const EventRow = ({ item }) => {
       <Td p={4}>{item.eventSpeaker}</Td>
       <Td p={4}>{item.eventDate}</Td>
       <Td p={4}>{item.eventTime}</Td>
+      <Td p={4}>{item.eventSeat}</Td>
       <Td p={4}>
         <Text sx={{ ...statusStyle }}>{item.eventStatus}</Text>
       </Td>

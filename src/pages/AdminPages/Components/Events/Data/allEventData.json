@@ -5,6 +5,7 @@
       "eventSpeaker": "John Doe",
       "eventDate": "2023-12-15",
       "eventTime": "10:00 AM",
+      "eventSeat":"22/22",
       "eventStatus": "Scheduled"
     },
     {
@@ -13,6 +14,7 @@
       "eventSpeaker": "Jane Smith",
       "eventDate": "2023-11-25",
       "eventTime": "02:30 PM",
+      "eventSeat":"12/22",
       "eventStatus": "Completed"
     },
     {
@@ -21,6 +23,7 @@
       "eventSpeaker": "Alex Johnson",
       "eventDate": "2023-12-05",
       "eventTime": "09:00 AM",
+      "eventSeat":"22/30",
       "eventStatus": "Upcoming"
     },
     {
@@ -29,6 +32,7 @@
       "eventSpeaker": "Emily Brown",
       "eventDate": "2023-11-30",
       "eventTime": "11:30 AM",
+      "eventSeat":"12/12",
       "eventStatus": "Cancelled"
     },
     {
@@ -37,6 +41,7 @@
       "eventSpeaker": "Michael Wilson",
       "eventDate": "2023-12-08",
       "eventTime": "01:00 PM",
+      "eventSeat":"20/23",
       "eventStatus": "Scheduled"
     },
     {
@@ -45,6 +50,7 @@
       "eventSpeaker": "Sarah Adams",
       "eventDate": "2023-12-20",
       "eventTime": "03:45 PM",
+      "eventSeat":"22/30",
       "eventStatus": "Upcoming"
     }
   ]
