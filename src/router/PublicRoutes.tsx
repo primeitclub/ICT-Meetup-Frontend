@@ -13,6 +13,7 @@ import SingleGallery from '../pages/Gallery/components/SingleGallery';
 import AboutUs from '../pages/AboutUs/AboutUs';
 import ValorantRegistrationForm from '../components/forms/valorant-form';
 import LoginFormHoookForm from '../pages/Auth/_components/Login';
+import IdeathonForm from '../components/forms/ideathon-form';
 
 const PublicRoutes = () => {
  return (
@@ -29,8 +30,7 @@ const PublicRoutes = () => {
     <Route path="/gallery" element={<Gallery />}></Route>
     <Route path="/gallery/:eventName" element={<SingleGallery />} />
     <Route path="/about" element={<AboutUs />}></Route>
-    <Route path="/val-reg" element={<ValorantRegistrationForm />}></Route>
-    <Route path="/testlogin" element={<LoginFormHoookForm />}></Route>
+    <Route path="/val-reg" element={<IdeathonForm />}></Route>
    </Routes>
   </>
  );

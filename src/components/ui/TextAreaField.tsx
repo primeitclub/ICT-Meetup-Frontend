@@ -2,15 +2,14 @@ import { Box, Text } from '@chakra-ui/react';
 
 interface Props {
  placeholder: string;
- label?: string;
- errors?: any;
+ label: string;
+ errors: any;
  type: string;
  field?: any;
  required?: boolean;
- disabled?: boolean;
 }
 
-export default function InputField(props: Props) {
+export default function TextAreaInputField(props: Props) {
  return (
   <div>
    <label htmlFor={props.label}>
@@ -34,13 +33,11 @@ export default function InputField(props: Props) {
      </Box>
     }
    </label>
-   <input
+   <textarea
     className={`custom-input ${props.errors ? 'error-input' : ''}`}
     {...props.field}
     type={props.type}
     placeholder={props.placeholder}
-    autoComplete="off"
-    disabled={props.disabled}
    />
    {
     <Text
