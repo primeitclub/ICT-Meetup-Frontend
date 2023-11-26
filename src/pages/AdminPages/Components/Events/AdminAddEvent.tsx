@@ -44,7 +44,7 @@ function EventForm() {
   console.log(value);
  };
 
- const watchFields = watch();
+ const watchFields = watch();setValue
 
  console.log(errors);
 
@@ -56,10 +56,11 @@ function EventForm() {
 
  return (
   <>
-   <Box width={'95%'} margin={'auto'} className="event_form">
+   <Box width={'80%'} margin={'auto'} className="event_form">
     <Box
      className="Form_heaing"
      sx={{
+        color:'#090D1B',
       fontSize: '22px',
       textTransform: 'uppercase',
       fontWeight: 600,

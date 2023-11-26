@@ -6,12 +6,15 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import InputFieldAdmin from '../AdminInputFill';
 import AdminFile from '../AdminFile';
 import { Button } from '@chakra-ui/button';
+import { useEffect } from 'react';
 
 export default function AddAlbum() {
  const {
   handleSubmit,
   register,
   watch,
+  setValue,
+  getValues,
   formState: { errors }
  } = useForm<AlbumFromSchema>({
   resolver: zodResolver(albumScheme)
@@ -24,16 +27,35 @@ export default function AddAlbum() {
 
  //  watch
  const Formwatch = watch();
+
+useEffect( ()=>{
+
+        if(Formwatch.title){
+            setValue('slug',slugify( Formwatch.title ))
+        } 
+
+} , [Formwatch.title])
+
+// function 
+function slugify( title:string ){
+
+    const slug = title.toLocaleLowerCase().replace(/\s+/g, '-');
+    const cleanSlug = slug.replace(/[^\w-]+/g, '');
+    return cleanSlug;
+
+}
+
+
  return (
   <>
-   <Box width={'95%'} margin={'auto'} className="event_form">
+   <Box width={'80%'} margin={'auto'} className="event_form">
     <Box
      className="Form_heaing"
      sx={{
       fontSize: '22px',
       textTransform: 'uppercase',
       fontWeight: 600,
-      marginBottom: 8,
+      marginBottom: 8, 
       paddingLeft: 5
      }}>
      Add Album

@@ -264,7 +264,7 @@ image {
 /* admin */
 .custom-input-admin ,  .select_input_admin select{
   background-color: transparent;
-  border-bottom: 2px solid #040D2A;
+  border-bottom: 2px solid #08080893;
   width: 100%;
   padding: 12px 0px;
   color: #575757;

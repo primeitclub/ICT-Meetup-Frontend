@@ -32,7 +32,7 @@ function AdminAddMember() {
 
  return (
   <>
-   <Box width={'95%'} margin={'auto'} className="form_speaker">
+   <Box width={'80%'} margin={'auto'} className="form_speaker">
     <Box
      className="Form_heaing"
      sx={{

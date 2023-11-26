@@ -7,6 +7,7 @@ import { MdModeEdit } from 'react-icons/md';
 
 
 interface dataAlbumProp {
+    id:number,
     title:string,
     thumbnail:string,
     images:string[]
@@ -23,7 +24,7 @@ function GalleryAdmin() {
 
  return (
   <>
-   <Box className="gallery_wrap">
+   <Box w={'90%'} margin={'auto'} className="gallery_wrap">
     <Flex justifyContent={'space-between'}>
      <Heading
       sx={{
@@ -68,13 +69,14 @@ function GalleryAdmin() {
          key={index}
          className="single_album">
          <Box h={'40vh'} width={'auto'} className="image_wrap_album">
-          <Image src={item.thumbnail} height={'100%'} width={'100%'} />
+          <Image borderTopRadius={'7px'} objectFit={'cover'} src={item.thumbnail} height={'100%'} width={'100%'} />
          </Box>
          <Box p={5} className="content_text_album">
           <Heading as={'h2'} fontSize={'20px'} fontWeight={500}>
            {item.title}
           </Heading>
           <Flex justifyContent={'space-between'} mt={5}>
+           <Link to={`${item.id}`} >
            <Button
             sx={{
              fontSize: '14px',
@@ -88,12 +90,12 @@ function GalleryAdmin() {
              }
             }}>
             Manage Images
-           </Button>
+           </Button></Link>
            <Flex justifyContent={'space-between'} gap={3} className="edit_icons">
-            <Box fontSize={'25px'}>
+            <Box fontSize={'22px'}>
              <MdModeEdit />
             </Box>
-            <Box fontSize={'25px'}>
+            <Box fontSize={'22px'}>
              <MdAutoDelete />
             </Box>
            </Flex>
