@@ -8,25 +8,13 @@ interface Props {
  type: string;
  field?: any;
  required?: boolean;
- setSlug?:(value:any)=>void
 }
 
 export default function InputFieldAdmin(props: Props) {
 
 
-let setSlugFunction= props.setSlug;
 
-// handelOnchnage
-const handelOnchnage = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>)=>{
-  const valueInput = event.target.value;
-  console.log(valueInput)
 
-    if(setSlugFunction){
-      setSlugFunction(valueInput)
-    }else {
-      console.log("set slug never loaded")
-    }
-}
 
 
  return (
@@ -65,7 +53,6 @@ const handelOnchnage = (event: React.ChangeEvent<HTMLInputElement | HTMLTextArea
       </Textarea>
     ) : (
         <input
-        onChange={handelOnchnage}
         className={`custom-input-admin `}
         {...props.field}
         type={props.type}

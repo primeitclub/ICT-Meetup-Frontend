@@ -11,6 +11,7 @@ import AdminAddMember from '../pages/AdminPages/Components/Members/AdminAddMembe
 import AdminAllMember from '../pages/AdminPages/Components/Members/AdminAllMember';
 import Participants from '../pages/AdminPages/Components/Participants/Participants';
 import Speaker from '../pages/AdminPages/Components/Events/Speaker';
+import AddAlbum from '../pages/AdminPages/Components/Gallery/AddAlbum';
 
 const AdminRoute = () => {
  return (
@@ -32,6 +33,8 @@ const AdminRoute = () => {
      </Route>
 
      <Route path="gallery" element={<GalleryAdmin />} />
+     <Route path="gallery/add-album" element={<AddAlbum />} />
+
 
      <Route path='participants' element={<Participants/>} />
 

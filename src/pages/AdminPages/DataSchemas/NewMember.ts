@@ -13,8 +13,8 @@ const urlCheck = (str:string)=>{
 export const zodMember = z.object({
 
     name:z.string().min(1, "Please enter new member name"),
-    image:z.any().refine( (file)=> ACCEPTED_FILES.includes(file?.[0]?.type),"the file type is invalid"  ).refine( (file)=>file?.[0]?.size < MaxSize , "Image file size limits 5mb only" ),
-    Category:z.string().min(1,"Select Category"),
+    image:z.any().refine( (file)=>file.length>0, "upload an image" ).refine( (file)=> ACCEPTED_FILES.includes(file?.[0]?.type),"the file type is invalid"  ).refine( (file)=>file?.[0]?.size < MaxSize , "Image file size limits 5mb only" ),
+    Category:z.string().min(1,"select an category"),
     facebook:z.string().refine( urlCheck, "Registration link must be a valid URL format (http://example.com)" ),
     twitter:z.string().refine( urlCheck, "Registration link must be a valid URL format (http://example.com)" ),
     linkedin:z.string().refine( urlCheck, "Registration link must be a valid URL format (http://example.com)" ),

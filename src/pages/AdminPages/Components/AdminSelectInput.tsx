@@ -41,13 +41,7 @@ function SelectInput( {label , options , required , field , errors} : SelectInpu
 
     <select        
     {...field}
-    onChange={ (e)=>{
-        const valueChange = e.target.value;
-        if(valueChange === "Select an option"){
-        field.onChange("");
-        }
-    } }
-    placeholder="Select option">
+      placeholder="Select option">
 
         <option style={{color:'#a2a2a2'}} value="">Select an option</option>
         {options?.map( (item:any)=>(
