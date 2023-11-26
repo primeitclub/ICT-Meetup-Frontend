@@ -23,7 +23,7 @@ export const addEventSchema = z.object({
 
   eventThumbnail:z.any()
   .refine(
-    (files)=> files.length > 0 ,"Please upload an image"
+    (files)=> files.length < 0 ,"Please upload an image"
     )
   .refine(
       (files) => ACCEPTED_IMAGE_TYPES.includes(files?.[0]?.type),

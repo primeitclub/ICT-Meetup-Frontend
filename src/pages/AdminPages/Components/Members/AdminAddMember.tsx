@@ -9,6 +9,15 @@ import AdminFile from '../AdminFile';
 
 import SelectInput from '../AdminSelectInput';
 
+
+  // function on submti 
+  const onSubmit = ( value:any )=>{
+
+    console.log(value);
+
+  }
+
+
 function AdminAddMember() {
  const {
   handleSubmit,
@@ -36,7 +45,10 @@ function AdminAddMember() {
      Add Member
     </Box>
 
-    <Flex
+
+     <form  onSubmit={ handleSubmit(onSubmit) } >
+
+     <Flex
      direction={'column'}
      gap={7}
      boxShadow={'0px 0px 50px -40px black'}
@@ -58,10 +70,10 @@ function AdminAddMember() {
 
        <SelectInput
         label="Category"
-        errors={errors.batch}
-        field={register('batch')}
+        errors={errors.Category}
+        field={register('Category')}
         required={true}
-        key={'batch'}
+        key={'Category'}
         options={['OrganizeR Team', 'Volunteer','Development Team']}
        />
 
@@ -124,6 +136,9 @@ function AdminAddMember() {
       Submit
      </Button>
     </Flex>
+
+     </form>
+
    </Box>
   </>
  );
