@@ -13,7 +13,10 @@ import SingleGallery from '../pages/Gallery/components/SingleGallery';
 import AboutUs from '../pages/AboutUs/AboutUs';
 import ValorantRegistrationForm from '../components/forms/valorant-form';
 import LoginFormHoookForm from '../pages/Auth/_components/Login';
-
+import ForgetPassword from '../pages/Auth/_components/forgetPassword';
+import OTPlogin from '../pages/Auth/_components/otp-verification';
+import CreateNewPassword from '../pages/Auth/_components/createNew';
+import Successful from '../pages/Auth/_components/successful';
 const PublicRoutes = () => {
  return (
   <>
@@ -31,6 +34,10 @@ const PublicRoutes = () => {
     <Route path="/about" element={<AboutUs />}></Route>
     <Route path="/val-reg" element={<ValorantRegistrationForm />}></Route>
     <Route path="/testlogin" element={<LoginFormHoookForm />}></Route>
+    <Route path="/forgetPassword" element={<ForgetPassword />}></Route>
+    <Route path="/otp" element={<OTPlogin />}></Route>
+    <Route path="/newpw" element={<CreateNewPassword />}></Route>
+    <Route path="/successful" element={<Successful />}></Route>
    </Routes>
   </>
  );
