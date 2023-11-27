@@ -1,9 +1,9 @@
-function AdminAdddEvent() {
+function AdminAddEvent() {
     return ( <>
     
-        bro
+    
     
     </> );
 }
 
-export default AdminAdddEvent;
+export default AdminAddEvent;
