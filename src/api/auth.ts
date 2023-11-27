@@ -1,16 +1,16 @@
-import { RegisterSchemaType } from "../schema/registerSchema";
-import { PostRequest } from "../services/httpRequest";
+import { setLocalStorage } from '../helpers/localStorage';
+import { PostRequest } from '../services/httpRequest';
+import { requestHandler } from '../services/requestHandler';
+import { LoginResponse } from '../utils/types/auth';
 
-export async function registerToWebsite(
-    data: RegisterSchemaType
-){
-    try {
-        const response = await PostRequest("/auth/register", {
-            data: data
-        });
-        return response;
-    }
-    catch (error:any) {
-        return error.response;
-    }
+export const registerUser = requestHandler<any, unknown>(async (params) => {
+    return PostRequest("auth/register", params);
+})
+
+export const loginUser = requestHandler<any, LoginResponse>(async (params) => {
+    return PostRequest("auth/login", params);
+});
+
+export const setToken = (token: string) => {
+    setLocalStorage("pitc-token", token);
 }

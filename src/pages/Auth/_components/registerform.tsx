@@ -1,14 +1,17 @@
 import { Button, Flex, Heading, Box, Text, Image } from '@chakra-ui/react';
 import { Stack } from '@chakra-ui/react';
 import google from '../../../assets/google.png';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { RegisterSchemaType, registerSchema } from '../../../schema/registerSchema';
 import InputField from '../../../components/ui/InputField';
 import NepalFlag from '../../../assets/nepal.png';
+import { registerUser } from '../../../api/auth';
+import { toast } from 'sonner';
 
 export default function LoginForm() {
+ const navigate = useNavigate();
  const {
   register,
   handleSubmit,
@@ -19,7 +22,19 @@ export default function LoginForm() {
 
  const onSubmit = async (registerData: RegisterSchemaType) => {
   registerData.phone = `+977${registerData.phone}`;
-  console.log(registerData);
+  const response = await registerUser(registerData);
+
+  if (response.success === true) {
+   console.log(response.data);
+   toast.success('Registered Successfully! Please login to continue');
+   navigate('/login');
+  } else {
+   //    console.log(response.message);
+   toast.error('Registration Failed! Please try again');
+   response.error.detail.forEach((error: any) => {
+    toast.warning(error);
+   });
+  }
  };
 
  return (
@@ -27,7 +42,6 @@ export default function LoginForm() {
    <Box
     p={{ base: '20px', md: '25px', lg: '50px' }}
     w={{ base: '100%', md: '700px', lg: '600px' }}
-    h={{ base: '160vh', md: '130vh', lg: '150vh', xl: '110vh' }}
     borderRadius="24px"
     background="rgba(9, 13, 27, 0.50)"
     // background={'red'}
@@ -75,6 +89,13 @@ export default function LoginForm() {
         />
 
         <InputField
+         errors={errors.address}
+         field={register('address')}
+         placeholder="Address"
+         type="text"
+        />
+
+        <InputField
          errors={errors.password}
          field={register('password')}
          placeholder="Password"
@@ -93,20 +114,18 @@ export default function LoginForm() {
          justifyContent={'space-between'}
          alignItems={'center'}
          position={'relative'}>
-         <Flex width={'100px'}>
-          <Image
-           src={NepalFlag}
-           position="absolute"
-           alt="Nepal Flag"
-           top="40%"
-           right="0"
-           transform="translateY(-50%)"
-           width="20px"
-           height={'20px'}
-          />
-          <InputField disabled placeholder="+977" type="tel" />
-         </Flex>
-         <Box width={'80%'}>
+         <Image
+          src={NepalFlag}
+          position="absolute"
+          alt="Nepal Flag"
+          top="40%"
+          right="0"
+          transform="translateY(-50%)"
+          width="20px"
+          height={'20px'}
+         />
+
+         <Box width={'100%'}>
           <InputField
            errors={errors.phone}
            field={register('phone')}
@@ -131,11 +150,24 @@ export default function LoginForm() {
        alignItems={'center'}
        w="100%"
        gap="12px">
-       <Flex alignItems="center" gap="4px">
-        <input type="checkbox" {...register('TnCFlag')} />
-        <Text fontFamily="body" color={'#D6D6D6'}>
-         I agree to the <Link to="/terms">Terms and Conditions</Link>
-        </Text>
+       <Flex direction={'column'} gap="4px">
+        <Flex align={'center'} gap={'10px'}>
+         <input
+          type="checkbox"
+          {...register('TnCFlag')}
+          style={{
+           scale: '1.5'
+          }}
+         />
+         <Text fontFamily="body" color={'#D6D6D6'}>
+          I agree to the <Link to="/terms">Terms and Conditions</Link>
+         </Text>
+        </Flex>
+        {errors.TnCFlag && (
+         <Text color="red" fontSize="12px">
+          Please agree to the terms and conditions
+         </Text>
+        )}
        </Flex>
 
        <Text fontFamily="body" color={'#D6D6D6'}>
@@ -180,20 +212,12 @@ export default function LoginForm() {
         padding={{ base: '8px', md: '8px 16px' }}
         display={{ base: 'flex', md: 'inline-flex' }}
         alignItems="center"
-        gap="4px"
-        borderRadius="8px"
-        border="1px solid rgba(255, 255, 255, 0.12)"
-        background="#0D0D0D"
-        width="100%">
-        <img src={google} alt="google" />
-        <Text fontFamily="body" color={'#D6D6D6'}>
-         Sign Up with Google
-        </Text>
-       </Flex>
-       <Flex
-        padding={{ base: '8px', md: '8px 16px' }}
-        display={{ base: 'flex', md: 'inline-flex' }}
-        alignItems="center"
+        justifyContent="center"
+        cursor={'pointer'}
+        _hover={{
+         background: 'rgba(255, 255, 255, 0.12)'
+        }}
+        transition={'all 0.5s ease-in-out'}
         gap="4px"
         borderRadius="8px"
         border="1px solid rgba(255, 255, 255, 0.12)"
