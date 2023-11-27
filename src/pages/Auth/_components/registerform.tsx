@@ -146,8 +146,9 @@ export default function LoginForm() {
        <Checkbox colorScheme="white" defaultChecked color="#D6D6D6">
         Remember me
        </Checkbox>
+
        <Text fontFamily="body" color={'#D6D6D6'}>
-        Forgot your password?
+        <Link to="/forgetPassword"> Forgot your password?</Link>
        </Text>
       </Flex>
       <Box
