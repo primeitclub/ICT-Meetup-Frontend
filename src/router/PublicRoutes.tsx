@@ -11,8 +11,6 @@ import Gallery from '../pages/Gallery/Gallery';
 import SingleGallery from '../pages/Gallery/components/SingleGallery';
 
 import AboutUs from '../pages/AboutUs/AboutUs';
-import ValorantRegistrationForm from '../components/forms/valorant-form';
-import LoginFormHoookForm from '../pages/Auth/_components/Login';
 import IdeathonForm from '../components/forms/ideathon-form';
 
 const PublicRoutes = () => {
