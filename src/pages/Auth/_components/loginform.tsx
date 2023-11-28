@@ -5,7 +5,7 @@ import { toast } from 'sonner';
 import { Box, Button, Checkbox, Flex, Heading, Stack, Text } from '@chakra-ui/react';
 import { zodResolver } from '@hookform/resolvers/zod';
 
-import { loginUser, setToken } from '../../../api/auth';
+import { loginUser, setRefreshToken, setToken } from '../../../api/auth';
 import google from '../../../assets/google.png';
 import InputField from '../../../components/ui/InputField';
 import { loginSchema, LoginSchemaType } from '../../../schema/loginSchema';
@@ -25,9 +25,11 @@ export default function LoginForm() {
     const response = await loginUser(loginData);
 
     if (response.success === true) {
+      console.log(response);
       setToken(response.data.accessToken);
+      setRefreshToken(response.data.refreshToken);
       toast.success('Logged in Successfully!');
-      navigate('/');
+      // navigate('/');
     } else {
       //    console.log(response.message);
       toast.error('Login Failed! Please try again');

@@ -1,5 +1,7 @@
 import { create } from 'zustand';
 
+import { getUserProfile } from '../../api/auth';
+
 type AuthStore = {
     isAuthenticated: () => boolean;
 }
@@ -11,9 +13,8 @@ type User = {
 }
 
 type UserDetail = {
-    user: User | null;
-    getUser: () => User;
-    setUser: (user: User) => void;
+    user: any;
+    getUser: () => any;
 }
 
 export const useAuthStore = create<AuthStore>((set, get) => ({
@@ -24,13 +25,11 @@ export const useAuthStore = create<AuthStore>((set, get) => ({
 }));
 
 export const useUserStore = create<UserDetail>((set, get) => ({
-    getUser: () => {
-        const user = localStorage.getItem("pitc-user");
-        return user ? JSON.parse(user) : null;
+    getUser: async () => {
+        const user = await getUserProfile();
+        if(user.success===true){
+            set({user:user.data})
+        }
     },
-    setUser: (user: User) => {
-        localStorage.setItem("pitc-user", JSON.stringify(user));
-    }
-    ,
     user: null
 }))
