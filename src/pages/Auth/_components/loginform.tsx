@@ -44,7 +44,6 @@ export default function LoginForm() {
       <Box
         p={{ base: '20px', md: '25px', lg: '50px' }}
         w={{ base: '100%', md: '700px', lg: '600px' }}
-        h={{ base: '110vh', md: '90vh', lg: '110vh', xl: '90vh' }}
         borderRadius='24px'
         background='rgba(9, 13, 27, 0.50)'
         // background={'red'}

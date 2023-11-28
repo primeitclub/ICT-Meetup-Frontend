@@ -1,11 +1,11 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 import { Link } from 'react-router-dom';
 
 import { Button, Flex, HStack, Image } from '@chakra-ui/react';
 
 import Logo from '../../assets/mainlogo.png';
-import { useUserStore } from '../../store/auth/authStore';
+import { useAuthStore } from '../../store/auth/authStore';
 
 const data = [
   {
@@ -31,9 +31,14 @@ const data = [
 ];
 
 export default function Navbar() {
-  const { getUser } = useUserStore((state) => state);
+  const { user, getUser } = useAuthStore((state) => state);
+  const shouldFetch = useRef(true);
+  console.log(user);
   useEffect(() => {
-    getUser();
+    if (shouldFetch.current) {
+      getUser();
+      shouldFetch.current = false;
+    }
   }, []);
   return (
     <header className='navbar'>
@@ -71,12 +76,29 @@ export default function Navbar() {
           ))}
         </HStack>
         <HStack spacing={5}>
-          <Button>
-            <Link to='/login'>Login</Link>
-          </Button>
-          <Button>
-            <Link to='/register'>Register</Link>
-          </Button>
+          {
+            // if user is logged in then show user profile and logout button
+            user ? (
+              <>
+                <Link to='/profile'>
+                  <Button>{user.username}</Button>
+                </Link>
+                <Link to='/logout'>
+                  <Button>Logout</Button>
+                </Link>
+              </>
+            ) : (
+              // else show login and register button
+              <>
+                <Link to='/login'>
+                  <Button>Login</Button>
+                </Link>
+                <Link to='/register'>
+                  <Button>Register</Button>
+                </Link>
+              </>
+            )
+          }
         </HStack>
       </Flex>
     </header>

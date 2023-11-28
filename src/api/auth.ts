@@ -6,6 +6,14 @@ import {
 import { requestHandler } from '../services/requestHandler';
 import { LoginResponse } from '../utils/types/auth';
 
+interface UserSession{
+    user: {
+        email: string;
+        username: string;
+        user_type: string;
+    }
+}
+
 export const registerUser = requestHandler<any, unknown>(async (params) => {
     return PostRequest("auth/register", params);
 })
@@ -22,6 +30,6 @@ export const setRefreshToken = (token: string) => {
     setLocalStorage("pitc-refresh-token", token);
 }
 
-export const getUserProfile = requestHandler<any, unknown>(async (params) => {
-    return GetRequest("user/profile", params);
+export const getUserProfile = requestHandler<any, UserSession>(async (params) => {
+    return GetRequest("user/session", params);
 })

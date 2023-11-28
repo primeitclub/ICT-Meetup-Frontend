@@ -3,33 +3,34 @@ import { create } from 'zustand';
 import { getUserProfile } from '../../api/auth';
 
 type AuthStore = {
-    isAuthenticated: () => boolean;
-}
-
-type User = {
-    id: number;
-    email: string;
-    username: string;
-}
-
-type UserDetail = {
-    user: any;
+    isAuthenticated: boolean;
+     user: User;
+    role: string;
     getUser: () => any;
 }
 
-export const useAuthStore = create<AuthStore>((set, get) => ({
-    isAuthenticated: () => {
-        const token = localStorage.getItem("pitc-token");
-        return token ? true : false;
-    }
-}));
+type User = {
+    email: string;
+    username: string;
+} | null;
 
-export const useUserStore = create<UserDetail>((set, get) => ({
+
+
+export const useAuthStore = create<AuthStore>((set, get) => ({
+    isAuthenticated: false, 
+    user: null,
+    role: "",
     getUser: async () => {
         const user = await getUserProfile();
         if(user.success===true){
-            set({user:user.data})
+            set({user:{
+                email: user.data.user.email,
+                username: user.data.user.username,
+            }})
+            set({role: user.data.user.user_type})
+            set({isAuthenticated: true})
         }
     },
-    user: null
-}))
+}));
+
+
