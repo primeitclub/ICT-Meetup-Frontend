@@ -5,14 +5,16 @@ import GalleryAdmin from '../pages/AdminPages/Components/Gallery/AdminGallery';
 import EventAdmin from '../pages/AdminPages/Components/Events/AdminEvent';
 import Dashboard from '../pages/AdminPages/Components/DashboardAdmin';
 import AdminAdddEvent from '../pages/AdminPages/Components/Events/AdminAddEvent';
-import AdminAllEvent from '../pages/AdminPages/Components/Events/AdminAddEvent/AdminAllEvent';
+import AdminAllEvent from '../pages/AdminPages/Components/Events/AdminAllEvent/AdminAllEvent';
 import AdminAdddSpeaker from '../pages/AdminPages/Components/Events/AdminAddSpeaker';
 import AdminAddMember from '../pages/AdminPages/Components/Members/AdminAddMember';
 import AdminAllMember from '../pages/AdminPages/Components/Members/AdminAllMembers/AdminAllMember';
-import Participants from '../pages/AdminPages/Components/Participants/Participants';
-import Speaker from '../pages/AdminPages/Components/Events/Speaker';
+import Participants from '../pages/AdminPages/Components/Participants/AdminAllParticipant';
+import Speaker from '../pages/AdminPages/Components/Events/AdminSpeaker';
 import AddAlbum from '../pages/AdminPages/Components/Gallery/AddAlbum';
 import AlbumImages from '../pages/AdminPages/Components/Gallery/AlbumImages';
+import AdminAllSpeaker from '../pages/AdminPages/Components/Events/AdminAllSpeaker/AdminAllSpeaker';
+import AdminAllParticipant from '../pages/AdminPages/Components/Participants/AdminAllParticipant';
 
 const AdminRoute = () => {
  return (
@@ -24,7 +26,7 @@ const AdminRoute = () => {
      <Route path="events">
       <Route path="all-event" element={<AdminAllEvent />} />
       <Route path="add-event" element={<AdminAdddEvent />} />
-      <Route path="speaker" element={<Speaker />} />
+      <Route path="all-speaker" element={<AdminAllSpeaker />} />
       <Route path='speaker/add-speaker' element={<AdminAdddSpeaker/>} />
      </Route>
 
@@ -38,7 +40,7 @@ const AdminRoute = () => {
      <Route path='gallery/:id'  element={<AlbumImages/>} />
 
 
-     <Route path="participants" element={<Participants />} />
+     <Route path="all-participant" element={<AdminAllParticipant />} />
     </Route>
    </Routes>
   </>

@@ -1,4 +1,4 @@
-import { Box, Flex, Image, Select, Spacer, Text } from '@chakra-ui/react';
+import { Box, Flex, Image, Spacer, Text } from '@chakra-ui/react';
 import { NavLink } from 'react-router-dom';
 import imagelogo from '../../../assets/logo.svg';
 import { RxDashboard } from 'react-icons/rx';
@@ -101,7 +101,7 @@ function NavbarAdmin() {
          </Box>
 
          <Box sx={navItemAdmin}>
-          <NavLink to={'events/speaker'}>Speaker</NavLink>
+          <NavLink to={'events/all-speaker'}>Speaker</NavLink>
          </Box>
         </Flex>
        </Box>
@@ -140,10 +140,10 @@ function NavbarAdmin() {
 
 
      <Box className="sing_nav_item">
-      <NavLink to={'Participants'}>
+      <NavLink to={'all-participant'}>
        <Flex sx={navItemAdmin} alignItems={'center'} gap={4}>
         <LuUsers2 className="icon_size_admin" />
-        PARTICIPATES 
+        PARTICIPANTS
        </Flex>
       </NavLink>
      </Box>

@@ -14,9 +14,10 @@ import {
   generatePages
 } from 'chakra-paginator';
 import { CgChevronLeft, CgChevronRight } from 'react-icons/cg';
+import ParticipantRow from '../Participants/components/ParticipantRow';
 
 const AdminAllList = ({ dataList, title, addLink, tableHeaders, RowComponent }) => {
-  const isMemberList = RowComponent === MemberRow;
+  const isMemberParticipant = RowComponent === MemberRow || RowComponent === ParticipantRow;
   console.log(dataList)
   const itemsPerPage = 10;
   const totalPages = Math.ceil(dataList.length / itemsPerPage);
@@ -68,7 +69,7 @@ const AdminAllList = ({ dataList, title, addLink, tableHeaders, RowComponent }) 
         </Tbody>
       </GenericTable>
 
-      {isMemberList && (
+      {isMemberParticipant && (
         <Stack direction="row" spacing={2} mt={4} justifyContent="center" color={'gray.600'}>
           <Paginator
             pagesQuantity={totalPages}

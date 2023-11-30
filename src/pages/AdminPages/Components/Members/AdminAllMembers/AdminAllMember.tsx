@@ -4,11 +4,11 @@ import MemberRow from './components/MemberRow';
 
 interface MemberData {
   memberImg:string,
-  memberName: string;
-  memberEmail: string;
-  memberVolunteer: string;
-  memberDesignation: string;
-  memberBatch: string;
+  memberName: string,
+  memberEmail: string,
+  memberVolunteer: string,
+  memberDesignation: string,
+  memberBatch: string
 }
 
 const tableHeadersForMembers = ['Name', 'Email', 'Volunteer', 'Designation', 'Batch', 'Actions'];

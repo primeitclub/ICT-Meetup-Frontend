@@ -1,4 +1,4 @@
-import { Tr, Td, Image, Text, Flex, Center } from '@chakra-ui/react';
+import { Tr, Td, Image, Flex, Center } from '@chakra-ui/react';
 import { MdDeleteOutline } from 'react-icons/md';
 import { AiOutlineEdit } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
