@@ -288,3 +288,7 @@ image {
   padding-left:10px ;
 }
 
+
+.Tab_Header {
+  color: red !important;
+}

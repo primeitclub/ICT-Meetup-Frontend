@@ -13,9 +13,11 @@ import {
  Tabs,
  TabList,
  TabPanels,
+ Divider,
  chakra,
  shouldForwardProp
 } from '@chakra-ui/react';
+import mic from "../../assets/mic.svg";
 import PageTitle from '../../components/Global/PageTitle';
 import { motion, isValidMotionProp, Transition } from 'framer-motion';
 import { useState } from 'react';
@@ -23,9 +25,10 @@ import jsondata from '../../data/dataEvent.json';
 import TabLists from './Components/TabLists';
 // tab contens
 import { MdLocationOn, MdOutlineDateRange } from 'react-icons/md';
+import { FaRegClock } from "react-icons/fa6";
 
 function EventPage() {
- const [activeTab, setActiveTab] = useState(0);
+ const [_activeTab, setActiveTab] = useState(0);
  interface ObjectDataType {
   [key: string]: {
    event_title: string;
@@ -73,6 +76,7 @@ function EventPage() {
     <Box width={{ base: '100%', xl: '80%' }} margin={'auto'} className="tabWraper">
      <Tabs onChange={(index) => setActiveTab(index)}>
       <TabList
+      className='event_list'
        whiteSpace={'nowrap'}
        display={'flex'}
        flexWrap={'wrap'}
@@ -81,12 +85,12 @@ function EventPage() {
        <TabLists />
       </TabList>
 
-      <TabPanels mt={'69px'}>
+      <TabPanels overflow={'hidden'} mt={'69px'}>
        {Object.keys(workShop).map((dataIndex) => {
         const DataVariable = workShop[dataIndex];
 
         return (
-         <MotionBox initial={{ y: 100 }} animate={{ y: 0 }} transition={customeTranstion}>
+         <MotionBox  initial={{ y: 100 }} animate={{ y: 0 }} transition={customeTranstion}>
           <TabPanel>
            {DataVariable.map((items) => {
             return (
@@ -94,7 +98,7 @@ function EventPage() {
               <Card
                direction={{ base: 'column', md: 'row' }}
                border={'2px solid #3A3A3A;'}
-               p={{ xl: '48px 36px', lg: '44px 40px', md: '32px 28px', base: '28px 24px' }}
+               p={{ xl: '24px', lg: '24px', md: '24px', base: '28px 24px' }}
                borderRadius={16}
                gap={{ lg: '48px', md: '30px', base: '24px' }}
                background={'rgba(3, 3, 3, 0.20)'}
@@ -113,12 +117,15 @@ function EventPage() {
                  }
                 }
                }}>
+               <Box h={{  md: '266px', sm: 'auto', base: 'auto' }} >
                <Image
+               borderRadius={'10px'}
                 objectFit={'cover'}
                 maxW={{ base: '100%', md: '315px' }}
-                h={{ sm: '330px', md: 'auto', base: 'auto' }}
+                h={'100%'}
                 src={items.image}
                />
+               </Box>
 
                <Stack className="card_body" w={'100%'}>
                 <CardBody>
@@ -129,58 +136,69 @@ function EventPage() {
                    lineHeight={{ lg: '36px', md: '34px', base: '30px' }}>
                    {items.event_title}
                   </Heading>
-                  <Text
+                 <Flex alignItems={'center'} gap={3} >
+                    <Box mt={2} className='img_mic' width={'17px'} height={'17px'}>
+                        <Image src={mic} height={'100%'} width={'100%'} />
+                    </Box>
+                    <Text
                    pt={{ base: '10px', sm: '' }}
-                   fontSize={{ lg: '20px', sm: '18px', base: '16px' }}
+                   fontSize={{ lg: '18px', sm: '16px', base: '16px' }}
                    fontWeight={500}>
-                   Speaker : {items.event_speaker}
+                   {items.event_speaker}
                   </Text>
+                 </Flex>
                  </Box>
 
                  <Flex
                   direction={'column'}
-                  gap={5}
-                  fontSize={{ lg: '16px', sm: '14px', base: '14px' }}
+                  gap={3}
                   fontWeight={400}
                   lineHeight={{ md: '24px', base: '18px' }}
-                  py={5}>
+                  py={3}>
+
                   <Flex gap={5}>
-                   <MdLocationOn fill="white" style={{ color: 'white', fontSize: 24 }} />
-                   <Text fontSize={{ lg: '20px', sm: '18px', base: '16px' }}>
+                   <MdLocationOn fill="white" style={{ color: 'white', fontSize: 21 }} />
+                   <Text fontSize={{ lg: '18px', sm: '16px', base: '16px' }}>
                     Seminar hall, 3rd floor
                    </Text>
                   </Flex>
-                  <Flex gap={5} alignItems={'center'}>
-                   <MdOutlineDateRange fill="white" style={{ color: 'white', fontSize: 24 }} />
-                   <Flex
-                    fontSize={{ lg: '20px', sm: '18px', base: '16px' }}
-                    direction={'column'}
-                    gap={4}>
-                    <Text>{items.date}</Text>
-                    <Text>{items.time}</Text>
-                   </Flex>
+                  
+                  <Flex gap={5}>
+                  <MdOutlineDateRange fill="white" style={{ color: 'white', fontSize: 21 }} />
+                   <Text fontSize={{ lg: '18px', sm: '16px', base: '16px' }}>
+                   {items.date}
+                   </Text>
                   </Flex>
+
+                  <Flex gap={5}>
+                   <FaRegClock fill="white" style={{ color: 'white', fontSize: 20 }} />
+                   <Text fontSize={{ lg: '18px', sm: '16px', base: '16px' }}>
+                   {items.time}
+                   </Text>
+                  </Flex>
+
                  </Flex>
                 </CardBody>
-                <CardFooter mt={2} gap={{ sm: 10, base: '20px' }} w={'100%'}>
+                <CardFooter  gap={{ sm: 10, base: '20px' }} w={'100%'}>
                  <Button
                   sx={{
                    '&:hover': {
-                    background: 'linear-gradient(93deg, #2C84EC 12.34%, #000AE9 84.22%)'
+                    background: 'linear-gradient(92deg, #2C6DEC 0.11%, #003CD5 103.68%)'
                    }
                   }}
                   variant={'primary-button'}
-                  p={{ md: '16.08px 32.16px', base: '10px 20px' }}
+                  p={{ md: '12px 24px', base: '10px 20px' }}
                   w={'50%'}
                   fontSize={{ lg: '20px', sm: '18px', base: '16px' }}>
                   Register Now
                  </Button>
                  <Button
+                 borderRadius={"10px"}
                   w={'50%'}
                   variant={'outlined-button'}
                   border={'3px solid blue'}
                   fontSize={{ lg: '20px', sm: '18px', base: '16px' }}
-                  p={{ md: '16.08px 32.16px', base: '10px 20px' }}
+                  p={{ md: '12px 24px', base: '10px 20px' }}
                   color={'white'}>
                   Read More
                  </Button>
