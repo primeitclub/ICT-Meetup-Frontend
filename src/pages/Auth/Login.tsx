@@ -12,23 +12,13 @@ const LoginPage = () => {
    margin={'auto'}
    position={'relative'}
    display={'flex'}
-   justifyContent={'space-between'}
+   justifyContent={'center'}
    alignItems={'center'}
    flexShrink={0}
    flexDirection={{
     base: 'column',
     lg: 'row'
    }}>
-   <Show above="lg">
-    <Flex direction={'column'} w={{ base: '100%', md: '500px' }} h="auto" borderRadius="24px">
-     <img
-      src={auth_robot}
-      alt="gradient"
-      style={{ width: '100%', height: 'auto', borderRadius: '24px' }}
-     />
-    </Flex>
-   </Show>
-
    <LoginForm />
   </Box>
  );
