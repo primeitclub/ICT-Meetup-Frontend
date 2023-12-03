@@ -69,7 +69,10 @@ export default function About() {
           </Heading>
 
           <Text
-            fontSize={'24px'}
+            fontSize={{
+              base: '18px',
+              md: '24px',
+            }}
             color={'white'}
             lineHeight={'34px'}
             letterSpacing={'0.36px'}
@@ -117,14 +120,14 @@ export default function About() {
                     fill='white'
                   />
                 </svg>
-                <p
-                  style={{
-                    fontWeight: '400',
-                    fontSize: '24px',
+                <Text
+                  fontSize={{
+                    base: '18px',
+                    md: '24px',
                   }}
                 >
                   {item}
-                </p>
+                </Text>
               </HStack>
             ))}
           </VStack>

@@ -5,7 +5,6 @@ import {
   AccordionItem,
   AccordionPanel,
   Box,
-  Button,
   Container,
   Flex,
   Heading,
@@ -13,6 +12,7 @@ import {
 } from '@chakra-ui/react';
 
 import HomePageTitle from '../reusables/HomePageTitle';
+import OutlinedButton from '../ui/OutlinedButton';
 
 interface IFAQData {
   question: string;
@@ -103,17 +103,7 @@ export default function FAQAccordion() {
             Contact our events head @Sandesh Basnet or @Jenish Maharjan
           </Text>
           <Box paddingY={'10'}>
-            <Button
-              paddingX={'24px'}
-              width={{
-                base: '100%',
-                sm: '321px',
-              }}
-              paddingY={'12px'}
-              variant={'outlined-button'}
-            >
-              Contact Us
-            </Button>
+            <OutlinedButton buttonText={'Contact Us'} />
           </Box>
         </Flex>
       </Container>

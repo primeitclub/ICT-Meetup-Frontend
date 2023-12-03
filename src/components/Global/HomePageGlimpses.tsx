@@ -54,7 +54,7 @@ export default function HomePageGlimpses() {
             base: 'repeat(2, 1fr)',
             lg: 'repeat(3, 1fr)',
           }}
-          paddingY={'80px'}
+          paddingY={'48px'}
         >
           {homePageGlimpsesData.images.map((image, index) => (
             <GridItem key={index} rowSpan={index === 0 || index === 2 ? 2 : 1}>

@@ -18,7 +18,7 @@ export default function Events() {
         <Box paddingY={'32px'}>
           <Flex
             direction={{
-              base: 'column',
+              base: 'column-reverse',
               md: 'row',
             }}
             align={'center'}

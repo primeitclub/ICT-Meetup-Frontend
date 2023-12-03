@@ -29,7 +29,11 @@ export default function EventSlide() {
             fontWeight={'500'}
             direction={'column'}
             gap={'16px'}
-            fontSize={'24px'}
+            fontSize={{
+              base: '24px',
+              md: '28px',
+              lg: '36px',
+            }}
             align={'start'}
           >
             {data.map((item, i) => (
