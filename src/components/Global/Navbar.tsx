@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 
 import { Link } from 'react-router-dom';
 
-import { Button, Flex, HStack, Image } from '@chakra-ui/react';
+import { Button, Flex, HStack, Image, Text } from '@chakra-ui/react';
 
 import Logo from '../../assets/mainlogo.png';
 import { useAuthStore } from '../../store/auth/authStore';
@@ -50,6 +50,10 @@ export default function Navbar() {
         paddingX={{
           base: '32px',
           md: '64px',
+          '2xl': '0px',
+        }}
+        maxW={{
+          '2xl': '1440px',
         }}
         margin={'auto'}
         w='100%'
@@ -57,7 +61,6 @@ export default function Navbar() {
         align='center'
         justify='space-between'
         textColor={'white'}
-        fontFamily={'body'}
         fontSize={'24px'}
       >
         <Image src={Logo} h='50px' />
@@ -71,7 +74,9 @@ export default function Navbar() {
         >
           {data.map((item, i) => (
             <Link key={i} to={item.link}>
-              <Button> {item.label} </Button>
+              <Text fontSize={'24px'} fontWeight={'500'}>
+                {item.label}
+              </Text>
             </Link>
           ))}
         </HStack>
@@ -91,10 +96,15 @@ export default function Navbar() {
               // else show login and register button
               <>
                 <Link to='/login'>
-                  <Button>Login</Button>
+                  <Text fontSize={'24px'} fontWeight={'500'}>
+                    Login
+                  </Text>
                 </Link>
+                {' | '}
                 <Link to='/register'>
-                  <Button>Register</Button>
+                  <Text fontSize={'24px'} fontWeight={'500'}>
+                    Register
+                  </Text>
                 </Link>
               </>
             )
