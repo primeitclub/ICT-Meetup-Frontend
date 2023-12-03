@@ -74,6 +74,7 @@ axiosInstance.interceptors.response.use(
   (response) => response,
   (error: AxiosError) => {
     console.log(error)
+    
 
     if (error.response) {
       // The request was made and the server responded with a status code
