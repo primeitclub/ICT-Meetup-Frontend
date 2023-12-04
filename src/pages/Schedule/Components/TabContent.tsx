@@ -62,7 +62,7 @@ function TabContent() {
 
     <Divider border={'1px solid #0E1A3B'} />
 
-    <TabPanels>
+    <TabPanels overflow={'hidden'} >
      {/* looopppp */}
 
      <BoxSchedule initial={{ y: 100 }} animate={{ y: 0 }} transition={customeTranstion}>
