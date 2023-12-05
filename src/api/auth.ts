@@ -33,3 +33,7 @@ export const setRefreshToken = (token: string) => {
 export const getUserProfile = requestHandler<any, UserSession>(async (params) => {
     return GetRequest("user/session", params);
 })
+
+export const checkAdmin = requestHandler<any, UserSession>(async () => {
+    return GetRequest("user/isAdmin");
+})
