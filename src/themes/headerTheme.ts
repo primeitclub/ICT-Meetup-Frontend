@@ -3,15 +3,18 @@ export const sectionHeaderTheme = {
   'section-header': {
    color: 'white',
    fontSize: {
-    base: '32px',
-    md: '48px'
+    base: '24px',
+    md: '32px',
+    lg: '48px'
    },
    fontWeight: '700',
    textTransform: 'uppercase',
-   lineHeight: '64px',
+   lineHeight: {
+    base: '40px',
+    lg: '64px'
+   },
    letterSpacing: '0.96px'
   },
-
         "section-main-text": {
             color: "white",
             fontSize: {

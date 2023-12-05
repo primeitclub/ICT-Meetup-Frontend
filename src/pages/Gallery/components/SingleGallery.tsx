@@ -15,11 +15,11 @@ import PageTitle from '../../../components/Global/PageTitle';
 import React , { useState } from 'react';
 
 
-interface Images {
+export interface Images {
  imagePath: string;
 }
 
-interface DataImages {
+export interface DataImages {
  [eventName: string]: Images[];
 }
 
@@ -46,7 +46,7 @@ function SingleGallery() {
  
 
  // image css
- const imageStyle = {
+    const imageStyle = {
   columnCount: { lg: '3', md: '2', sm: 1, base: '1' },
   columnWidth: '33.33%'
  };

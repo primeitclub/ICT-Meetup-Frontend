@@ -1,0 +1,99 @@
+[
+      {
+        "memberImg": "../../assets/Members/dummy.jpg",
+        "memberName": "John Doe",
+        "memberEmail": "john.doe@gmail.com",
+        "memberVolunteer": "Organizer Team",
+        "memberDesignation": "Executive",
+        "memberBatch": "2022"
+      },
+      {
+        "memberImg": "../../assets/Members/dummy.jpg",
+        "memberName": "Emily Smith",
+        "memberEmail": "emily.smith@gmail.com",
+        "memberVolunteer": "Volunteer",
+        "memberDesignation": "General",
+        "memberBatch": "2024"
+      },
+      {
+        "memberImg": "../../assets/Members/dummy.jpg",
+        "memberName": "Alex Johnson",
+        "memberEmail": "alex.johnson@gmail.com",
+        "memberVolunteer": "Development Team",
+        "memberDesignation": "Executive",
+        "memberBatch": "2023"
+      },
+      {
+        "memberImg": "../../assets/Members/dummy.jpg",
+        "memberName": "Sophia Williams",
+        "memberEmail": "sophia.williams@gmail.com",
+        "memberVolunteer": "Organizer Team",
+        "memberDesignation": "General",
+        "memberBatch": "2025"
+      },
+      {
+        "memberImg": "../../assets/Members/dummy.jpg",
+        "memberName": "Daniel Brown",
+        "memberEmail": "daniel.brown@gmail.com",
+        "memberVolunteer": "Volunteer",
+        "memberDesignation": "Executive",
+        "memberBatch": "2022"
+      },
+      {
+        "memberImg": "../../assets/Members/dummy.jpg",
+        "memberName": "Ava Wilson",
+        "memberEmail": "ava.wilson@gmail.com",
+        "memberVolunteer": "Organizer Team",
+        "memberDesignation": "General",
+        "memberBatch": "2024"
+      },
+      {
+        "memberImg": "../../assets/Members/dummy.jpg",
+        "memberName": "Ethan Miller",
+        "memberEmail": "ethan.miller@gmail.com",
+        "memberVolunteer": "Volunteer",
+        "memberDesignation": "Executive",
+        "memberBatch": "2023"
+      },
+      {
+        "memberImg": "../../assets/Members/dummy.jpg",
+        "memberName": "Olivia Davis",
+        "memberEmail": "olivia.davis@gmail.com",
+        "memberVolunteer": "Development Team",
+        "memberDesignation": "General",
+        "memberBatch": "2025"
+      },
+      {
+        "memberImg": "../../assets/Members/dummy.jpg",
+        "memberName": "Matthew Taylor",
+        "memberEmail": "matthew.taylor@gmail.com",
+        "memberVolunteer": "Organizer Team",
+        "memberDesignation": "Executive",
+        "memberBatch": "2022"
+      },
+      {
+        "memberImg": "../../assets/Members/dummy.jpg",
+        "memberName": "Emma Anderson",
+        "memberEmail": "emma.anderson@gmail.com",
+        "memberVolunteer": "Volunteer",
+        "memberDesignation": "General",
+        "memberBatch": "2024"
+      },
+      {
+        "memberImg": "../../assets/Members/dummy.jpg",
+        "memberName": "Matthew Taylor",
+        "memberEmail": "matthew.taylor@gmail.com",
+        "memberVolunteer": "Organizer Team",
+        "memberDesignation": "Executive",
+        "memberBatch": "2022"
+      },
+      {
+        "memberImg": "../../assets/Members/dummy.jpg",
+        "memberName": "Emma Anderson",
+        "memberEmail": "emma.anderson@gmail.com",
+        "memberVolunteer": "Volunteer",
+        "memberDesignation": "General",
+        "memberBatch": "2024"
+      }
+    ]
+    

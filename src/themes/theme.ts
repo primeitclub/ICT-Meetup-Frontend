@@ -1,7 +1,7 @@
 import { extendBaseTheme } from '@chakra-ui/react';
+
 import { buttonTheme } from './buttonTheme';
 import { sectionHeaderTheme } from './headerTheme';
-import { TableTheme } from './AdminTable';
 
 const breakpoints = {
   base: "0px",
@@ -15,6 +15,7 @@ const breakpoints = {
 export const theme = extendBaseTheme({
  fonts: {
   body: 'Darker Grotesque, sans-serif',
+  // body: 'Poppins, sans-serif',
   heading: 'Syncopate, sans-serif'
  },
  components: {

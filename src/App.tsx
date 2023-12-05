@@ -1,19 +1,28 @@
-import MainRoute from './router/MainRoute';
-import AdminRoute from './router/AdminRoute';
 import { useState } from "react";
 
+import { Toaster } from "sonner";
+
+import ScrollToTop from "./hoc/ScrollToTop";
+import AdminRoute from "./router/AdminRoute";
+import MainRoute from "./router/MainRoute";
+
 function App() {
+  const [isAdmin, setAdmin] = useState(false);
 
-    const [isAdmin, setAdmin] = useState(true);
-    
- return (
-  <>
-
-  {  isAdmin ? ( <AdminRoute /> ) : ( <MainRoute /> )   } 
-
-   
-  </>
- );
+  return (
+    <>
+      <ScrollToTop />
+      <Toaster
+        position="top-right"
+        richColors
+        closeButton
+        theme="dark"
+        visibleToasts={3}
+        expand
+      />
+      {isAdmin ? <AdminRoute /> : <MainRoute />}
+    </>
+  );
 }
 
 export default App;

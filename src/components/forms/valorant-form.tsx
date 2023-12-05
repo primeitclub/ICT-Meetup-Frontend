@@ -1,64 +1,39 @@
-import { Box, Button } from '@chakra-ui/react';
+import ValorantTeamForm from './_components/valorant-team-info-form';
+import { Box, Flex } from '@chakra-ui/react';
 import RegistrationFormHeader from '../reusables/registration-form-header';
-import { useForm, useFieldArray } from 'react-hook-form';
-import InputField from '../ui/InputField';
 import {
- valorantRegistrationSchema,
- valorantRegstrationSchemaType
-} from '../../schema/valorantRegistration';
-import { zodResolver } from '@hookform/resolvers/zod';
-import FileInput from '../ui/FileInput';
+ Step,
+ StepIcon,
+ StepIndicator,
+ StepNumber,
+ StepStatus,
+ StepTitle,
+ Stepper
+} from '@chakra-ui/react';
+import TeamSubForm from './_components/valorant-sub-member-form';
+import ValorantTeamMemberFormOne from './_components/valorant-team-member-form';
+import { useValorantFormStore } from '../../store/valorantForm';
 
-const formSteps = [
+const ValorantRegistrationFormSteps = [
  {
   name: 'Team Info',
-  component: <></>
+  component: <ValorantTeamForm />,
+  label: 'Please fill up the details'
  },
- //for four members a different component
+ {
+  name: 'Team Sub Info',
+  component: <TeamSubForm />,
+  label: 'Please fill up the details'
+ },
  {
   name: 'Team Members',
-  component: [
-   {
-    name: 'Member 1',
-    component: <></>
-   },
-   {
-    name: 'Member 2',
-    component: <></>
-   },
-   {
-    name: 'Member 3',
-    component: <></>
-   },
-   {
-    name: 'Member 4',
-    component: <></>
-   }
-  ]
+  component: <ValorantTeamMemberFormOne />,
+  label: 'Please fill up the details'
  }
 ];
 
 export default function ValorantRegistrationForm() {
- const {
-  register,
-  handleSubmit,
-  watch,
-  control,
-  formState: { errors }
- } = useForm<valorantRegstrationSchemaType>({
-  resolver: zodResolver(valorantRegistrationSchema)
- });
- const watchFields = watch();
-
- const { fields, append } = useFieldArray({
-  control,
-  name: 'teamMembers'
- });
-
- const onSubmit = (data: valorantRegstrationSchemaType) => {
-  console.log(errors);
-  console.log(data);
- };
+ const activeFormState = useValorantFormStore((state) => state.activeStep);
 
  return (
   <>
@@ -68,7 +43,7 @@ export default function ValorantRegistrationForm() {
      '2xl': '1440px'
     }}
     paddingX={{
-     base: '32px',
+     base: '10px',
      md: '64px',
      xl: '0px'
     }}
@@ -79,89 +54,61 @@ export default function ValorantRegistrationForm() {
     flexDirection={'column'}
     marginTop={'64px'}>
     <RegistrationFormHeader title="Valorant Form" description="Please fill up the details" />
-
     <Box
      marginTop={'64px'}
      borderRadius={'24px'}
      backdropFilter={'blur(20px)'}
      maxW={'800px'}
      width={'100%'}
-     padding={'64px 64px 103px 64px'}
+     padding={{
+      base: '32px 32px 103px 32px',
+      md: '64px 64px 103px 64px'
+     }}
      backgroundColor={'var(--form-background)'}
      boxShadow={'0px 0px 150px -10px #061847;'}>
-     <form
-      onSubmit={handleSubmit(onSubmit)}
-      style={{
-       display: 'flex',
-       flexDirection: 'column',
-       gap: '40px'
-      }}>
-      <InputField
-       placeholder="Enter team name"
-       label="Team Name"
-       errors={errors.teamName}
-       type="text"
-       field={register('teamName')}
-       required={true}
-      />
+     {/* form headers for different components */}
 
-      <FileInput
-       label="Team Logo"
-       registerName="teamLogo"
-       watch={watchFields.teamLogo}
-       register={register}
-       errors={errors.teamLogo}
-      />
+     <Stepper
+      index={activeFormState}
+      display={'flex'}
+      alignItems={'center'}
+      justifyContent={'space-between'}
+      color={'white'}
+      fontSize={'16px'}
+      marginBottom={'64px'}>
+      {ValorantRegistrationFormSteps.map((step, index) => (
+       <Step key={index}>
+        <Box display={'flex'} alignItems={'center'} gap={'5'} flexDirection={'column'}>
+         <Flex
+          alignItems={'center'}
+          justifyContent={'center'}
+          padding={'6px 10px'}
+          rounded={'full'}
+          backgroundColor={'var(--accent-blue)'}>
+          <StepIndicator>
+           <StepStatus
+            complete={<StepIcon />}
+            incomplete={<StepNumber />}
+            active={<StepNumber />}
+           />
+          </StepIndicator>
+         </Flex>
 
-      <InputField
-       placeholder="Enter Team Leader Name"
-       label="Team Leader Name"
-       errors={errors.teamLeaderName}
-       type="text"
-       field={register('teamLeaderName')}
-       required={true}
-      />
-
-      <FileInput
-       label="Team Leader Photo"
-       registerName="teamLeaderImage"
-       register={register}
-       watch={watchFields.teamLeaderImage}
-       errors={errors.teamLeaderImage}
-      />
-
-      {fields.map((member, index) => (
-       <div key={member.id}>
-        <InputField
-         placeholder={`Enter Team Member ${index + 1} Name`}
-         label={`Team Member ${index + 1} Name`}
-         errors={errors.teamMembers?.[index]?.name}
-         type="text"
-         field={register(`teamMembers.${index}.name`)}
-         required={true}
-        />
-
-        <FileInput
-         label={`Team Member ${index + 1} Image`}
-         registerName={`teamMembers.${index}.image`}
-         register={register(`teamMembers.${index}.image`)}
-         watch={watchFields}
-         errors={errors}
-        />
-       </div>
+         <Box flexShrink="0" color={'var(--input-label)'}>
+          <StepTitle>{step.name}</StepTitle>
+         </Box>
+        </Box>
+       </Step>
       ))}
+     </Stepper>
 
-      <Button
-       variant={'primary-button'}
-       type="button"
-       onClick={() => append({ name: '', image: null })}>
-       Add Team Member
-      </Button>
-
-      <Button variant={'primary-button'} type="submit">
-       Submit
-      </Button>
-     </form>
+     {ValorantRegistrationFormSteps.map((step, index) => {
+      return (
+       <Box key={index} display={index === activeFormState ? 'block' : 'none'}>
+        {step.component}
+       </Box>
+      );
+     })}
     </Box>
    </Box>
   </>
