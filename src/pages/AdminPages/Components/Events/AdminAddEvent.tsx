@@ -1,186 +1,281 @@
-import { Box, Flex } from '@chakra-ui/layout';
-import { useForm } from 'react-hook-form';
-import InputFieldAdmin from '../AdminInputFill';
-import { useEffect, useState } from 'react';
-// form schemda
-import { AddEventFormValues } from '../../DataSchemas/AddEventSchema';
-import { addEventSchema } from '../../DataSchemas/AddEventSchema';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { FormControl, FormLabel } from '@chakra-ui/form-control';
-import { Button } from '@chakra-ui/button';
+import { useEffect } from "react";
 
+import { useForm } from "react-hook-form";
+
+import { Box, Flex, Text } from "@chakra-ui/layout";
+import { Button } from "@chakra-ui/react";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+// form schemda
+import {
+  AddEventFormValues,
+  addEventSchema,
+} from "../../DataSchemas/AddEventSchema";
+import AdminFile from "../AdminFile";
+import InputFieldAdmin from "../AdminInputFill";
 // demo select
-import SelectInput from '../AdminSelectInput';
-import AdminFile from '../AdminFile';
+import SelectInput from "../AdminSelectInput";
+import Editor from "../reusables/AdminCkEditor";
 
 function EventForm() {
- // state to copy from slug
- //  const [slug, setSlug] = useState<any>('');
+  // state to copy from slug
+  //  const [slug, setSlug] = useState<any>('');
 
- const {
-  handleSubmit,
-  register,
-  watch,
-  setValue,
-  getValues,
-  formState: { errors }
- } = useForm<AddEventFormValues>({
-  resolver: zodResolver(addEventSchema)
- });
+  const {
+    handleSubmit,
+    register,
+    watch,
+    setValue,
+    getValues,
+    formState: { errors },
+  } = useForm<AddEventFormValues>({
+    resolver: zodResolver(addEventSchema),
+  });
 
- // onSubmit function
+  // onSubmit function
 
- function slugify(title: string): string {
-  // Convert the title to lowercase and replace spaces with hyphens
-  const slug = title.toLowerCase().replace(/\s+/g, '-');
+  function slugify(title: string): string {
+    // Convert the title to lowercase and replace spaces with hyphens
+    const slug = title.toLowerCase().replace(/\s+/g, "-");
 
-  // Remove special characters and non-alphanumeric characters
-  const cleanedSlug = slug.replace(/[^\w-]+/g, '');
+    // Remove special characters and non-alphanumeric characters
+    const cleanedSlug = slug.replace(/[^\w-]+/g, "");
 
-  return cleanedSlug;
- }
-
- const onSubmit = (value: AddEventFormValues) => {
-  console.log(value);
- };
-
- const watchFields = watch();setValue
-
- console.log(errors);
-
- useEffect(() => {
-  if (watchFields.title) {
-   setValue('slug', slugify(watchFields.title));
+    return cleanedSlug;
   }
- }, [getValues('title')]);
 
- return (
-  <>
-   <Box width={'80%'} margin={'auto'} className="event_form">
-    <Box
-     className="Form_heaing"
-     sx={{
-        color:'#090D1B',
-      fontSize: '22px',
-      textTransform: 'uppercase',
-      fontWeight: 600,
-      marginBottom: 8,
-      paddingLeft: 5
-     }}>
-     Add Event
-    </Box>
+  const onSubmit = (value: AddEventFormValues) => {
+    console.log(value);
+  };
 
-    <Box
-     boxShadow={'0px 0px 50px -40px black'}
-     bg={'white'}
-     sx={{ borderRadius: 10 }}
-     p={12}
-     className="form_wrap">
-     <form onSubmit={handleSubmit(onSubmit)}>
-      <Flex direction={'column'} gap={6}>
-       <InputFieldAdmin
-        key={'name'}
-        required={true}
-        label="Event Name"
-        type="text"
-        placeholder="Enter Event Title"
-        field={register('title')}
-        errors={errors.title}
-       />
+  console.log(errors);
 
-       <InputFieldAdmin
-        key={'slug'}
-        required={true}
-        label="Event Slug"
-        type="text"
-        placeholder="Enter Event Slug"
-        field={register('slug')}
-        errors={errors.slug}
-       />
+  const watchFields = watch();
+  setValue;
 
-       <SelectInput
-        key={'event'}
-        errors={errors.category}
-        required={true}
-        field={register('category')}
-        label="Event Category"
-        options={['Voulneter', 'Development', 'Helping Hands']}
-       />
+  useEffect(() => {
+    if (watchFields.title) {
+      setValue("slug", slugify(watchFields.title));
+    }
+  }, [getValues("title")]);
 
-       <InputFieldAdmin
-        key={'venue'}
-        required={true}
-        label="Event Venue"
-        type="text"
-        placeholder="Enter Venue"
-        field={register('venue', { required: 'Venue is Required' })}
-        errors={errors.venue}
-       />
+  return (
+    <>
+      <Box width={"95%"} margin={"auto"} className="event_form">
+        <Box
+          className="Form_heaing"
+          sx={{
+            color: "#090D1B",
+            fontSize: "22px",
+            textTransform: "uppercase",
+            fontWeight: 600,
+            marginBottom: 8,
+            paddingLeft: 5,
+          }}
+        >
+          Add Event
+        </Box>
 
-       <InputFieldAdmin
-        key={'link'}
-        required={true}
-        label="Event Reg Link"
-        type="text"
-        placeholder="Enter Registration Link"
-        field={register('registrationLink')}
-        errors={errors.registrationLink}
-       />
+        <Box sx={{ borderRadius: 10 }} className="form_wrap">
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <Flex align={"start"} direction={"row"} gap={6}>
+              <Box flex={1} backgroundColor={"white"} padding={"30px"}>
+                <InputFieldAdmin
+                  key={"name"}
+                  required={true}
+                  label="Event Name"
+                  type="text"
+                  placeholder="Enter Event Title"
+                  field={register("title")}
+                  errors={errors.title}
+                />
 
-       <InputFieldAdmin
-        key={'text'}
-        required={true}
-        label="Event Description"
-        type="textarea"
-        placeholder="Enter Description"
-        field={register('description')}
-        errors={errors.description}
-       />
+                <InputFieldAdmin
+                  key={"slug"}
+                  required={true}
+                  label="Event Slug"
+                  type="text"
+                  placeholder="Enter Event Slug"
+                  field={register("slug")}
+                  errors={errors.slug}
+                />
 
-       <InputFieldAdmin
-        key={'eventDate'}
-        required={true}
-        label="Event Date"
-        type="date"
-        placeholder="Event Date"
-        field={register('eventDate', { required: 'please enter a date' })}
-        errors={errors.eventDate}
-       />
+                <SelectInput
+                  key={"event"}
+                  errors={errors.category}
+                  required={true}
+                  field={register("category")}
+                  label="Event Category"
+                  options={["Voulneter", "Development", "Helping Hands"]}
+                />
 
-       <InputFieldAdmin
-        key={'startTime'}
-        required={true}
-        label="Start At"
-        type="time"
-        placeholder="Event Time"
-        field={register('startTime', { required: 'please enter a time' })}
-        errors={errors.startTime}
-       />
+                <InputFieldAdmin
+                  key={"venue"}
+                  required={true}
+                  label="Event Venue"
+                  type="text"
+                  placeholder="Enter Venue"
+                  field={register("location", {
+                    required: "Venue is Required",
+                  })}
+                  errors={errors.location}
+                />
 
-       <AdminFile
-        errors={errors.eventThumbnail}
-        registerName="eventThumbnail"
-        label="eventThumbnail"
-        key={'file upload'}
-        register={register}
-        watch={watchFields.eventThumbnail}
-       />
+                <Flex gap={"5"}>
+                  <Box flex={1}>
+                    <InputFieldAdmin
+                      key={"floor"}
+                      required={true}
+                      label="Event Floor"
+                      type="text"
+                      placeholder="Enter Floor Detail"
+                      field={register("floor")}
+                      errors={errors.floor}
+                    />
+                  </Box>
 
-       <Button
-        type="submit"
-        bg={'blue.300'}
-        transition={'0.1s ease-in'}
-        _hover={{ bg: 'blue.700', color: 'white' }}
-        py={4}
-        borderRadius={10}>
-        Submit
-       </Button>
-      </Flex>
-     </form>
-    </Box>
-   </Box>
-  </>
- );
+                  <Box flex={1}>
+                    <InputFieldAdmin
+                      key={"room"}
+                      required={true}
+                      label="Event Room"
+                      type="text"
+                      placeholder="Enter Room Detail"
+                      field={register("roomNo")}
+                      errors={errors.roomNo}
+                    />
+                  </Box>
+                </Flex>
+
+                <div>
+                  <Box
+                    display={"flex"}
+                    textColor={"#A2A2A2"}
+                    fontFamily={"body"}
+                    fontSize={"20px"}
+                    fontStyle={"normal"}
+                    fontWeight={"700"}
+                    color={"#252525"}
+                    lineHeight={"150%"}
+                  >
+                    Event Description
+                    <Text marginLeft={"5px"} textColor={"red"}>
+                      *
+                    </Text>
+                  </Box>
+                  <Editor
+                    registerName="description"
+                    setValue={setValue}
+                    placeholder="Description"
+                    // value={productInfo?.description}
+                  />
+                  {errors.description?.message && (
+                    <p className="text-red-500">
+                      {errors.description?.message}
+                    </p>
+                  )}
+                </div>
+              </Box>
+
+              <Box flex={1} backgroundColor={"white"} padding={"30px"}>
+                <InputFieldAdmin
+                  key={"eventDate"}
+                  required={true}
+                  label="Event Date"
+                  type="date"
+                  placeholder="Event Date"
+                  field={register("eventDate", {
+                    required: "please enter a date",
+                  })}
+                  errors={errors.eventDate}
+                />
+
+                <Flex gap={"5"}>
+                  <Box flex={1}>
+                    <InputFieldAdmin
+                      key={"startTime"}
+                      required={true}
+                      label="Start At"
+                      type="time"
+                      placeholder="Event Time"
+                      field={register("startTime", {
+                        required: "please enter a time",
+                      })}
+                      errors={errors.startTime}
+                    />
+                  </Box>
+
+                  <Box flex={1}>
+                    <InputFieldAdmin
+                      key={"endTime"}
+                      required={true}
+                      label="End Time"
+                      type="time"
+                      placeholder="Event Time"
+                      field={register("endTime", {
+                        required: "please enter a time",
+                      })}
+                      errors={errors.endTime}
+                    />
+                  </Box>
+                </Flex>
+
+                <InputFieldAdmin
+                  key={"totalSeats"}
+                  required={false}
+                  label="Number of Seats"
+                  type="number"
+                  placeholder="Number of seats"
+                  field={register("totalSeats")}
+                  errors={errors.endTime}
+                />
+
+                <AdminFile
+                  errors={errors.eventThumbnail}
+                  registerName="eventThumbnail"
+                  label="Event Thumbnail"
+                  key={"file upload"}
+                  register={register}
+                  watch={watchFields.eventThumbnail}
+                />
+                <Flex align={"center"} marginTop={"9"} gap={"5"}>
+                  <Button
+                    paddingX={"10px"}
+                    width={{
+                      base: "100%",
+                      md: "321px",
+                    }}
+                    rounded={"lg"}
+                    paddingY={"12px"}
+                    color={"black"}
+                    fontWeight={"700"}
+                    backgroundColor={"#d1d0ce"}
+                  >
+                    Cancel
+                  </Button>
+                  <Button
+                    paddingX={"10px"}
+                    width={{
+                      base: "100%",
+                      md: "321px",
+                    }}
+                    rounded={"lg"}
+                    paddingY={"12px"}
+                    color={"white"}
+                    fontWeight={"700"}
+                    backgroundColor={"var(--accent-blue)"}
+                    type="submit"
+                  >
+                    Submit
+                  </Button>
+                </Flex>
+              </Box>
+            </Flex>
+          </form>
+        </Box>
+      </Box>
+    </>
+  );
 }
 
 export default EventForm;
