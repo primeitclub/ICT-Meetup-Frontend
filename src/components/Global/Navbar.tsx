@@ -1,8 +1,17 @@
-import { useEffect, useRef } from 'react';
+import {
+  useEffect,
+  useRef,
+} from 'react';
 
 import { Link } from 'react-router-dom';
 
-import { Button, Flex, HStack, Image, Text } from '@chakra-ui/react';
+import {
+  Button,
+  Flex,
+  HStack,
+  Image,
+  Text,
+} from '@chakra-ui/react';
 
 import Logo from '../../assets/mainlogo.png';
 import { useAuthStore } from '../../store/auth/authStore';

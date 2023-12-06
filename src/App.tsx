@@ -1,14 +1,20 @@
-import { useState } from "react";
+import { useEffect, useRef } from "react";
 
 import { Toaster } from "sonner";
 
 import ScrollToTop from "./hoc/ScrollToTop";
-import AdminRoute from "./router/AdminRoute";
 import MainRoute from "./router/MainRoute";
+import { useAuthStore } from "./store/auth/authStore";
 
 function App() {
-  const [isAdmin, setAdmin] = useState(false);
-
+  const { getUser } = useAuthStore((state) => state);
+  const shouldFetch = useRef(true);
+  useEffect(() => {
+    if (shouldFetch.current) {
+      getUser();
+      shouldFetch.current = false;
+    }
+  }, []);
   return (
     <>
       <ScrollToTop />
@@ -20,7 +26,7 @@ function App() {
         visibleToasts={3}
         expand
       />
-      {isAdmin ? <AdminRoute /> : <MainRoute />}
+      <MainRoute />
     </>
   );
 }

@@ -15,6 +15,8 @@
   "@chakra-ui/icons": "^2.1.1",
   "@chakra-ui/input": "^2.1.1",
   "@chakra-ui/react": "^2.8.1",
+  "@ckeditor/ckeditor5-build-classic": "^40.1.0",
+  "@ckeditor/ckeditor5-react": "^6.2.0",
   "@emotion/react": "^11.11.1",
   "@emotion/styled": "^11.11.0",
   "@hookform/resolvers": "^3.3.2",
