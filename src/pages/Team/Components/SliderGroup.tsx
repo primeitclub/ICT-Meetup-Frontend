@@ -24,7 +24,7 @@ function SliderGroup({ TeamData }: TeamProps) {
      delay: 2000,
      disableOnInteraction: false
     }}
-    navigation={true}
+    navigation={false}
     breakpoints={{
      300: {
       slidesPerView: 2
@@ -66,9 +66,10 @@ function SliderGroup({ TeamData }: TeamProps) {
         justifyContent={'center'}
         color={'white'}
         h={'15%'}
+        fontSize={{md:"20px",base:"18px"}}
         bg={'#061532'}
-        fontFamily={'Syncopate'}
-        fontWeight={700}
+        // fontFamily={'Syncopate'}
+        fontWeight={600}
         className="single_team_name"
         letterSpacing={'.2px'}>
         {item.name}

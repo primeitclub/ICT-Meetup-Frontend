@@ -1,6 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 
 import IdeathonForm from "../components/forms/ideathon-form";
+import PublicLayout from "../layout/PublicLayout";
+import RedirectLayout from "../layout/RedirectLayout";
 import AboutUs from "../pages/AboutUs/AboutUs";
 import ForgetPassword from "../pages/Auth/_components/forgetPassword";
 import OTPlogin from "../pages/Auth/_components/otp-verification";
@@ -15,13 +17,6 @@ import InsideEvents from "../pages/InsideEvents/InsideEvents";
 import Schedule from "../pages/Schedule/Schedule";
 import Team from "../pages/Team/Team";
 import Valorant from "../pages/Valorant/valorant";
-import { useAuthStore } from "../store/auth/authStore";
-
-const RedirectRoutes = () => {
-  const { isAuthenticated } = useAuthStore((state) => state);
-
-  return !isAuthenticated ? <Outlet /> : <Navigate to="/" replace />;
-};
 
 const PublicRoutes = () => {
   return (
