@@ -47,14 +47,14 @@ function TabContent() {
       <Tab
        p={'16px 20px'}
        border={'2px solid transparent'}
-       _selected={{ border: '2px solid #0055D5' }}>
+       _selected={{ border: '2px solid #0055D5',fontWeight:600 }}>
        Dec 12
       </Tab>
 
       <Tab
        p={'16px 20px'}
        border={'2px solid transparent'}
-       _selected={{ border: '2px solid #0055D5' }}>
+       _selected={{ border: '2px solid #0055D5',fontWeight:600 }}>
        Dec 13
       </Tab>
      </TabList>
@@ -62,7 +62,7 @@ function TabContent() {
 
     <Divider border={'1px solid #0E1A3B'} />
 
-    <TabPanels overflow={'hidden'} >
+    <TabPanels className='tab_custome' width={{md:"100%",sm:"90%"}} margin={'auto'} overflow={'hidden'} >
      {/* looopppp */}
 
      <BoxSchedule initial={{ y: 100 }} animate={{ y: 0 }} transition={customeTranstion}>

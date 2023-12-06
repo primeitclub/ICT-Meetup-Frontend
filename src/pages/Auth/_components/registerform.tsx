@@ -1,17 +1,26 @@
-import { Button, Flex, Heading, Box, Text, Image } from "@chakra-ui/react";
-import { Stack } from "@chakra-ui/react";
-import google from "../../../assets/google.png";
-import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import {
-  RegisterSchemaType,
-  registerSchema,
-} from "../../../schema/registerSchema";
-import InputField from "../../../components/ui/InputField";
-import NepalFlag from "../../../assets/nepal.png";
-import { registerUser } from "../../../api/auth";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "sonner";
+
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Image,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+import { registerUser } from "../../../api/auth";
+import google from "../../../assets/google.png";
+import NepalFlag from "../../../assets/nepal.png";
+import InputField from "../../../components/ui/InputField";
+import {
+  registerSchema,
+  RegisterSchemaType,
+} from "../../../schema/registerSchema";
 
 export default function LoginForm() {
   const navigate = useNavigate();
@@ -58,10 +67,15 @@ export default function LoginForm() {
             fontWeight={700}
             color={"white"}
           >
-            WELCOME!
+            WELCOME!<span style={{ color: "#E76028" }}>.</span>
           </Heading>
 
-          <Text color={"#D6D6D6"} fontFamily="body">
+          <Text
+            color={"#D6D6D6"}
+            fontSize={"20px"}
+            fontWeight={500}
+            fontFamily="body"
+          >
             Create your account to register
           </Text>
 
@@ -153,6 +167,7 @@ export default function LoginForm() {
             </Stack>
 
             <Flex
+              fontSize={{ md: "18px", sm: "16px" }}
               direction={{ base: "column", md: "row" }}
               justifyContent={{ base: "flex-start", md: "space-between" }}
               alignItems={"center"}

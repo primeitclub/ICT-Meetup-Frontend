@@ -21,14 +21,14 @@ function PageTitle({ pageTitle, pageDescription }: PageProps) {
        <AiOutlinePlus />
       </Box>
       <Heading as={'h1'} fontFamily={'heading'} variant={'section-header'}>
-       {pageTitle}
+       {pageTitle}<span style={{color:'#E76028'}} >.</span>  
       </Heading>
       <Box sx={iconsStyle}>
        <AiOutlinePlus />
       </Box>
      </Flex>
 
-     <Text textAlign={'center'} color={'white'} fontSize={{ sm: '16px', base: '14px' }}>
+     <Text textAlign={'center'} color={'white'} fontWeight={400} fontSize={{md:"22px", sm: '18px', base: '20px' }}>
       {pageDescription}
      </Text>
     </Box>
