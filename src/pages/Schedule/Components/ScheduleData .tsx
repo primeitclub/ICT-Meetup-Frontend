@@ -48,15 +48,15 @@ function ScheduleData ( { dataScheduleDate }: DataProps) {
 
        <Box w={{ lg: '80%', md: '70%', sm: '60%', base: '100%' }} className="event_detail">
         <Flex w={'100%'} justifyContent={'space-between'} className="Headings">
-         <Stack>
-          <Heading fontWeight={600} fontSize={{ lg: '24px', sm: '20px', base: '20px' }} as={'h4'}>
+         <Stack gap={0} >
+          <Heading fontWeight={600} fontSize={{ lg: '28px', sm: '20px', base: '20px' }} as={'h4'}>
            {item.EventName}
           </Heading>
           <Heading
            as={'h5'}
            color={'#26A0F9'}
-           fontSize={{ lg: '20px', sm: '18px', base: '16px' }}
-           fontWeight={400}
+           fontSize={{ lg: '24px', sm: '18px', base: '16px' }}
+           fontWeight={600}
            lineHeight={'140%'}
            letterSpacing={'0.4px'}>
            {item.EventTimeStart} - {item.EventTimeEnd}
@@ -64,7 +64,7 @@ function ScheduleData ( { dataScheduleDate }: DataProps) {
          </Stack>
          <Box>
           {item.EventType === 'Event' ? (
-           <Text borderRadius={'4px'} h={'fit-content'} bg={ProgramType[item.ProgramType as keyof typeof ProgramType]} p={'5px 12px'}>
+           <Text borderRadius={'4px'} fontWeight={400} fontSize={{ lg: '20px', sm: '18px', base: '16px' }} h={'fit-content'} bg={ProgramType[item.ProgramType as keyof typeof ProgramType]} p={'5px 12px'}>
             { item.ProgramType}
            </Text>
           ) : null}
@@ -76,7 +76,7 @@ function ScheduleData ( { dataScheduleDate }: DataProps) {
          lineHeight={'155%'}
          letterSpacing={'0.36px'}
          mt={5}
-         fontSize={{ lg: '18px', sm: '16px', base: '16px' }}
+         fontSize={{ lg: '20px', sm: '18px', base: '16px' }}
          justifyContent={'space-between'}
          alignItems={'center'}>
          <Text>{item.EventAuthor}</Text>

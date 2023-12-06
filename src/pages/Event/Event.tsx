@@ -13,7 +13,6 @@ import {
  Tabs,
  TabList,
  TabPanels,
- Divider,
  chakra,
  shouldForwardProp
 } from '@chakra-ui/react';
@@ -61,14 +60,13 @@ function EventPage() {
  };
 
  const FontCard = {
-  fontFamily: 'Nunito Sans',
   color: '#FFF',
   fontStyle: 'normal'
  };
 
  return (
   <>
-   <Box height={'100%'} color={'white'}>
+   <Box  width={{md:"100%",sm:"90%",base:"90%"}} margin={'auto'} height={'100%'} color={'white'}>
     <PageTitle pageTitle="Event" pageDescription="Find out what’s happening when" />
 
     {/* tab content begins */}
@@ -79,9 +77,11 @@ function EventPage() {
       className='event_list'
        whiteSpace={'nowrap'}
        display={'flex'}
-       flexWrap={'wrap'}
+       flexWrap={'nowrap'}
+    //    overflow={'scroll'}
+       
        justifyContent={'space-around'}
-       gap={{ sm: '', base: '20px' }}>
+       gap={{ sm: '40px', base: '20px' }}>
        <TabLists />
       </TabList>
 
@@ -131,7 +131,7 @@ function EventPage() {
                 <CardBody>
                  <Box mb={2}>
                   <Heading
-                   fontSize={{ lg: '32px', sm: '24px', base: '20px' }}
+                   fontSize={{ lg: '32px', sm: '24px', base: '22px' }}
                    fontWeight={600}
                    lineHeight={{ lg: '36px', md: '34px', base: '30px' }}>
                    {items.event_title}
@@ -142,7 +142,7 @@ function EventPage() {
                     </Box>
                     <Text
                    pt={{ base: '10px', sm: '' }}
-                   fontSize={{ lg: '18px', sm: '16px', base: '16px' }}
+                   fontSize={{ lg: '20px', sm: '18px', base: '18px' }}
                    fontWeight={500}>
                    {items.event_speaker}
                   </Text>
@@ -156,30 +156,30 @@ function EventPage() {
                   lineHeight={{ md: '24px', base: '18px' }}
                   py={3}>
 
-                  <Flex gap={5}>
+                  <Flex alignItems={'center'} gap={5}>
                    <MdLocationOn fill="white" style={{ color: 'white', fontSize: 21 }} />
-                   <Text fontSize={{ lg: '18px', sm: '16px', base: '16px' }}>
+                   <Text fontWeight={500} fontSize={{ lg: '20px', sm: '18px', base: '18px' }}>
                     Seminar hall, 3rd floor
                    </Text>
                   </Flex>
                   
-                  <Flex gap={5}>
+                  <Flex alignItems={'center'} gap={5}>
                   <MdOutlineDateRange fill="white" style={{ color: 'white', fontSize: 21 }} />
-                   <Text fontSize={{ lg: '18px', sm: '16px', base: '16px' }}>
+                   <Text fontWeight={500} fontSize={{ lg: '20px', sm: '18px', base: '18px' }}>
                    {items.date}
                    </Text>
                   </Flex>
 
-                  <Flex gap={5}>
+                  <Flex alignItems={'center'} gap={5}>
                    <FaRegClock fill="white" style={{ color: 'white', fontSize: 20 }} />
-                   <Text fontSize={{ lg: '18px', sm: '16px', base: '16px' }}>
+                   <Text fontWeight={500} fontSize={{ lg: '20px', sm: '18px', base: '18px' }}>
                    {items.time}
                    </Text>
                   </Flex>
 
                  </Flex>
                 </CardBody>
-                <CardFooter  gap={{ sm: 10, base: '20px' }} w={'100%'}>
+                <CardFooter mt={{md:"",sm:"8px",base:"8px"}} gap={{ md:10, sm: 5, base: '5px' }} w={'100%'}>
                  <Button
                   sx={{
                    '&:hover': {
@@ -188,16 +188,18 @@ function EventPage() {
                   }}
                   variant={'primary-button'}
                   p={{ md: '12px 24px', base: '10px 20px' }}
-                  w={'50%'}
-                  fontSize={{ lg: '20px', sm: '18px', base: '16px' }}>
+                 fontWeight={500}
+                  w={{md:'50%',sm:'100%'}}
+                  fontSize={{ lg: '24px', sm: '18px', base: '16px' }}>
                   Register Now
                  </Button>
                  <Button
                  borderRadius={"10px"}
-                  w={'50%'}
+                  w={{md:'50%',sm:'100%'}}
                   variant={'outlined-button'}
+                 fontWeight={500}
                   border={'3px solid blue'}
-                  fontSize={{ lg: '20px', sm: '18px', base: '16px' }}
+                  fontSize={{ lg: '24px', sm: '18px', base: '16px' }}
                   p={{ md: '12px 24px', base: '10px 20px' }}
                   color={'white'}>
                   Read More

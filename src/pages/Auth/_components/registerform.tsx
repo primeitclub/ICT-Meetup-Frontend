@@ -53,10 +53,10 @@ export default function LoginForm() {
       fontFamily="heading"
       fontWeight={700}
       color={'white'}>
-      WELCOME!
+      WELCOME!<span style={{color:'#E76028'}} >.</span>  
      </Heading>
 
-     <Text color={'#D6D6D6'} fontFamily="body">
+     <Text color={'#D6D6D6'} fontSize={'20px'} fontWeight={500} fontFamily="body">
       Create your account to register
      </Text>
 
@@ -145,6 +145,7 @@ export default function LoginForm() {
       </Stack>
 
       <Flex
+      fontSize={{md:"18px",sm:"16px"}}
        direction={{ base: 'column', md: 'row' }}
        justifyContent={{ base: 'flex-start', md: 'space-between' }}
        alignItems={'center'}

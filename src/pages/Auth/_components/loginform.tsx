@@ -46,7 +46,8 @@ export default function LoginForm() {
         w={{ base: '100%', md: '700px', lg: '600px' }}
         borderRadius='24px'
         background='rgba(9, 13, 27, 0.50)'
-        // background={'red'}
+        boxShadow={'0px 0px 150px -10px #061847'}
+        my={10}
         backdropFilter='blur(20px)'
       >
         <Flex direction={'column'}>
@@ -57,10 +58,10 @@ export default function LoginForm() {
             fontWeight={700}
             color={'white'}
           >
-            LOGIN
+            LOGIN<span style={{color:'#E76028'}} >.</span>  
           </Heading>
 
-          <Text color={'#D6D6D6'} fontFamily='body'>
+          <Text color={'#D6D6D6'}  fontSize={"18px"} fontWeight={400} fontFamily='body'>
             Log in to your account
           </Text>
 
@@ -71,6 +72,7 @@ export default function LoginForm() {
             justifyContent='center'
             alignItems='center'
             gap='36px'
+            fontSize={"18px"}
           >
             <Stack spacing={10} alignSelf='stretch'>
               <form

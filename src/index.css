@@ -175,8 +175,8 @@ input:-webkit-autofill:active {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: Syncopate;
-  text-transform: uppercase;
+  /* font-family: Syncopate; */
+  text-transform: capitalize;
 }
 
 .Tab_Header[aria-selected='true'],
@@ -185,8 +185,8 @@ input:-webkit-autofill:active {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: Syncopate;
-  text-transform: uppercase;
+  /* font-family: Syncopate; */
+  text-transform: capitalize;
 }
 
 /* .team_wrap .swiper {
@@ -330,6 +330,3 @@ image {
 }
 
 
-.Tab_Header {
-  color: red !important;
-}

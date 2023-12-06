@@ -7,7 +7,7 @@ const LoginPage = () => {
  return (
   <Box
    paddingY={{ base: '10px', lg: '20px' }}
-   h={{ base: '115vh', md: '100vh', lg: '115vh', xl: '100vh' }}
+   h={{ sm: '100%',base:"100%" }}
    width={'85%'}
    margin={'auto'}
    position={'relative'}
