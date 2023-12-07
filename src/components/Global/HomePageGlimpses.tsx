@@ -1,7 +1,12 @@
-import { Container, Flex, Grid, GridItem, Heading, Image } from '@chakra-ui/react';
+import Glimpse2 from "/assets/Glimpses/glimpse2.webp";
+import Glimpse3 from "/assets/Glimpses/glimpse3.webp";
+import Glimpse4 from "/assets/Glimpses/glimpse4.webp";
+import Glimpse1 from "/assets/Glimpses/glimpses1.jpg";
 
-import HomePageTitle from '../reusables/HomePageTitle';
-import OutlinedButton from '../ui/OutlinedButton';
+import { Container, Flex, Grid, GridItem, Heading } from "@chakra-ui/react";
+
+import HomePageTitle from "../reusables/HomePageTitle";
+import OutlinedButton from "../ui/OutlinedButton";
 
 interface IHomePageGlimpsesData {
   images: {
@@ -13,20 +18,20 @@ interface IHomePageGlimpsesData {
 const homePageGlimpsesData: IHomePageGlimpsesData = {
   images: [
     {
-      src: 'https://placehold.co/300x200',
-      alt: 'Image 1',
+      src: Glimpse2,
+      alt: "Image 1",
     },
     {
-      src: 'https://placehold.co/300x200',
-      alt: 'Image 2',
+      src: Glimpse1,
+      alt: "Image 2",
     },
     {
-      src: 'https://placehold.co/300x200',
-      alt: 'Image 3',
+      src: Glimpse4,
+      alt: "Image 3",
     },
     {
-      src: 'https://placehold.co/300x200',
-      alt: 'Image 4',
+      src: Glimpse3,
+      alt: "Image 4",
     },
   ],
 };
@@ -36,39 +41,42 @@ export default function HomePageGlimpses() {
     <>
       <Container
         paddingY={{
-          base: '40px',
-          lg: '112px',
+          base: "40px",
+          lg: "112px",
         }}
       >
-        <HomePageTitle pageTitle={'Glimpses of the past'} />
-        <Heading variant={'h5'} textAlign={'center'}>
+        <HomePageTitle pageTitle={"Glimpses of the past"} />
+        <Heading variant={"h5"} textAlign={"center"}>
           Experience the past editions of the conference
         </Heading>
         <Grid
           gap={4}
           templateRows={{
-            base: 'repeat(3, 1fr)',
-            lg: 'repeat(2, 1fr)',
+            base: "repeat(3, 1fr)",
+            lg: "repeat(2, 1fr)",
           }}
           templateColumns={{
-            base: 'repeat(2, 1fr)',
-            lg: 'repeat(3, 1fr)',
+            base: "repeat(2, 1fr)",
+            lg: "repeat(3, 1fr)",
           }}
-          paddingY={'48px'}
+          paddingY={"48px"}
         >
           {homePageGlimpsesData.images.map((image, index) => (
             <GridItem key={index} rowSpan={index === 0 || index === 2 ? 2 : 1}>
-              <Image
+              <img
                 src={image.src}
                 alt={image.alt}
-                objectFit={'cover'}
-                style={index === 0 || index === 2 ? { height: '100%' } : { width: '100%' }}
+                style={
+                  index === 0 || index === 2
+                    ? { height: "100%", objectFit: "cover" }
+                    : { width: "100%", objectFit: "cover" }
+                }
               />
             </GridItem>
           ))}
         </Grid>
-        <Flex justifyContent={'center'}>
-          <OutlinedButton buttonText={'View Gallery'} />
+        <Flex justifyContent={"center"}>
+          <OutlinedButton buttonText={"View Gallery"} />
         </Flex>
       </Container>
     </>

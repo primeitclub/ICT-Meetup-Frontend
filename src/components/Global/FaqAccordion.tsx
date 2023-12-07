@@ -9,10 +9,10 @@ import {
   Flex,
   Heading,
   Text,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 
-import HomePageTitle from '../reusables/HomePageTitle';
-import OutlinedButton from '../ui/OutlinedButton';
+import HomePageTitle from "../reusables/HomePageTitle";
+import OutlinedButton from "../ui/OutlinedButton";
 
 interface IFAQData {
   question: string;
@@ -21,24 +21,29 @@ interface IFAQData {
 
 const faqData: IFAQData[] = [
   {
-    question: 'Question 1',
-    answer: 'Answer 1',
+    question: "What is ICT V7?",
+    answer:
+      "ICT V7 is the 7th edition of an annual event organized by Prime IT Club, focused on showcasing the latest developments and innovations in the field of Information and Communication Technology (ICT)",
   },
   {
-    question: 'Question 2',
-    answer: 'Answer 2',
+    question: "When and where is ICT V7 taking place?",
+    answer:
+      "The event is scheduled for January 8-9, 2024, and it will be hosted at Prime College",
   },
   {
-    question: 'Question 3',
-    answer: 'Answer 3',
+    question: "How can I register for the event?",
+    answer:
+      "Registration details will be made available closer to the event date. Keep an eye on our official website and social media channels for updates",
   },
   {
-    question: 'Question 4',
-    answer: 'Answer 4',
+    question: "Is there parking available at the event venue?",
+    answer:
+      "Details about parking facilities will be provided in the event guide, which will be shared closer to the event date.",
   },
   {
-    question: 'Question 5',
-    answer: 'Answer 5',
+    question: "What can I expect at ICT V7",
+    answer:
+      " ICT V7 will feature keynote speakers, workshops, panel discussions, and exhibitions highlighting the latest trends in ICT. It's a great opportunity to network with professionals and enthusiasts in the field",
   },
 ];
 
@@ -47,34 +52,56 @@ export default function FAQAccordion() {
     <>
       <Container
         paddingY={{
-          base: '40px',
-          lg: '80px',
+          base: "40px",
+          lg: "80px",
         }}
       >
-        <HomePageTitle pageTitle={'FAQS'} />
+        <HomePageTitle pageTitle={"FAQS"} />
         <Heading
-          as={'h2'}
-          color={'white'}
-          fontSize={'28px'}
-          fontWeight={'500'}
-          textAlign={'center'}
+          as={"h2"}
+          color={"white"}
+          fontSize={"28px"}
+          fontWeight={"500"}
+          textAlign={"center"}
         >
-          Find the answers to common questions about the event, registration and attendance.
+          Find the answers to common questions about the event, registration and
+          attendance.
         </Heading>
-        <Flex justifyContent={'center'} paddingY={'16'}>
-          <Accordion allowToggle w={'full'} maxW={'4xl'} borderTop={'1px solid white'}>
+        <Flex justifyContent={"center"} paddingY={"16"}>
+          <Accordion
+            allowToggle
+            w={"full"}
+            maxW={"4xl"}
+            borderTop={"1px solid white"}
+          >
             {faqData.map((faq, index: number) => (
-              <AccordionItem key={index} paddingY={'20px'} borderBottom={'1px solid white'}>
-                <Heading variant={'h5'}>
+              <AccordionItem
+                key={index}
+                paddingY={"20px"}
+                borderBottom={"1px solid white"}
+              >
+                <Heading variant={"h5"}>
                   <AccordionButton>
-                    <Box as='span' flex='1' fontSize={'24px'} textAlign='left' fontWeight={'500'}>
+                    <Box
+                      as="span"
+                      flex="1"
+                      fontSize={"24px"}
+                      textAlign="left"
+                      fontWeight={"500"}
+                    >
                       {faq.question}
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
                 </Heading>
                 <AccordionPanel py={4}>
-                  <Heading variant={'h5'} as={'h3'} fontWeight={'500'} textAlign={'left'}>
+                  <Heading
+                    variant={"h5"}
+                    as={"p"}
+                    fontWeight={"400"}
+                    textAlign={"left"}
+                    fontSize={"20px"}
+                  >
                     {faq.answer}
                   </Heading>
                 </AccordionPanel>
@@ -83,27 +110,31 @@ export default function FAQAccordion() {
           </Accordion>
         </Flex>
 
-        <Flex justifyContent={'center'} direction={'column'} alignItems={'center'}>
+        <Flex
+          justifyContent={"center"}
+          direction={"column"}
+          alignItems={"center"}
+        >
           <Heading
-            variant={'h3'}
-            as={'h2'}
-            fontSize={'34px'}
-            textAlign={'center'}
-            fontFamily={'heading'}
+            variant={"h3"}
+            as={"h2"}
+            fontSize={"34px"}
+            textAlign={"center"}
+            fontFamily={"heading"}
           >
             STILL HAVE A QUESTION?
           </Heading>
           <Text
-            textAlign={'center'}
+            textAlign={"center"}
             paddingY={4}
-            color={'white'}
-            fontSize={'28px'}
-            fontWeight={'500'}
+            color={"white"}
+            fontSize={"28px"}
+            fontWeight={"500"}
           >
             Contact our events head @Sandesh Basnet or @Jenish Maharjan
           </Text>
-          <Box paddingY={'10'}>
-            <OutlinedButton buttonText={'Contact Us'} />
+          <Box paddingY={"10"}>
+            <OutlinedButton buttonText={"Contact Us"} />
           </Box>
         </Flex>
       </Container>
