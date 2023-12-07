@@ -288,12 +288,13 @@ image {
   width: 100%;
   padding: 20px 10px;
   color: white;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .custom-input::placeholder {
   color: #a2a2a2;
-  font-size: 20px;
+  font-size: 22px;
+  font-weight: 500;
 }
 
 .custom-input:focus {

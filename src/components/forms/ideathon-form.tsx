@@ -1,173 +1,184 @@
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import InputField from '../ui/InputField';
-import { Box, Button } from '@chakra-ui/react';
-import RegistrationFormHeader from '../reusables/registration-form-header';
-import TextAreaInputField from '../ui/TextAreaField';
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+
+import { Box, Button } from "@chakra-ui/react";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+import RegistrationFormHeader from "../reusables/registration-form-header";
+import InputField from "../ui/InputField";
+import TextAreaInputField from "../ui/TextAreaField";
 
 const ideathonSchema = z.object({
- teamName: z.string().min(3).max(50),
- teamMembers: z.string().min(3).max(50),
- collegeName: z.string().min(3).max(50),
- teamLeaderName: z.string().min(3).max(50),
- sdgGoals: z.string().min(3).max(50),
- ideaName: z.string().min(3).max(50),
- ideaDescription: z.string().min(150).max(250),
- ideaImpact: z.string().min(3).max(50),
- ideaImplementation: z.string().min(3).max(50)
+  teamName: z.string().min(3).max(50),
+  teamMembers: z.string().min(3).max(50),
+  collegeName: z.string().min(3).max(50),
+  teamLeaderName: z.string().min(3).max(50),
+  sdgGoals: z.string().min(3).max(50),
+  ideaName: z.string().min(3).max(50),
+  ideaDescription: z.string().min(150).max(250),
+  ideaImpact: z.string().min(3).max(50),
+  ideaImplementation: z.string().min(3).max(50),
 });
 
 type FormValues = z.infer<typeof ideathonSchema>;
 
 export default function IdeathonForm() {
- const {
-  register,
-  handleSubmit,
-  watch,
-  formState: { errors }
- } = useForm<FormValues>({
-  resolver: zodResolver(ideathonSchema)
- });
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormValues>({
+    resolver: zodResolver(ideathonSchema),
+  });
 
- const onSubmit = (data: FormValues) => {
-  console.log(data);
- };
+  console.log(errors);
 
- return (
-  <>
-   <Box
-    maxW={{
-     xl: '1100px',
-     '2xl': '1440px'
-    }}
-    paddingX={{
-     base: '10px',
-     md: '64px',
-     xl: '0px'
-    }}
-    margin={'auto'}
-    display={'flex'}
-    justifyContent={'center'}
-    alignItems={'center'}
-    flexDirection={'column'}
-    marginTop={'64px'}>
-    <RegistrationFormHeader title="Ideathon Form" description="Please fill up the details" />
-    <Box
-     marginTop={'64px'}
-     borderRadius={'24px'}
-     backdropFilter={'blur(20px)'}
-     maxW={'800px'}
-     width={'100%'}
-     padding={{
-      base: '32px 32px 103px 32px',
-      md: '64px 64px 103px 64px'
-     }}
-     backgroundColor={'var(--form-background)'}
-     boxShadow={'0px 0px 150px -10px #061847;'}>
-     <form
-      onSubmit={handleSubmit(onSubmit)}
-      style={{
-       display: 'flex',
-       flexDirection: 'column',
-       gap: '3rem'
-      }}>
-      <InputField
-       label="Team Name"
-       errors={errors.teamName?.message}
-       required={true}
-       placeholder="Team Name"
-       type="text"
-       field={register('teamName')}
-       key={'teamName'}
-      />
+  const onSubmit = (data: FormValues) => {
+    console.log(data);
+  };
 
-      <InputField
-       label="Team Members (Separate by commas)"
-       errors={errors.teamMembers?.message}
-       required={true}
-       placeholder="Team Members"
-       type="text"
-       field={register('teamMembers')}
-       key={'teamMembers'}
-      />
+  return (
+    <>
+      <Box
+        maxW={{
+          xl: "1100px",
+          "2xl": "1440px",
+        }}
+        paddingX={{
+          base: "10px",
+          md: "64px",
+          xl: "0px",
+        }}
+        margin={"auto"}
+        display={"flex"}
+        justifyContent={"center"}
+        alignItems={"center"}
+        flexDirection={"column"}
+        marginTop={"64px"}
+      >
+        <RegistrationFormHeader
+          title="Ideathon Form"
+          description="Please fill up the details"
+        />
+        <Box
+          marginTop={"64px"}
+          borderRadius={"24px"}
+          backdropFilter={"blur(20px)"}
+          maxW={"800px"}
+          width={"100%"}
+          padding={{
+            base: "32px 32px 103px 32px",
+            md: "64px 64px 103px 64px",
+          }}
+          backgroundColor={"var(--form-background)"}
+          boxShadow={"0px 0px 150px -10px #061847;"}
+        >
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "3rem",
+            }}
+          >
+            <InputField
+              label="Team Name"
+              errors={errors.teamName}
+              required={true}
+              placeholder="Team Name"
+              type="text"
+              field={register("teamName")}
+              key={"teamName"}
+            />
 
-      <InputField
-       label="College Name"
-       errors={errors.collegeName?.message}
-       required={true}
-       placeholder="College Name"
-       type="text"
-       field={register('collegeName')}
-       key={'collegeName'}
-      />
+            <InputField
+              label="Team Members (Separate by commas)"
+              errors={errors.teamMembers}
+              required={true}
+              placeholder="Team Members"
+              type="text"
+              field={register("teamMembers")}
+              key={"teamMembers"}
+            />
 
-      <InputField
-       label="Team Leader Name"
-       errors={errors.teamLeaderName?.message}
-       required={true}
-       placeholder="Team Leader Name"
-       type="text"
-       field={register('teamLeaderName')}
-       key={'teamLeaderName'}
-      />
+            <InputField
+              label="College Name"
+              errors={errors.collegeName}
+              required={true}
+              placeholder="College Name"
+              type="text"
+              field={register("collegeName")}
+              key={"collegeName"}
+            />
 
-      <InputField
-       label="SDG Goals"
-       errors={errors.sdgGoals?.message}
-       required={true}
-       placeholder="SDG Goals"
-       type="text"
-       field={register('sdgGoals')}
-       key={'sdgGoals'}
-      />
+            <InputField
+              label="Team Leader Name"
+              errors={errors.teamLeaderName}
+              required={true}
+              placeholder="Team Leader Name"
+              type="text"
+              field={register("teamLeaderName")}
+              key={"teamLeaderName"}
+            />
 
-      <InputField
-       label="Idea Name"
-       errors={errors.ideaName?.message}
-       required={true}
-       placeholder="Idea Name"
-       type="text"
-       field={register('ideaName')}
-       key={'ideaName'}
-      />
+            <InputField
+              label="SDG Goals"
+              errors={errors.sdgGoals}
+              required={true}
+              placeholder="SDG Goals"
+              type="text"
+              field={register("sdgGoals")}
+              key={"sdgGoals"}
+            />
 
-      <TextAreaInputField
-       label="Idea Description"
-       errors={errors.ideaDescription?.message}
-       required={true}
-       placeholder="Idea Description"
-       type="text"
-       field={register('ideaDescription')}
-       key={'ideaDescription'}
-      />
+            <InputField
+              label="Idea Name"
+              errors={errors.ideaName}
+              required={true}
+              placeholder="Idea Name"
+              type="text"
+              field={register("ideaName")}
+              key={"ideaName"}
+            />
 
-      <InputField
-       label="Idea Impact"
-       errors={errors.ideaImpact?.message}
-       required={true}
-       placeholder="Idea Impact"
-       type="text"
-       field={register('ideaImpact')}
-       key={'ideaImpact'}
-      />
+            <TextAreaInputField
+              label="Idea Description"
+              errors={errors.ideaDescription}
+              required={true}
+              placeholder="Idea Description"
+              type="text"
+              field={register("ideaDescription")}
+              key={"ideaDescription"}
+            />
 
-      <TextAreaInputField
-       label="Idea Implementation"
-       errors={errors.ideaImplementation?.message}
-       required={true}
-       placeholder="Idea Implementation"
-       type="text"
-       field={register('ideaImplementation')}
-       key={'ideaImplementation'}
-      />
+            <InputField
+              label="Idea Impact"
+              errors={errors.ideaImpact}
+              required={true}
+              placeholder="Idea Impact"
+              type="text"
+              field={register("ideaImpact")}
+              key={"ideaImpact"}
+            />
 
-      <Button variant={'primary-button'}>Submit Form</Button>
-     </form>
-    </Box>
-   </Box>
-  </>
- );
+            <TextAreaInputField
+              label="Idea Implementation"
+              errors={errors.ideaImplementation}
+              required={true}
+              placeholder="Idea Implementation"
+              type="text"
+              field={register("ideaImplementation")}
+              key={"ideaImplementation"}
+            />
+
+            <Button type="submit" variant={"primary-button"}>
+              Submit Form
+            </Button>
+          </form>
+        </Box>
+      </Box>
+    </>
+  );
 }
 
 //team name

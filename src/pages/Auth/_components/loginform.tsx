@@ -14,7 +14,6 @@ import {
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import { loginUser, setRefreshToken, setToken } from "../../../api/auth";
-import google from "../../../assets/google.png";
 import InputField from "../../../components/ui/InputField";
 import { loginSchema, LoginSchemaType } from "../../../schema/loginSchema";
 
@@ -29,15 +28,13 @@ export default function LoginForm() {
   });
 
   const onSubmit = async (loginData: LoginSchemaType) => {
-    console.log(loginData);
     const response = await loginUser(loginData);
 
     if (response.success === true) {
-      console.log(response);
       setToken(response.data.accessToken);
       setRefreshToken(response.data.refreshToken);
       toast.success("Logged in Successfully!");
-      // navigate('/');
+      window.location.replace("/");
     } else {
       //    console.log(response.message);
       toast.error("Login Failed! Please try again");
@@ -47,10 +44,27 @@ export default function LoginForm() {
     }
   };
 
+  // const oAuthLogin = async () => {
+  //   window.location.href = "http://localhost:6969/auth/login-with-google";
+  //   // if (response.success === true) {
+  //   //   console.log(response);
+  //   //   setToken(response.data.accessToken);
+  //   //   setRefreshToken(response.data.refreshToken);
+  //   //   toast.success("Logged in Successfully!");
+  //   //   // navigate('/');
+  //   // } else {
+  //   //   console.log(response);
+  //   //   toast.error("Login Failed! Please try again");
+  //   //   response.error.detail.forEach((error: any) => {
+  //   //     toast.warning(error);
+  //   //   });
+  //   // }
+  // };
+
   return (
     <>
       <Box
-        p={{ base: "20px", md: "25px", lg: "50px" }}
+        p={{ base: "60px", md: "70px", lg: "50px" }}
         w={{ base: "100%", md: "700px", lg: "600px" }}
         borderRadius="24px"
         background="rgba(9, 13, 27, 0.50)"
@@ -152,7 +166,7 @@ export default function LoginForm() {
                 Dont have an account? <Link to="/register">Register Now</Link>
               </Text>
             </Box>
-            <Text
+            {/* <Text
               fontFamily="heading"
               color={"rgba(255, 255, 255, 0.60)"}
               fontWeight={700}
@@ -161,15 +175,16 @@ export default function LoginForm() {
               textTransform="uppercase"
             >
               -OR-
-            </Text>
-            <Flex
+            </Text> */}
+            {/* <Flex
               justifyContent="space-between"
               alignItems="center"
               w="100%"
               gap="34px"
               flexDirection={{ base: "column", md: "row" }}
             >
-              <Flex
+              <Button
+                onClick={oAuthLogin}
                 padding={{ base: "8px", md: "8px 16px" }}
                 display={"inline-flex"}
                 alignItems="center"
@@ -183,23 +198,8 @@ export default function LoginForm() {
                 <Text fontFamily="body" color={"#D6D6D6"}>
                   Sign Up with Google
                 </Text>
-              </Flex>
-              <Flex
-                padding={{ base: "8px", md: "8px 16px" }}
-                display={"inline-flex"}
-                alignItems="center"
-                gap="4px"
-                borderRadius="8px"
-                border="1px solid rgba(255, 255, 255, 0.12)"
-                background="#0D0D0D"
-                width="100%"
-              >
-                <img src={google} alt="google" />
-                <Text fontFamily="body" color={"#D6D6D6"}>
-                  Sign Up with Google
-                </Text>
-              </Flex>
-            </Flex>
+              </Button>
+            </Flex> */}
           </Box>
         </Flex>
       </Box>

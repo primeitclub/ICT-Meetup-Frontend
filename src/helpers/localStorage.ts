@@ -1,6 +1,6 @@
 export const clearStorage=()=>localStorage.clear()
 
-export const setLocalStorage = (key: string, value: string) => {
+export const setLocalStorage = (key: string, value: any) => {
     localStorage.setItem(key, value)
 }
 

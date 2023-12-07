@@ -14,7 +14,14 @@ interface UserSession{
     }
 }
 
-export const registerUser = requestHandler<any, unknown>(async (params) => {
+interface RegisterResponse{
+    email: string;
+    id: number;
+    message: string;
+    statusCode: number;
+}
+
+export const registerUser = requestHandler<any, RegisterResponse>(async (params) => {
     return PostRequest("auth/register", params);
 })
 
@@ -38,3 +45,23 @@ export const checkAdmin = requestHandler<any, UserSession>(async () => {
     return GetRequest("user/isAdmin");
 })
 
+export const verifyOtp = requestHandler<any, unknown>(async (params) => {
+    return PostRequest("auth/verify-otp", params);
+})
+
+export const resendOtp = requestHandler<any, unknown>(async (params) => {
+    return PostRequest("auth/verify-otp", params);
+})
+
+export const loginWithGoogle = requestHandler<any, LoginResponse>(async () => {
+    return GetRequest("auth/login-with-google");
+})
+
+export const logoutUser = async () => {
+    //clear token
+    setLocalStorage("pitc-token", "");
+    setLocalStorage("pitc-refresh-token", "");
+    //refresh page
+    window.location.reload();
+    return;
+}

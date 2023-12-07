@@ -6,6 +6,8 @@ export const buttonTheme = {
 
    borderRadius: '10px',
    color: 'white',
+   fontWeight: '500',
+   fontSize: '22px',
    transition: 'background 0.3s ease-in-out, transform 0.3s ease-in-out',
    _hover: {
     transform: 'scale(1.05)' // Scale the button slightly on hover for a smooth effect
