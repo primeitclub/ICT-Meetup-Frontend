@@ -33,7 +33,6 @@ const data = [
 export default function Navbar() {
   const { user, getUser } = useAuthStore((state) => state);
   const shouldFetch = useRef(true);
-  console.log(user);
   useEffect(() => {
     if (shouldFetch.current) {
       getUser();
