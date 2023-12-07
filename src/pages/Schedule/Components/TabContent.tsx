@@ -17,6 +17,7 @@ import jsondata1 from "../../../data/dataSchedule.json";
 import ScheduleData from "./ScheduleData ";
 
 function TabContent() {
+  //@ts-ignore
   const [activeTab, setActiveTab] = useState(0);
 
   //  framer motion

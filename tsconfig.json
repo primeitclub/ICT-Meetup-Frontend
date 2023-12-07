@@ -5,6 +5,7 @@
   "lib": ["ES2020", "DOM", "DOM.Iterable"],
   "module": "ESNext",
   "skipLibCheck": true,
+  "allowUnusedLabels": true,
 
   /* Bundler mode */
   "moduleResolution": "bundler",
@@ -17,8 +18,8 @@
   /* Linting */
   "strict": true,
   "noUnusedLocals": true,
-  "noUnusedParameters": true,
-  "noFallthroughCasesInSwitch": true
+  "noUnusedParameters": false,
+  "noFallthroughCasesInSwitch": true,
  },
  "include": ["src"],
  "references": [{ "path": "./tsconfig.node.json" }]

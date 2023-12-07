@@ -16,7 +16,7 @@ type User = {
 
 
 
-export const useAuthStore = create<AuthStore>((set, get) => ({
+export const useAuthStore = create<AuthStore>((set) => ({
     isAuthenticated: false, 
     user: null,
     role: "",
