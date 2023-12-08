@@ -50,15 +50,15 @@ export default function AboutUs() {
       <Box
         backgroundImage={`url(${AboutBg})`}
         width={"100%"}
-        height={"605px"}
+        height={{md:"605px",sm:"300px"}}
         backgroundRepeat={"no-repeat"}
         backgroundSize="cover"
         backgroundBlendMode={"color-dodge"}
         backgroundColor={"lightgray 50%"}
         position={"relative"}
       >
-        <Box position={"absolute"} top={"25%"} left={["15%", "25%"]}>
-          <Image src={LogoPng} width={"800px"}></Image>
+        <Box position={"absolute"} top={"25%"}  right={{xl:"25%",lg:"",md:"10%",sm:"0%"}} >
+          <Image src={LogoPng} width={{md:"800px",sm:"100%"}}></Image>
         </Box>
       </Box>
       <Container

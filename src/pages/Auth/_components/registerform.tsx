@@ -183,7 +183,7 @@ export default function LoginForm() {
                       scale: "1.5",
                     }}
                   />
-                  <Text fontFamily="body" color={"#D6D6D6"}>
+                  <Text fontFamily="body" fontSize={"20px"} color={"#D6D6D6"}>
                     I agree to the <Link to="/terms">Terms and Conditions</Link>
                   </Text>
                 </Flex>
@@ -194,7 +194,7 @@ export default function LoginForm() {
                 )}
               </Flex>
 
-              <Text fontFamily="body" color={"#D6D6D6"}>
+              <Text fontSize={"20px"} fontFamily="body" color={"#D6D6D6"}>
                 <Link to="/forgetPassword"> Forgot your password?</Link>
               </Text>
             </Flex>

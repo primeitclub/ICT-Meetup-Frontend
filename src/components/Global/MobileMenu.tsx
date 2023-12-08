@@ -105,13 +105,13 @@ export default function MobileMenu() {
       >
         <Flex justifyContent={"space-between"} alignItems={"center"}>
           <Box>
-            <Link to="/">
-              <Image src={Logo} alt="logo" boxSize="12" width={"150px"} />
+            <Link onClick={closeNav} to="/">
+              <Image  src={Logo} alt="logo" boxSize="12" width={"150px"} />
             </Link>
           </Box>
 
           <Box>
-            <Button className="navbar-close" onClick={closeNav}>
+            <Button className="navbar-close" >
               <CloseButton color="white" />
             </Button>
           </Box>
@@ -133,8 +133,8 @@ export default function MobileMenu() {
               width={"full"}
               textAlign={"right"}
             >
-              <Link to={item.link}>
-                <Text color={"white"} fontSize={"24px"} fontWeight={"500"}>
+              <Link onClick={closeNav} to={item.link}>
+                <Text  color={"white"} fontSize={"24px"} fontWeight={"500"}>
                   {item.label}
                 </Text>
               </Link>

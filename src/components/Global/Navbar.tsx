@@ -72,7 +72,9 @@ export default function Navbar() {
         textColor={'white'}
         fontSize={'24px'}
       >
-        <Image src={Logo} h='50px' />
+       <Link to={"/"} >
+       <Image src={Logo} h='50px' />
+       </Link>
         <HStack
           as='nav'
           spacing='8'
