@@ -69,7 +69,7 @@ input:-webkit-autofill:active {
     --bg,
     radial-gradient(132.21% 68.86% at 43.76% 52.23%, #040e2c 0.47%, #01050c 100%)
   ); */
-  background-image: url("/assets/AboutUs/bg.png");
+  background-image: url("/assets/AboutUs/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
