@@ -110,9 +110,13 @@ input:-webkit-autofill:active {
 }
 
 .navbar {
-  /* background: rgba(4, 13, 42, 0.8);*/
+  background: rgba(4, 13, 42, 0.8);
   box-shadow: 0px 6px 32px 0px rgba(8, 38, 114, 0.4);
   backdrop-filter: blur(100px);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
 }
 .meetup-header {
   background: var(
