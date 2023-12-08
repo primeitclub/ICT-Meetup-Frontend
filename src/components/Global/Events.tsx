@@ -4,6 +4,7 @@ import { Box, Button, Container, Flex, Image, Text } from '@chakra-ui/react';
 
 import EventSlider from '../reusables/EventsSlider';
 import HomePageTitle from '../reusables/HomePageTitle';
+import FramerAnimation from '../animation/FramerAnimation';
 
 export default function Events() {
   return (
@@ -25,7 +26,8 @@ export default function Events() {
           >
             <EventSlider />
             <Box>
-              <Image
+             <FramerAnimation>
+             <Image
                 src={AiRobot}
                 borderRadius={'64px 0px 0px 64px'}
                 alt='About'
@@ -39,6 +41,7 @@ export default function Events() {
                   xl: '100%',
                 }}
               />
+             </FramerAnimation>
             </Box>
           </Flex>
           <Box

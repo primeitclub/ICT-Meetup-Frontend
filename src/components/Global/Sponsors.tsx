@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Box, Container, Flex, Grid, Heading, Image } from '@chakra-ui/react';
 
 import HomePageTitle from '../reusables/HomePageTitle';
+import { ScaleUpanimation } from '../animation/FramerAnimation';
 
 interface ISponsorsData {
   type: string;
@@ -137,11 +138,13 @@ export default function Sponsors() {
                 >
                   {sponsor.sponsors.map((s: any, i: any) => {
                     return (
-                      <Link key={i} to={s.link} target='_blank' rel='noopener noreferrer'>
+                      <ScaleUpanimation>
+                        <Link key={i} to={s.link} target='_blank' rel='noopener noreferrer'>
                         <Box maxH={'335px'} maxW={'500px'} backgroundColor={'white'}>
                           <Image src={s.img} alt={s.name} />
                         </Box>
                       </Link>
+                      </ScaleUpanimation>
                     );
                   })}
                 </Grid>

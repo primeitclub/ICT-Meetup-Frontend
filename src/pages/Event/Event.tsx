@@ -92,7 +92,7 @@ function EventPage() {
        <TabLists />
       </TabList>
 
-      <TabPanels overflow={'hidden'} mt={'69px'}>
+      <TabPanels overflowY={'visible'} mt={'69px'}>
        {Object.keys(workShop).map((dataIndex) => {
         const DataVariable = workShop[dataIndex];
 

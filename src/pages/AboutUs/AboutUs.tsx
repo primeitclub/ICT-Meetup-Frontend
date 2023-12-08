@@ -4,6 +4,7 @@ import AboutBg from "../../assets/AboutUs/aboutBg.png";
 import LogoPng from "../../assets/AboutUs/logo.svg";
 import PageTitle from "../../components/Global/PageTitle";
 import AboutUsSection from "./Component/AboutUsSection";
+import FramerAnimation from "../../components/animation/FramerAnimation";
 
 interface ObjectDataType {
   name: string;
@@ -58,7 +59,9 @@ export default function AboutUs() {
         position={"relative"}
       >
         <Box position={"absolute"} top={"25%"}  right={{xl:"25%",lg:"",md:"10%",sm:"0%"}} >
-          <Image src={LogoPng} width={{md:"800px",sm:"100%"}}></Image>
+         <FramerAnimation>
+         <Image src={LogoPng} width={{md:"800px",sm:"100%"}}></Image>
+         </FramerAnimation>
         </Box>
       </Box>
       <Container
