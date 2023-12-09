@@ -8,7 +8,7 @@ const MainRoute = () => {
   return (
     <>
       <Box className="main-body ">
-        <Box margin={"auto"} className="main-body-wrapper">
+        <Box margin={"auto"} marginTop={"60px"} className="main-body-wrapper">
           <PrivateRoutes />
           <PublicRoutes />
         </Box>

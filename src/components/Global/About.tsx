@@ -33,7 +33,10 @@ export default function About() {
           base: "center",
         }}
         position={"relative"}
-        paddingY={"50px"}
+        paddingY={{
+          base: "32px",
+          lg: "80px",
+        }}
       >
         <Box
           maxW={{
@@ -50,7 +53,6 @@ export default function About() {
           direction={"column"}
           gap={{
             base: "32px",
-            md: "48px",
           }}
           marginTop={{
             base: "32px",
@@ -58,7 +60,7 @@ export default function About() {
           }}
           paddingX={{
             base: "32px",
-            md: "97px",
+            md: "64px",
           }}
         >
           <Heading
@@ -66,7 +68,7 @@ export default function About() {
             fontSize={{
               base: "24px",
               md: "32px",
-              lg: "40px",
+              lg: "36px",
             }}
             fontFamily="heading"
             fontWeight={"700"}
@@ -144,7 +146,7 @@ export default function About() {
             ))}
           </VStack>
 
-          <OutlinedButton buttonText="Register Now" />
+          <OutlinedButton buttonText="Learn More" />
         </Flex>
       </Flex>
     </>
