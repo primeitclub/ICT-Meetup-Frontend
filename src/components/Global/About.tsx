@@ -1,9 +1,18 @@
 import AiRobot from "/assets/AboutUs/ai_robot.png";
 
-import { Flex, Heading, HStack, Image, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  HStack,
+  Image,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 
 import HomePageTitle from "../reusables/HomePageTitle";
 import OutlinedButton from "../ui/OutlinedButton";
+import FramerAnimation from "../animation/FramerAnimation";
 
 const data = [
   "Discover cutting-edge technology",
@@ -29,16 +38,17 @@ export default function About() {
           lg: "80px",
         }}
       >
-        <Image
-          src={AiRobot}
-          alt="About"
-          borderRadius={"0px 64px 64px 0px"}
+        <Box
           maxW={{
             sm: "100%",
             md: "50%",
             "2xl": "50%",
           }}
-        />
+        >
+         <FramerAnimation>
+         <Image src={AiRobot} alt="About" borderRadius={"0px 64px 64px 0px"} />
+         </FramerAnimation>
+        </Box>
         <Flex
           direction={"column"}
           gap={{

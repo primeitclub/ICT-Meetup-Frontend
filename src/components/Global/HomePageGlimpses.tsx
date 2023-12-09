@@ -2,6 +2,7 @@ import { Container, Flex, Grid, GridItem, Heading, Image } from '@chakra-ui/reac
 
 import HomePageTitle from '../reusables/HomePageTitle';
 import OutlinedButton from '../ui/OutlinedButton';
+import FramerAnimation from '../animation/FramerAnimation';
 
 interface IHomePageGlimpsesData {
   images: {
@@ -44,6 +45,7 @@ export default function HomePageGlimpses() {
         <Heading variant={'h5'} textAlign={'center'}>
           Experience the past editions of the conference
         </Heading>
+        <FramerAnimation>
         <Grid
           gap={4}
           templateRows={{
@@ -67,6 +69,7 @@ export default function HomePageGlimpses() {
             </GridItem>
           ))}
         </Grid>
+        </FramerAnimation>
         <Flex justifyContent={'center'}>
           <OutlinedButton buttonText={'View Gallery'} />
         </Flex>

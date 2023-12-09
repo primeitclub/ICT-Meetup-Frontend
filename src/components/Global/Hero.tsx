@@ -1,4 +1,5 @@
 import { BsArrowRight } from "react-icons/bs";
+import FramerAnimation from "../animation/FramerAnimation";
 
 import { Box, Button, Flex, Text } from "@chakra-ui/react";
 
@@ -76,7 +77,10 @@ export default function Hero() {
             lg: "0",
           }}
         >
-          <img src={Robot} alt="gradient" />
+          <FramerAnimation>
+           <img src={Robot} alt="gradient" />
+          </FramerAnimation>
+          
         </Flex>
       </Box>
     </>

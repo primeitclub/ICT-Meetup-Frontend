@@ -85,7 +85,7 @@ export default function LoginForm() {
 
           <Text
             color={"#D6D6D6"}
-            fontSize={"18px"}
+            fontSize={"20px"}
             fontWeight={400}
             fontFamily="body"
           >
@@ -162,7 +162,7 @@ export default function LoginForm() {
               >
                 Login
               </Button>
-              <Text fontFamily="body" color={"#D6D6D6"}>
+              <Text fontFamily="body" fontSize={"20px"} color={"#D6D6D6"}>
                 Dont have an account? <Link to="/register">Register Now</Link>
               </Text>
             </Box>

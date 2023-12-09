@@ -1,11 +1,40 @@
-import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Text, chakra, shouldForwardProp } from "@chakra-ui/react";
+import { ScaleUpanimation } from "../../../components/animation/FramerAnimation";
+import { isValidMotionProp } from "framer-motion";
+import { useEffect , useRef } from "react";
+import { motion } from "framer-motion";
 
 const AboutUsSection = (props: any) => {
   const { imageLink, heading, paragraph, direction } = props;
   const flexDirection = direction === "left" ? "row" : "row-reverse";
+
+  const heightAbout = useRef<HTMLDivElement | null>(null);
+
+  const scrollByViewPort = () => {
+    const viewportHeight = window.innerHeight;
+    heightAbout.current?.scrollBy(0, 100); // Scroll the window
+  }
+
+  useEffect( ()=>{
+
+    const scrollHandler = () => scrollByViewPort();
+    window.addEventListener( "scroll",scrollHandler );
+
+    return ()=>{
+      window.removeEventListener("scroll",scrollHandler);
+    }
+
+  } ,[])
+
+  // compo
+  const MotionBox = chakra( motion.div , {
+    shouldForwardProp:( prop ) => isValidMotionProp( prop ) || shouldForwardProp( prop )
+  });
+
   return (
-    <Flex
+      <Flex
       //    key={index}
+      ref={heightAbout}
       direction={{
         base: "column",
         lg: flexDirection,
@@ -16,6 +45,7 @@ const AboutUsSection = (props: any) => {
       justifyContent={"center"}
       alignItems={"center"}
       color={"#fff"}
+      height={{md:"90vh",sm:"90vh"}}
     >
       <Box
         width={{
@@ -23,7 +53,9 @@ const AboutUsSection = (props: any) => {
           lg: "50%",
         }}
       >
-        <Image src={imageLink} alt="Image" />
+       <ScaleUpanimation>
+       <Image src={imageLink} alt="Image" />
+       </ScaleUpanimation>
       </Box>
       <Box
         width={{
