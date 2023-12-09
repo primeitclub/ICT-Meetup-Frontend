@@ -1,6 +1,6 @@
 export interface DataTypeTeam{
 
-    name : string,
+    fullName : string,
     image : string
 
 }

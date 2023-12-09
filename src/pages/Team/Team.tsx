@@ -3,14 +3,48 @@ import SliderGroup from "./Components/SliderGroup"
 import TeamData from '../../data/dataTeam.json'
 import { Box } from "@chakra-ui/layout"
 import TeamHeader from "./Components/TeamHeader"
+import { useEffect, useState } from "react"
+import axios from "axios"
+import { DataTypeTeam } from "./DataSchema/Data"
+import { GetRequest } from "../../services/httpRequest"
 
-function Team(){
+enum TeamCategory {
+    organizer = "organizer",
+    volunteer = "volunteer",
+    developer = "developer"
+}
+
+    interface dataTeamProp {
+        
+        groupedTeamMembers: DataTypeTeam[];
+    
+    }
+
+function Team(){    
+
+    const [dataTeam, setDataTeam] = useState<any>();
+
+    useEffect(() => {
+      const teamData = async () => {
+        try {
+          const dataTeam = await GetRequest("team-members");
+          setDataTeam(dataTeam.data.groupedTeamMembers);
+          console.log(dataTeam.data.groupedTeamMembers)
+          return dataTeam.data;
+        } catch (err) {
+          console.log(err);
+        }
+      };
+  
+      teamData();
+    }, []);    
 
 
 
-    const team_developer = TeamData.developer_team;
-    const team_organizer = TeamData.organizer_team;
-    const team_volunter = TeamData.volunteer_team;
+    const team_developer = dataTeam?.development;
+    const team_organizer =dataTeam?.organizer;
+    const team_volunter =dataTeam?.volunteer;
+
 
     return (<>
     

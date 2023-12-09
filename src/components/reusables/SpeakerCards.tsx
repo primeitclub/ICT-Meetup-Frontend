@@ -50,7 +50,10 @@ export default function SpeakerCards({
             className='speaker_name'
             backgroundBlendMode={'plus-darker'}
             letterSpacing={'.2px'}
-          ></Box>
+          >
+            {name}
+            {speakerSpeciality}
+          </Box>
         </Box>
       </Flex>
     </>

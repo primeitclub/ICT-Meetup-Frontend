@@ -40,13 +40,13 @@ function ScheduleData({ dataScheduleDate }: DataProps) {
             }}
             className="single_program"
           >
-            <Flex flexDirection={{ sm: "row", base: "column" }} gap={7}>
+            <Flex flexDirection={{ md: "row", base: "column" }} gap={7}>
               {item.EventType === "Event" ? (
                 <Box
                   // here
-                  w={{ lg: "20%", md: "30%", sm: "40%", base: "100%" }}
+                  w={{ lg: "20%", md: "40%", sm: "100%", base: "100%" }}
                   //  change in here
-                  h={{ base: "150px", sm: "125px" }}
+                  h={{ sm: "150px", md: "125px" }}
                   className="event_image"
                 >
                   <Image
@@ -59,7 +59,7 @@ function ScheduleData({ dataScheduleDate }: DataProps) {
               ) : null}
 
               <Box
-                w={{ lg: "80%", md: "70%", sm: "60%", base: "100%" }}
+                w={{ lg: "80%", md: "70%", base: "100%" }}
                 className="event_detail"
               >
                 <Flex

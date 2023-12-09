@@ -201,7 +201,7 @@ function EventPage() {
                   Register Now
                  </Button>
                  <Button
-                 borderRadius={"10px"}
+                 borderRadius={"full"}
                   w={{md:'50%',sm:'100%'}}
                   variant={'outlined-button'}
                  fontWeight={500}
