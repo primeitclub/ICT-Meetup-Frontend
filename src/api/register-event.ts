@@ -8,3 +8,11 @@ export const registerValorant = requestHandler<any, unknown>(async (params) => {
         }
     });
 })
+
+export const registerIdeathon = requestHandler<any, unknown>(async (params) => {
+    return PostRequest("events/ideathon/register", params, {
+        headers: {
+            "Content-Type": "multipart/form-data"
+        }
+    });
+})

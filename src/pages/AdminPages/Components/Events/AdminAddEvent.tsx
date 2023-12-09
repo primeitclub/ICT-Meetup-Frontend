@@ -1,11 +1,14 @@
 import { useEffect } from "react";
 
-import { useForm } from "react-hook-form";
+import { useFieldArray, useForm } from "react-hook-form";
+import { TbTrash } from "react-icons/tb";
+import { toast } from "sonner";
 
 import { Box, Flex, Text } from "@chakra-ui/layout";
 import { Button } from "@chakra-ui/react";
 import { zodResolver } from "@hookform/resolvers/zod";
 
+import { addNewEvent } from "../../../../api/admin";
 // form schemda
 import {
   AddEventFormValues,
@@ -18,18 +21,24 @@ import SelectInput from "../AdminSelectInput";
 import Editor from "../reusables/AdminCkEditor";
 
 function EventForm() {
-  // state to copy from slug
-  //  const [slug, setSlug] = useState<any>('');
-
   const {
     handleSubmit,
     register,
     watch,
     setValue,
-    getValues,
+    control,
     formState: { errors },
   } = useForm<AddEventFormValues>({
     resolver: zodResolver(addEventSchema),
+    defaultValues: {
+      eventDate: [
+        {
+          date: "",
+          endTime: "",
+          startTime: "",
+        },
+      ],
+    },
   });
 
   // onSubmit function
@@ -44,20 +53,53 @@ function EventForm() {
     return cleanedSlug;
   }
 
-  const onSubmit = (value: AddEventFormValues) => {
-    console.log(value);
+  const onSubmit = async (value: AddEventFormValues) => {
+    const formData = new FormData();
+    Object.keys(value).forEach((key) => {
+      //@ts-ignore
+      if (key === "eventThumbnail") {
+        //@ts-ignore
+        formData.append(key, value[key][0]);
+      }
+      if (key === "eventDate") {
+        console.log(value[key]);
+        //@ts-ignore
+        value[key].forEach((item) => {
+          formData.append("eventDate", item.date);
+          formData.append("startTime", item.startTime);
+          formData.append("endTime", item.endTime);
+        });
+      }
+      //@ts-ignore
+      else {
+        //@ts-ignore
+        formData.append(key, value[key]);
+      }
+    });
+    console.log(Object.fromEntries(formData.entries()));
+    const response = await addNewEvent(formData);
+    if (response.success === true) {
+      toast.success("Event Added Successfully");
+    } else {
+      response.error.detail.forEach((err: any) => {
+        toast.error(err);
+      });
+      toast.error("Event Not Added");
+    }
   };
 
-  console.log(errors);
-
   const watchFields = watch();
-  setValue;
 
   useEffect(() => {
     if (watchFields.title) {
       setValue("slug", slugify(watchFields.title));
     }
-  }, [getValues("title")]);
+  }, [watchFields.title]);
+
+  const { fields, append, remove } = useFieldArray({
+    control,
+    name: "eventDate",
+  });
 
   return (
     <>
@@ -98,15 +140,21 @@ function EventForm() {
                   placeholder="Enter Event Slug"
                   field={register("slug")}
                   errors={errors.slug}
+                  readOnly={true}
                 />
 
                 <SelectInput
                   key={"event"}
-                  errors={errors.category}
+                  errors={errors.eventType}
                   required={true}
-                  field={register("category")}
+                  field={register("eventType")}
                   label="Event Category"
-                  options={["Voulneter", "Development", "Helping Hands"]}
+                  options={[
+                    "workshop",
+                    "session",
+                    "pannel_discussion",
+                    "competition",
+                  ]}
                 />
 
                 <InputFieldAdmin
@@ -178,7 +226,7 @@ function EventForm() {
               </Box>
 
               <Box flex={1} backgroundColor={"white"} padding={"30px"}>
-                <InputFieldAdmin
+                {/* <InputFieldAdmin
                   key={"eventDate"}
                   required={true}
                   label="Event Date"
@@ -218,7 +266,88 @@ function EventForm() {
                       errors={errors.endTime}
                     />
                   </Box>
-                </Flex>
+                </Flex> */}
+                {fields.length > 0 &&
+                  fields.map((item, index) => (
+                    <Flex key={item.id} gap={"5"}>
+                      <Box flex={1}>
+                        <InputFieldAdmin
+                          key={"date"}
+                          required={true}
+                          label="Event Date"
+                          type="date"
+                          placeholder="Event Date"
+                          field={register(`eventDate.${index}.date`, {
+                            required: "please enter a date",
+                          })}
+                          errors={errors.eventDate?.[index]?.date}
+                        />
+                      </Box>
+
+                      <Box flex={1}>
+                        <InputFieldAdmin
+                          key={"startTime"}
+                          required={true}
+                          label="Start At"
+                          type="time"
+                          placeholder="Event Time"
+                          field={register(`eventDate.${index}.startTime`, {
+                            required: "please enter a time",
+                          })}
+                          errors={errors.eventDate?.[index]?.startTime}
+                        />
+                      </Box>
+
+                      <Box flex={1}>
+                        <InputFieldAdmin
+                          key={"endTime"}
+                          required={true}
+                          label="End Time"
+                          type="time"
+                          placeholder="Event Time"
+                          field={register(`eventDate.${index}.endTime`, {
+                            required: "please enter a time",
+                          })}
+                          errors={errors.eventDate?.[index]?.endTime}
+                        />
+                      </Box>
+                      <Box
+                        display={"flex"}
+                        justifyContent={"center"}
+                        alignItems={"center"}
+                      >
+                        <Button
+                          onClick={() => remove(index)}
+                          paddingX={"10px"}
+                          rounded={"lg"}
+                          paddingY={"12px"}
+                          color={"black"}
+                          fontWeight={"700"}
+                          backgroundColor={"#d1d0ce"}
+                        >
+                          <TbTrash />
+                        </Button>
+                      </Box>
+                    </Flex>
+                  ))}
+
+                <Button
+                  onClick={() =>
+                    append({
+                      date: "",
+                      endTime: "",
+                      startTime: "",
+                    })
+                  }
+                  paddingX={"10px"}
+                  rounded={"lg"}
+                  paddingY={"12px"}
+                  color={"black"}
+                  fontWeight={"700"}
+                  backgroundColor={"#d1d0ce"}
+                >
+                  Add Second Date
+                </Button>
 
                 <InputFieldAdmin
                   key={"totalSeats"}
@@ -227,7 +356,7 @@ function EventForm() {
                   type="number"
                   placeholder="Number of seats"
                   field={register("totalSeats")}
-                  errors={errors.endTime}
+                  errors={errors.totalSeats}
                 />
 
                 <AdminFile

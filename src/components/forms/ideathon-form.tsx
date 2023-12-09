@@ -1,40 +1,64 @@
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
 import { z } from "zod";
 
 import { Box, Button } from "@chakra-ui/react";
 import { zodResolver } from "@hookform/resolvers/zod";
 
+import { registerIdeathon } from "../../api/register-event";
 import RegistrationFormHeader from "../reusables/registration-form-header";
+import FileInput from "../ui/FileInput";
 import InputField from "../ui/InputField";
+import SelectField from "../ui/SelectField";
 import TextAreaInputField from "../ui/TextAreaField";
 
 const ideathonSchema = z.object({
   teamName: z.string().min(3).max(50),
   teamMembers: z.string().min(3).max(50),
   collegeName: z.string().min(3).max(50),
-  teamLeaderName: z.string().min(3).max(50),
   sdgGoals: z.string().min(3).max(50),
   ideaName: z.string().min(3).max(50),
   ideaDescription: z.string().min(150).max(250),
-  ideaImpact: z.string().min(3).max(50),
-  ideaImplementation: z.string().min(3).max(50),
+  payment: z.any(),
 });
 
 type FormValues = z.infer<typeof ideathonSchema>;
 
 export default function IdeathonForm() {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
+    watch,
     formState: { errors },
   } = useForm<FormValues>({
     resolver: zodResolver(ideathonSchema),
   });
 
-  console.log(errors);
-
-  const onSubmit = (data: FormValues) => {
+  const watchFields = watch();
+  const onSubmit = async (data: FormValues) => {
+    const formData = new FormData();
+    formData.append("teamName", data.teamName);
+    formData.append("TeamMembers", data.teamMembers);
+    formData.append("collegeName", data.collegeName);
+    formData.append("sdgGoal", data.sdgGoals);
+    formData.append("ideaName", data.ideaName);
+    formData.append("ideaDescription", data.ideaDescription);
+    formData.append("payment", data.payment[0]);
     console.log(data);
+
+    const response = await registerIdeathon(formData);
+
+    if (response.success === true) {
+      toast.success("Successfully registered for Ideathon");
+      navigate("/");
+    } else {
+      response.error.detail.forEach((error: any) => {
+        toast.warning(error);
+      });
+      toast.error("Failed to register for Ideathon");
+    }
   };
 
   return (
@@ -111,17 +135,7 @@ export default function IdeathonForm() {
               key={"collegeName"}
             />
 
-            <InputField
-              label="Team Leader Name"
-              errors={errors.teamLeaderName}
-              required={true}
-              placeholder="Team Leader Name"
-              type="text"
-              field={register("teamLeaderName")}
-              key={"teamLeaderName"}
-            />
-
-            <InputField
+            <SelectField
               label="SDG Goals"
               errors={errors.sdgGoals}
               required={true}
@@ -129,6 +143,7 @@ export default function IdeathonForm() {
               type="text"
               field={register("sdgGoals")}
               key={"sdgGoals"}
+              options={["SDG4", "SDG6", "SDG7", "SDG11", "SDG13"]}
             />
 
             <InputField
@@ -151,24 +166,13 @@ export default function IdeathonForm() {
               key={"ideaDescription"}
             />
 
-            <InputField
-              label="Idea Impact"
-              errors={errors.ideaImpact}
-              required={true}
-              placeholder="Idea Impact"
-              type="text"
-              field={register("ideaImpact")}
-              key={"ideaImpact"}
-            />
-
-            <TextAreaInputField
-              label="Idea Implementation"
-              errors={errors.ideaImplementation}
-              required={true}
-              placeholder="Idea Implementation"
-              type="text"
-              field={register("ideaImplementation")}
-              key={"ideaImplementation"}
+            <FileInput
+              label="Payment"
+              errors={errors.payment}
+              registerName="payment"
+              register={register}
+              key={"payment"}
+              watch={watchFields.payment}
             />
 
             <Button type="submit" variant={"primary-button"}>
