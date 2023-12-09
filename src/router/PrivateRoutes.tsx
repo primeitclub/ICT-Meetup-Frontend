@@ -36,6 +36,13 @@ const PrivateRoutes = () => {
           <Route path="gallery/:id" element={<AlbumImages />} />
 
           <Route path="participants" element={<Participants />} />
+          <Route
+            path="*"
+            element={
+              //redirect to home
+              <Dashboard />
+            }
+          />
         </Route>
       </Routes>
     </>

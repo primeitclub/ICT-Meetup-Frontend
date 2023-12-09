@@ -28,14 +28,11 @@ const Navlinks = [
     label: "Gallery",
     link: "/gallery",
   },
-  {
-    label: "FAQ",
-    link: "/faq",
-  },
 ];
 
 export default function MobileMenu() {
   const [nav, setNav] = useState<Boolean>(false);
+  //close nav when the route changes
 
   const handleNav = (): void => {
     setNav(true);
@@ -56,6 +53,7 @@ export default function MobileMenu() {
   return (
     <>
       <Box
+        className="navbar"
         display={{ base: "block", lg: "none" }}
         width={"full"}
         paddingX={{
@@ -88,7 +86,7 @@ export default function MobileMenu() {
         top={"0"}
         bottom={"0"}
         right={"0"}
-        zIndex={nav ? "10" : "-10"}
+        zIndex={nav ? "101" : "-100"}
         height={"100vh"}
         position={"fixed"}
         left={nav ? "0" : "100%"}
@@ -133,7 +131,7 @@ export default function MobileMenu() {
               width={"full"}
               textAlign={"right"}
             >
-              <Link to={item.link}>
+              <Link to={item.link} onClick={closeNav}>
                 <Text color={"white"} fontSize={"24px"} fontWeight={"500"}>
                   {item.label}
                 </Text>

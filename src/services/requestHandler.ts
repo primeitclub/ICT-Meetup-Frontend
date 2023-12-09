@@ -1,10 +1,10 @@
-import { AxiosResponse } from "axios";
+import { AxiosResponse } from 'axios';
 
 type BaseRequest<T,V> = (params?: T) => Promise<AxiosResponse<V>>;
 
-type SuccessResponse<T> = {
+type SuccessResponse<K> = {
     success: true;
-    data: T;
+    data: K;
 };
 
 type ErrorResponse
@@ -13,7 +13,7 @@ type ErrorResponse
     error: {
         message: string;
         status: number;
-            detail: Array<string>;
+        detail: Array<string>;
     }
 };
 

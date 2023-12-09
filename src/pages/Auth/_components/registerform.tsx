@@ -17,6 +17,7 @@ import { registerUser } from "../../../api/auth";
 import google from "../../../assets/google.png";
 import NepalFlag from "../../../assets/nepal.png";
 import InputField from "../../../components/ui/InputField";
+import { setLocalStorage } from "../../../helpers/localStorage";
 import {
   registerSchema,
   RegisterSchemaType,
@@ -38,8 +39,9 @@ export default function LoginForm() {
 
     if (response.success === true) {
       console.log(response.data);
-      toast.success("Registered Successfully! Please login to continue");
-      navigate("/login");
+      toast.success(response.data.message);
+      setLocalStorage("id", response?.data.id);
+      navigate("/otp");
     } else {
       //    console.log(response.message);
       toast.error("Registration Failed! Please try again");
