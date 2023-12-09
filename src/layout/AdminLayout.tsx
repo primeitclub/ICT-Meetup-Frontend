@@ -34,7 +34,7 @@ function MainAdmin() {
 
   return (
     <>
-      <Box minH={"100vh"}>
+      <Box minH={"100vh"} marginTop={"-60px"}>
         <Flex minH={"100vh"} className="admin_content_wrap">
           <Box
             width={"18%"}
