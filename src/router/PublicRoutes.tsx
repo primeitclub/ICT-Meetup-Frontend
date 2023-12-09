@@ -17,6 +17,7 @@ import Home from "../pages/Home/Home";
 import InsideEvents from "../pages/InsideEvents/InsideEvents";
 import Schedule from "../pages/Schedule/Schedule";
 import Team from "../pages/Team/Team";
+import Profile from "../pages/User/Profile";
 import Valorant from "../pages/Valorant/valorant";
 
 const PublicRoutes = () => {
@@ -32,7 +33,8 @@ const PublicRoutes = () => {
           <Route path="/valorant" element={<Valorant />} />
           <Route path="/insideevents" element={<InsideEvents />} />
 
-          <Route path="/events" element={<EventPage />}>
+          <Route path="/events">
+            <Route index element={<EventPage />} />
             <Route
               path="/events/valorant/register"
               element={<ValorantRegistrationForm />}
@@ -42,6 +44,7 @@ const PublicRoutes = () => {
               element={<IdeathonForm />}
             />
           </Route>
+          <Route path="/my-profile" element={<Profile />} />
           <Route path="/events" element={<EventPage />} />
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/teams" element={<Team />} />

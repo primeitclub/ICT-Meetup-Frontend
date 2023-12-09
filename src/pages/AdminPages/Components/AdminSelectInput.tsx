@@ -41,7 +41,7 @@ function SelectInput({ label, options, required, field, errors }: SelectInput) {
           <option style={{ color: "#a2a2a2" }} value="">
             Select an option
           </option>
-          {options?.map((item: any) => <option value="option1">{item}</option>)}
+          {options?.map((item: any) => <option value={item}>{item}</option>)}
         </select>
 
         {
