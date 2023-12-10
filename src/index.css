@@ -48,6 +48,22 @@ input:-webkit-autofill:active {
   background: #040e2c;
 }
 
+.resend-btn {
+  color: var(--accent-blue);
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.resend-btn:hover {
+  color: white;
+}
+
+.resend-btn:hover::after {
+  content: "👈";
+}
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--accent-blue);

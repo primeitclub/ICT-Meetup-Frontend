@@ -1,22 +1,64 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 
 import { Box, Button, Flex, Heading, Input, Text } from "@chakra-ui/react";
 
-import { verifyOtp } from "../../../api/auth";
-import { getLocalStorage } from "../../../helpers/localStorage";
+import { resendOtpEmail, verifyOtp } from "../../../api/auth";
+import {
+  deleteLocalStorage,
+  getLocalStorage,
+} from "../../../helpers/localStorage";
 
 export default function OTPlogin() {
   const navigate = useNavigate();
   const [otpValues, setOtpValues] = useState(["", "", "", ""]);
   const [error, setError] = useState("");
+  const inputRefs = useRef<HTMLInputElement[]>(Array(length).fill(null));
 
   const handleInputChange = (index: number, value: any) => {
     const updatedOtpValues = [...otpValues];
     updatedOtpValues[index] = value;
     setOtpValues(updatedOtpValues);
+
+    //when one input is filled, focus goes to next input
+    if (index < updatedOtpValues.length - 1 && value) {
+      inputRefs.current[index + 1].focus();
+    }
+
+    if (index > 0 && !value) {
+      inputRefs.current[index - 1].focus();
+    }
+  };
+
+  const focusInput = (index: number) => {
+    if (inputRefs.current[index]) {
+      inputRefs.current[index].focus();
+    }
+  };
+
+  const resendOtp = async (e: any) => {
+    e.preventDefault();
+
+    try {
+      // Send OTP values to the backend
+      const email = getLocalStorage("email");
+      const response = await resendOtpEmail({
+        email: email,
+      });
+
+      if (response.success) {
+        toast.success("OTP sent successfully!");
+        toast.success("Check your email.");
+      } else {
+        toast.error("OTP send failed!");
+      }
+    } catch (error) {
+      toast.error(
+        "An error occurred while sending OTP. Please try again later."
+      );
+    }
   };
 
   const onSubmit = async (e: any) => {
@@ -25,6 +67,7 @@ export default function OTPlogin() {
     // Check if all digits are entered
     if (otpValues.some((value) => value === "")) {
       setError("Please enter all digits of the OTP.");
+      toast.error("Please enter all digits of the OTP.");
       return;
     }
 
@@ -41,16 +84,15 @@ export default function OTPlogin() {
       if (response.success) {
         toast.success("OTP verified successfully!");
         toast.success("You can now login.");
+        deleteLocalStorage("email");
         navigate("/login");
       } else {
-        console.log(response);
         toast.error("OTP verification failed!");
       }
     } catch (error) {
       setError(
         "An error occurred while verifying OTP. Please try again later."
       );
-      console.error(error);
     }
   };
 
@@ -91,6 +133,8 @@ export default function OTPlogin() {
             <div style={{ display: "flex", justifyContent: "center" }}>
               {otpValues.map((value, index) => (
                 <Input
+                  id="otp"
+                  ref={(ref) => (inputRefs.current[index] = ref!)}
                   key={index}
                   type="text"
                   maxLength={1}
@@ -106,6 +150,7 @@ export default function OTPlogin() {
                   borderWidth={2}
                   margin={"10px"}
                   value={value}
+                  onFocus={() => focusInput(index)}
                   onChange={(e) => handleInputChange(index, e.target.value)}
                 />
               ))}
@@ -139,10 +184,13 @@ export default function OTPlogin() {
               color={"#D6D6D6"}
               textAlign={"center"}
               marginTop={"10px"}
-              fontSize={"18px"}
+              fontSize={"22px"}
               fontWeight={500}
             >
-              Didn't receive code? Resend
+              Didn't receive code?{" "}
+              <button className="resend-btn" onClick={resendOtp}>
+                Resend
+              </button>
             </Text>
           </form>
         </Box>

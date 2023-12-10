@@ -41,6 +41,7 @@ export default function LoginForm() {
       console.log(response.data);
       toast.success(response.data.message);
       setLocalStorage("id", response?.data.id);
+      setLocalStorage("email", response?.data.email);
       navigate("/otp");
     } else {
       //    console.log(response.message);
