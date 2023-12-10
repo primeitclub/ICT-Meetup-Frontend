@@ -111,6 +111,12 @@ export default function Sponsors() {
                           <Box
                             maxH={"335px"}
                             maxW={"500px"}
+                            height={"100%"}
+                            padding={i === 2 ? "30px" : "0px"}
+                            aspectRatio={1 / 1}
+                            display={"flex"}
+                            justifyContent={"center"}
+                            alignItems={"center"}
                             backgroundColor={"white"}
                           >
                             <Image src={s.img} alt={s.name} />
