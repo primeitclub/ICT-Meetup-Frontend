@@ -97,7 +97,7 @@ export default function Footer() {
                             <Heading variant={'h5'}>Follow Us</Heading>
                             <Flex gap={'20px'} direction={'column'} fontSize={'18px'}>
 
-                                <Link to={'https://www.facebook.com/primeitclub'} isExternal>
+                                <Link to={'https://www.facebook.com/primeitclub'} >
                                     <Flex gap={'4'}>
                                         <FaFacebook size={24} color={'white'} />
                                         <Text color={'white'} fontWeight={'600'}>
@@ -107,7 +107,7 @@ export default function Footer() {
                                 </Link>
 
                                 {/* LinkedIn */}
-                                <Link to={'https://www.linkedin.com/company/prime-it-club/'} isExternal>
+                                <Link to={'https://www.linkedin.com/company/prime-it-club/'} >
                                     <Flex gap={'4'}>
                                         <FaLinkedinIn size={24} color={'white'} />
                                         <Text color={'white'} fontWeight={'600'}>
@@ -117,7 +117,7 @@ export default function Footer() {
                                 </Link>
 
                                 {/* Twitter */}
-                                <Link to={'https://twitter.com/primeitclub'} isExternal>
+                                <Link to={'https://twitter.com/primeitclub'} >
                                     <Flex gap={'4'}>
                                         <FaTwitter size={24} color={'white'} />
                                         <Text color={'white'} fontWeight={'600'}>
@@ -127,7 +127,7 @@ export default function Footer() {
                                 </Link>
 
                                 {/* Instagram */}
-                                <Link to={'https://instagram.com/primeitclub'} isExternal>
+                                <Link to={'https://instagram.com/primeitclub'} >
                                     <Flex gap={'4'}>
                                         <FaInstagram size={24} color={'white'} />
                                         <Text color={'white'} fontWeight={'600'}>
@@ -137,7 +137,7 @@ export default function Footer() {
                                 </Link>
 
                                 {/* YouTube */}
-                                <Link to={'https://www.youtube.com/@primeitclub'} isExternal>
+                                <Link to={'https://www.youtube.com/@primeitclub'} >
                                     <Flex gap={'4'}>
                                         <FaYoutube size={24} color={'white'} />
                                         <Text color={'white'} fontWeight={'600'}>

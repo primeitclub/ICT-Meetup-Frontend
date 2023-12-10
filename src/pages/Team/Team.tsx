@@ -3,8 +3,9 @@ import SliderGroup from "./Components/SliderGroup"
 import TeamData from '../../data/dataTeam.json'
 import { Box } from "@chakra-ui/layout"
 import TeamHeader from "./Components/TeamHeader"
+import CommingSoon from "../../components/ui/CommingSoon"
 
-function Team(){
+function Team() {
 
 
 
@@ -13,12 +14,13 @@ function Team(){
     const team_volunter = TeamData.volunteer_team;
 
     return (<>
-    
-    <PageTitle pageTitle="Teams" pageDescription="Find out what’s happening when" />
+
+        <PageTitle pageTitle="Teams" pageDescription="Find out what’s happening when" />
+
+        <CommingSoon />
 
 
-
-    <Box className="team_wrap" w={ {lg:'85%',sm:'90%',base:'100%'} } m={'auto'}  >
+        {/* <Box className="team_wrap" w={ {lg:'85%',sm:'90%',base:'100%'} } m={'auto'}  >
 
 
     <Box className="team_category" pb={'80px'} >
@@ -36,7 +38,7 @@ function Team(){
     <SliderGroup TeamData={ team_developer } />
     </Box>
 
-    </Box>
+    </Box> */}
 
     </>)
 
