@@ -1,6 +1,9 @@
-import axios, { AxiosError, AxiosResponse } from "axios";
+import axios, {
+  AxiosError,
+  AxiosResponse,
+} from 'axios';
 
-import { getTokenFromStorage } from "../helpers/localStorage";
+import { getTokenFromStorage } from '../helpers/localStorage';
 
 const axiosInstance = axios.create({
   baseURL: import.meta.env.VITE_EXPRESS_BACKEND_URL,

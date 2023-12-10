@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import { z } from "zod";
 
-import { Box, Button } from "@chakra-ui/react";
+import { Box, Button, Text } from "@chakra-ui/react";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import { registerIdeathon } from "../../api/register-event";
@@ -46,7 +46,6 @@ export default function IdeathonForm() {
     formData.append("ideaName", data.ideaName);
     formData.append("ideaDescription", data.ideaDescription);
     formData.append("payment", data.payment[0]);
-    console.log(data);
 
     const response = await registerIdeathon(formData);
 
@@ -78,12 +77,57 @@ export default function IdeathonForm() {
         justifyContent={"center"}
         alignItems={"center"}
         flexDirection={"column"}
-        marginTop={"64px"}
+        marginTop={"128px"}
       >
         <RegistrationFormHeader
           title="Ideathon Form"
           description="Please fill up the details"
         />
+
+        <Box
+          marginTop={"64px"}
+          borderRadius={"24px"}
+          backdropFilter={"blur(20px)"}
+          maxW={"800px"}
+          width={"100%"}
+          padding={{
+            base: "32px 32px 32px 32px",
+          }}
+          backgroundColor={"var(--form-background)"}
+          boxShadow={"0px 0px 150px -10px #061847;"}
+        >
+          <Text fontSize={"xl"} fontWeight={"bold"} color={"white"}>
+            Ideathon is an event or competition that focuses on generating and
+            developing innovative ideas within a specific timeframe working
+            intensively on creating solutions to a given challenge or problem.
+            The goal is to encourage innovative thinking, foster creativity, and
+            provide a platform for individuals to showcase their problem-solving
+            skills.
+            <br />
+            <br />
+            Theme: Sustainable Development Goals (SDGs)
+            <br />
+            • This Ideathon centers around addressing challenges based on 5 out
+            of 17 SDG goals aligned with the United Nations' SDGs, encouraging
+            participants to create solutions that contribute to a better and
+            more sustainable future.
+            <br />
+            <br />
+            Who can apply:
+            <br />
+            • All bachelors running students are eligible to participate.
+            <br />
+            <br />
+            Rules:
+            <br />
+            • Teams should submit ideas based on the theme provided by the
+            organizers.
+            <br />
+            • Teams can consist of at most four members each.
+            <br />• The registration will be through our official website.
+          </Text>
+        </Box>
+
         <Box
           marginTop={"64px"}
           borderRadius={"24px"}

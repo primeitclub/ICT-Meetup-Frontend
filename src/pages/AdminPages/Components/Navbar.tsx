@@ -125,6 +125,12 @@ function NavbarAdmin() {
                   </Box>
 
                   <Box sx={navItemAdmin}>
+                    <NavLink to={"events/ideathon"}>
+                      Ideathon Participants
+                    </NavLink>
+                  </Box>
+
+                  <Box sx={navItemAdmin}>
                     <NavLink to={"events/speaker"}>Speaker</NavLink>
                   </Box>
                 </Flex>

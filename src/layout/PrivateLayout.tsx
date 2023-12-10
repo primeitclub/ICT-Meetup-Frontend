@@ -1,8 +1,10 @@
 import { Navigate, Outlet } from "react-router-dom";
 
-import { useAuthStore } from "../store/auth/authStore";
+import { getTokenFromStorage } from "../helpers/localStorage";
 
-export default function PrivateRouteLayout() {
-  const { isAuthenticated } = useAuthStore((state) => state);
+const PrivateLayout = () => {
+  const isAuthenticated = getTokenFromStorage();
   return <>{isAuthenticated ? <Outlet /> : <Navigate to="/login" replace />}</>;
-}
+};
+
+export default PrivateLayout;
