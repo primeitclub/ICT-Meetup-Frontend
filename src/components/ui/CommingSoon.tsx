@@ -5,7 +5,7 @@ const CommingSoon = () => {
     return (
         <Flex justifyContent='center' marginY={'50px'}>
             <Heading as={'h1'} fontFamily={'heading'} variant={'section-header'}>
-                Comming Soon<span style={{ color: '#2C84EC' }} >.</span>
+                Coming Soon<span style={{ color: '#2C84EC' }} >.</span>
                 <span style={{ color: '#2C84EC' }} >.</span>
                 <span style={{ color: '#2C84EC' }} >.</span>
                 <span style={{ color: '#2C84EC' }} >.</span>

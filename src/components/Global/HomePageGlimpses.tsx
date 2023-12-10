@@ -8,6 +8,7 @@ import { Container, Flex, Grid, GridItem, Heading } from "@chakra-ui/react";
 import FramerAnimation from "../animation/FramerAnimation";
 import HomePageTitle from "../reusables/HomePageTitle";
 import OutlinedButton from "../ui/OutlinedButton";
+import { Link } from "react-router-dom";
 
 interface IHomePageGlimpsesData {
     images: {
@@ -82,7 +83,9 @@ export default function HomePageGlimpses() {
                     </Grid>
                 </FramerAnimation>
                 <Flex justifyContent={"center"}>
-                    <OutlinedButton buttonText={"View Gallery"} />
+                    <Link to="/gallery">
+                        <OutlinedButton buttonText={"View Gallery"} />
+                    </Link>
                 </Flex>
             </Container>
         </>
