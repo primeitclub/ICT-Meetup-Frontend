@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import { Button, Flex, HStack, Image, Text } from "@chakra-ui/react";
 
+import { logoutUser } from "../../api/auth";
 import Logo from "../../assets/mainlogo.png";
 import { useAuthStore } from "../../store/auth/authStore";
 
@@ -62,9 +63,9 @@ export default function Navbar() {
         textColor={"white"}
         fontSize={"24px"}
       >
-       <Link to={"/"} >
-       <Image src={Logo} h='50px' />
-       </Link>
+        <Link to={"/"}>
+          <Image src={Logo} h="50px" />
+        </Link>
         <HStack
           as="nav"
           spacing="8"
@@ -89,9 +90,14 @@ export default function Navbar() {
                 <Link to="/profile">
                   <Button>{user.username}</Button>
                 </Link>
-                <Link to="/logout">
-                  <Button>Logout</Button>
-                </Link>
+
+                <Button
+                  onClick={() => {
+                    logoutUser();
+                  }}
+                >
+                  Logout
+                </Button>
               </>
             ) : (
               // else show login and register button
