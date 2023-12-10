@@ -5,6 +5,7 @@ import Glimpse1 from "/assets/Glimpses/glimpses1.jpg";
 
 import { Container, Flex, Grid, GridItem, Heading } from "@chakra-ui/react";
 
+import FramerAnimation from "../animation/FramerAnimation";
 import HomePageTitle from "../reusables/HomePageTitle";
 import OutlinedButton from "../ui/OutlinedButton";
 
@@ -49,32 +50,37 @@ export default function HomePageGlimpses() {
         <Heading variant={"h5"} textAlign={"center"}>
           Experience the past editions of the conference
         </Heading>
-        <Grid
-          gap={4}
-          templateRows={{
-            base: "repeat(3, 1fr)",
-            lg: "repeat(2, 1fr)",
-          }}
-          templateColumns={{
-            base: "repeat(2, 1fr)",
-            lg: "repeat(3, 1fr)",
-          }}
-          paddingY={"48px"}
-        >
-          {homePageGlimpsesData.images.map((image, index) => (
-            <GridItem key={index} rowSpan={index === 0 || index === 2 ? 2 : 1}>
-              <img
-                src={image.src}
-                alt={image.alt}
-                style={
-                  index === 0 || index === 2
-                    ? { height: "100%", objectFit: "cover" }
-                    : { width: "100%", objectFit: "cover" }
-                }
-              />
-            </GridItem>
-          ))}
-        </Grid>
+        <FramerAnimation>
+          <Grid
+            gap={4}
+            templateRows={{
+              base: "repeat(3, 1fr)",
+              lg: "repeat(2, 1fr)",
+            }}
+            templateColumns={{
+              base: "repeat(2, 1fr)",
+              lg: "repeat(3, 1fr)",
+            }}
+            paddingY={"48px"}
+          >
+            {homePageGlimpsesData.images.map((image, index) => (
+              <GridItem
+                key={index}
+                rowSpan={index === 0 || index === 2 ? 2 : 1}
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  style={
+                    index === 0 || index === 2
+                      ? { height: "100%", objectFit: "cover" }
+                      : { width: "100%", objectFit: "cover" }
+                  }
+                />
+              </GridItem>
+            ))}
+          </Grid>
+        </FramerAnimation>
         <Flex justifyContent={"center"}>
           <OutlinedButton buttonText={"View Gallery"} />
         </Flex>

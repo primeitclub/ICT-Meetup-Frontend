@@ -14,6 +14,12 @@ interface UserSession{
     }
 }
 
+interface UserRoles{
+    statusCode: number;
+    message: string;
+    userType: string;    
+}
+
 interface RegisterResponse{
     email: string;
     id: number;
@@ -41,7 +47,7 @@ export const getUserProfile = requestHandler<any, UserSession>(async (params) =>
     return GetRequest("user/profile", params);
 })
 
-export const checkAdmin = requestHandler<any, UserSession>(async () => {
+export const checkAdmin = requestHandler<any, UserRoles>(async () => {
     return GetRequest("user/isAdmin");
 })
 

@@ -14,8 +14,11 @@ function MainAdmin() {
   useEffect(() => {
     const isAdmin = async () => {
       const response = await checkAdmin();
-      if (response.success === false) {
-        navigate("/");
+      if (response.success === true) {
+        if (response.data.userType !== "admin") {
+          // If user is not an admin, redirect to home page
+          navigate("/");
+        }
       } else {
         setIsLoading(false); // Set loading to false only if admin check is successful
       }
@@ -34,7 +37,7 @@ function MainAdmin() {
 
   return (
     <>
-      <Box minH={"100vh"}>
+      <Box minH={"100vh"} marginTop={"-60px"}>
         <Flex minH={"100vh"} className="admin_content_wrap">
           <Box
             width={"18%"}

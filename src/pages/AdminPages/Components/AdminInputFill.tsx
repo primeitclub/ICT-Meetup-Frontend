@@ -7,6 +7,7 @@ interface Props {
   type: string;
   field?: any;
   required?: boolean;
+  readOnly?: boolean;
 }
 
 export default function InputFieldAdmin(props: Props) {
@@ -49,6 +50,7 @@ export default function InputFieldAdmin(props: Props) {
           {...props.field}
           type={props.type}
           placeholder={props.placeholder}
+          readOnly={props.readOnly}
         />
       )}
 

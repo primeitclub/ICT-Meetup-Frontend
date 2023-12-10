@@ -1,13 +1,21 @@
-import Auther from "/assets/Bronze/auther.jpeg";
-import Chuk from "/assets/Bronze/chuk.jpg";
-import GalliMap from "/assets/Supporters/galli.png";
-import HamroPatro from "/assets/Supporters/hp.png";
-import Programiz from "/assets/Supporters/pc_logo.svg";
-import { Link } from "react-router-dom";
+import Auther from '/assets/Bronze/auther.jpeg';
+import Chuk from '/assets/Bronze/chuk.jpg';
+import GalliMap from '/assets/Supporters/galli.png';
+import HamroPatro from '/assets/Supporters/hp.png';
+import Programiz from '/assets/Supporters/pc_logo.svg';
+import { Link } from 'react-router-dom';
 
-import { Box, Container, Flex, Grid, Heading, Image } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Flex,
+  Grid,
+  Heading,
+  Image,
+} from '@chakra-ui/react';
 
-import HomePageTitle from "../reusables/HomePageTitle";
+import { ScaleUpanimation } from '../animation/FramerAnimation';
+import HomePageTitle from '../reusables/HomePageTitle';
 
 interface ISponsorsData {
   type: string;
@@ -130,6 +138,8 @@ export default function Sponsors() {
         paddingTop={{
           base: "40px",
           md: "112px",
+          base: "40px",
+          md: "112px",
         }}
       >
         <HomePageTitle pageTitle={"Our Sponsors"} />
@@ -139,8 +149,22 @@ export default function Sponsors() {
           gap={"10"}
           paddingY={"10"}
         >
+        <HomePageTitle pageTitle={"Our Sponsors"} />
+        <Flex
+          direction={"column"}
+          alignItems={"center"}
+          gap={"10"}
+          paddingY={"10"}
+        >
           {sponsorsData.map((sponsor: any, index: number) => {
             return (
+              <Flex
+                gap={"10"}
+                direction={"column"}
+                key={index}
+                className="container"
+              >
+                <Heading variant={"h3"} as={"h2"} textAlign={"center"}>
               <Flex
                 gap={"10"}
                 direction={"column"}
@@ -166,26 +190,13 @@ export default function Sponsors() {
                 >
                   {sponsor.sponsors.map((s: any, i: any) => {
                     return (
-                      <Link
-                        key={i}
-                        to={s.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Box
-                          maxH={"335px"}
-                          maxW={"500px"}
-                          height={"100%"}
-                          padding={i === 2 ? "30px" : "0px"}
-                          aspectRatio={1 / 1}
-                          display={"flex"}
-                          justifyContent={"center"}
-                          alignItems={"center"}
-                          backgroundColor={"white"}
-                        >
+                      <ScaleUpanimation>
+                        <Link key={i} to={s.link} target='_blank' rel='noopener noreferrer'>
+                        <Box maxH={'335px'} maxW={'500px'} backgroundColor={'white'}>
                           <Image src={s.img} alt={s.name} />
                         </Box>
                       </Link>
+                      </ScaleUpanimation>
                     );
                   })}
                 </Grid>

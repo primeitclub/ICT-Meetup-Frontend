@@ -77,15 +77,22 @@ function EventPage() {
       className='event_list'
        whiteSpace={'nowrap'}
        display={'flex'}
-       flexWrap={'nowrap'}
-    //    overflow={'scroll'}
-       
-       justifyContent={'space-around'}
-       gap={{ sm: '40px', base: '20px' }}>
+      //  flexWrap={'nowrap'}
+       overflow={{md:'scroll',sm:'scroll',base:'scroll'}}       
+       justifyContent={{md:'space-around',sm:'start',base:'start'}}
+       gap={{ md:"40px" , sm: '20px', base: '28px' }}
+       sx={{
+         '&::-webkit-scrollbar': {
+           display: 'none', 
+         },
+         scrollbarWidth: 'none', 
+         msOverflowStyle: 'none', 
+       }}      
+       >
        <TabLists />
       </TabList>
 
-      <TabPanels overflow={'hidden'} mt={'69px'}>
+      <TabPanels overflowY={'visible'} mt={'69px'}>
        {Object.keys(workShop).map((dataIndex) => {
         const DataVariable = workShop[dataIndex];
 

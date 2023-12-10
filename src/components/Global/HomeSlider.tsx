@@ -7,11 +7,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import SingleImage from '../../assets/susit.png';
 import SpeakerCards from '../reusables/SpeakerCards';
+import FramerAnimation from '../animation/FramerAnimation';
 
 export default function HomeSwiper() {
   return (
     <>
-      <Swiper
+    <FramerAnimation>
+    <Swiper
         modules={[Pagination, Navigation]}
         spaceBetween={50}
         slidesPerView={3}
@@ -47,6 +49,7 @@ export default function HomeSwiper() {
           <SpeakerCards name='Susit' image={SingleImage} speakerSpeciality='Ui Ux Designer' />
         </SwiperSlide>
       </Swiper>
+    </FramerAnimation>
     </>
   );
 }

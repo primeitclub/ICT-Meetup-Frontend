@@ -69,7 +69,7 @@ input:-webkit-autofill:active {
     --bg,
     radial-gradient(132.21% 68.86% at 43.76% 52.23%, #040e2c 0.47%, #01050c 100%)
   ); */
-  background-image: url("/assets/AboutUs/bg.png");
+  background-image: url("/assets/AboutUs/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -110,9 +110,13 @@ input:-webkit-autofill:active {
 }
 
 .navbar {
-  /* background: rgba(4, 13, 42, 0.8);*/
+  background: rgba(4, 13, 42, 0.8);
   box-shadow: 0px 6px 32px 0px rgba(8, 38, 114, 0.4);
   backdrop-filter: blur(100px);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
 }
 .meetup-header {
   background: var(
@@ -296,6 +300,8 @@ image {
   font-size: 22px;
   font-weight: 500;
 }
+
+/* select field background for options */
 
 .custom-input:focus {
   outline: none;

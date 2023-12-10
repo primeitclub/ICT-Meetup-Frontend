@@ -1,14 +1,11 @@
 import { Flex, Heading, HStack, Text } from "@chakra-ui/react";
 
 const data = [
-  "Sessions",
-  "Workshops",
-  "Ideathon",
-  "Panel Demonstration",
-  "Competitions",
-  "ICT Night",
-  "Valorant Competition",
-  "Stalls",
+  "Data Science",
+  "Web 3",
+  "Neural Networks",
+  "Git and Github",
+  "Computer Vision",
 ];
 
 export default function EventSlide() {
@@ -25,7 +22,11 @@ export default function EventSlide() {
         <Flex direction={"column"} gap={"48px"} align={"start"} width={"full"}>
           <Heading
             as="h1"
-            fontSize={"3xl"}
+            fontSize={{
+              base: "24px",
+              md: "32px",
+              lg: "36px",
+            }}
             fontFamily="heading"
             fontWeight={"bold"}
             autoCapitalize="true"
@@ -41,7 +42,6 @@ export default function EventSlide() {
             fontSize={{
               base: "24px",
               md: "28px",
-              lg: "36px",
             }}
             align={"start"}
           >
