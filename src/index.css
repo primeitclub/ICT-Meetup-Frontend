@@ -301,6 +301,8 @@ image {
   font-weight: 500;
 }
 
+/* select field background for options */
+
 .custom-input:focus {
   outline: none;
 }
