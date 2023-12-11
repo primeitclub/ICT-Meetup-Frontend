@@ -19,10 +19,11 @@ interface IFAQData {
   answer: string;
 }
 
+
 const faqData: IFAQData[] = [
   {
     question: "Question 1",
-    answer: "Answer 1",
+    answer: "lorem ipsum dolor sit amet consectetur adipisicing elit lorem ipsum dolor sit",
   },
   {
     question: "Question 2",
@@ -94,6 +95,7 @@ export default function FAQAccordion() {
                 </Heading>
                 <AccordionPanel py={4}>
                   <Heading
+                    fontSize={ {md:"20px",base:"18px"} }
                     variant={"h5"}
                     as={"h3"}
                     fontWeight={"500"}

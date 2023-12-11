@@ -16,7 +16,7 @@ export default function Events() {
         }}
       >
         <HomePageTitle pageTitle='Events' />
-        <Box paddingY={'32px'}>
+        <Box paddingY={{md:'82px',base:"32px"}}>
           <Flex
             direction={{
               base: 'column-reverse',
@@ -24,7 +24,9 @@ export default function Events() {
             }}
             align={'center'}
           >
-            <EventSlider />
+           
+              <EventSlider />
+
             <Box>
              <FramerAnimation>
              <Image
@@ -44,28 +46,7 @@ export default function Events() {
              </FramerAnimation>
             </Box>
           </Flex>
-          <Box
-            margin={'auto'}
-            maxW={{
-              base: '80%',
-            }}
-          >
-            <Button
-              display={{
-                base: 'none',
-                md: 'block',
-              }}
-              marginTop={10}
-              paddingY={5}
-              variant='outlined-button'
-              width={'full'}
-              rounded={'full'}
-            >
-              <Text fontWeight='bold' fontSize='18px' color='white'>
-                REGISTER AT OUR EVENTS PAGE
-              </Text>
-            </Button>
-          </Box>
+          
         </Box>
       </Container>
     </>

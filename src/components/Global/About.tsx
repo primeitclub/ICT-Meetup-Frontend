@@ -38,6 +38,7 @@ export default function About() {
           lg: "80px",
         }}
       >
+
         <Box
           maxW={{
             sm: "100%",
@@ -49,6 +50,7 @@ export default function About() {
          <Image src={AiRobot} alt="About" borderRadius={"0px 64px 64px 0px"} />
          </FramerAnimation>
         </Box>
+
         <Flex
           direction={"column"}
           gap={{
@@ -148,6 +150,7 @@ export default function About() {
 
           <OutlinedButton buttonText="Learn More" />
         </Flex>
+        
       </Flex>
     </>
   );

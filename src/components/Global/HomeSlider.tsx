@@ -9,6 +9,7 @@ import SingleImage from '../../assets/susit.png';
 import SpeakerCards from '../reusables/SpeakerCards';
 import FramerAnimation from '../animation/FramerAnimation';
 
+
 export default function HomeSwiper() {
   return (
     <>

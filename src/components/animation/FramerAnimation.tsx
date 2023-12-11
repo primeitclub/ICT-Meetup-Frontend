@@ -47,7 +47,7 @@ export function ScaleUpanimation ( {children} : {children:React.ReactNode} ) {
 
     return (<>
     
-    <MotionBoxImage transition={transitionPropScale} initial={{scale:0.4}} whileInView={{scale:1}} viewport={{once:true}} >
+    <MotionBoxImage height={"100%"} width={"100%"} transition={transitionPropScale} initial={{scale:0.4}} whileInView={{scale:1}} viewport={{once:true}} >
         {children}
     </MotionBoxImage>
     

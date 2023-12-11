@@ -7,6 +7,8 @@ import {
   Button,
   Checkbox,
   Flex,
+  FormControl,
+  FormLabel,
   Heading,
   Stack,
   Text,
@@ -131,13 +133,8 @@ export default function LoginForm() {
               alignItems={"center"}
               w="100%"
               gap={{ base: "8px", md: "12px" }}
-            >
-              {/* <FormControl display="flex" alignItems="center">
-        <Box display="flex" alignItems="center" border="1px solid white" p="2" mr="2">
-         <Checkbox color="white" defaultChecked />
-        </Box>
-        <FormLabel color="white">Remember me</FormLabel>
-       </FormControl> */}
+            >              
+             
               <Checkbox colorScheme="white" defaultChecked color="#D6D6D6">
                 Remember me
               </Checkbox>

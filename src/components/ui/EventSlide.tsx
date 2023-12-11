@@ -20,6 +20,23 @@ export default function EventSlide() {
         }}
       >
         <Flex direction={"column"} gap={"48px"} align={"start"} width={"full"}>
+        <Heading
+            as="h1"
+            fontSize={{
+              base: "24px",
+              md: "32px",
+              lg: "57px",
+            }}
+            fontFamily="heading"
+            fontWeight={"bold"}
+            autoCapitalize="true"
+            color={"black"}
+            background={"white"}
+            backgroundClip={"text"}
+            position={"relative"}   
+          >
+            01
+          </Heading>
           <Heading
             as="h1"
             fontSize={{
