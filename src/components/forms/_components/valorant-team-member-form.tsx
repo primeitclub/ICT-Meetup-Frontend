@@ -1,9 +1,11 @@
 import { useEffect, useRef } from "react";
 
 import { useFieldArray, useForm } from "react-hook-form";
+import { toast } from "sonner";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 
+import { registerValorant } from "../../../api/register-event";
 import {
   teamMemberSchema,
   teamMemberSchemaType,
@@ -22,6 +24,7 @@ export default function ValorantTeamMemberFormOne() {
     handleSubmit,
     watch,
     control,
+    reset,
     formState: { errors },
   } = useForm<teamMemberSchemaType>({
     resolver: zodResolver(teamMemberSchema),
@@ -32,7 +35,9 @@ export default function ValorantTeamMemberFormOne() {
     control,
     name: "teamMembers",
   });
-  const { setFormData, formData } = useValorantFormDataStore((state) => state);
+  const { setFormData, formData, clearFormData } = useValorantFormDataStore(
+    (state) => state
+  );
   const setStep = useValorantFormStore((state) => state.setStep);
   const onSubmit = async (data: teamMemberSchemaType) => {
     const teamMembers = data.teamMembers;
@@ -62,8 +67,22 @@ export default function ValorantTeamMemberFormOne() {
         );
       }
     });
+    valorantFormData.append("paymentImage", data.paymentImage);
     console.log(Object.fromEntries(valorantFormData.entries()));
-    setStep(0);
+    const response = await registerValorant(valorantFormData);
+    console.log(response);
+
+    if (response.success === true) {
+      toast.success("Valorant Team Registered Successfully");
+      setStep(0);
+      clearFormData();
+      reset();
+    } else {
+      response.error.detail.forEach((error) => {
+        toast.error(error);
+      });
+      toast.error("Error");
+    }
   };
   useEffect(() => {
     if (shouldFetch.current) {
@@ -86,7 +105,7 @@ export default function ValorantTeamMemberFormOne() {
         }}
       >
         {fields?.map((field, index) => (
-          <>
+          <div key={index}>
             <InputField
               placeholder={`Enter Team Member #${index + 1} Name`}
               label={`Team Member #${index + 1} Name`}
@@ -104,8 +123,16 @@ export default function ValorantTeamMemberFormOne() {
               register={register}
               errors={errors.teamMembers?.[index]?.image}
             />
-          </>
+          </div>
         ))}
+
+        <FileInput
+          label="Payment Screenshot"
+          registerName="paymentImage"
+          register={register}
+          watch={watchFields.paymentImage}
+          errors={errors.paymentImage}
+        />
 
         <FormStepperButtons handleNextStep={handleSubmit(onSubmit)} />
       </form>

@@ -28,6 +28,7 @@ type teamData = {
 type ValorantFormData = {
    formData: teamData;
    setFormData: (formData: teamData) => void;
+   clearFormData: () => void;
 }
 
 export const useValorantFormDataStore = create<ValorantFormData>((set) => ({
@@ -40,7 +41,16 @@ export const useValorantFormDataStore = create<ValorantFormData>((set) => ({
         teamSubImage: null,
         teamMembers: [],
     },
-    setFormData: (formData) => set({ formData })
+    setFormData: (formData) => set({ formData }),
+    clearFormData: () => set({ formData: {
+        teamName: "",
+        teamLogo: null,
+        teamLeaderName: "",
+        teamLeaderImage: null,
+        teamSubName: "",
+        teamSubImage: null,
+        teamMembers: [],
+    }})
 }));
 
 
