@@ -107,13 +107,16 @@ export default function IdeathonForm() {
                         skills.
                         <br />
                         <br />
-                        Theme: Sustainable Development Goals (SDGs)
+                        <Text as='span' fontWeight={'1000'} color='#FF6B2E'> Theme: Sustainable Development Goals (SDGs)</Text>
                         <br />
-                        • This Ideathon centers around addressing challenges based on 5 out
-                        of 17 SDG goals aligned with the United Nations' SDGs, encouraging
-                        participants to create solutions that contribute to a better and
-                        more sustainable future.
+                        • This Ideathon centers around addressing challenges based on 5 out of 17 SDG goals aligned with the United Nations' SDGs, encouraging participants to create solutions that contribute to a better and more sustainable future. The selected goals are as follows:
                         <br />
+                        <br />
+                        1. <Text as='span' fontWeight={'1000'} color='#FF6B2E'>SDG 4:</Text> Quality Education<br />
+                        2. <Text as='span' fontWeight={'1000'} color='#FF6B2E'>SDG 6: </Text>Clean Water and Sanitation<br />
+                        3. <Text as='span' fontWeight={'1000'} color='#FF6B2E'>SDG 7: </Text>Affordable and Clean Energy<br />
+                        4. <Text as='span' fontWeight={'1000'} color='#FF6B2E'>SDG 11: </Text>Sustainable Cities and Communities<br />
+                        5. <Text as='span' fontWeight={'1000'} color='#FF6B2E'>SDG 13:</Text> Climate Action<br />
                         <br />
                         Who can apply:
                         <br />
@@ -131,7 +134,7 @@ export default function IdeathonForm() {
                         <br />
                         Payment Details:
                         <br />
-                        • Registration Fee: <Text as='span' fontWeight={'800'}>Rs. 3500 </Text>per team
+                        • Registration Fee: <Text as='span' fontWeight={'1000'} color='#00ff62'>Rs. 2000 </Text>per team
                         <br />
 
                     </Text>
