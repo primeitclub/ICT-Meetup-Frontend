@@ -64,6 +64,7 @@ function EventPage() {
   fontStyle: 'normal'
  };
 
+
  return (
   <>
    <Box  width={{md:"100%",sm:"90%",base:"90%"}} margin={'auto'} height={'100%'} color={'white'}>
