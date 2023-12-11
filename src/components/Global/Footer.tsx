@@ -19,7 +19,7 @@ export default function Footer() {
     return (
         <>
             <Container
-                paddingY={'80px'}
+                paddingTop={'80px'}
                 paddingX={{
                     base: '32px',
                     md: '64px',
