@@ -6,8 +6,17 @@
       "date": "2024-01-04",
       "time": "TBD",
       "location": "Seminar hall, 3rd floor",
-      "image": "http://localhost:5173/public/ideathon.jpg",
+      "image": "https://ictv7.primeitclub.com/FrontAssets/ideathon.png",
       "link": "/event-registration/ideathon"
+    },
+    {
+      "event_title": "ICT Meetup V7.0 : Valorant Tournament",
+      "event_speaker": "Announcing Soon",
+      "date": "2024-01-05",
+      "time": "TBD",
+      "location": "Seminar hall, 3rd floor",
+      "image": "https://ictv7.primeitclub.com/FrontAssets/valorant.png",
+      "link": "https://forms.gle/2tmq7TgV49qpGSa96"
     }
   ]
 }
