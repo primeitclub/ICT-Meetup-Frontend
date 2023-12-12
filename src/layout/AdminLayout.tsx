@@ -21,6 +21,7 @@ function MainAdmin() {
         }
       } else {
         setIsLoading(false); // Set loading to false only if admin check is successful
+        navigate("/");
       }
       setIsLoading(false); // Set loading to false if admin check fails
     };

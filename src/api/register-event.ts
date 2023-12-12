@@ -2,7 +2,7 @@ import { PostRequest } from '../services/httpRequest';
 import { requestHandler } from '../services/requestHandler';
 
 export const registerValorant = requestHandler<any, unknown>(async (params) => {
-    return PostRequest("esports/valorant/register", params, {
+    return PostRequest("events/valorant/", params, {
         headers: {
             "Content-Type": "multipart/form-data"
         }
