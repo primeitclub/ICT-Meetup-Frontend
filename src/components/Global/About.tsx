@@ -80,7 +80,7 @@ export default function About() {
                     >
                         AI Innovation{" "}
                         <span style={{ color: "var(--accent-orange)" }}>:</span>
-                        <br /> Sculpting a<br /> Brighter Future
+                        <br /> Sculpting a<br /> Smarter Tomorrow
                         <span style={{ color: "var(--accent-orange)" }}>.</span>
                     </Heading>
 
