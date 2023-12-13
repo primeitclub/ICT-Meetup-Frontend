@@ -1,4 +1,4 @@
-import { Box, Container, Image } from "@chakra-ui/react";
+import { Box, Container, Flex, Image } from "@chakra-ui/react";
 
 import AboutBg from "../../assets/AboutUs/aboutBg.png";
 import LogoPng from "../../assets/AboutUs/logo.svg";
@@ -15,9 +15,9 @@ import SpeakerCards from "../../components/reusables/SpeakerCards";
 
 
 interface ObjectDataType {
-  name: string;
-  text: string;
-  image: string;
+    name: string;
+    text: string;
+    image: string;
 }
 
 

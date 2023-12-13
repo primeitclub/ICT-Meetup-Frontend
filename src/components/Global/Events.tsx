@@ -5,6 +5,7 @@ import { Box, Button, Container, Flex, Image, Text } from '@chakra-ui/react';
 import EventSlider from '../reusables/EventsSlider';
 import HomePageTitle from '../reusables/HomePageTitle';
 import FramerAnimation from '../animation/FramerAnimation';
+import { Link } from 'react-router-dom';
 
 export default function Events() {
   return (

@@ -86,7 +86,7 @@ export default function MobileMenu() {
         top={"0"}
         bottom={"0"}
         right={"0"}
-        zIndex={nav ? "101" : "-100"}
+        zIndex={nav ? "1000" : "-100"}
         height={"100vh"}
         position={"fixed"}
         left={nav ? "0" : "100%"}
@@ -104,12 +104,12 @@ export default function MobileMenu() {
         <Flex justifyContent={"space-between"} alignItems={"center"}>
           <Box>
             <Link onClick={closeNav} to="/">
-              <Image  src={Logo} alt="logo" boxSize="12" width={"150px"} />
+              <Image src={Logo} alt="logo" boxSize="12" width={"150px"} />
             </Link>
           </Box>
 
           <Box>
-            <Button className="navbar-close" >
+            <Button className="navbar-close" onClick={closeNav}>
               <CloseButton color="white" />
             </Button>
           </Box>

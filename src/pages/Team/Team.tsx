@@ -47,12 +47,13 @@ function Team(){
 
 
     return (<>
-    
-    <PageTitle pageTitle="Teams" pageDescription="Find out what’s happening when" />
+
+        <PageTitle pageTitle="Teams" pageDescription="Find out what’s happening when" />
+
+        <CommingSoon />
 
 
-
-    <Box className="team_wrap" w={ {lg:'85%',sm:'90%',base:'100%'} } m={'auto'}  >
+        {/* <Box className="team_wrap" w={ {lg:'85%',sm:'90%',base:'100%'} } m={'auto'}  >
 
 
     <Box className="team_category" pb={'80px'} >
@@ -70,7 +71,7 @@ function Team(){
     <SliderGroup TeamData={ team_developer } />
     </Box>
 
-    </Box>
+    </Box> */}
 
     </>)
 

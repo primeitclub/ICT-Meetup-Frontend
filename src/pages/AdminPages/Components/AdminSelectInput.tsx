@@ -9,7 +9,7 @@ interface SelectInput {
   errors: any;
 }
 
-function SelectInput({ label, options, required, field, errors }: SelectInput) {
+function SelectInput({ label, options, field, errors }: SelectInput) {
   return (
     <>
       <Box className="select_input_admin">

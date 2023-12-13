@@ -28,7 +28,6 @@ export const teamInfoSchema = z.object({
         "Only .jpg, .jpeg, .png and .webp formats are supported."
         )
         .refine((files) => files?.[0]?.size < MAX_FILE_SIZE, `Max image size is 5MB.`),
-    teamLeaderName: z.string().min(3, "Team leader name must be at least 3 characters long").max(30, "Team leader name must be at most 30 characters long"),
     teamLeaderImage: z.any().refine(
         (files) => ACCEPTED_IMAGE_TYPES.includes(files?.[0]?.type),
         "Only .jpg, .jpeg, .png and .webp formats are supported."
@@ -49,6 +48,12 @@ export const teamMemberSchema = z.object({
     teamMembers: z.array(memberSchema)
     .min(4, "Team must have 5 members with leader")
     .refine((members) => members.length === 4, {message: "Team must have 5 members with leader"}),
+    paymentImage: z.any().refine(
+        (files) => ACCEPTED_IMAGE_TYPES.includes(files?.[0]?.type),
+        "Only .jpg, .jpeg, .png and .webp formats are supported."
+        )
+        .refine((files) => files?.[0]?.size < MAX_FILE_SIZE, `Max image size is 5MB.`),
+        
 })
 
 export type teamInfoSchemaType = z.infer<typeof teamInfoSchema>

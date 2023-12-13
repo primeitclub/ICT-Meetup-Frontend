@@ -1,4 +1,7 @@
-import { setLocalStorage } from '../helpers/localStorage';
+import {
+  clearStorage,
+  setLocalStorage,
+} from '../helpers/localStorage';
 import {
   GetRequest,
   PostRequest,
@@ -55,8 +58,8 @@ export const verifyOtp = requestHandler<any, unknown>(async (params) => {
     return PostRequest("auth/verify-otp", params);
 })
 
-export const resendOtp = requestHandler<any, unknown>(async (params) => {
-    return PostRequest("auth/verify-otp", params);
+export const resendOtpEmail = requestHandler<any, unknown>(async (params) => {
+    return PostRequest("auth/resend-otp-verification-mail", params);
 })
 
 export const loginWithGoogle = requestHandler<any, LoginResponse>(async () => {
@@ -65,8 +68,7 @@ export const loginWithGoogle = requestHandler<any, LoginResponse>(async () => {
 
 export const logoutUser = async () => {
     //clear token
-    setLocalStorage("pitc-token", "");
-    setLocalStorage("pitc-refresh-token", "");
+    clearStorage();
     //refresh page
     window.location.reload();
     return;

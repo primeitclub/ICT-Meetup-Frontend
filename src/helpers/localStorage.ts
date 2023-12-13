@@ -11,3 +11,7 @@ export const getLocalStorage = (key: string) => {
 export const getTokenFromStorage = () => {
     return getLocalStorage("pitc-token")
 }
+
+export const deleteLocalStorage = (key: string) => {
+    localStorage.removeItem(key)
+}

@@ -36,7 +36,10 @@ export default function Navbar() {
   const shouldFetch = useRef(true);
   useEffect(() => {
     if (shouldFetch.current) {
-      getUser();
+      const fetchUser = async () => {
+        await getUser();
+      };
+      fetchUser();
       shouldFetch.current = false;
     }
   }, []);

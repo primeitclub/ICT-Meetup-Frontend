@@ -1,7 +1,6 @@
 import { Box } from "@chakra-ui/react";
 
 // import AdminRoute from "./AdminRoute";
-import PrivateRoutes from "./PrivateRoutes";
 import PublicRoutes from "./PublicRoutes";
 
 const MainRoute = () => {
@@ -9,7 +8,6 @@ const MainRoute = () => {
     <>
       <Box className="main-body ">
         <Box margin={"auto"} marginTop={"60px"} className="main-body-wrapper">
-          <PrivateRoutes />
           <PublicRoutes />
         </Box>
       </Box>
