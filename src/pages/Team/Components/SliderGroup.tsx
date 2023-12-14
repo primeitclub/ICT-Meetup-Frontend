@@ -13,7 +13,6 @@ import axios from "axios";
 
 interface TeamProps {
   TeamData: DataTypeTeam[];
-  TeamData: DataTypeTeam[];
 }
 
 function SliderGroup({ TeamData }: TeamProps) {

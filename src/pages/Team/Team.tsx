@@ -7,6 +7,7 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 import { DataTypeTeam } from "./DataSchema/Data"
 import { GetRequest } from "../../services/httpRequest"
+import CommingSoon from "../../components/ui/CommingSoon"
 
 enum TeamCategory {
     organizer = "organizer",

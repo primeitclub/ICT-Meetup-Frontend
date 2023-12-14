@@ -1,9 +1,9 @@
-import dataJson from '../Data/allMemberData.json';
-import AdminAllList from '../../reusables/AdminAllList';
-import MemberRow from './components/MemberRow';
+import dataJson from "../Data/allMemberData.json";
+import AdminAllList from "../../reusables/AdminAllList";
+import MemberRow from "./components/MemberRow";
 
 interface MemberData {
-  memberImg:string,
+  memberImg: string;
   memberName: string;
   memberEmail: string;
   memberVolunteer: string;
@@ -11,12 +11,27 @@ interface MemberData {
   memberBatch: string;
 }
 
-const tableHeadersForMembers = ['Name', 'Email', 'Volunteer', 'Designation', 'Batch', 'Actions'];
+const tableHeadersForMembers = [
+  "Name",
+  "Email",
+  "Volunteer",
+  "Designation",
+  "Batch",
+  "Actions",
+];
 
 function AdminAllMember() {
   const allMemberData: MemberData[] = dataJson;
 
-  return <AdminAllList dataList={allMemberData} title="All Members" addLink="/" tableHeaders={tableHeadersForMembers} RowComponent={MemberRow} />;
+  return (
+    <AdminAllList
+      dataList={allMemberData}
+      title="All Members"
+      addLink="/"
+      tableHeaders={tableHeadersForMembers}
+      RowComponent={MemberRow}
+    />
+  );
 }
 
 export default AdminAllMember;

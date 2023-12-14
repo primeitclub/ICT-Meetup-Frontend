@@ -23,7 +23,7 @@ const AboutUsSection = (props: any) => {
       justifyContent={"center"}
       alignItems={"center"}
       color={"#fff"}
-      height={{md:"70vh",sm:"90vh"}}
+      height={{md:"80vh",sm:"90vh"}}
     >
 
       <Box

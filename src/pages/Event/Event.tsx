@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Ideathon from "/assets/ideathon.png";
 import { isValidMotionProp, motion, Transition } from "framer-motion";
@@ -8,90 +8,126 @@ import { MdLocationOn, MdOutlineDateRange } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 import {
-    Box,
-    Button,
-    Card,
-    CardBody,
-    CardFooter,
-    chakra,
-    Flex,
-    Heading,
-    Image,
-    shouldForwardProp,
-    Stack,
-    TabPanel,
-    TabPanels,
-    Tabs,
-    Text,
+  Box,
+  Button,
+  Card,
+  CardBody,
+  CardFooter,
+  chakra,
+  Flex,
+  Heading,
+  Image,
+  shouldForwardProp,
+  Stack,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Tabs,
+  Text,
 } from "@chakra-ui/react";
 
 import mic from "../../assets/mic.svg";
 import PageTitle from "../../components/Global/PageTitle";
 import jsondata from "../../data/dataEvent.json";
+import TabLists from "./Components/TabLists";
+import CommingSoon from "../../components/ui/CommingSoon";
+import { GetRequest } from "../../services/httpRequest";
+import { EventApiProps } from "../AdminPages/Components/Events/AdminAddEvent/AdminAllEvent";
+
+import SingleCardEvent from "./Components/SingleCard";
 
 function EventPage() {
-    const [_activeTab, setActiveTab] = useState(0);
-    interface ObjectDataType {
-        [key: string]: {
-            event_title: string;
-            event_speaker: string;
-            date: string;
-            time: string;
-            location: string;
-            image: string;
-            link: string;
-        }[];
-    }
+  const [profile, setProfile] = useState<EventApiProps[] | null>(null);
 
-    const workShop: ObjectDataType = jsondata;
+  const [_activeTab, setActiveTab] = useState(0);
 
-    //  framer motion
+  interface ObjectDataType {
+    [key: string]: {
+      event_title: string;
+      event_speaker: string;
+      date: string;
+      time: string;
+      location: string;
+      image: string;
+      link: string;
+    }[];
+  }
 
-    const MotionBox = chakra(motion.div, {
-        shouldForwardProp: (prop) =>
-            isValidMotionProp(prop) || shouldForwardProp(prop),
-    });
+  const workShop: ObjectDataType = jsondata;
 
-    // for transition data , since typescript wont allow using it
+  //  framer motion
 
-    // declaring variable as transition type
+  const MotionBox = chakra(motion.div, {
+    shouldForwardProp: (prop) =>
+      isValidMotionProp(prop) || shouldForwardProp(prop),
+  });
 
-    const customeTranstion: Transition = {
-        duration: "0.3",
-        ease: "easeOut",
-        type: "spring",
-        stiffness: 200,
-        damping: 15,
+  // for transition data , since typescript wont allow using it
+
+  // declaring variable as transition type
+
+  const customeTranstion: Transition = {
+    duration: "0.3",
+    ease: "easeOut",
+    type: "spring",
+    stiffness: 200,
+    damping: 15,
+  };
+
+  // function retrive data from api
+  useEffect(() => {
+    const retriveData = async () => {
+      try {
+        const profileData = await GetRequest("events");
+        setProfile(profileData.data.events);
+      } catch (err) {
+        console.log(err);
+      }
     };
 
- const FontCard = {
-  color: '#FFF',
-  fontStyle: 'normal'
- };
+    retriveData();
+  }, []);
 
 
-    return (
-        <>
-            <Box
-                width={{ md: "100%", sm: "90%", base: "90%" }}
-                margin={"auto"}
-                height={"100%"}
-                color={"white"}
-            >
-                <PageTitle
-                    pageTitle="Event"
-                    pageDescription="Find out what’s happening when"
-                />
+  let compititionData = profile?.filter((item: EventApiProps) => {
+    return item.eventType === "competition";
+  });
 
-                {/* tab content begins */}
+  compititionData?.map((item: EventApiProps) =>{
+    console.log(item);
+  })
 
-                <Box
-                    width={{ base: "100%", xl: "80%" }}
-                    margin={"auto"}
-                    className="tabWraper"
-                >
-                    <Tabs onChange={(index) => setActiveTab(index)}>
-                        {/* <TabList
+  let esportData = profile?.filter((item: EventApiProps) => {
+    return item.eventType === "esport";
+  });
+
+  const FontCard = {
+    color: "#FFF",
+    fontStyle: "normal",
+  };
+
+  return (
+    <>
+      <Box
+        width={{ md: "100%", sm: "90%", base: "90%" }}
+        margin={"auto"}
+        height={"100%"}
+        color={"white"}
+      >
+        <PageTitle
+          pageTitle="Event"
+          pageDescription="Find out what’s happening when"
+        />
+
+        {/* tab content begins */}
+
+        <Box
+          width={{ base: "100%", xl: "80%" }}
+          margin={"auto"}
+          className="tabWraper"
+        >
+          <Tabs onChange={(index) => setActiveTab(index)}>
+            <TabList
               className="event_list"
               whiteSpace={"nowrap"}
               display={"flex"}
@@ -112,9 +148,74 @@ function EventPage() {
               }}
             >
               <TabLists />
-            </TabList> */}
+            </TabList>
 
-                        <TabPanels overflowY={"visible"} mt={"69px"}>
+            <TabPanels overflowY={"visible"} mt={"69px"}>
+              <MotionBox
+                initial={{ y: 100 }}
+                animate={{ y: 0 }}
+                transition={customeTranstion}
+              >
+                <TabPanel>
+                  <Box py={10}>
+                    <CommingSoon />
+                  </Box>
+                </TabPanel>
+              </MotionBox>
+
+              <MotionBox
+                initial={{ y: 100 }}
+                animate={{ y: 0 }}
+                transition={customeTranstion}
+              >
+                <TabPanel>
+                  <Box py={10}>
+                    <CommingSoon />
+                  </Box>
+                </TabPanel>
+              </MotionBox>
+
+{/* compitition */}
+              <MotionBox
+                initial={{ y: 100 }}
+                animate={{ y: 0 }}
+                transition={customeTranstion}
+              >
+                <TabPanel>
+                  {compititionData?.map( (item:EventApiProps)=>(
+                    <SingleCardEvent dataApi={item}  />
+                  ) )}
+                  
+                </TabPanel>
+              </MotionBox>
+{/* compoititon ends */}
+              <MotionBox
+                initial={{ y: 100 }}
+                animate={{ y: 0 }}
+                transition={customeTranstion}
+              >
+                <TabPanel>
+                  <Box py={10}>
+                    <CommingSoon />
+                  </Box>
+                </TabPanel>
+              </MotionBox>
+
+              <MotionBox
+                initial={{ y: 100 }}
+                animate={{ y: 0 }}
+                transition={customeTranstion}
+              >
+                <TabPanel>
+                {esportData?.map( (item:EventApiProps)=>(
+                    <SingleCardEvent dataApi={item} />
+                  ) )}
+                </TabPanel>
+
+              </MotionBox>
+            </TabPanels>
+
+            {/* <TabPanels overflowY={"visible"} mt={"69px"}>
                             {Object.keys(workShop).map((dataIndex) => {
                                 const DataVariable = workShop[dataIndex];
 
@@ -302,12 +403,12 @@ function EventPage() {
          </MotionBox>
         );
        })}
-      </TabPanels>
-     </Tabs>
-    </Box>
-   </Box>
-  </>
- );
+      </TabPanels> */}
+          </Tabs>
+        </Box>
+      </Box>
+    </>
+  );
 }
 
 export default EventPage;

@@ -148,7 +148,7 @@ export default function About() {
                             </HStack>
                         ))}
                     </VStack>
-                    <Link to="/events">
+                    <Link to="/events"/>
 
           <OutlinedButton buttonText="Learn More" />
         </Flex>
