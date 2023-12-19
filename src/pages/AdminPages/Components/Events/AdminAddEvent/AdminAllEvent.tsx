@@ -29,6 +29,7 @@ export interface EventApiProps {
     id?: number;
     title: string;
     eventType?: string;
+    slug: string;
     location?: string;
     totalSeats?: number;
     eventDate: any;

@@ -47,15 +47,15 @@ const PublicRoutes = () => {
           <Route path="/valorant" element={<Valorant />} />
           <Route path="/insideevents" element={<InsideEvents />} />
 
-          <Route path="/events">
-            <Route index element={<EventPage />} />
-          </Route>
           <Route path="/event-registration" element={<PrivateRouteLayout />}>
             <Route path="valorant" element={<ValorantRegistrationForm />} />
             <Route path="ideathon" element={<IdeathonForm />} />
           </Route>
           <Route path="/my-profile" element={<Profile />} />
+          
           <Route path="/events" element={<EventPage />} />
+          <Route path="events/:slug" element={<InsideEvents/>} />
+
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/teams" element={<Team />} />
           <Route path="/gallery" element={<Gallery />}></Route>

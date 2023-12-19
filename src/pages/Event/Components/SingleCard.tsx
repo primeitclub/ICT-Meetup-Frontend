@@ -2,13 +2,14 @@ import { Box, Card, Image, Stack, Heading, Flex, Text, Button, CardBody, CardFoo
 import { MdLocationOn, MdOutlineDateRange } from 'react-icons/md';
 import { FaRegClock } from 'react-icons/fa';
 import mic from "../../../assets/mic.svg";
-import { EventApiProps } from '../../AdminPages/Components/Events/AdminAddEvent/AdminAllEvent';
+import { Link } from 'react-router-dom';
 
-function SingleCardEvent( { dataApi}  ) {
+function SingleCardEvent( {dataApi}  ) {
 
-    const { title  , eventThumbnail , startTime , endTime , eventDate , location } = dataApi;
+    const { title  , eventThumbnail , startTime , slug, endTime , eventDate , location } = dataApi;
     
   const FontCard = {
+
     color: "#FFF",
     fontStyle: "normal",
   };
@@ -50,7 +51,7 @@ function SingleCardEvent( { dataApi}  ) {
         objectFit={"cover"}
         maxW={{ base: "100%", md: "315px" }}
         h={"100%"}
-        src={eventThumbnail}
+        src={ import.meta.env.VITE_EXPRESS_BACKEND_URL + eventThumbnail}
       />
     </Box>
 
@@ -157,12 +158,13 @@ function SingleCardEvent( { dataApi}  ) {
           variant={"primary-button"}
           p={{ md: "12px 24px", base: "10px 20px" }}
           fontWeight={500}
-          w={{ md: "50%", sm: "100%" }}
+          w={{ md: "100%", sm: "100%" }}
           fontSize={{ lg: "24px", sm: "18px", base: "16px" }}
         >
           Register Now
         </Button>
-        <Button
+        
+        {/* <Button
           borderRadius={"full"}
           w={{ md: "50%", sm: "100%" }}
           variant={"outlined-button"}
@@ -172,8 +174,11 @@ function SingleCardEvent( { dataApi}  ) {
           p={{ md: "12px 24px", base: "10px 20px" }}
           color={"white"}
         >
+          <Link to={slug} >
           Read More
-        </Button>
+          </Link>
+          
+        </Button> */}
       </CardFooter>
     </Stack>
   </Card>

@@ -190,7 +190,7 @@ export default function Profile() {
             </Flex>
           </Box>
         </Container>
-        <PageTitle
+        {/* <PageTitle
           pageTitle="My Schedule"
           pageDescription="A timeline of your events"
         />
@@ -203,7 +203,7 @@ export default function Profile() {
           m={"auto"}
         >
           <TabContent />
-        </Box>
+        </Box> */}
       </Box>
     </>
   );

@@ -5,6 +5,7 @@ import insideevents from '../../assets/insideevents.jpeg';
 import { FaFacebook, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import speakerImage from '../../assets/speakerImage.jpeg';
 import speakerMic from '../../assets/speaker-card-mic.svg';
+import { useParams } from 'react-router-dom';
 const data = [
  {
   title: 'Research Paper Reading',
@@ -26,6 +27,11 @@ const speakerData = {
 };
 
 const InsideEvents = () => {
+
+    const {slug} = useParams<{slug:string}>();
+
+    console.log(slug);
+
  return (
   <Container display={'flex'} alignItems={'center'} flexDirection={'column'}>
    <Box
