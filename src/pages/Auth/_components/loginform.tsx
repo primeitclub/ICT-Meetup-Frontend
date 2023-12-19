@@ -3,13 +3,15 @@ import { Link } from "react-router-dom";
 import { toast } from "sonner";
 
 import {
-    Box,
-    Button,
-    Checkbox,
-    Flex,
-    Heading,
-    Stack,
-    Text,
+  Box,
+  Button,
+  Checkbox,
+  Flex,
+  FormControl,
+  FormLabel,
+  Heading,
+  Stack,
+  Text,
 } from "@chakra-ui/react";
 import { zodResolver } from "@hookform/resolvers/zod";
 
@@ -124,49 +126,43 @@ export default function LoginForm() {
                             </form>
                         </Stack>
 
-                        <Flex
-                            direction={{ base: "column", md: "row" }}
-                            justifyContent={{ base: "flex-start", md: "space-between" }}
-                            alignItems={"center"}
-                            w="100%"
-                            gap={{ base: "8px", md: "12px" }}
-                        >
-                            {/* <FormControl display="flex" alignItems="center">
-        <Box display="flex" alignItems="center" border="1px solid white" p="2" mr="2">
-         <Checkbox color="white" defaultChecked />
-        </Box>
-        <FormLabel color="white">Remember me</FormLabel>
-       </FormControl> */}
-                            <Checkbox colorScheme="white" defaultChecked color="#D6D6D6">
-                                Remember me
-                            </Checkbox>
-                            <Link to="/forgot-password">
-                                <Text fontFamily="body" color={"#D6D6D6"}>
-                                    Forgot your password?
-                                </Text>
-                            </Link>
-                        </Flex>
-                        <Box
-                            display="inline-flex"
-                            flexDirection="column"
-                            justifyContent="center"
-                            alignItems="center"
-                            gap={"18px"}
-                        >
-                            <Button
-                                onClick={handleSubmit(onSubmit)}
-                                variant={"primary-button"}
-                                w={{ base: "100%", md: "27vw" }}
-                                minW="27vw"
-                                borderRadius={"none"}
-                            >
-                                Login
-                            </Button>
-                            <Text fontFamily="body" fontSize={"20px"} color={"#D6D6D6"}>
-                                Dont have an account? <Link to="/register">Register Now</Link>
-                            </Text>
-                        </Box>
-                        {/* <Text
+            <Flex
+              direction={{ base: "column", md: "row" }}
+              justifyContent={{ base: "flex-start", md: "space-between" }}
+              alignItems={"center"}
+              w="100%"
+              gap={{ base: "8px", md: "12px" }}
+            >              
+             
+              <Checkbox colorScheme="white" defaultChecked color="#D6D6D6">
+                Remember me
+              </Checkbox>
+
+              <Text fontFamily="body" color={"#D6D6D6"}>
+                Forgot your password?
+              </Text>
+            </Flex>
+            <Box
+              display="inline-flex"
+              flexDirection="column"
+              justifyContent="center"
+              alignItems="center"
+              gap={"18px"}
+            >
+              <Button
+                onClick={handleSubmit(onSubmit)}
+                variant={"primary-button"}
+                w={{ base: "100%", md: "27vw" }}
+                minW="27vw"
+                borderRadius={"none"}
+              >
+                Login
+              </Button>
+              <Text fontFamily="body" fontSize={"20px"} color={"#D6D6D6"}>
+                Dont have an account? <Link to="/register">Register Now</Link>
+              </Text>
+            </Box>
+            {/* <Text
               fontFamily="heading"
               color={"rgba(255, 255, 255, 0.60)"}
               fontWeight={700}

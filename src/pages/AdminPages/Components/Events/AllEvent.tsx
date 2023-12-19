@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import dataJson from './Data/allEventData.json';
 import {
  Table,
@@ -10,6 +11,7 @@ import {
  Box,
  Heading
 } from '@chakra-ui/react';
+import { GetRequest } from '../../../../services/httpRequest';
 
 interface EventData {
  eventTitle: string;
@@ -20,6 +22,17 @@ interface EventData {
  eventStatus: string;
 }
 
+
+// event interface
+interface Event {
+    title: string;
+    eventType: string;
+    location: string;
+    totalSeats: number;
+    eventDate: Date | null;
+    startTime: string;
+  }
+
 // style table head
 export const tableStyle = {
  background: 'white',
@@ -29,7 +42,27 @@ export const tableStyle = {
 function AdminAllEvent() {
  let allEventData: EventData[] = dataJson;
 
- console.log(allEventData);
+//  state for data 
+const [profile, setProfile] = useState<Event[] | null>(null);
+
+ // function retrive data from api
+useEffect(() => {
+    const retriveData = async () => {
+      try {
+        const profileData = await GetRequest("events");
+        console.log(profileData)
+        setProfile(profileData.data.events);
+        
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    retriveData();
+  }, []);
+
+  console.log(profile);
+
 
  return (
   <>

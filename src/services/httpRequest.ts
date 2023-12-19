@@ -18,4 +18,4 @@ export const DeleteRequest = (url: string, data: any = {}) => {
 
 export const PatchRequest = (url: string, data: any, config: any) => {
  return axiosInstance.patch(url, data, config);
-};
+}; 

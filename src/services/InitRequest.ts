@@ -13,7 +13,8 @@ const axiosInstance = axios.create({
   },
 });
 
-axiosInstance.interceptors.request.use(
+axiosInstance.interceptors.request.use( 
+
   (config: any) => {
     const token = getTokenFromStorage();
     try {
@@ -28,6 +29,7 @@ axiosInstance.interceptors.request.use(
     }
     return config;
   },
+  
   (error) => {
     return Promise.reject(error);
   }

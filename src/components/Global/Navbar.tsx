@@ -90,7 +90,7 @@ export default function Navbar() {
             // if user is logged in then show user profile and logout button
             user ? (
               <>
-                <Link to="/profile">
+                <Link to="/my-profile">
                   <Button>{user.username}</Button>
                 </Link>
 

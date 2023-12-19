@@ -1,235 +1,235 @@
 {
-    "organizer_team": [
+    "organizer": [
       {
-        "name": "OJohn Doe",
+        "fullName": "OJohn Doe",
         "image": "/src/assets/susit.png"
       },
       {
-        "name": "Alice Smith",
+        "fullName": "Alice Smith",
         "image": "/src/assets/susit.png"
       },
       {
-        "name": "Robert Johnson",
+        "fullName": "Robert Johnson",
         "image": "/src/assets/susit.png"
       },
       {
-        "name": "Sarah Wilson",
+        "fullName": "Sarah Wilson",
         "image": "/src/assets/susit.png"
       },
       {
-        "name": "Chris Brown",
+        "fullName": "Chris Brown",
         "image": "/src/assets/susit.png"
       },
       {
-        "name": "Emma White",
+        "fullName": "Emma White",
         "image": "/src/assets/susit.png"
       },
       {
-        "name": "Michael Davis",
+        "fullName": "Michael Davis",
         "image": "/src/assets/susit.png"
       },
       {
-        "name": "Olivia Johnson",
+        "fullName": "Olivia Johnson",
         "image": "/src/assets/susit.png"
       },
       {
-        "name": "Daniel Lee",
+        "fullName": "Daniel Lee",
         "image": "/src/assets/susit.png"
       },
       {
-        "name": "Sophia Miller",
+        "fullName": "Sophia Miller",
         "image": "/src/assets/susit.png"
       },
       {
-        "name": "William Smith",
+        "fullName": "William Smith",
         "image": "/src/assets/susit.png"
       },
       {
-        "name": "Ava Davis",
+        "fullName": "Ava Davis",
         "image": "/src/assets/susit.png"
       },
       {
-        "name": "Liam Anderson",
+        "fullName": "Liam Anderson",
         "image": "/src/assets/susit.png"
       },
       {
-        "name": "Grace Taylor",
+        "fullName": "Grace Taylor",
         "image": "/src/assets/susit.png"
       },
       {
-        "name": "Ethan Martin",
+        "fullName": "Ethan Martin",
         "image": "/src/assets/susit.png"
       },
       {
-        "name": "Chloe Moore",
+        "fullName": "Chloe Moore",
         "image": "/src/assets/susit.png"
       },
       {
-        "name": "James Jackson",
+        "fullName": "James Jackson",
         "image": "/src/assets/susit.png"
       },
       {
-        "name": "Aiden Harris",
+        "fullName": "Aiden Harris",
         "image": "/src/assets/susit.png"
       },
       {
-        "name": "Mia Thomas",
+        "fullName": "Mia Thomas",
         "image": "/src/assets/susit.png"
       }
     ],
-    "volunteer_team": [
+    "volunteer": [
         {
-            "name": "VJohn Doe",
+            "fullName": "VJohn Doe",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "Alice Smith",
+            "fullName": "Alice Smith",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "Robert Johnson",
+            "fullName": "Robert Johnson",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "Sarah Wilson",
+            "fullName": "Sarah Wilson",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "Chris Brown",
+            "fullName": "Chris Brown",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "Emma White",
+            "fullName": "Emma White",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "Michael Davis",
+            "fullName": "Michael Davis",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "Olivia Johnson",
+            "fullName": "Olivia Johnson",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "Daniel Lee",
+            "fullName": "Daniel Lee",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "Sophia Miller",
+            "fullName": "Sophia Miller",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "William Smith",
+            "fullName": "William Smith",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "Ava Davis",
+            "fullName": "Ava Davis",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "Liam Anderson",
+            "fullName": "Liam Anderson",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "Grace Taylor",
+            "fullName": "Grace Taylor",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "Ethan Martin",
+            "fullName": "Ethan Martin",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "Chloe Moore",
+            "fullName": "Chloe Moore",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "James Jackson",
+            "fullName": "James Jackson",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "Aiden Harris",
+            "fullName": "Aiden Harris",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "Mia Thomas",
+            "fullName": "Mia Thomas",
             "image": "/src/assets/susit.png"
           }
     ],
-    "developer_team": [
+    "developer": [
         {
-            "name": "DJohn Doe",
+            "fullName": "DJohn Doe",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "Alice Smith",
+            "fullName": "Alice Smith",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "Robert Johnson",
+            "fullName": "Robert Johnson",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "Sarah Wilson",
+            "fullName": "Sarah Wilson",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "Chris Brown",
+            "fullName": "Chris Brown",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "Emma White",
+            "fullName": "Emma White",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "Michael Davis",
+            "fullName": "Michael Davis",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "Olivia Johnson",
+            "fullName": "Olivia Johnson",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "Daniel Lee",
+            "fullName": "Daniel Lee",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "Sophia Miller",
+            "fullName": "Sophia Miller",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "William Smith",
+            "fullName": "William Smith",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "Ava Davis",
+            "fullName": "Ava Davis",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "Liam Anderson",
+            "fullName": "Liam Anderson",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "Grace Taylor",
+            "fullName": "Grace Taylor",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "Ethan Martin",
+            "fullName": "Ethan Martin",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "Chloe Moore",
+            "fullName": "Chloe Moore",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "James Jackson",
+            "fullName": "James Jackson",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "Aiden Harris",
+            "fullName": "Aiden Harris",
             "image": "/src/assets/susit.png"
           },
           {
-            "name": "Mia Thomas",
+            "fullName": "Mia Thomas",
             "image": "/src/assets/susit.png"
           }
     ]

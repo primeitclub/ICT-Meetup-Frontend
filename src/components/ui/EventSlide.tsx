@@ -14,31 +14,48 @@ const data = [
 ];
 
 export default function EventSlide() {
-    return (
-        <>
-            <Flex
-                align={"center"}
-                width={"full"}
-                paddingX={{
-                    base: "0",
-                    md: "97px",
-                }}
-            >
-                <Flex direction={"column"} gap={"48px"} align={"start"} width={"full"}>
-                    <Heading
-                        as="h1"
-                        fontSize={{
-                            base: "24px",
-                            md: "32px",
-                            lg: "36px",
-                        }}
-                        fontFamily="heading"
-                        fontWeight={"bold"}
-                        autoCapitalize="true"
-                        color={"white"}
-                    >
-                        HIGHLIGHTS
-                    </Heading>
+  return (
+    <>
+      <Flex
+        align={"center"}
+        width={"full"}
+        paddingX={{
+          base: "0",
+          md: "97px",
+        }}
+      >
+        <Flex direction={"column"} gap={"48px"} align={"start"} width={"full"}>
+        <Heading
+            as="h1"
+            fontSize={{
+              base: "24px",
+              md: "32px",
+              lg: "57px",
+            }}
+            fontFamily="heading"
+            fontWeight={"bold"}
+            autoCapitalize="true"
+            color={"black"}
+            background={"white"}
+            backgroundClip={"text"}
+            position={"relative"}   
+          >
+            01
+          </Heading>
+          <Heading
+            as="h1"
+            fontSize={{
+              base: "24px",
+              md: "32px",
+              lg: "36px",
+            }}
+            fontFamily="heading"
+            fontWeight={"bold"}
+            autoCapitalize="true"
+            color={"white"}
+          >
+            WORKSHOPS
+          </Heading>
 
                     <Flex
                         fontWeight={"500"}

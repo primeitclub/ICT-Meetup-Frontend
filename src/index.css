@@ -97,7 +97,7 @@ input:-webkit-autofill:active {
 .main-body-wrapper {
   width: 100%;
   height: 100%;
-  background-image: url("/assets/AboutUs/animated.png");
+  /* background-image: url("/assets/AboutUs/animated.png"); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -376,7 +376,7 @@ image {
 }
 
 .custom-input {
-  background-color: var(--form-background);
+  background-color: transparent;
   border-bottom: 1px solid #d9d9d9;
   width: 100%;
   padding: 20px 10px;

@@ -35,7 +35,7 @@ const AdminAllList = ({
     RowComponent,
 }) => {
     const isMemberList = RowComponent === MemberRow;
-    console.log(dataList);
+    // console.log(dataList);
     const itemsPerPage = 10;
     const totalPages = Math.ceil(dataList.length / itemsPerPage);
 
@@ -43,7 +43,6 @@ const AdminAllList = ({
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
     const currentItems = dataList.slice(indexOfFirstItem, indexOfLastItem);
-    console.log(currentItems);
     const handlePageChange = (newPage) => {
         setCurrentPage(newPage);
     };

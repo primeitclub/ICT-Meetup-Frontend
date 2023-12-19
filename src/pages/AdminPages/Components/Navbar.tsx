@@ -17,7 +17,7 @@ function NavbarAdmin() {
   const [expandMember, setExpandMember] = useState(false);
 
   const navItemAdmin = {
-    fontSize: "16px",
+    fontSize: "20px",
     cursor: "pointer",
     textTransform: "capitalize",
     _hover: {
@@ -99,11 +99,12 @@ function NavbarAdmin() {
               onClick={handelEvent}
               sx={navItemAdmin}
               alignItems={"center"}
-              gap={4}
-            >
-              <TbCalendarEvent className="icon_size_admin" />
+              gap={20}
+>
+             <Flex alignItems={"center"} gap={5} >
+             <TbCalendarEvent className="icon_size_admin" />
               <Text className={expandEvent ? "active" : "nav"}>Events</Text>
-              <Spacer />
+             </Flex>
 
               {expandEvent ? <IoIosArrowUp /> : <IoIosArrowDown />}
             </Flex>
@@ -145,11 +146,12 @@ function NavbarAdmin() {
               onClick={handelMember}
               sx={navItemAdmin}
               alignItems={"center"}
-              gap={4}
+              gap={20}
             >
-              <FaUserEdit className="icon_size_admin" />
+            <Flex alignItems={"center"} gap={5}  >
+            <FaUserEdit className="icon_size_admin" />
               <Text className={expandMember ? "active" : "nav"}>Members</Text>
-              <Spacer />
+            </Flex>
 
               {expandMember ? <IoIosArrowUp /> : <IoIosArrowDown />}
             </Flex>

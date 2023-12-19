@@ -20,6 +20,7 @@ interface IFAQData {
     answer: string;
 }
 
+
 const faqData: IFAQData[] = [
     {
         question: "What is ICT V7?",

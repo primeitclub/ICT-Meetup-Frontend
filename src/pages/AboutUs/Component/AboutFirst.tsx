@@ -1,8 +1,9 @@
 import { Box, Flex, Image, Text, chakra, shouldForwardProp } from "@chakra-ui/react";
 import { ScaleUpanimation } from "../../../components/animation/FramerAnimation";
-import { isValidMotionProp } from "framer-motion";
-import { useEffect , useRef } from "react";
-import { motion } from "framer-motion";
+import {  useRef } from "react";
+
+
+
 
 const AboutUsSection = (props: any) => {
   const { imageLink, heading, paragraph, direction } = props;
@@ -13,7 +14,6 @@ const AboutUsSection = (props: any) => {
 
   return (
       <Flex
-      //    key={index}
       ref={heightAbout}
       direction={{
         base: "column",
@@ -29,7 +29,7 @@ const AboutUsSection = (props: any) => {
       <Box
         width={{
           base: "100%",
-          lg: "60%",
+          lg: "50%",
         }}
         height={{md:"430px"}}
       >
@@ -41,11 +41,11 @@ const AboutUsSection = (props: any) => {
       <Box
         width={{
           base: "100%",
-          lg: "40%",
+          lg: "50%",
         }}
       >
         
-        <Box  width={{xl:"70%",lg:"80%",base:"100%"}} mx={"auto"}>
+        <Box  width={{xl:"90%",lg:"80%",base:"100%"}} mr={"auto"}>
         <Text
        
        variant={"section-header"}

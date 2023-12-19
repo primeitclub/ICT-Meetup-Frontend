@@ -1,20 +1,24 @@
+import SingleImage from "../../../assets/susit.png";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Grid, Pagination, Navigation } from "swiper/modules";
+import { Box } from "@chakra-ui/layout";
+import { Image, Flex } from "@chakra-ui/react";
+import { DataTypeTeam } from "../DataSchema/Data";
+
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
-
-import { Autoplay, Grid, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import { Box } from "@chakra-ui/layout";
-import { Flex, Image } from "@chakra-ui/react";
-
-import { DataTypeTeam } from "../DataSchema/Data";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 interface TeamProps {
   TeamData: DataTypeTeam[];
 }
 
 function SliderGroup({ TeamData }: TeamProps) {
+
+
+
   return (
     <>
       <Swiper
@@ -57,7 +61,7 @@ function SliderGroup({ TeamData }: TeamProps) {
                   h={"100%"}
                   w={"100%"}
                   objectFit={"cover"}
-                  src={item.image}
+                  src={`http://localhost:6969/`+ `${item.image}`}
                 />
               </Box>
               <Box
@@ -75,7 +79,7 @@ function SliderGroup({ TeamData }: TeamProps) {
                 className="single_team_name"
                 letterSpacing={".2px"}
               >
-                {item.name}
+                {item.fullName}
               </Box>
             </Flex>
           </SwiperSlide>

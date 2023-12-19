@@ -120,7 +120,7 @@ function EventForm() {
 
         <Box sx={{ borderRadius: 10 }} className="form_wrap">
           <form onSubmit={handleSubmit(onSubmit)}>
-            <Flex align={"start"} direction={"row"} gap={6}>
+            <Flex align={"start"} direction={"column"} gap={6}>
               <Box flex={1} backgroundColor={"white"} padding={"30px"}>
                 <InputFieldAdmin
                   key={"name"}
