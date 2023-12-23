@@ -146,10 +146,11 @@ function EventPage() {
                                 transition={customeTranstion}
                             >
                                 <TabPanel>
-                                    {workshopArrayData &&
+                                    {/* {workshopArrayData &&
                                         workshopArrayData.map((item: EventApiProps) => (
                                             <SingleCardEvent dataApi={item} />
-                                        ))}
+                                        ))} */}
+                                        <CommingSoon/>
                                 </TabPanel>
                             </MotionBox>
                             {/* workshop ends */}

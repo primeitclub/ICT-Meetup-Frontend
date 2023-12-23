@@ -10,10 +10,11 @@ import { Box, Button, Flex, Text } from "@chakra-ui/react";
 
 import EventSlide from "../ui/EventSlide";
 
+// demo data 
+import eventdata from "../ui/eventSlideData.json";
+
 export default function EventSlider() {
 
-
-    
 
 
   return (
@@ -48,18 +49,12 @@ export default function EventSlider() {
             }}
             slidesPerView={1}
           >
-            <SwiperSlide>
-              <EventSlide />
+            { eventdata.map( (item:any,index:number)=>(
+              <SwiperSlide key={index} >
+              <EventSlide eventData ={item} number={index} />
             </SwiperSlide>
-            <SwiperSlide>
-              <EventSlide />
-            </SwiperSlide>
-            <SwiperSlide>
-              <EventSlide />
-            </SwiperSlide>
-            <SwiperSlide>
-              <EventSlide />
-            </SwiperSlide>
+            ) ) }
+        
 
             <Box className="swiper-button-next" mr={{md:10,base:0}} color={"white"}></Box>
             <Box className="swiper-button-prev" display={{md:"block",base:"none"}} color={"white"}></Box>

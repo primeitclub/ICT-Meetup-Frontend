@@ -1,19 +1,16 @@
 import { Flex, Heading, HStack, Text } from "@chakra-ui/react";
 
-const data = [
 
-    "Sessions",
-    " Workshops",
-    " Ideathon",
-    " Panel Discussion",
-    "Project Demonstration",
-    "Competitions",
-    "ICT Musical Night",
-    "Valorant",
-    "Stalls"
-];
+interface EventSlideProps {
+  title:string,
+  events:Array<string>
+}
 
-export default function EventSlide() {
+export default function EventSlide( {eventData,number}:{eventData:EventSlideProps,number:number}) {
+
+  const { title , events } = eventData;
+
+
   return (
     <>
       <Flex
@@ -40,7 +37,7 @@ export default function EventSlide() {
             backgroundClip={"text"}
             position={"relative"}   
           >
-            01
+            {number + 1}
           </Heading>
           <Heading
             as="h1"
@@ -54,7 +51,7 @@ export default function EventSlide() {
             autoCapitalize="true"
             color={"white"}
           >
-            WORKSHOPS
+            {title}
           </Heading>
 
                     <Flex
@@ -67,7 +64,7 @@ export default function EventSlide() {
                         }}
                         align={"start"}
                     >
-                        {data.map((item, i) => (
+                        {events.map((item, i) => (
                             <HStack key={i} color={"white"} spacing={"10px"}>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
