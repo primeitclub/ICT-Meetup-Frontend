@@ -8,23 +8,23 @@ import { MdLocationOn, MdOutlineDateRange } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 import {
-  Box,
-  Button,
-  Card,
-  CardBody,
-  CardFooter,
-  chakra,
-  Flex,
-  Heading,
-  Image,
-  Portal,
-  shouldForwardProp,
-  Stack,
-  TabList,
-  TabPanel,
-  TabPanels,
-  Tabs,
-  Text,
+    Box,
+    Button,
+    Card,
+    CardBody,
+    CardFooter,
+    chakra,
+    Flex,
+    Heading,
+    Image,
+    Portal,
+    shouldForwardProp,
+    Stack,
+    TabList,
+    TabPanel,
+    TabPanels,
+    Tabs,
+    Text,
 } from "@chakra-ui/react";
 
 import mic from "../../assets/mic.svg";
@@ -38,179 +38,180 @@ import { EventApiProps } from "../AdminPages/Components/Events/AdminAddEvent/Adm
 import SingleCardEvent from "./Components/SingleCard";
 
 interface EventDataProps {
-  [key: string]: EventApiProps[];
+    [key: string]: EventApiProps[];
 }
 
 function EventPage() {
-  const [profile, setProfile] = useState<EventDataProps | null>(null);
+    // const [profile, setProfile] = useState<EventDataProps | null>(jsondata);
+    const [profile, setProfile] = useState<any>(jsondata);
 
-  const [_activeTab, setActiveTab] = useState(0);
+    const [_activeTab, setActiveTab] = useState(0);
 
 
 
 
-  //  framer motion
+    //  framer motion
 
-  const MotionBox = chakra(motion.div, {
-    shouldForwardProp: (prop) =>
-      isValidMotionProp(prop) || shouldForwardProp(prop),
-  });
+    const MotionBox = chakra(motion.div, {
+        shouldForwardProp: (prop) =>
+            isValidMotionProp(prop) || shouldForwardProp(prop),
+    });
 
-  // for transition data , since typescript wont allow using it
+    // for transition data , since typescript wont allow using it
 
-  // declaring variable as transition type
+    // declaring variable as transition type
 
-  const customeTranstion: Transition = {
-    duration: "0.3",
-    ease: "easeOut",
-    type: "spring",
-    stiffness: 200,
-    damping: 15,
-  };
-
-  // function retrive data from api
-
-  let esportArrayData;
-  let workshopArrayData;
-  let competitionArrayData;
-
-  useEffect(() => {
-    const retriveData = async () => {
-      try {
-        const profileData = await GetRequest("events");
-        setProfile(profileData.data);
-      } catch (err) {
-        console.log(err);
-      }
+    const customeTranstion: Transition = {
+        duration: "0.3",
+        ease: "easeOut",
+        type: "spring",
+        stiffness: 200,
+        damping: 15,
     };
 
-    retriveData();
-  }, []);
+    // function retrive data from api
 
-  if (profile) {
-    esportArrayData = profile.esports;
-    workshopArrayData = profile.workshop;
-    competitionArrayData = profile.competition;
-  }
+    let esportArrayData;
+    let workshopArrayData;
+    let competitionArrayData;
 
-  return (
-    <>
-      <Box
-        width={{ md: "100%", sm: "90%", base: "90%" }}
-        margin={"auto"}
-        height={"100%"}
-        color={"white"}
-      >
-        <PageTitle
-          pageTitle="Event"
-          pageDescription="Find out what’s happening when"
-        />
+    useEffect(() => {
+        const retriveData = async () => {
+            try {
+                const profileData = await GetRequest("events");
+                setProfile(profileData.data);
+            } catch (err) {
+                console.log(err);
+            }
+        };
 
-        {/* tab content begins */}
+        // retriveData();
+    }, []);
 
-        <Box
-          width={{ base: "100%", xl: "80%" }}
-          margin={"auto"}
-          className="tabWraper"
-        >
-          <Tabs onChange={(index) => setActiveTab(index)}>
-            <TabList
-              className="event_list"
-              whiteSpace={"nowrap"}
-              display={"flex"}
-              //  flexWrap={'nowrap'}
-              overflow={{ md: "scroll", sm: "scroll", base: "scroll" }}
-              justifyContent={{
-                md: "space-around",
-                sm: "start",
-                base: "start",
-              }}
-              gap={{ md: "40px", sm: "20px", base: "28px" }}
-              sx={{
-                "&::-webkit-scrollbar": {
-                  display: "none",
-                },
-                scrollbarWidth: "none",
-                msOverflowStyle: "none",
-              }}
+    if (profile) {
+        esportArrayData = profile.esports;
+        workshopArrayData = profile.workshop;
+        competitionArrayData = profile.competition;
+    }
+
+    return (
+        <>
+            <Box
+                width={{ md: "100%", sm: "90%", base: "90%" }}
+                margin={"auto"}
+                height={"100%"}
+                color={"white"}
             >
-              <TabLists />
-            </TabList>
+                <PageTitle
+                    pageTitle="Event"
+                    pageDescription="Find out what’s happening when"
+                />
 
-            <TabPanels overflowY={"visible"} mt={"69px"}>
-              {/* workshop */}
-              <MotionBox
-                initial={{ y: 100 }}
-                animate={{ y: 0 }}
-                transition={customeTranstion}
-              >
-                <TabPanel>
-                  {workshopArrayData &&
-                    workshopArrayData.map((item: EventApiProps) => (
-                      <SingleCardEvent dataApi={item} />
-                    ))}
-                </TabPanel>
-              </MotionBox>
-              {/* workshop ends */}
-              {/* sessions */}
-              <MotionBox
-                initial={{ y: 100 }}
-                animate={{ y: 0 }}
-                transition={customeTranstion}
-              >
-                <TabPanel>
-                  <Box py={10}>
-                    <CommingSoon />
-                  </Box>
-                </TabPanel>
-              </MotionBox>
-              {/* sessions ends */}
-              {/* competitoion */}
-              <MotionBox
-                initial={{ y: 100 }}
-                animate={{ y: 0 }}
-                transition={customeTranstion}
-              >
-                <TabPanel>
-                  {competitionArrayData &&
-                    competitionArrayData.map((item:EventApiProps) => (
-                      <SingleCardEvent dataApi={item} />
-                    ))}
-                </TabPanel>
-              </MotionBox>
-              {/* competition ends */}
-              {/* panel */}
-              <MotionBox
-                initial={{ y: 100 }}
-                animate={{ y: 0 }}
-                transition={customeTranstion}
-              >
-                <TabPanel>
-                  <Box py={10}>
-                    <CommingSoon />
-                  </Box>
-                </TabPanel>
-              </MotionBox>
-              {/* panels ends */}
-              {/* esport  */}
-              <MotionBox
-                initial={{ y: 100 }}
-                animate={{ y: 0 }}
-                transition={customeTranstion}
-              >
-                <TabPanel>
-                  {esportArrayData &&
-                    esportArrayData.map((item: any) => (
-                      <SingleCardEvent dataApi={item} />
-                    ))}
-                </TabPanel>
-              </MotionBox>
-              {/* esport ends */}
-            </TabPanels>
+                {/* tab content begins */}
 
-            {/* <TabPanels overflowY={"visible"} mt={"69px"}>
+                <Box
+                    width={{ base: "100%", xl: "80%" }}
+                    margin={"auto"}
+                    className="tabWraper"
+                >
+                    <Tabs onChange={(index) => setActiveTab(index)}>
+                        <TabList
+                            className="event_list"
+                            whiteSpace={"nowrap"}
+                            display={"flex"}
+                            //  flexWrap={'nowrap'}
+                            overflow={{ md: "scroll", sm: "scroll", base: "scroll" }}
+                            justifyContent={{
+                                md: "space-around",
+                                sm: "start",
+                                base: "start",
+                            }}
+                            gap={{ md: "40px", sm: "20px", base: "28px" }}
+                            sx={{
+                                "&::-webkit-scrollbar": {
+                                    display: "none",
+                                },
+                                scrollbarWidth: "none",
+                                msOverflowStyle: "none",
+                            }}
+                        >
+                            <TabLists />
+                        </TabList>
+
+                        <TabPanels overflowY={"visible"} mt={"69px"}>
+                            {/* workshop */}
+                            <MotionBox
+                                initial={{ y: 100 }}
+                                animate={{ y: 0 }}
+                                transition={customeTranstion}
+                            >
+                                <TabPanel>
+                                    {workshopArrayData &&
+                                        workshopArrayData.map((item: EventApiProps) => (
+                                            <SingleCardEvent dataApi={item} />
+                                        ))}
+                                </TabPanel>
+                            </MotionBox>
+                            {/* workshop ends */}
+                            {/* sessions */}
+                            <MotionBox
+                                initial={{ y: 100 }}
+                                animate={{ y: 0 }}
+                                transition={customeTranstion}
+                            >
+                                <TabPanel>
+                                    <Box py={10}>
+                                        <CommingSoon />
+                                    </Box>
+                                </TabPanel>
+                            </MotionBox>
+                            {/* sessions ends */}
+                            {/* competitoion */}
+                            <MotionBox
+                                initial={{ y: 100 }}
+                                animate={{ y: 0 }}
+                                transition={customeTranstion}
+                            >
+                                <TabPanel>
+                                    {competitionArrayData &&
+                                        competitionArrayData.map((item: EventApiProps) => (
+                                            <SingleCardEvent dataApi={item} />
+                                        ))}
+                                </TabPanel>
+                            </MotionBox>
+                            {/* competition ends */}
+                            {/* panel */}
+                            <MotionBox
+                                initial={{ y: 100 }}
+                                animate={{ y: 0 }}
+                                transition={customeTranstion}
+                            >
+                                <TabPanel>
+                                    <Box py={10}>
+                                        <CommingSoon />
+                                    </Box>
+                                </TabPanel>
+                            </MotionBox>
+                            {/* panels ends */}
+                            {/* esport  */}
+                            <MotionBox
+                                initial={{ y: 100 }}
+                                animate={{ y: 0 }}
+                                transition={customeTranstion}
+                            >
+                                <TabPanel>
+                                    {esportArrayData &&
+                                        esportArrayData.map((item: any) => (
+                                            <SingleCardEvent dataApi={item} />
+                                        ))}
+                                </TabPanel>
+                            </MotionBox>
+                            {/* esport ends */}
+                        </TabPanels>
+
+                        {/* <TabPanels overflowY={"visible"} mt={"69px"}>
               { profile &&  Object.keys(profile).map((dataIndex) => {
-                const DataVariable:EventApiProps[] = profile[dataIndex];               
+                const DataVariable:EventApiProps[] = profile[dataIndex];
 
                 return (
                   <MotionBox
@@ -367,7 +368,7 @@ function EventPage() {
                                           base: "18px",
                                         }}
                                       >
-                                        {items.startTime} - {items.endTime} 
+                                        {items.startTime} - {items.endTime}
                                       </Text>
                                     </Flex>
                                   </Flex>
@@ -423,11 +424,11 @@ function EventPage() {
                 );
               })}
             </TabPanels> */}
-          </Tabs>
-        </Box>
-      </Box>
-    </>
-  );
+                    </Tabs>
+                </Box>
+            </Box>
+        </>
+    );
 }
 
 export default EventPage;

@@ -15,64 +15,64 @@ enum TeamCategory {
     developer = "developer"
 }
 
-    interface dataTeamProp {
-        
-        groupedTeamMembers: DataTypeTeam[];
-    
-    }
+interface dataTeamProp {
 
-function Team(){    
+    groupedTeamMembers: DataTypeTeam[];
 
-    const [dataTeam, setDataTeam] = useState<any>();
+}
+
+function Team() {
+
+    const [dataTeam, setDataTeam] = useState<any>(TeamData);
 
     useEffect(() => {
-      const teamData = async () => {
-        try {
-          const dataTeam = await GetRequest("team-members");
-          setDataTeam(dataTeam.data.groupedTeamMembers);
-          console.log(dataTeam.data.groupedTeamMembers)
-          return dataTeam.data;
-        } catch (err) {
-          console.log(err);
-        }
-      };
-  
-      teamData();
-    }, []);    
+        const teamData = async () => {
+            try {
+                const dataTeam = await GetRequest("team-members");
+                setDataTeam(dataTeam.data.groupedTeamMembers);
+                console.log(dataTeam.data.groupedTeamMembers)
+                return dataTeam.data;
+            } catch (err) {
+                console.log(err);
+            }
+        };
+
+        // teamData();
+    }, []);
 
 
 
     const team_developer = dataTeam?.development;
-    const team_organizer =dataTeam?.organizer;
-    const team_volunter =dataTeam?.volunteer;
+    const team_organizer = dataTeam?.organizer;
+    const team_volunter = dataTeam?.volunteer;
 
 
     return (<>
 
         <PageTitle pageTitle="Teams" pageDescription="Find out what’s happening when" />
 
-        <CommingSoon />
+        {/* <CommingSoon /> */}
 
 
-        {/* <Box className="team_wrap" w={ {lg:'85%',sm:'90%',base:'100%'} } m={'auto'}  >
+        <Box className="team_wrap" w={{ lg: '85%', sm: '90%', base: '100%' }} m={'auto'}  >
 
 
-    <Box className="team_category" pb={'80px'} >
-    <TeamHeader headerTitle = 'OrganizeR Team' headerDescription= 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.dasdas sdadsa asd  ' />
-    <SliderGroup TeamData = {team_organizer}  />
-    </Box>
+            <Box className="team_category" pb={'80px'} >
+                <TeamHeader headerTitle='OrganizeR Team' headerDescription='Lorem ipsum dolor sit amet, consectetur adipiscing elit.dasdas sdadsa asd  ' />
+                <SliderGroup TeamData={team_organizer} />
+            </Box>
 
-   <Box className="team_category" pb={'80px'} >
-   <TeamHeader headerTitle = 'Volunteer' headerDescription= 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' />
-    <SliderGroup TeamData={ team_volunter } />
-   </Box>
+            <Box className="team_category" pb={'80px'} >
+                <TeamHeader headerTitle='Volunteer' headerDescription='Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' />
+                <SliderGroup TeamData={team_volunter} />
+            </Box>
 
-    <Box className="team_category" pb={'80px'} >
-    <TeamHeader headerTitle = 'Development Team' headerDescription= 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' />
-    <SliderGroup TeamData={ team_developer } />
-    </Box>
+            <Box className="team_category" pb={'80px'} >
+                <TeamHeader headerTitle='Development Team' headerDescription='Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' />
+                <SliderGroup TeamData={team_developer} />
+            </Box>
 
-    </Box> */}
+        </Box>
 
     </>)
 
