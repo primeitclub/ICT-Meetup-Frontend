@@ -22,67 +22,67 @@ const data = [
 ];
 
 export default function About() {
-  return (
-    <>
-      <HomePageTitle pageTitle="About the event" />
-      <Flex
-        direction={{
-          base: "column",
-          lg: "row",
-        }}
-        alignItems={{
-          base: "center",
-        }}
-        position={"relative"}
-        paddingY={{
-          base: "32px",
-          lg: "80px",
-        }}
-      >
+    return (
+        <>
+            <HomePageTitle pageTitle="About the event" />
+            <Flex
+                direction={{
+                    base: "column",
+                    lg: "row",
+                }}
+                alignItems={{
+                    base: "center",
+                }}
+                position={"relative"}
+                paddingY={{
+                    base: "32px",
+                    lg: "80px",
+                }}
+            >
 
-        <Box
-          maxW={{
-            sm: "100%",
-            md: "50%",
-            "2xl": "50%",
-          }}
-        >
-         <FramerAnimation>
-         <Image src={AiRobot} alt="About" borderRadius={"0px 64px 64px 0px"} />
-         </FramerAnimation>
-        </Box>
+                <Box
+                    maxW={{
+                        sm: "100%",
+                        md: "50%",
+                        "2xl": "50%",
+                    }}
+                >
+                    <FramerAnimation>
+                        <Image src={AiRobot} alt="About" borderRadius={"0px 64px 64px 0px"} />
+                    </FramerAnimation>
+                </Box>
 
-        <Flex
-          direction={"column"}
-          gap={{
-            base: "32px",
-          }}
-          marginTop={{
-            base: "32px",
-            md: "0px",
-          }}
-          paddingX={{
-            base: "32px",
-            md: "64px",
-          }}
-        >
-          <Heading
-            as="h1"
-            fontSize={{
-              base: "24px",
-              md: "32px",
-              lg: "36px",
-            }}
-            fontFamily="heading"
-            fontWeight={"700"}
-            textTransform={"uppercase"}
-            color={"white"}
-          >
-            AI Innovation{" "}
-            <span style={{ color: "var(--accent-orange)" }}>:</span>
-            <br /> Sculpting a<br /> Brighter Future
-            <span style={{ color: "var(--accent-orange)" }}>.</span>
-          </Heading>
+                <Flex
+                    direction={"column"}
+                    gap={{
+                        base: "32px",
+                    }}
+                    marginTop={{
+                        base: "32px",
+                        md: "0px",
+                    }}
+                    paddingX={{
+                        base: "32px",
+                        md: "64px",
+                    }}
+                >
+                    <Heading
+                        as="h1"
+                        fontSize={{
+                            base: "24px",
+                            md: "32px",
+                            lg: "36px",
+                        }}
+                        fontFamily="heading"
+                        fontWeight={"700"}
+                        textTransform={"uppercase"}
+                        color={"white"}
+                    >
+                        AI Innovation{" "}
+                        <span style={{ color: "var(--accent-orange)" }}>:</span>
+                        <br /> Sculpting a<br /> smarter tomorow
+                        <span style={{ color: "var(--accent-orange)" }}>.</span>
+                    </Heading>
 
                     <Text
                         fontSize={{
@@ -148,12 +148,12 @@ export default function About() {
                             </HStack>
                         ))}
                     </VStack>
-                    <Link to="/events"/>
+                    <Link to="/events" />
 
-          <OutlinedButton buttonText="Learn More" />
-        </Flex>
-        
-      </Flex>
-    </>
-  );
+                    <OutlinedButton buttonText="Learn More" />
+                </Flex>
+
+            </Flex>
+        </>
+    );
 }

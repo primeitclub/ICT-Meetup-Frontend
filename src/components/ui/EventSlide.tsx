@@ -2,27 +2,27 @@ import { Flex, Heading, HStack, Text } from "@chakra-ui/react";
 
 
 interface EventSlideProps {
-  title:string,
-  events:Array<string>
+    title: string,
+    events: Array<string>
 }
 
-export default function EventSlide( {eventData,number}:{eventData:EventSlideProps,number:number}) {
+export default function EventSlide({ eventData, number }: { eventData: EventSlideProps, number: number }) {
 
-  const { title , events } = eventData;
+    const { title, events } = eventData;
 
 
-  return (
-    <>
-      <Flex
-        align={"center"}
-        width={"full"}
-        paddingX={{
-          base: "0",
-          md: "97px",
-        }}
-      >
-        <Flex direction={"column"} gap={"48px"} align={"start"} width={"full"}>
-        <Heading
+    return (
+        <>
+            <Flex
+                align={"center"}
+                width={"full"}
+                paddingX={{
+                    base: "0",
+                    md: "97px",
+                }}
+            >
+                <Flex direction={"column"} gap={"48px"} align={"start"} width={"full"}>
+                    {/* <Heading
             as="h1"
             fontSize={{
               base: "24px",
@@ -35,24 +35,24 @@ export default function EventSlide( {eventData,number}:{eventData:EventSlideProp
             color={"black"}
             background={"white"}
             backgroundClip={"text"}
-            position={"relative"}   
+            position={"relative"}
           >
             {number + 1}
-          </Heading>
-          <Heading
-            as="h1"
-            fontSize={{
-              base: "24px",
-              md: "32px",
-              lg: "36px",
-            }}
-            fontFamily="heading"
-            fontWeight={"bold"}
-            autoCapitalize="true"
-            color={"white"}
-          >
-            {title}
-          </Heading>
+          </Heading> */}
+                    <Heading
+                        as="h1"
+                        fontSize={{
+                            base: "24px",
+                            md: "32px",
+                            lg: "36px",
+                        }}
+                        fontFamily="heading"
+                        fontWeight={"bold"}
+                        autoCapitalize="true"
+                        color={"white"}
+                    >
+                        {title}
+                    </Heading>
 
                     <Flex
                         fontWeight={"500"}

@@ -1,237 +1,180 @@
 {
-    "organizer": [
-      {
-        "fullName": "OJohn Doe",
-        "image": "/src/assets/susit.png"
-      },
-      {
-        "fullName": "Alice Smith",
-        "image": "/src/assets/susit.png"
-      },
-      {
-        "fullName": "Robert Johnson",
-        "image": "/src/assets/susit.png"
-      },
-      {
-        "fullName": "Sarah Wilson",
-        "image": "/src/assets/susit.png"
-      },
-      {
-        "fullName": "Chris Brown",
-        "image": "/src/assets/susit.png"
-      },
-      {
-        "fullName": "Emma White",
-        "image": "/src/assets/susit.png"
-      },
-      {
-        "fullName": "Michael Davis",
-        "image": "/src/assets/susit.png"
-      },
-      {
-        "fullName": "Olivia Johnson",
-        "image": "/src/assets/susit.png"
-      },
-      {
-        "fullName": "Daniel Lee",
-        "image": "/src/assets/susit.png"
-      },
-      {
-        "fullName": "Sophia Miller",
-        "image": "/src/assets/susit.png"
-      },
-      {
-        "fullName": "William Smith",
-        "image": "/src/assets/susit.png"
-      },
-      {
-        "fullName": "Ava Davis",
-        "image": "/src/assets/susit.png"
-      },
-      {
-        "fullName": "Liam Anderson",
-        "image": "/src/assets/susit.png"
-      },
-      {
-        "fullName": "Grace Taylor",
-        "image": "/src/assets/susit.png"
-      },
-      {
-        "fullName": "Ethan Martin",
-        "image": "/src/assets/susit.png"
-      },
-      {
-        "fullName": "Chloe Moore",
-        "image": "/src/assets/susit.png"
-      },
-      {
-        "fullName": "James Jackson",
-        "image": "/src/assets/susit.png"
-      },
-      {
-        "fullName": "Aiden Harris",
-        "image": "/src/assets/susit.png"
-      },
-      {
-        "fullName": "Mia Thomas",
-        "image": "/src/assets/susit.png"
-      }
-    ],
-    "volunteer": [
-        {
-            "fullName": "VJohn Doe",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "Alice Smith",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "Robert Johnson",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "Sarah Wilson",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "Chris Brown",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "Emma White",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "Michael Davis",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "Olivia Johnson",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "Daniel Lee",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "Sophia Miller",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "William Smith",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "Ava Davis",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "Liam Anderson",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "Grace Taylor",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "Ethan Martin",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "Chloe Moore",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "James Jackson",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "Aiden Harris",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "Mia Thomas",
-            "image": "/src/assets/susit.png"
-          }
-    ],
-    "developer": [
-        {
-            "fullName": "DJohn Doe",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "Alice Smith",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "Robert Johnson",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "Sarah Wilson",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "Chris Brown",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "Emma White",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "Michael Davis",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "Olivia Johnson",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "Daniel Lee",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "Sophia Miller",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "William Smith",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "Ava Davis",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "Liam Anderson",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "Grace Taylor",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "Ethan Martin",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "Chloe Moore",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "James Jackson",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "Aiden Harris",
-            "image": "/src/assets/susit.png"
-          },
-          {
-            "fullName": "Mia Thomas",
-            "image": "/src/assets/susit.png"
-          }
-    ]
-  }
-  
+  "organizer": [
+    {
+      "fullName": "Supriya Thapa Bhujel",
+      "image": "https://www.primeitclub.com/members/CXdUNL8GrxhJmYwyYKpYKjbb4RfvftYzDjl66usA.png"
+    },
+    {
+      "fullName": "Nimesh Shrestha",
+      "image": "https://www.primeitclub.com/members/INRWwOLt9cEE3b3zXdiPO99tfIC3B5syAKVYv7f2.png"
+    },
+    {
+      "fullName": "Niva Maharjan",
+      "image": "https://www.primeitclub.com/members/EDN9OwAscUreiRjJPkp0Akjixcr3c0Ddz4dEKTxT.png"
+    },
+    {
+      "fullName": "Jenish Maharjan",
+      "image": "https://www.primeitclub.com/members/vW8hKGub5skREi3dmsMRQo23Wpjy0oNk2YxZrM2V.png"
+    },
+    {
+      "fullName": "Aditika Singh",
+      "image": "https://www.primeitclub.com/members/lQP3n40FmA6R4z9v0AEWWwLZrDPxJJkyj6pbfs8o.png"
+    },
+    {
+      "fullName": "Basanta Rana Sampang Rai",
+      "image": "https://www.primeitclub.com/members/sCM30F7DduL5BREY46hpHTt8MUerJDsa1FXci1T0.png"
+    },
+    {
+      "fullName": "Sweta Tara Tuladhar",
+      "image": "https://www.primeitclub.com/members/XVHgK0T34JaBh86Vbogy7hssxRWLci67QTybE44H.png"
+    },
+    {
+      "fullName": "Saugat KC",
+      "image": "https://www.primeitclub.com/members/DeNT2TzyeJ4djXU42nN9ka2skJLFYqQftR1LUz0h.png"
+    },
+    {
+      "fullName": "Umang Shakya",
+      "image": "https://www.primeitclub.com/members/8NfYU3nL5Ve2wLxZDLrdx3FUHEMJgOaVCXpADyor.png"
+    },
+    {
+      "fullName": "Pranab Raj Kc Pandey",
+      "image": "https://www.primeitclub.com/members/VYw5bGHxga5E6HuWYsjk92sjhqs2qllAqrKzCqgi.png"
+    },
+    {
+      "fullName": "Sujal Chitrakar",
+      "image": "https://www.primeitclub.com/members/A2YoJJwDviBw4ds5H12MHO2y2lUDEiAoH0cxNE4t.png"
+    },
+    {
+      "fullName": "Ruan Shrestha",
+      "image": "https://www.primeitclub.com/members/XZEfMF2EG152x8yj6CCk48ArTge1ONbLB7loq2Xm.jpg"
+    },
+    {
+      "fullName": "Prashanna bahadur Shrestha",
+      "image": "https://www.primeitclub.com/members/180gq33EimrBi4EnZ86uqDNiwzjxLb3AUMBkq3ky.png"
+    },
+    {
+      "fullName": "Sagan Krishna Tamrakar",
+      "image": "https://www.primeitclub.com/members/3q3LeEYfkiSVaDFse4O7zBPtf5X2hnAN0hKY8ZhF.png"
+    },
+    {
+      "fullName": "Sandesh Basnet",
+      "image": "https://www.primeitclub.com/members/q1HGBGnOOXM53pePuIjEeRkrvuM7NJEpgf9fkHvj.png"
+    },
+    {
+      "fullName": "Nirjala Shakya",
+      "image": "https://www.primeitclub.com/members/MFWIzx9B1w3PYJzAYDawDLfAq85mIDollADy53aH.png"
+    }
+  ],
+  "volunteer": [
+    {
+      "fullName": "Pragati Shrestha",
+      "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Pragati Shrestha.jpg"
+    },
+    {
+      "fullName": "Sameer Acharya",
+      "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Sameer Acharya.jpg"
+    },
+    {
+      "fullName": "Shashank Singh",
+      "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Shashank Singh.jpg"
+    },
+    {
+      "fullName": "Sargaa Manandhar",
+      "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Sargaa Manandhar.jpg"
+    },
+    {
+      "fullName": "Trisha Shrestha",
+      "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Trisha Shrestha.jpg"
+    },
+    {
+      "fullName": "Sworup Prajapati",
+      "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Sworup Prajapati.jpg"
+    },
+    {
+      "fullName": "Prashansa Singh",
+      "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Prashansa Singh.jpg"
+    },
+    {
+      "fullName": "Shreebisha Shrestha",
+      "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Shreebisha Shrestha.jpg"
+    },
+    {
+      "fullName": "Sambid Dahal",
+      "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Sambid Dahal.jpg"
+    },
+    {
+      "fullName": "Aditi Shrestha ",
+      "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Aditi Shrestha.jpg"
+    },
+    {
+      "fullName": "Bikesh Maharjan",
+      "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Bikesh Maharjan.jpg"
+    },
+    {
+      "fullName": "Riddima Sthapit",
+      "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Riddima Sthapit.jpg"
+    },
+    {
+      "fullName": "Akriti Upadhaya Sharma",
+      "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Akriti Upadhaya Sharma.jpg"
+    },
+    {
+      "fullName": "Nirdesh Joshi",
+      "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Nirdesh Joshi.jpg"
+    },
+    {
+      "fullName": "Saurab Manandhar",
+      "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Saurav Manadhar.jpg"
+    }
+  ],
+  "developer": [
+    {
+      "fullName": "Nimesh Shrestha",
+      "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Nimesh Shrestha.jpg"
+    },
+    {
+      "fullName": "Susit Ratna Tuladhar",
+      "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Susit Ratna Tuladhar.jpg"
+    },
+    {
+      "fullName": "Sulav Baral",
+      "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Sulav Baral.jpg"
+    },
+    {
+      "fullName": "Basanta Rana Sampang Rai",
+      "image": "https://www.primeitclub.com/members/sCM30F7DduL5BREY46hpHTt8MUerJDsa1FXci1T0.png"
+    },
+    {
+      "fullName": "Rikesh Sherpa",
+      "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Rikesh Sherpa.jpg"
+    },
+    {
+      "fullName": "Niva Maharjan",
+      "image": "https://www.primeitclub.com/members/EDN9OwAscUreiRjJPkp0Akjixcr3c0Ddz4dEKTxT.png"
+    },
+    {
+      "fullName": "Nirjala Shakya",
+      "image": "https://www.primeitclub.com/members/MFWIzx9B1w3PYJzAYDawDLfAq85mIDollADy53aH.png"
+    },
+    {
+      "fullName": "Sujal Chitrakar",
+      "image": "https://www.primeitclub.com/members/A2YoJJwDviBw4ds5H12MHO2y2lUDEiAoH0cxNE4t.png"
+    },
+    {
+      "fullName": "Sandhiya Thapa Bhujel",
+      "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Sandhiya.jpg"
+    },
+    {
+      "fullName": "Shashank Singh",
+      "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Shashank Singh.jpg"
+    },
+    {
+      "fullName": "Sagan Krishna Tamrakar",
+      "image": "https://www.primeitclub.com/members/3q3LeEYfkiSVaDFse4O7zBPtf5X2hnAN0hKY8ZhF.png"
+    },
+    {
+      "fullName": "Pragati Shrestha",
+      "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Pragati Shrestha.jpg"
+    }
+  ]
+}

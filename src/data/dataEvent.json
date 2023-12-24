@@ -1,20 +1,41 @@
 {
+  "sessions": [
+    {
+      "title": "Ai in Finance",
+      "event_speaker": "Announcing Soon",
+      "eventDate": "2024-01-04",
+      "startTime": "9 AM",
+      "location": "Prime College, Khusibun",
+      "eventThumbnail": "https://ictv7.primeitclub.com/FrontAssets/ai_in_finance.webp",
+      "link": "https://forms.gle/KhzqzUaiD4CwrpsWA"
+    }
+  ],
   "competition": [
     {
       "title": "ICT Meetup V7.0 : Ideathon 2024",
       "event_speaker": "Announcing Soon",
       "eventDate": "2024-01-04",
-      "time": "TBD",
-      "location": "Seminar hall, 3rd floor",
+      "startTime": "9 AM",
+      "location": "Prime College, Khusibun",
       "eventThumbnail": "https://ictv7.primeitclub.com/FrontAssets/ideathon.png",
-      "link": "/event-registration/ideathon"
+      "link": "https://forms.gle/KhzqzUaiD4CwrpsWA"
+    },
+
+    {
+      "title": "ICT Meetup V7.0 : Project Demo Competition",
+      "event_speaker": "Announcing Soon",
+      "eventDate": "2024-01-06",
+      "startTime": "9 AM",
+      "location": "Prime College, Khusibun",
+      "eventThumbnail": "https://ictv7.primeitclub.com/FrontAssets/ICT_Project_Demo.png",
+      "link": "https://forms.gle/Q6euwibRWpafdqXm8"
     },
     {
       "title": "ICT Meetup V7.0 : Graphic Design Competition",
       "event_speaker": "Announcing Soon",
       "eventDate": "2024-01-06",
-      "time": "TBD",
-      "location": "Prime College",
+      "startTime": "9 AM",
+      "location": "Prime College, Khusibun",
       "eventThumbnail": "https://ictv7.primeitclub.com/FrontAssets/Graphic_designing.png",
       "link": "https://forms.gle/hGkGcQxLtKSuKMn68"
     },
@@ -22,8 +43,8 @@
       "title": "ICT Meetup V7.0 : Photography Competition",
       "event_speaker": "Announcing Soon",
       "eventDate": "2024-01-06",
-      "time": "TBD",
-      "location": "Prime College",
+      "startTime": "9 AM",
+      "location": "Prime College, Khusibun",
       "eventThumbnail": "https://ictv7.primeitclub.com/FrontAssets/Photgraphy.png",
       "link": "https://forms.gle/iB8NNgti7aZY6zzEA"
     }
@@ -33,8 +54,8 @@
       "title": "ICT Meetup V7.0 : Valorant Tournament",
       "event_speaker": "Announcing Soon",
       "eventDate": "2024-01-05",
-      "time": "TBD",
-      "location": "Seminar hall, 3rd floor",
+      "startTime": "9 AM",
+      "location": "Prime College, Khusibun",
       "eventThumbnail": "https://ictv7.primeitclub.com/FrontAssets/valorant.png",
       "link": "https://forms.gle/2tmq7TgV49qpGSa96"
     }

@@ -1,36 +1,33 @@
 [
-    {
-        "title": "workshop",
-        "events": [
-            "Computer Vision",
-            "Natural Language Processing (NLP)",
-            "Prompt Engineering",
-            "Data Science"
-        ]
-    },
-    {
-        "title": "sessions",
-        "events": [
-            "Research Paper Reading",
-            "AI in Finance",
-            "Scope of Game Development in Nepal"
-        ]
-    },
-    {
-        "title": "competition",
-        "events": [
-            "Ideathon",
-            "Valorant",
-            "Graphic designing",
-            "Photography"
-        ]
-    },
-    {
-        "title": "recreationalActivities",
-        "events": [
-            "Food Stalls",
-            "Game Stalls",
-            "ICT Night"
-        ]
-    }
+  {
+    "title": "Workshop",
+    "events": [
+      "Computer Vision",
+      "Natural Language Processing (NLP)",
+      "Prompt Engineering",
+      "Data Science"
+    ]
+  },
+  {
+    "title": "Sessions",
+    "events": [
+      "Research Paper Reading",
+      "AI in Finance",
+      "Scope of Game Development in Nepal"
+    ]
+  },
+  {
+    "title": "competition",
+    "events": [
+      "Ideathon",
+      "Project Demo",
+      "Valorant",
+      "Graphic designing",
+      "Photography"
+    ]
+  },
+  {
+    "title": "Recreational Activities",
+    "events": ["Food Stalls", "Game Stalls", "ICT Night"]
+  }
 ]

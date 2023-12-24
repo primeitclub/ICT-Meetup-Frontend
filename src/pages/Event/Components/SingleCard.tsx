@@ -139,7 +139,7 @@ function SingleCardEvent({ dataApi }) {
                                     fontWeight={500}
                                     fontSize={{ lg: "20px", sm: "18px", base: "18px" }}
                                 >
-                                    {startTime} - {endTime}
+                                    {startTime} onwards
                                 </Text>
                             </Flex>
                         </Flex>

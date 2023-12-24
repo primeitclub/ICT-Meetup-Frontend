@@ -92,6 +92,7 @@ function EventPage() {
         esportArrayData = profile.esports;
         workshopArrayData = profile.workshop;
         competitionArrayData = profile.competition;
+
     }
 
     return (
@@ -150,7 +151,7 @@ function EventPage() {
                                         workshopArrayData.map((item: EventApiProps) => (
                                             <SingleCardEvent dataApi={item} />
                                         ))} */}
-                                        <CommingSoon/>
+                                    <CommingSoon />
                                 </TabPanel>
                             </MotionBox>
                             {/* workshop ends */}
@@ -162,6 +163,9 @@ function EventPage() {
                             >
                                 <TabPanel>
                                     <Box py={10}>
+                                        {profile?.sessions?.map((item: EventApiProps) => (
+                                            <SingleCardEvent dataApi={item} />
+                                        ))}
                                         <CommingSoon />
                                     </Box>
                                 </TabPanel>

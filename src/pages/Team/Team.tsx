@@ -42,14 +42,14 @@ function Team() {
 
 
 
-    const team_developer = dataTeam?.development;
+    const team_developer = dataTeam?.developer;
     const team_organizer = dataTeam?.organizer;
     const team_volunter = dataTeam?.volunteer;
 
 
     return (<>
 
-        <PageTitle pageTitle="Teams" pageDescription="Find out what’s happening when" />
+        <PageTitle pageTitle="Teams" pageDescription="The Dedicated Team Behind Making this Event Possible." />
 
         {/* <CommingSoon /> */}
 
@@ -58,17 +58,17 @@ function Team() {
 
 
             <Box className="team_category" pb={'80px'} >
-                <TeamHeader headerTitle='OrganizeR Team' headerDescription='Lorem ipsum dolor sit amet, consectetur adipiscing elit.dasdas sdadsa asd  ' />
+                <TeamHeader headerTitle='OrganizeR Team' headerDescription='Architects of Vision' />
                 <SliderGroup TeamData={team_organizer} />
             </Box>
 
             <Box className="team_category" pb={'80px'} >
-                <TeamHeader headerTitle='Volunteer' headerDescription='Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' />
+                <TeamHeader headerTitle='Volunteer' headerDescription='Executors of Passion' />
                 <SliderGroup TeamData={team_volunter} />
             </Box>
 
             <Box className="team_category" pb={'80px'} >
-                <TeamHeader headerTitle='Development Team' headerDescription='Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' />
+                <TeamHeader headerTitle='Development Team' headerDescription='Builders of Innovation.' />
                 <SliderGroup TeamData={team_developer} />
             </Box>
 
