@@ -35,74 +35,74 @@ import Profile from "../pages/User/Profile";
 import Valorant from "../pages/Valorant/valorant";
 
 const PublicRoutes = () => {
-  return (
-    <>
-      <Routes>
-        <Route path="/" element={<PublicLayout />}>
-          <Route index element={<Home />} />
-          <Route element={<RedirectLayout />}>
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/register" element={<RegisterPage />} />
-          </Route>
-          <Route path="/valorant" element={<Valorant />} />
-          <Route path="/insideevents" element={<InsideEvents />} />
+    return (
+        <>
+            <Routes>
+                <Route path="/" element={<PublicLayout />}>
+                    <Route index element={<Home />} />
+                    {/* <Route element={<RedirectLayout />}>
+                        <Route path="/login" element={<LoginPage />} />
+                        <Route path="/register" element={<RegisterPage />} />
+                    </Route> */}
+                    <Route path="/valorant" element={<Valorant />} />
+                    <Route path="/insideevents" element={<InsideEvents />} />
 
-          <Route path="/event-registration" element={<PrivateRouteLayout />}>
-            <Route path="valorant" element={<ValorantRegistrationForm />} />
-            <Route path="ideathon" element={<IdeathonForm />} />
-          </Route>
-          <Route path="/my-profile" element={<Profile />} />
-          
-          <Route path="/events" element={<EventPage />} />
-          <Route path="events/:slug" element={<InsideEvents/>} />
+                    <Route path="/event-registration" element={<PrivateRouteLayout />}>
+                        <Route path="valorant" element={<ValorantRegistrationForm />} />
+                        <Route path="ideathon" element={<IdeathonForm />} />
+                    </Route>
+                    <Route path="/my-profile" element={<Profile />} />
 
-          <Route path="/schedule" element={<Schedule />} />
-          <Route path="/teams" element={<Team />} />
-          <Route path="/gallery" element={<Gallery />}></Route>
-          <Route path="/gallery/:eventName" element={<SingleGallery />} />
-          <Route path="/about" element={<AboutUs />}></Route>
-          <Route path="/forgetpassword" element={<ForgetPassword />}></Route>
-          <Route path="/otp" element={<OTPlogin />}></Route>
-          <Route path="/successful" element={<Successful />}></Route>
-          <Route
-            path="*"
-            element={
-              //redirect to home
-              <NotFound />
-            }
-          />
-        </Route>
+                    <Route path="/events" element={<EventPage />} />
+                    <Route path="events/:slug" element={<InsideEvents />} />
 
-        <Route path="/admin" element={<AdminLayout />}>
-          <Route index element={<Dashboard />} />
-          <Route path="events">
-            <Route path="all-event" element={<AdminAllEvent />} />
-            <Route path="add-event" element={<AdminAdddEvent />} />
-            <Route path="speaker" element={<Speaker />} />
-            <Route path="speaker/add-speaker" element={<AdminAdddSpeaker />} />
-          </Route>
+                    <Route path="/schedule" element={<Schedule />} />
+                    <Route path="/teams" element={<Team />} />
+                    <Route path="/gallery" element={<Gallery />}></Route>
+                    <Route path="/gallery/:eventName" element={<SingleGallery />} />
+                    <Route path="/about" element={<AboutUs />}></Route>
+                    <Route path="/forgetpassword" element={<ForgetPassword />}></Route>
+                    <Route path="/otp" element={<OTPlogin />}></Route>
+                    <Route path="/successful" element={<Successful />}></Route>
+                    <Route
+                        path="*"
+                        element={
+                            //redirect to home
+                            <NotFound />
+                        }
+                    />
+                </Route>
 
-          <Route path="members">
-            <Route path="all-member" element={<AdminAllMember />} />
-            <Route path="add-member" element={<AdminAddMember />} />
-          </Route>
+                <Route path="/admin" element={<AdminLayout />}>
+                    <Route index element={<Dashboard />} />
+                    <Route path="events">
+                        <Route path="all-event" element={<AdminAllEvent />} />
+                        <Route path="add-event" element={<AdminAdddEvent />} />
+                        <Route path="speaker" element={<Speaker />} />
+                        <Route path="speaker/add-speaker" element={<AdminAdddSpeaker />} />
+                    </Route>
 
-          <Route path="gallery" element={<GalleryAdmin />} />
-          <Route path="gallery/add-album" element={<AddAlbum />} />
-          <Route path="gallery/:id" element={<AlbumImages />} />
+                    <Route path="members">
+                        <Route path="all-member" element={<AdminAllMember />} />
+                        <Route path="add-member" element={<AdminAddMember />} />
+                    </Route>
 
-          <Route path="participants" element={<Participants />} />
-          <Route
-            path="*"
-            element={
-              //redirect to home
-              <Dashboard />
-            }
-          />
-        </Route>
-      </Routes>
-    </>
-  );
+                    <Route path="gallery" element={<GalleryAdmin />} />
+                    <Route path="gallery/add-album" element={<AddAlbum />} />
+                    <Route path="gallery/:id" element={<AlbumImages />} />
+
+                    <Route path="participants" element={<Participants />} />
+                    <Route
+                        path="*"
+                        element={
+                            //redirect to home
+                            <Dashboard />
+                        }
+                    />
+                </Route>
+            </Routes>
+        </>
+    );
 };
 
 export default PublicRoutes;

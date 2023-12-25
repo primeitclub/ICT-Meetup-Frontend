@@ -51,7 +51,7 @@ export default function Hero() {
                         workshops, exciting competitions and more!
                     </Text>
 
-                    <Link to="/register">
+                    <Link to="/events">
                         <Button
                             background={
                                 "linear-gradient(92deg, #2C6DEC 0.11%, #003CD5 103.68%)"

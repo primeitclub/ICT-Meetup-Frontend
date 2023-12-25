@@ -23,6 +23,7 @@
     "@hookform/resolvers": "^3.3.2",
     "axios": "^1.5.0",
     "chakra-paginator": "^0.7.3",
+    "firebase": "^10.7.1",
     "framer-motion": "^10.16.4",
     "immer": "^10.0.3",
     "react": "^18.2.0",
