@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 function SingleCardEvent({ dataApi }) {
 
-    const { title, eventThumbnail, startTime, slug, endTime, eventDate, location, link } = dataApi;
+    const { title, eventThumbnail, startTime, slug, endTime, eventDate, location, event_speaker, link } = dataApi;
 
     const FontCard = {
 
@@ -87,7 +87,7 @@ function SingleCardEvent({ dataApi }) {
                                     }}
                                     fontWeight={500}
                                 >
-                                    TBD
+                                    {event_speaker}
                                 </Text>
                             </Flex>
                         </Box>
@@ -150,7 +150,7 @@ function SingleCardEvent({ dataApi }) {
                         w={"100%"}
                     >
 
-                        <Link to={link} style={{ width: '100%' }}>
+                        <Link to={link} rel="noreferrer" target={'_blank'} style={{ width: '100%' }}>
                             <Button
                                 sx={{
                                     "&:hover": {
@@ -163,10 +163,7 @@ function SingleCardEvent({ dataApi }) {
                                 fontWeight={500}
                                 w={{ md: "100%", sm: "100%" }}
                                 fontSize={{ lg: "24px", sm: "18px", base: "16px" }}
-                                onClick={
-                                    // open link using react router n new tab
-                                    () => window.open(link, "_blank")
-                                }
+
                             >
                                 Register Now
                             </Button>

@@ -7,32 +7,33 @@ import JoinUs from "../../components/Global/JoinUs";
 import SneakPeak from "../../components/Global/SneakPeak";
 import Sponsors from "../../components/Global/Sponsors";
 import MaxWidthHOC from "../../hoc/MaxWidth";
+import { getEvents } from "../../services/firebaseRequest";
 
 const Home = () => {
-  return (
-    <>
-      <MaxWidthHOC>
-        <Hero />
-      </MaxWidthHOC>
-      <About />
-      <Events />
-      {/* <Events />
+    return (
+        <>
+            <MaxWidthHOC>
+                <Hero />
+            </MaxWidthHOC>
+            <About />
+            <Events />
+            {/* <Events />
       <MaxWidthHOC>
         <Speakers />
       </MaxWidthHOC>
       <SneakPeak /> */}
-      <MaxWidthHOC>
-        <SneakPeak />
-      </MaxWidthHOC>
+            <MaxWidthHOC>
+                <SneakPeak />
+            </MaxWidthHOC>
 
-      <MaxWidthHOC>
-        <Sponsors />
-        <HomePageGlimpses />
-        <FAQAccordion />
-      </MaxWidthHOC>
-      <JoinUs />
-    </>
-  );
+            <MaxWidthHOC>
+                <Sponsors />
+                <HomePageGlimpses />
+                <FAQAccordion />
+            </MaxWidthHOC>
+            <JoinUs />
+        </>
+    );
 };
 
 export default Home;

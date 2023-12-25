@@ -44,26 +44,26 @@ const PublicRoutes = () => {
                         <Route path="/login" element={<LoginPage />} />
                         <Route path="/register" element={<RegisterPage />} />
                     </Route> */}
-                    <Route path="/valorant" element={<Valorant />} />
-                    <Route path="/insideevents" element={<InsideEvents />} />
+                    {/* <Route path="/valorant" element={<Valorant />} /> */}
+                    {/* <Route path="/insideevents" element={<InsideEvents />} /> */}
 
-                    <Route path="/event-registration" element={<PrivateRouteLayout />}>
+                    {/* <Route path="/event-registration" element={<PrivateRouteLayout />}>
                         <Route path="valorant" element={<ValorantRegistrationForm />} />
                         <Route path="ideathon" element={<IdeathonForm />} />
-                    </Route>
-                    <Route path="/my-profile" element={<Profile />} />
+                    </Route> */}
+                    {/* <Route path="/my-profile" element={<Profile />} /> */}
 
                     <Route path="/events" element={<EventPage />} />
-                    <Route path="events/:slug" element={<InsideEvents />} />
+                    {/* <Route path="events/:slug" element={<InsideEvents />} /> */}
 
                     <Route path="/schedule" element={<Schedule />} />
                     <Route path="/teams" element={<Team />} />
                     <Route path="/gallery" element={<Gallery />}></Route>
                     <Route path="/gallery/:eventName" element={<SingleGallery />} />
                     <Route path="/about" element={<AboutUs />}></Route>
-                    <Route path="/forgetpassword" element={<ForgetPassword />}></Route>
+                    {/* <Route path="/forgetpassword" element={<ForgetPassword />}></Route>
                     <Route path="/otp" element={<OTPlogin />}></Route>
-                    <Route path="/successful" element={<Successful />}></Route>
+                    <Route path="/successful" element={<Successful />}></Route> */}
                     <Route
                         path="*"
                         element={

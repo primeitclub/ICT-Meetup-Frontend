@@ -30,12 +30,14 @@ import {
 import mic from "../../assets/mic.svg";
 import PageTitle from "../../components/Global/PageTitle";
 import jsondata from "../../data/dataEvent.json";
+import jsonInsertdata from "../../data/datainsertEvent.json";
 import TabLists from "./Components/TabLists";
 import CommingSoon from "../../components/ui/CommingSoon";
 import { GetRequest } from "../../services/httpRequest";
 import { EventApiProps } from "../AdminPages/Components/Events/AdminAddEvent/AdminAllEvent";
 
 import SingleCardEvent from "./Components/SingleCard";
+import { addDataFromJsonFile, getEvents, getEventsGroupedByEventType } from "../../services/firebaseRequest";
 
 interface EventDataProps {
     [key: string]: EventApiProps[];
@@ -74,25 +76,28 @@ function EventPage() {
     let esportArrayData;
     let workshopArrayData;
     let competitionArrayData;
+    const retriveData = async () => {
+        try {
+            // const profileData = await GetRequest("events")
+            // const profileData = await getEvents();
+            const profileData = await getEventsGroupedByEventType();
+            setProfile(profileData);
+            // Example usage:
+            const jsonFilePath = '../../data/datainsertEvent.json';
+            const collectionName = 'events';
 
+            // addDataFromJsonFile(jsonInsertdata, collectionName);
+        } catch (err) {
+            console.log(err);
+        }
+    };
     useEffect(() => {
-        const retriveData = async () => {
-            try {
-                const profileData = await GetRequest("events");
-                setProfile(profileData.data);
-            } catch (err) {
-                console.log(err);
-            }
-        };
-
-        // retriveData();
+        retriveData();
     }, []);
-
     if (profile) {
         esportArrayData = profile.esports;
         workshopArrayData = profile.workshop;
         competitionArrayData = profile.competition;
-
     }
 
     return (
@@ -147,11 +152,11 @@ function EventPage() {
                                 transition={customeTranstion}
                             >
                                 <TabPanel>
-                                    {/* {workshopArrayData &&
-                                        workshopArrayData.map((item: EventApiProps) => (
-                                            <SingleCardEvent dataApi={item} />
-                                        ))} */}
-                                    <CommingSoon />
+                                    {profile?.workshop?.map((item: EventApiProps) => (
+                                        <SingleCardEvent dataApi={item} key={1} />
+                                    ))}
+                                    {profile?.workshop || <CommingSoon />}
+
                                 </TabPanel>
                             </MotionBox>
                             {/* workshop ends */}
@@ -163,10 +168,9 @@ function EventPage() {
                             >
                                 <TabPanel>
                                     <Box py={10}>
-                                        {profile?.sessions?.map((item: EventApiProps) => (
-                                            <SingleCardEvent dataApi={item} />
+                                        {profile?.sessions?.map((item: EventApiProps, index: number) => (
+                                            <SingleCardEvent dataApi={item} key={index} />
                                         ))}
-                                        <CommingSoon />
                                     </Box>
                                 </TabPanel>
                             </MotionBox>
@@ -179,8 +183,8 @@ function EventPage() {
                             >
                                 <TabPanel>
                                     {competitionArrayData &&
-                                        competitionArrayData.map((item: EventApiProps) => (
-                                            <SingleCardEvent dataApi={item} />
+                                        competitionArrayData.map((item: EventApiProps, index) => (
+                                            <SingleCardEvent dataApi={item} key={index} />
                                         ))}
                                 </TabPanel>
                             </MotionBox>
@@ -193,7 +197,10 @@ function EventPage() {
                             >
                                 <TabPanel>
                                     <Box py={10}>
-                                        <CommingSoon />
+                                        {profile?.panel || <CommingSoon />}
+                                        {profile?.panel?.map((item: EventApiProps) => (
+                                            <SingleCardEvent dataApi={item} />
+                                        ))}
                                     </Box>
                                 </TabPanel>
                             </MotionBox>
@@ -206,8 +213,8 @@ function EventPage() {
                             >
                                 <TabPanel>
                                     {esportArrayData &&
-                                        esportArrayData.map((item: any) => (
-                                            <SingleCardEvent dataApi={item} />
+                                        esportArrayData.map((item: any, index) => (
+                                            <SingleCardEvent dataApi={item} key={index} />
                                         ))}
                                 </TabPanel>
                             </MotionBox>
