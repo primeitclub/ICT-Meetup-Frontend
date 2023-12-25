@@ -1,6 +1,7 @@
 import PageTitle from "../../components/Global/PageTitle"
 import SliderGroup from "./Components/SliderGroup"
 import TeamData from '../../data/dataTeam.json'
+import TeamInsertData from '../../data/datainsertTeam.json'
 import { Box } from "@chakra-ui/layout"
 import TeamHeader from "./Components/TeamHeader"
 import { useEffect, useState } from "react"
@@ -8,6 +9,7 @@ import axios from "axios"
 import { DataTypeTeam } from "./DataSchema/Data"
 import { GetRequest } from "../../services/httpRequest"
 import CommingSoon from "../../components/ui/CommingSoon"
+import { addDataFromJsonFile, getTeamsGroupedByType } from "../../services/firebaseRequest"
 
 enum TeamCategory {
     organizer = "organizer",
@@ -23,21 +25,25 @@ interface dataTeamProp {
 
 function Team() {
 
-    const [dataTeam, setDataTeam] = useState<any>(TeamData);
+    const [dataTeam, setDataTeam] = useState<any>([]);
 
     useEffect(() => {
         const teamData = async () => {
             try {
-                const dataTeam = await GetRequest("team-members");
-                setDataTeam(dataTeam.data.groupedTeamMembers);
-                console.log(dataTeam.data.groupedTeamMembers)
-                return dataTeam.data;
+                // const dataTeam = await GetRequest("team-members");
+                // setDataTeam(dataTeam.data.groupedTeamMembers);
+                // console.log(dataTeam.data.groupedTeamMembers)
+                console.log("team data");
+                const dataTeam = await getTeamsGroupedByType();
+                console.log(dataTeam);
+                setDataTeam(dataTeam);
+                return dataTeam;
             } catch (err) {
                 console.log(err);
             }
         };
 
-        // teamData();
+        teamData();
     }, []);
 
 

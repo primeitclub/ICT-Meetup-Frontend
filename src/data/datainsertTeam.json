@@ -1,0 +1,260 @@
+[
+    {
+        "order": 1,
+        "fullName": "Supriya Thapa Bhujel",
+        "image": "https://www.primeitclub.com/members/CXdUNL8GrxhJmYwyYKpYKjbb4RfvftYzDjl66usA.png",
+        "type": "organizer"
+    },
+    {
+        "order": 2,
+        "fullName": "Nimesh Shrestha",
+        "image": "https://www.primeitclub.com/members/INRWwOLt9cEE3b3zXdiPO99tfIC3B5syAKVYv7f2.png",
+        "type": "organizer"
+    },
+    {
+        "order": 3,
+        "fullName": "Niva Maharjan",
+        "image": "https://www.primeitclub.com/members/EDN9OwAscUreiRjJPkp0Akjixcr3c0Ddz4dEKTxT.png",
+        "type": "organizer"
+    },
+    {
+        "order": 4,
+        "fullName": "Jenish Maharjan",
+        "image": "https://www.primeitclub.com/members/vW8hKGub5skREi3dmsMRQo23Wpjy0oNk2YxZrM2V.png",
+        "type": "organizer"
+    },
+    {
+        "order": 5,
+        "fullName": "Aditika Singh",
+        "image": "https://www.primeitclub.com/members/lQP3n40FmA6R4z9v0AEWWwLZrDPxJJkyj6pbfs8o.png",
+        "type": "organizer"
+    },
+    {
+        "order": 6,
+        "fullName": "Basanta Rana Sampang Rai",
+        "image": "https://www.primeitclub.com/members/sCM30F7DduL5BREY46hpHTt8MUerJDsa1FXci1T0.png",
+        "type": "organizer"
+    },
+    {
+        "order": 7,
+        "fullName": "Sweta Tara Tuladhar",
+        "image": "https://www.primeitclub.com/members/XVHgK0T34JaBh86Vbogy7hssxRWLci67QTybE44H.png",
+        "type": "organizer"
+    },
+    {
+        "order": 8,
+        "fullName": "Saugat KC",
+        "image": "https://www.primeitclub.com/members/DeNT2TzyeJ4djXU42nN9ka2skJLFYqQftR1LUz0h.png",
+        "type": "organizer"
+    },
+    {
+        "order": 9,
+        "fullName": "Umang Shakya",
+        "image": "https://www.primeitclub.com/members/8NfYU3nL5Ve2wLxZDLrdx3FUHEMJgOaVCXpADyor.png",
+        "type": "organizer"
+    },
+    {
+        "order": 10,
+        "fullName": "Pranab Raj Kc Pandey",
+        "image": "https://www.primeitclub.com/members/VYw5bGHxga5E6HuWYsjk92sjhqs2qllAqrKzCqgi.png",
+        "type": "organizer"
+    },
+    {
+        "order": 11,
+        "fullName": "Sujal Chitrakar",
+        "image": "https://www.primeitclub.com/members/A2YoJJwDviBw4ds5H12MHO2y2lUDEiAoH0cxNE4t.png",
+        "type": "organizer"
+    },
+    {
+        "order": 12,
+        "fullName": "Ruan Shrestha",
+        "image": "https://www.primeitclub.com/members/XZEfMF2EG152x8yj6CCk48ArTge1ONbLB7loq2Xm.jpg",
+        "type": "organizer"
+    },
+    {
+        "order": 13,
+        "fullName": "Prashanna bahadur Shrestha",
+        "image": "https://www.primeitclub.com/members/180gq33EimrBi4EnZ86uqDNiwzjxLb3AUMBkq3ky.png",
+        "type": "organizer"
+    },
+    {
+        "order": 14,
+        "fullName": "Sagan Krishna Tamrakar",
+        "image": "https://www.primeitclub.com/members/3q3LeEYfkiSVaDFse4O7zBPtf5X2hnAN0hKY8ZhF.png",
+        "type": "organizer"
+    },
+    {
+        "order": 15,
+        "fullName": "Sandesh Basnet",
+        "image": "https://www.primeitclub.com/members/q1HGBGnOOXM53pePuIjEeRkrvuM7NJEpgf9fkHvj.png",
+        "type": "organizer"
+    },
+    {
+        "order": 16,
+        "fullName": "Nirjala Shakya",
+        "image": "https://www.primeitclub.com/members/MFWIzx9B1w3PYJzAYDawDLfAq85mIDollADy53aH.png",
+        "type": "organizer"
+    },
+    {
+        "order": 17,
+        "fullName": "Pragati Shrestha",
+        "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Pragati Shrestha.jpg",
+        "type": "volunteer"
+    },
+    {
+        "order": 18,
+        "fullName": "Sameer Acharya",
+        "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Sameer Acharya.jpg",
+        "type": "volunteer"
+    },
+    {
+        "order": 19,
+        "fullName": "Shashank Singh",
+        "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Shashank Singh.jpg",
+        "type": "volunteer"
+    },
+    {
+        "order": 20,
+        "fullName": "Sargaa Manandhar",
+        "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Sargaa Manandhar.jpg",
+        "type": "volunteer"
+    },
+    {
+        "order": 21,
+        "fullName": "Trisha Shrestha",
+        "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Trisha Shrestha.jpg",
+        "type": "volunteer"
+    },
+    {
+        "order": 22,
+        "fullName": "Sworup Prajapati",
+        "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Sworup Prajapati.jpg",
+        "type": "volunteer"
+    },
+    {
+        "order": 23,
+        "fullName": "Prashansa Singh",
+        "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Prashansa Singh.jpg",
+        "type": "volunteer"
+    },
+    {
+        "order": 24,
+        "fullName": "Shreebisha Shrestha",
+        "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Shreebisha Shrestha.jpg",
+        "type": "volunteer"
+    },
+    {
+        "order": 25,
+        "fullName": "Sambid Dahal",
+        "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Sambid Dahal.jpg",
+        "type": "volunteer"
+    },
+    {
+        "order": 26,
+        "fullName": "Aditi Shrestha ",
+        "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Aditi Shrestha.jpg",
+        "type": "volunteer"
+    },
+    {
+        "order": 27,
+        "fullName": "Bikesh Maharjan",
+        "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Bikesh Maharjan.jpg",
+        "type": "volunteer"
+    },
+    {
+        "order": 28,
+        "fullName": "Riddima Sthapit",
+        "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Riddima Sthapit.jpg",
+        "type": "volunteer"
+    },
+    {
+        "order": 29,
+        "fullName": "Akriti Upadhaya Sharma",
+        "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Akriti Upadhaya Sharma.jpg",
+        "type": "volunteer"
+    },
+    {
+        "order": 30,
+        "fullName": "Nirdesh Joshi",
+        "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Nirdesh Joshi.jpg",
+        "type": "volunteer"
+    },
+    {
+        "order": 31,
+        "fullName": "Saurab Manandhar",
+        "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Saurav Manadhar.jpg",
+        "type": "volunteer"
+    },
+    {
+        "order": 32,
+        "fullName": "Nimesh Shrestha",
+        "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Nimesh Shrestha.jpg",
+        "type": "developer"
+    },
+    {
+        "order": 33,
+        "fullName": "Susit Ratna Tuladhar",
+        "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Susit Ratna Tuladhar.jpg",
+        "type": "developer"
+    },
+    {
+        "order": 34,
+        "fullName": "Sulav Baral",
+        "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Sulav Baral.jpg",
+        "type": "developer"
+    },
+    {
+        "order": 35,
+        "fullName": "Basanta Rana Sampang Rai",
+        "image": "https://www.primeitclub.com/members/sCM30F7DduL5BREY46hpHTt8MUerJDsa1FXci1T0.png",
+        "type": "developer"
+    },
+    {
+        "order": 36,
+        "fullName": "Rikesh Sherpa",
+        "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Rikesh Sherpa.jpg",
+        "type": "developer"
+    },
+    {
+        "order": 37,
+        "fullName": "Niva Maharjan",
+        "image": "https://www.primeitclub.com/members/EDN9OwAscUreiRjJPkp0Akjixcr3c0Ddz4dEKTxT.png",
+        "type": "developer"
+    },
+    {
+        "order": 38,
+        "fullName": "Nirjala Shakya",
+        "image": "https://www.primeitclub.com/members/MFWIzx9B1w3PYJzAYDawDLfAq85mIDollADy53aH.png",
+        "type": "developer"
+    },
+    {
+        "order": 39,
+        "fullName": "Sujal Chitrakar",
+        "image": "https://www.primeitclub.com/members/A2YoJJwDviBw4ds5H12MHO2y2lUDEiAoH0cxNE4t.png",
+        "type": "developer"
+    },
+    {
+        "order": 40,
+        "fullName": "Sandhiya Thapa Bhujel",
+        "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Sandhiya.jpg",
+        "type": "developer"
+    },
+    {
+        "order": 41,
+        "fullName": "Shashank Singh",
+        "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Shashank Singh.jpg",
+        "type": "developer"
+    },
+    {
+        "order": 42,
+        "fullName": "Sagan Krishna Tamrakar",
+        "image": "https://www.primeitclub.com/members/3q3LeEYfkiSVaDFse4O7zBPtf5X2hnAN0hKY8ZhF.png",
+        "type": "developer"
+    },
+    {
+        "order": 43,
+        "fullName": "Pragati Shrestha",
+        "image": "https://ictv7.primeitclub.com/FrontAssets/General%20Member%20Photos/Pragati Shrestha.jpg",
+        "type": "developer"
+    }
+]

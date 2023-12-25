@@ -63,7 +63,7 @@ export default function JoinUs() {
                         gap={4}
                         zIndex={2}
                     >
-                        <Link to="/register">
+                        <Link to="/events">
                             <PrimaryButton buttonText={"Register Now"} />
                         </Link>
                         <Link to="/events">
