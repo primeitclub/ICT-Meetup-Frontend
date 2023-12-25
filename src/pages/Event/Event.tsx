@@ -37,7 +37,7 @@ import { GetRequest } from "../../services/httpRequest";
 import { EventApiProps } from "../AdminPages/Components/Events/AdminAddEvent/AdminAllEvent";
 
 import SingleCardEvent from "./Components/SingleCard";
-import { addDataFromJsonFile, getEvents, getEventsGroupedByEventType } from "../../services/firebaseRequest";
+import { getEvents, getEventsGroupedByEventType } from "../../services/firebaseRequest";
 
 interface EventDataProps {
     [key: string]: EventApiProps[];
@@ -82,11 +82,8 @@ function EventPage() {
             // const profileData = await getEvents();
             const profileData = await getEventsGroupedByEventType();
             setProfile(profileData);
-            // Example usage:
-            const jsonFilePath = '../../data/datainsertEvent.json';
-            const collectionName = 'events';
 
-            // addDataFromJsonFile(jsonInsertdata, collectionName);
+
         } catch (err) {
             console.log(err);
         }

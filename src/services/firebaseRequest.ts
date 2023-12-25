@@ -40,23 +40,3 @@ export async function getEventsGroupedByEventType() {
       return null;
     }
   }
-
-  export async function addDataFromJsonFile(jsonData: any, collectionName: string) {
-    try {
-
-      const collectionRef = collection(db, collectionName);
-
-      // Add each document from the JSON file to Firestore
-      for (const key in jsonData) {
-        if (jsonData.hasOwnProperty(key)) {
-          const documentData = jsonData[key];
-          await addDoc(collectionRef, documentData);
-          console.log(`Document added: ${key}`);
-        }
-      }
-
-      console.log('Data import completed.');
-    } catch (error) {
-      console.error('Error importing data: ', error);
-    }
-  }
