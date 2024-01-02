@@ -67,14 +67,13 @@ const ScheduleTable: React.FC = () => {
               <Td></Td>
               <Td></Td>
               <Td
-                colSpan={3}
+                colSpan={4}
                 style={{
                   backgroundColor: "#7262af",
                 }}
               >
                 Workshop 1(Computer Vision)
               </Td>
-              <Td></Td>
             </Tr>
 
             <Tr>
@@ -100,6 +99,19 @@ const ScheduleTable: React.FC = () => {
                 colSpan={4}
                 style={{
                   backgroundColor: "#34aC81",
+                }}
+              >
+                Project Demo
+              </Td>
+            </Tr>
+
+            <Tr>
+              <Td></Td>
+              <Td></Td>
+              <Td
+                colSpan={2}
+                style={{
+                  backgroundColor: "#7262af",
                 }}
               >
                 Project Demo

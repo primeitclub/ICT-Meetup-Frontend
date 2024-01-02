@@ -60,7 +60,7 @@ const ScheduleTableDayTwo: React.FC = () => {
                   backgroundColor: "#0f4c81",
                 }}
               >
-                Workshop 3(Data Science)
+                Workshop 4(Data Science)
               </Td>
             </Tr>
 
