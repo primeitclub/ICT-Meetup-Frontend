@@ -5,7 +5,6 @@ import { isValidMotionProp, motion, Transition } from "framer-motion";
 import {
   Box,
   chakra,
-  Divider,
   shouldForwardProp,
   Tab,
   TabList,
@@ -13,8 +12,8 @@ import {
   Tabs,
 } from "@chakra-ui/react";
 
-import jsondata1 from "../../../data/dataSchedule.json";
-import ScheduleData from "./ScheduleData ";
+import ScheduleTable from "./Event-table";
+import ScheduleTableDayTwo from "./Event-table-2";
 
 function TabContent() {
   //@ts-ignore
@@ -50,6 +49,7 @@ function TabContent() {
             gap={2}
             fontSize={{ lg: "24px", sm: "20px", base: "20px" }}
             fontWeight={600}
+            color={"white"}
             lineHeight={"150%"}
           >
             <Tab
@@ -57,7 +57,7 @@ function TabContent() {
               border={"2px solid transparent"}
               _selected={{ border: "2px solid #0055D5", fontWeight: 600 }}
             >
-              Dec 12
+              Jan 8
             </Tab>
 
             <Tab
@@ -65,12 +65,10 @@ function TabContent() {
               border={"2px solid transparent"}
               _selected={{ border: "2px solid #0055D5", fontWeight: 600 }}
             >
-              Dec 13
+              Jan 9
             </Tab>
           </TabList>
         </Box>
-
-        <Divider border={"1px solid #0E1A3B"} />
 
         <TabPanels
           className="tab_custome"
@@ -86,15 +84,7 @@ function TabContent() {
             animate={{ y: 0 }}
             transition={customeTranstion}
           >
-            <ScheduleData dataScheduleDate={jsondata1.Dec12} />
-          </BoxSchedule>
-
-          <BoxSchedule
-            initial={{ y: 100 }}
-            animate={{ y: 0 }}
-            transition={customeTranstion}
-          >
-            <ScheduleData dataScheduleDate={jsondata1.Dec13} />
+            {activeTab === 0 ? <ScheduleTable /> : <ScheduleTableDayTwo />}
           </BoxSchedule>
         </TabPanels>
       </Tabs>
