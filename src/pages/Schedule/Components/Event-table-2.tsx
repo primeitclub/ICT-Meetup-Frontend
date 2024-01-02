@@ -103,7 +103,7 @@ const ScheduleTableDayTwo: React.FC = () => {
               </Td>
               <Td
                 style={{
-                  backgroundColor: "#0F4C81",
+                  backgroundColor: "#7262af",
                 }}
               >
                 Musical Night
