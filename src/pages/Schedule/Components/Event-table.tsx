@@ -86,7 +86,7 @@ const ScheduleTable: React.FC = () => {
                   backgroundColor: "#0F4C81",
                 }}
               >
-                Project Demo Finals
+                Session 1 (Research Paper Reading)
               </Td>
               <Td></Td>
               <Td></Td>
