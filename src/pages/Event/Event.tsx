@@ -95,8 +95,12 @@ function EventPage() {
         esportArrayData = profile.esports;
         workshopArrayData = profile.workshop;
         competitionArrayData = profile.competition;
+        // sort competition array byt date side of that object
+        competitionArrayData.sort((a: EventApiProps, b: EventApiProps) => {
+            return new Date(a.eventDate).getTime() - new Date(b.eventDate).getTime();
+        });
     }
-
+    console.log(profile.workshop);
     return (
         <>
             <Box
@@ -149,10 +153,10 @@ function EventPage() {
                                 transition={customeTranstion}
                             >
                                 <TabPanel>
-                                    {profile?.workshop?.map((item: EventApiProps) => (
-                                        <SingleCardEvent dataApi={item} key={1} />
+                                    {profile?.workshop?.map((item: EventApiProps, index: number) => (
+                                        <SingleCardEvent dataApi={item} key={index} />
                                     ))}
-                                    {profile?.workshop || <CommingSoon />}
+                                    {/* {profile?.workshop || <CommingSoon />} */}
 
                                 </TabPanel>
                             </MotionBox>

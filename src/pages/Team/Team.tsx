@@ -2,6 +2,7 @@ import PageTitle from "../../components/Global/PageTitle"
 import SliderGroup from "./Components/SliderGroup"
 import TeamData from '../../data/dataTeam.json'
 import TeamInsertData from '../../data/datainsertTeam.json'
+import evnetInsertData from '../../data/datainsertEvent.json'
 import { Box } from "@chakra-ui/layout"
 import TeamHeader from "./Components/TeamHeader"
 import { useEffect, useState } from "react"
@@ -30,6 +31,7 @@ function Team() {
     useEffect(() => {
         const teamData = async () => {
             try {
+                // addDataFromJsonFile(evnetInsertData, "events");
                 // const dataTeam = await GetRequest("team-members");
                 // setDataTeam(dataTeam.data.groupedTeamMembers);
                 // console.log(dataTeam.data.groupedTeamMembers)
