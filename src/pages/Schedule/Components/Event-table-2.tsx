@@ -22,7 +22,7 @@ const ScheduleTableDayTwo: React.FC = () => {
           <Tbody>
             {/* Row for 9-10 AM */}
             <Tr fontWeight={"700"}>
-              <Td rowSpan={9}>Day 1</Td>
+              <Td rowSpan={9}>Day 2</Td>
               <Td>9-10 AM</Td>
               <Td>10-11 AM</Td>
               <Td>11-12 PM</Td>
@@ -74,9 +74,22 @@ const ScheduleTableDayTwo: React.FC = () => {
                   backgroundColor: "#0F4C81",
                 }}
               >
-                Project Demo Finals
+                Project Demo (Judging round)
               </Td>
               <Td></Td>
+              <Td></Td>
+              <Td></Td>
+            </Tr>
+
+            <Tr>
+              <Td
+                colSpan={6}
+                style={{
+                  backgroundColor: "#7262af",
+                }}
+              >
+                Esports
+              </Td>
               <Td></Td>
               <Td></Td>
             </Tr>

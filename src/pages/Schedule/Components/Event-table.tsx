@@ -117,6 +117,18 @@ const ScheduleTable: React.FC = () => {
                 Project Demo
               </Td>
             </Tr>
+            <Tr>
+              <Td></Td>
+              <Td
+                colSpan={6}
+                style={{
+                  backgroundColor: "#34aC81",
+                }}
+              >
+                Esports
+              </Td>
+              <Td></Td>
+            </Tr>
           </Tbody>
         </Table>
       </Box>
