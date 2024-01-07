@@ -103,6 +103,14 @@ const ScheduleTableDayTwo: React.FC = () => {
               >
                 Session 3 (Game Dev)
               </Td>
+              <Td
+                colSpan={3}
+                style={{
+                  backgroundColor: "#7262af",
+                }}
+              >
+                Graphic Design Competition
+              </Td>
             </Tr>
 
             <Tr>

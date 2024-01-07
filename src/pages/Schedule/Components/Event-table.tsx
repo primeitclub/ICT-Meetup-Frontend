@@ -23,10 +23,10 @@ const ScheduleTable: React.FC = () => {
             {/* Row for 9-10 AM */}
             <Tr fontWeight={"700"}>
               <Td rowSpan={9}>Day 1</Td>
-              <Td>9-10 AM</Td>
-              <Td>10-11 AM</Td>
-              <Td>11-12 PM</Td>
-              <Td>12-1 PM</Td>
+              <Td>9:30-10:30 AM</Td>
+              <Td>10:30-11 AM</Td>
+              <Td>11-12:45 PM</Td>
+              <Td>12:45-1 PM</Td>
               <Td>1-2 PM</Td>
               <Td>2-3 PM</Td>
               <Td>3-4 PM</Td>
@@ -80,6 +80,7 @@ const ScheduleTable: React.FC = () => {
               <Td></Td>
               <Td></Td>
               <Td></Td>
+              <Td></Td>
               <Td
                 style={{
                   backgroundColor: "#0F4C81",
@@ -90,7 +91,6 @@ const ScheduleTable: React.FC = () => {
               <Td></Td>
               <Td></Td>
               <Td></Td>
-              <Td></Td>
             </Tr>
 
             <Tr>
@@ -98,25 +98,13 @@ const ScheduleTable: React.FC = () => {
               <Td
                 colSpan={4}
                 style={{
-                  backgroundColor: "#34aC81",
-                }}
-              >
-                Project Demo
-              </Td>
-            </Tr>
-
-            <Tr>
-              <Td></Td>
-              <Td></Td>
-              <Td
-                colSpan={2}
-                style={{
                   backgroundColor: "#7262af",
                 }}
               >
                 Project Demo
               </Td>
             </Tr>
+
             <Tr>
               <Td></Td>
               <Td
